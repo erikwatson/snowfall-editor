@@ -5,7 +5,7 @@ module.exports = {
   mode: 'development',
   entry: './src/index.tsx',
   plugins: [
-    new HtmlWebpackPlugin({ template: './dist/template.html' })
+    new HtmlWebpackPlugin({ template: './docs/template.html' })
   ],
   module: {
     rules: [
@@ -25,13 +25,13 @@ module.exports = {
   },
   output: {
     filename: 'app.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
     clean: true,
   },
   devServer: {
-    static: path.resolve(__dirname, 'dist'),
+    static: path.resolve(__dirname, 'docs'),
     hot: true,              // enables hot module replacement (HMR)
-    watchFiles: ['src/**/*', 'dist/template.html'], // ensures CSS/template changes trigger reload
+    watchFiles: ['src/**/*', 'docs/template.html'], // ensures CSS/template changes trigger reload
     port: 3000,
   },
   devtool: 'source-map',
