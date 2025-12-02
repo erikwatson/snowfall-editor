@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import {
   Types,
 } from "@erikwatson/snowfall";
-import { UserSchedule } from "@erikwatson/snowfall/dist/types";
+import { UserSchedule } from "@erikwatson/snowfall";
 
 export type PresetVariation = 'none' | 'snow' | 'lava' | 'space' | 'fallout' | 'snow2' | 'classic';
 

@@ -1,4 +1,4 @@
-import { CompleteUserConfig } from "@erikwatson/snowfall/dist/types";
+import { CompleteUserConfig } from "@erikwatson/snowfall";
 import { Preset } from "./presets";
 import { DEFAULT_IMAGE_LAYER, DEFAULT_SIMPLE_LAYER } from "@erikwatson/snowfall";
 

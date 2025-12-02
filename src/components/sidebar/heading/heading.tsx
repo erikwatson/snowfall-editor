@@ -9,8 +9,7 @@ type HeadingProps = {
 export const Heading = ({advanced}: HeadingProps) => {
   return (
     <div className="heading">
-      {!advanced && <h1>Snowfall :: stay cool ☃️</h1>}
-      {advanced && <h1>Snowfall :: stay frosty 🥶</h1>}
+      <h1>Snowfall :: stay cool ☃️</h1>
       <p>An <a href="https://erikwatson.me">Erik Watson</a> project</p>
       <ul>
         <li><a href='https://github.com/erikwatson/snowfall.js'><FontAwesomeIcon icon={faGithub}></FontAwesomeIcon></a></li>

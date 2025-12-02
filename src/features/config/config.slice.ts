@@ -9,7 +9,7 @@ import {
 } from "@erikwatson/snowfall";
 import { merge2 } from "@erikwatson/snowfall";
 import { PRESET_SNOW } from "../../presets/snow";
-import { ImageLayerConfig, SimpleLayerConfig } from "@erikwatson/snowfall/dist/types";
+import { ImageLayerConfig, SimpleLayerConfig } from "@erikwatson/snowfall";
 import { layerReducer } from "./layer/layer.slice";
 import { faRotate } from "@fortawesome/free-solid-svg-icons";
 import { Action } from "@dnd-kit/core/dist/store";

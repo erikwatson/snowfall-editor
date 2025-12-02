@@ -1,4 +1,4 @@
-import { CompleteUserConfig } from "@erikwatson/snowfall/dist/types";
+import { CompleteUserConfig } from "@erikwatson/snowfall";
 import { Preset } from "./presets";
 import { DEFAULT_GRAVITY, DEFAULT_SIMPLE_LAYER, DEFAULT_USER_CONFIG, DEFAULT_WIND, DEFAULT_WIND_GUSTS, DEFAULT_WIND_GUSTS_ACTIVE } from "@erikwatson/snowfall";
 

@@ -51,7 +51,7 @@ import { PRESET_LAVA } from "../../../presets/lava";
 import { PRESET_FALLOUT } from "../../../presets/fallout";
 import { PRESET_SPACE } from "../../../presets/space";
 import { CheckBox } from "../../checkbox/checkbox";
-import { ImageLayerConfig } from "@erikwatson/snowfall/dist/types";
+import { ImageLayerConfig } from "@erikwatson/snowfall";
 import { SnowflakeSize } from "./size/size";
 
 type LayerSettingsProps = {
