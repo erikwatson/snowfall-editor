@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"name": "snowfall-editor",
+			"path": "."
+		},
+		{
+			"name": "snowfall",
+			"path": "../snowfall"
+		},
+		{
+			"name": "Bramble",
+			"path": "../Bramble"
+		}
+	],
+	"settings": {
+		"cSpell.words": [
+			"Colour",
+			"Tweens"
+		]
+	}
+}

@@ -1,0 +1,118 @@
+.control-wrapper {
+  container-type: inline-size;
+}
+
+.control {
+  padding: 16px;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  border-bottom-color: rgb(195, 195, 195);
+  background-color: white;
+  /* ensure this stays */
+  cursor: default;
+  ;
+}
+
+.children {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+  /* fill the .control container */
+}
+
+.label-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  /* Allow shrinking below content min-size */
+}
+
+.label-row>label {
+  font-size: 18px;
+  font-weight: 700;
+  min-width: 100px;
+}
+
+.label-row>span {
+  min-width: 36px;
+  font-size: 12pt;
+  text-align: center;
+}
+
+.label-row>input {
+  max-width: 95px;
+}
+
+.input-row {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  flex: 1;
+  align-items: center;
+}
+
+.input-row>input,
+.input-row>select {
+  flex: 1 1 auto;
+  width: 100%;
+  min-width: 0;
+}
+
+.input-row>button {
+  flex: 0 0 auto;
+  margin-left: 8px;
+}
+
+/* styles.css or styles.module.css */
+/* styles.css or styles.module.css */
+.checkerboard {
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='16' height='16' fill='%23fff'/%3E%3Crect x='0' y='0' width='8' height='8' fill='%23ccc'/%3E%3Crect x='8' y='8' width='8' height='8' fill='%23ccc'/%3E%3C/svg%3E");
+  background-size: 24px 24px;
+  padding: 4px;
+  display: inline-block;
+}
+
+/* Small screen */
+@container (max-width: 450px) {
+  .children {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+    width: 100%;
+    /* ensure full width */
+  }
+
+  .label-row>input {
+    max-width: 100%;
+  }
+
+  .label-row,
+  .input-row {
+    width: 100%;
+    /* fill container to show background */
+  }
+
+  .label-row {
+    justify-content: space-between;
+    /* Heading | Value */
+  }
+
+  .input-row {
+    justify-content: flex-start;
+    /* Input | Reset | Tooltip */
+  }
+}
+
+/* New addition: Make the output input in .label-row flexible, shrinkable, and truncate with ellipsis */
+.label-row>input {
+  flex: 1 1 0px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* Ensure no wrapping (though default for inputs) */
+}

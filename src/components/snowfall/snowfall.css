@@ -1,0 +1,12 @@
+#snowfall {
+  width: 61.8%; /* Golden ratio */
+  background-color: black;
+  height: 100vh;
+}
+
+@media (max-width:1050px)  { 
+  #snowfall {
+    width: 100%;
+    height: calc(100vh - 61.8vh); /* Golden ratio */
+  }
+}

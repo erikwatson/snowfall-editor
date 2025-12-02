@@ -1,0 +1,45 @@
+.layers-header {
+  display: flex;          /* Default: Horizontal layout */
+  align-items: center;    /* Vertically centers H2 and button group */
+  justify-content: space-between; /* Pushes H2 left, buttons right; or use 'flex-start' for left-aligned */
+  gap: 16px;              /* Horizontal space between H2 and buttons; adjust */
+}
+
+.layers-header h3 {
+  margin: 0;              /* Reset default H2 margins */
+  font-size: 24px;        /* Match your previous styles */
+  /* Optional truncation for long H2 text */
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: inline-block;
+  padding: 16px 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.layers-header > div {    /* The div with buttons */
+  display: flex;          /* Keeps buttons in a row */
+  align-items: center;    /* Vertically centers buttons */
+  gap: 4px;               /* Space between buttons; adjust to match your original */
+  flex-wrap: nowrap;      /* Ensures buttons don't wrap individually */
+}
+
+/* Media query for narrow screens (adjust breakpoint as needed) */
+@media (max-width: 600px) {
+  .layers-header {
+    flex-direction: column; /* Stack vertically */
+    align-items: flex-start; /* Left-align (or 'center' if preferred) */
+    gap: 4px;             /* Vertical space between H2 and buttons; smaller for mobile */
+  }
+
+  .layers-header > div {
+    width: 100%;          /* Buttons span full width on mobile */
+    justify-content: flex-start; /* Align buttons left (or 'space-around'/'center') */
+  }
+}
