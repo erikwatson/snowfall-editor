@@ -8,10 +8,6 @@
     "watch": "pnpm exec webpack --config ./webpack.config.js --watch",
     "start": "webpack serve --config webpack.config.js"
   },
-  "funding": {
-    "type": "github",
-    "url": "https://github.com/sponsors/erikwatson"
-  },
   "keywords": [],
   "author": "Erik Watson <erik@erikwatson.me>",
   "license": "ISC",
