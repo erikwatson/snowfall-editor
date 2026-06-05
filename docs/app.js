@@ -5406,7 +5406,7 @@ eval("var __WEBPACK_AMD_DEFINE_RESULT__;/*\nCopyright 2019 David Bau.\n\nPermiss
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   diff: () => (/* binding */ diff),\n/* harmony export */   merge: () => (/* binding */ merge),\n/* harmony export */   merge2: () => (/* binding */ merge2)\n/* harmony export */ });\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils */ \"./src/utils.ts\");\n/* harmony import */ var _defaults__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./defaults */ \"./src/defaults.ts\");\nvar __assign = (undefined && undefined.__assign) || function () {\n    __assign = Object.assign || function(t) {\n        for (var s, i = 1, n = arguments.length; i < n; i++) {\n            s = arguments[i];\n            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))\n                t[p] = s[p];\n        }\n        return t;\n    };\n    return __assign.apply(this, arguments);\n};\nvar __rest = (undefined && undefined.__rest) || function (s, e) {\n    var t = {};\n    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)\n        t[p] = s[p];\n    if (s != null && typeof Object.getOwnPropertySymbols === \"function\")\n        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {\n            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))\n                t[p[i]] = s[p[i]];\n        }\n    return t;\n};\n\n\nvar simpleLayerConfig = function (layer, index) {\n    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15;\n    var defaultLayer = index < _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_LAYERS.length ? _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_LAYERS[index] : _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_SIMPLE_LAYER;\n    return {\n        colour: layer.colour || defaultLayer.colour || _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_SNOW_COLOR,\n        opacity: layer.opacity || defaultLayer.opacity || _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_OPACITY,\n        density: layer.density || defaultLayer.density || _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_DENSITY,\n        mode: 'simple',\n        mass: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_MASS), defaultLayer.mass), layer.mass),\n        size: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_SIZE), defaultLayer.size), layer.size),\n        sway: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_SWAY), defaultLayer.sway), layer.sway),\n        gravity: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_GRAVITY), defaultLayer.gravity), layer.gravity),\n        wind: __assign(__assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND), defaultLayer.wind), layer.wind), { gusts: __assign(__assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_GUSTS), (_a = defaultLayer.wind) === null || _a === void 0 ? void 0 : _a.gusts), (_b = layer.wind) === null || _b === void 0 ? void 0 : _b.gusts), { in: __assign(__assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_GUSTS_IN), (_d = (_c = defaultLayer.wind) === null || _c === void 0 ? void 0 : _c.gusts) === null || _d === void 0 ? void 0 : _d.in), (_f = (_e = layer.wind) === null || _e === void 0 ? void 0 : _e.gusts) === null || _f === void 0 ? void 0 : _f.in), { additionalStrength: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_IN_ADDITIONAL_STRENGTH), (_j = (_h = (_g = defaultLayer.wind) === null || _g === void 0 ? void 0 : _g.gusts) === null || _h === void 0 ? void 0 : _h.in) === null || _j === void 0 ? void 0 : _j.additionalStrength), (_m = (_l = (_k = layer.wind) === null || _k === void 0 ? void 0 : _k.gusts) === null || _l === void 0 ? void 0 : _l.in) === null || _m === void 0 ? void 0 : _m.additionalStrength), duration: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_IN_DURATION), (_q = (_p = (_o = defaultLayer.wind) === null || _o === void 0 ? void 0 : _o.gusts) === null || _p === void 0 ? void 0 : _p.in) === null || _q === void 0 ? void 0 : _q.duration), (_t = (_s = (_r = layer.wind) === null || _r === void 0 ? void 0 : _r.gusts) === null || _s === void 0 ? void 0 : _s.in) === null || _t === void 0 ? void 0 : _t.duration), delay: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_IN_DELAY), (_w = (_v = (_u = defaultLayer.wind) === null || _u === void 0 ? void 0 : _u.gusts) === null || _v === void 0 ? void 0 : _v.in) === null || _w === void 0 ? void 0 : _w.delay), (_z = (_y = (_x = layer.wind) === null || _x === void 0 ? void 0 : _x.gusts) === null || _y === void 0 ? void 0 : _y.in) === null || _z === void 0 ? void 0 : _z.delay) }), out: __assign(__assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_GUSTS_OUT), (_1 = (_0 = defaultLayer.wind) === null || _0 === void 0 ? void 0 : _0.gusts) === null || _1 === void 0 ? void 0 : _1.out), (_3 = (_2 = layer.wind) === null || _2 === void 0 ? void 0 : _2.gusts) === null || _3 === void 0 ? void 0 : _3.out), { duration: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_OUT_DURATION), (_6 = (_5 = (_4 = defaultLayer.wind) === null || _4 === void 0 ? void 0 : _4.gusts) === null || _5 === void 0 ? void 0 : _5.out) === null || _6 === void 0 ? void 0 : _6.duration), (_9 = (_8 = (_7 = layer.wind) === null || _7 === void 0 ? void 0 : _7.gusts) === null || _8 === void 0 ? void 0 : _8.out) === null || _9 === void 0 ? void 0 : _9.duration), delay: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_OUT_DELAY), (_12 = (_11 = (_10 = defaultLayer.wind) === null || _10 === void 0 ? void 0 : _10.gusts) === null || _11 === void 0 ? void 0 : _11.out) === null || _12 === void 0 ? void 0 : _12.delay), (_15 = (_14 = (_13 = layer.wind) === null || _13 === void 0 ? void 0 : _13.gusts) === null || _14 === void 0 ? void 0 : _14.out) === null || _15 === void 0 ? void 0 : _15.delay) }) }) })\n    };\n};\nvar imageLayerConfig = function (layer, index) {\n    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15;\n    var defaultLayer = _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_IMAGE_LAYER;\n    return {\n        density: layer.density || defaultLayer.density || _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_DENSITY,\n        mode: 'image',\n        image: layer.image || defaultLayer.image || _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_IMAGE,\n        opacity: layer.opacity || defaultLayer.opacity || _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_OPACITY,\n        rotate: layer.rotate || defaultLayer.rotate || _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_ROTATE,\n        mass: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_MASS), defaultLayer.mass), layer.mass),\n        size: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_SIZE), defaultLayer.size), layer.size),\n        sway: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_SWAY), defaultLayer.sway), layer.sway),\n        gravity: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_GRAVITY), defaultLayer.gravity), layer.gravity),\n        wind: __assign(__assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND), defaultLayer.wind), layer.wind), { gusts: __assign(__assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_GUSTS), (_a = defaultLayer.wind) === null || _a === void 0 ? void 0 : _a.gusts), (_b = layer.wind) === null || _b === void 0 ? void 0 : _b.gusts), { in: __assign(__assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_GUSTS_IN), (_d = (_c = defaultLayer.wind) === null || _c === void 0 ? void 0 : _c.gusts) === null || _d === void 0 ? void 0 : _d.in), (_f = (_e = layer.wind) === null || _e === void 0 ? void 0 : _e.gusts) === null || _f === void 0 ? void 0 : _f.in), { additionalStrength: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_IN_ADDITIONAL_STRENGTH), (_j = (_h = (_g = defaultLayer.wind) === null || _g === void 0 ? void 0 : _g.gusts) === null || _h === void 0 ? void 0 : _h.in) === null || _j === void 0 ? void 0 : _j.additionalStrength), (_m = (_l = (_k = layer.wind) === null || _k === void 0 ? void 0 : _k.gusts) === null || _l === void 0 ? void 0 : _l.in) === null || _m === void 0 ? void 0 : _m.additionalStrength), duration: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_IN_DURATION), (_q = (_p = (_o = defaultLayer.wind) === null || _o === void 0 ? void 0 : _o.gusts) === null || _p === void 0 ? void 0 : _p.in) === null || _q === void 0 ? void 0 : _q.duration), (_t = (_s = (_r = layer.wind) === null || _r === void 0 ? void 0 : _r.gusts) === null || _s === void 0 ? void 0 : _s.in) === null || _t === void 0 ? void 0 : _t.duration), delay: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_IN_DELAY), (_w = (_v = (_u = defaultLayer.wind) === null || _u === void 0 ? void 0 : _u.gusts) === null || _v === void 0 ? void 0 : _v.in) === null || _w === void 0 ? void 0 : _w.delay), (_z = (_y = (_x = layer.wind) === null || _x === void 0 ? void 0 : _x.gusts) === null || _y === void 0 ? void 0 : _y.in) === null || _z === void 0 ? void 0 : _z.delay) }), out: __assign(__assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_GUSTS_OUT), (_1 = (_0 = defaultLayer.wind) === null || _0 === void 0 ? void 0 : _0.gusts) === null || _1 === void 0 ? void 0 : _1.out), (_3 = (_2 = layer.wind) === null || _2 === void 0 ? void 0 : _2.gusts) === null || _3 === void 0 ? void 0 : _3.out), { duration: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_OUT_DURATION), (_6 = (_5 = (_4 = defaultLayer.wind) === null || _4 === void 0 ? void 0 : _4.gusts) === null || _5 === void 0 ? void 0 : _5.out) === null || _6 === void 0 ? void 0 : _6.duration), (_9 = (_8 = (_7 = layer.wind) === null || _7 === void 0 ? void 0 : _7.gusts) === null || _8 === void 0 ? void 0 : _8.out) === null || _9 === void 0 ? void 0 : _9.duration), delay: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_OUT_DELAY), (_12 = (_11 = (_10 = defaultLayer.wind) === null || _10 === void 0 ? void 0 : _10.gusts) === null || _11 === void 0 ? void 0 : _11.out) === null || _12 === void 0 ? void 0 : _12.delay), (_15 = (_14 = (_13 = layer.wind) === null || _13 === void 0 ? void 0 : _13.gusts) === null || _14 === void 0 ? void 0 : _14.out) === null || _15 === void 0 ? void 0 : _15.delay) }) }) })\n    };\n};\nfunction mergeBaseConfig(config) {\n    var _a;\n    var result = __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_BASE_CONFIG), config), { layers: ((_a = config.layers) !== null && _a !== void 0 ? _a : []).map(function (layer, index) {\n            return (0,_utils__WEBPACK_IMPORTED_MODULE_1__.isSimpleLayer)(layer)\n                ? simpleLayerConfig(layer, index)\n                : imageLayerConfig(layer, index);\n        }) });\n    return result;\n}\nfunction merge(config) {\n    var attachTo = config.attachTo, baseConfig = __rest(config, [\"attachTo\"]);\n    var basedConfig = mergeBaseConfig(baseConfig);\n    return __assign(__assign({}, basedConfig), { attachTo: config.attachTo\n            ? (0,_utils__WEBPACK_IMPORTED_MODULE_1__.getElementOrThrow)(config.attachTo)\n            : (0,_utils__WEBPACK_IMPORTED_MODULE_1__.getElementOrThrow)(_defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_CONTAINER_ID) });\n}\nfunction merge2(config) {\n    var _a;\n    var attachTo = config.attachTo, baseConfig = __rest(config, [\"attachTo\"]);\n    var basedConfig = mergeBaseConfig(baseConfig);\n    return __assign(__assign({}, basedConfig), { attachTo: (_a = config.attachTo) !== null && _a !== void 0 ? _a : _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_CONTAINER_ID });\n}\nfunction isPlainObject(obj) {\n    return obj !== null && typeof obj === 'object' && obj.constructor === Object;\n}\nfunction pruneObject(partial, defaultObj) {\n    if (!isPlainObject(partial))\n        return partial;\n    var result = {};\n    for (var key in partial) {\n        var val = partial[key];\n        var defVal = defaultObj[key];\n        if (val === defVal)\n            continue;\n        if (Array.isArray(val)) {\n            var prunedArray = pruneArray(val, defaultObj[key] || []);\n            if (prunedArray.length > 0)\n                result[key] = prunedArray;\n        }\n        else if (isPlainObject(val)) {\n            var pruned = pruneObject(val, defVal || {});\n            if (Object.keys(pruned).length > 0)\n                result[key] = pruned;\n        }\n        else {\n            result[key] = val;\n        }\n    }\n    return result;\n}\nfunction pruneArray(partialArray, defaultArray) {\n    var result = [];\n    for (var i = 0; i < partialArray.length; i++) {\n        var partialItem = partialArray[i];\n        var defaultItem = defaultArray[i] || getDefaultLayer(partialItem);\n        var prunedItem = pruneObject(partialItem, defaultItem);\n        if (isImageLayerPartial(partialItem) && prunedItem.mode === undefined) {\n            prunedItem.mode = 'image';\n        }\n        result.push(prunedItem);\n    }\n    return tidyUp(result, defaultArray);\n}\nfunction getDefaultLayer(partialLayer) {\n    if (isImageLayerPartial(partialLayer)) {\n        return _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_IMAGE_LAYER;\n    }\n    else {\n        return _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_SIMPLE_LAYER;\n    }\n}\nfunction isImageLayerPartial(partial) {\n    return (partial.mode === 'image' ||\n        partial.image !== undefined ||\n        partial.rotate !== undefined);\n}\nfunction tidyUp(layers, defaultLayers) {\n    return layers.filter(function (layer, index) {\n        if (layers.length > defaultLayers.length) {\n            return true;\n        }\n        if (Object.keys(layer).length > 0) {\n            return true;\n        }\n        // Check if there are any layers after this one that are not empty\n        if (!layers.slice(index).every(function (obj) { return Object.keys(obj).length === 0; })) {\n            return true;\n        }\n        return false;\n    });\n}\nfunction diff(config) {\n    var defaultConfig = _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_USER_CONFIG;\n    return pruneObject(config, defaultConfig);\n}\n\n\n//# sourceURL=webpack://snowfall/./src/config.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   diff: () => (/* binding */ diff),\n/* harmony export */   merge: () => (/* binding */ merge),\n/* harmony export */   merge2: () => (/* binding */ merge2)\n/* harmony export */ });\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils */ \"./src/utils.ts\");\n/* harmony import */ var _defaults__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./defaults */ \"./src/defaults.ts\");\nvar __assign = (undefined && undefined.__assign) || function () {\n    __assign = Object.assign || function(t) {\n        for (var s, i = 1, n = arguments.length; i < n; i++) {\n            s = arguments[i];\n            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))\n                t[p] = s[p];\n        }\n        return t;\n    };\n    return __assign.apply(this, arguments);\n};\nvar __rest = (undefined && undefined.__rest) || function (s, e) {\n    var t = {};\n    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)\n        t[p] = s[p];\n    if (s != null && typeof Object.getOwnPropertySymbols === \"function\")\n        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {\n            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))\n                t[p[i]] = s[p[i]];\n        }\n    return t;\n};\n\n\nvar simpleLayerConfig = function (layer, index) {\n    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15;\n    var defaultLayer = index < _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_LAYERS.length ? _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_LAYERS[index] : _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_SIMPLE_LAYER;\n    return {\n        colour: layer.colour || defaultLayer.colour || _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_SNOW_COLOR,\n        opacity: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_OPACITY), defaultLayer.opacity), layer === null || layer === void 0 ? void 0 : layer.opacity),\n        density: layer.density || defaultLayer.density || _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_DENSITY,\n        mode: 'simple',\n        mass: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_MASS), defaultLayer.mass), layer.mass),\n        size: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_SIZE), defaultLayer.size), layer.size),\n        sway: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_SWAY), defaultLayer.sway), layer.sway),\n        gravity: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_GRAVITY), defaultLayer.gravity), layer.gravity),\n        wind: __assign(__assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND), defaultLayer.wind), layer.wind), { gusts: __assign(__assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_GUSTS), (_a = defaultLayer.wind) === null || _a === void 0 ? void 0 : _a.gusts), (_b = layer.wind) === null || _b === void 0 ? void 0 : _b.gusts), { in: __assign(__assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_GUSTS_IN), (_d = (_c = defaultLayer.wind) === null || _c === void 0 ? void 0 : _c.gusts) === null || _d === void 0 ? void 0 : _d.in), (_f = (_e = layer.wind) === null || _e === void 0 ? void 0 : _e.gusts) === null || _f === void 0 ? void 0 : _f.in), { additionalStrength: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_IN_ADDITIONAL_STRENGTH), (_j = (_h = (_g = defaultLayer.wind) === null || _g === void 0 ? void 0 : _g.gusts) === null || _h === void 0 ? void 0 : _h.in) === null || _j === void 0 ? void 0 : _j.additionalStrength), (_m = (_l = (_k = layer.wind) === null || _k === void 0 ? void 0 : _k.gusts) === null || _l === void 0 ? void 0 : _l.in) === null || _m === void 0 ? void 0 : _m.additionalStrength), duration: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_IN_DURATION), (_q = (_p = (_o = defaultLayer.wind) === null || _o === void 0 ? void 0 : _o.gusts) === null || _p === void 0 ? void 0 : _p.in) === null || _q === void 0 ? void 0 : _q.duration), (_t = (_s = (_r = layer.wind) === null || _r === void 0 ? void 0 : _r.gusts) === null || _s === void 0 ? void 0 : _s.in) === null || _t === void 0 ? void 0 : _t.duration), delay: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_IN_DELAY), (_w = (_v = (_u = defaultLayer.wind) === null || _u === void 0 ? void 0 : _u.gusts) === null || _v === void 0 ? void 0 : _v.in) === null || _w === void 0 ? void 0 : _w.delay), (_z = (_y = (_x = layer.wind) === null || _x === void 0 ? void 0 : _x.gusts) === null || _y === void 0 ? void 0 : _y.in) === null || _z === void 0 ? void 0 : _z.delay) }), out: __assign(__assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_GUSTS_OUT), (_1 = (_0 = defaultLayer.wind) === null || _0 === void 0 ? void 0 : _0.gusts) === null || _1 === void 0 ? void 0 : _1.out), (_3 = (_2 = layer.wind) === null || _2 === void 0 ? void 0 : _2.gusts) === null || _3 === void 0 ? void 0 : _3.out), { duration: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_OUT_DURATION), (_6 = (_5 = (_4 = defaultLayer.wind) === null || _4 === void 0 ? void 0 : _4.gusts) === null || _5 === void 0 ? void 0 : _5.out) === null || _6 === void 0 ? void 0 : _6.duration), (_9 = (_8 = (_7 = layer.wind) === null || _7 === void 0 ? void 0 : _7.gusts) === null || _8 === void 0 ? void 0 : _8.out) === null || _9 === void 0 ? void 0 : _9.duration), delay: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_OUT_DELAY), (_12 = (_11 = (_10 = defaultLayer.wind) === null || _10 === void 0 ? void 0 : _10.gusts) === null || _11 === void 0 ? void 0 : _11.out) === null || _12 === void 0 ? void 0 : _12.delay), (_15 = (_14 = (_13 = layer.wind) === null || _13 === void 0 ? void 0 : _13.gusts) === null || _14 === void 0 ? void 0 : _14.out) === null || _15 === void 0 ? void 0 : _15.delay) }) }) })\n    };\n};\nvar imageLayerConfig = function (layer, index) {\n    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15;\n    var defaultLayer = _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_IMAGE_LAYER;\n    return {\n        density: layer.density || defaultLayer.density || _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_DENSITY,\n        mode: 'image',\n        image: layer.image || defaultLayer.image || _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_IMAGE,\n        opacity: layer.opacity || defaultLayer.opacity || _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_OPACITY,\n        rotate: layer.rotate || defaultLayer.rotate || _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_ROTATE,\n        mass: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_MASS), defaultLayer.mass), layer.mass),\n        size: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_SIZE), defaultLayer.size), layer.size),\n        sway: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_SWAY), defaultLayer.sway), layer.sway),\n        gravity: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_GRAVITY), defaultLayer.gravity), layer.gravity),\n        wind: __assign(__assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND), defaultLayer.wind), layer.wind), { gusts: __assign(__assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_GUSTS), (_a = defaultLayer.wind) === null || _a === void 0 ? void 0 : _a.gusts), (_b = layer.wind) === null || _b === void 0 ? void 0 : _b.gusts), { in: __assign(__assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_GUSTS_IN), (_d = (_c = defaultLayer.wind) === null || _c === void 0 ? void 0 : _c.gusts) === null || _d === void 0 ? void 0 : _d.in), (_f = (_e = layer.wind) === null || _e === void 0 ? void 0 : _e.gusts) === null || _f === void 0 ? void 0 : _f.in), { additionalStrength: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_IN_ADDITIONAL_STRENGTH), (_j = (_h = (_g = defaultLayer.wind) === null || _g === void 0 ? void 0 : _g.gusts) === null || _h === void 0 ? void 0 : _h.in) === null || _j === void 0 ? void 0 : _j.additionalStrength), (_m = (_l = (_k = layer.wind) === null || _k === void 0 ? void 0 : _k.gusts) === null || _l === void 0 ? void 0 : _l.in) === null || _m === void 0 ? void 0 : _m.additionalStrength), duration: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_IN_DURATION), (_q = (_p = (_o = defaultLayer.wind) === null || _o === void 0 ? void 0 : _o.gusts) === null || _p === void 0 ? void 0 : _p.in) === null || _q === void 0 ? void 0 : _q.duration), (_t = (_s = (_r = layer.wind) === null || _r === void 0 ? void 0 : _r.gusts) === null || _s === void 0 ? void 0 : _s.in) === null || _t === void 0 ? void 0 : _t.duration), delay: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_IN_DELAY), (_w = (_v = (_u = defaultLayer.wind) === null || _u === void 0 ? void 0 : _u.gusts) === null || _v === void 0 ? void 0 : _v.in) === null || _w === void 0 ? void 0 : _w.delay), (_z = (_y = (_x = layer.wind) === null || _x === void 0 ? void 0 : _x.gusts) === null || _y === void 0 ? void 0 : _y.in) === null || _z === void 0 ? void 0 : _z.delay) }), out: __assign(__assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_GUSTS_OUT), (_1 = (_0 = defaultLayer.wind) === null || _0 === void 0 ? void 0 : _0.gusts) === null || _1 === void 0 ? void 0 : _1.out), (_3 = (_2 = layer.wind) === null || _2 === void 0 ? void 0 : _2.gusts) === null || _3 === void 0 ? void 0 : _3.out), { duration: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_OUT_DURATION), (_6 = (_5 = (_4 = defaultLayer.wind) === null || _4 === void 0 ? void 0 : _4.gusts) === null || _5 === void 0 ? void 0 : _5.out) === null || _6 === void 0 ? void 0 : _6.duration), (_9 = (_8 = (_7 = layer.wind) === null || _7 === void 0 ? void 0 : _7.gusts) === null || _8 === void 0 ? void 0 : _8.out) === null || _9 === void 0 ? void 0 : _9.duration), delay: __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_OUT_DELAY), (_12 = (_11 = (_10 = defaultLayer.wind) === null || _10 === void 0 ? void 0 : _10.gusts) === null || _11 === void 0 ? void 0 : _11.out) === null || _12 === void 0 ? void 0 : _12.delay), (_15 = (_14 = (_13 = layer.wind) === null || _13 === void 0 ? void 0 : _13.gusts) === null || _14 === void 0 ? void 0 : _14.out) === null || _15 === void 0 ? void 0 : _15.delay) }) }) })\n    };\n};\nfunction mergeBaseConfig(config) {\n    var _a;\n    var result = __assign(__assign(__assign({}, _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_BASE_CONFIG), config), { layers: ((_a = config.layers) !== null && _a !== void 0 ? _a : []).map(function (layer, index) {\n            return (0,_utils__WEBPACK_IMPORTED_MODULE_1__.isSimpleLayer)(layer)\n                ? simpleLayerConfig(layer, index)\n                : imageLayerConfig(layer, index);\n        }) });\n    return result;\n}\nfunction merge(config) {\n    var attachTo = config.attachTo, baseConfig = __rest(config, [\"attachTo\"]);\n    var basedConfig = mergeBaseConfig(baseConfig);\n    return __assign(__assign({}, basedConfig), { attachTo: config.attachTo\n            ? (0,_utils__WEBPACK_IMPORTED_MODULE_1__.getElementOrThrow)(config.attachTo)\n            : (0,_utils__WEBPACK_IMPORTED_MODULE_1__.getElementOrThrow)(_defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_CONTAINER_ID) });\n}\nfunction merge2(config) {\n    var _a;\n    var attachTo = config.attachTo, baseConfig = __rest(config, [\"attachTo\"]);\n    var basedConfig = mergeBaseConfig(baseConfig);\n    return __assign(__assign({}, basedConfig), { attachTo: (_a = config.attachTo) !== null && _a !== void 0 ? _a : _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_CONTAINER_ID });\n}\nfunction isPlainObject(obj) {\n    return obj !== null && typeof obj === 'object' && obj.constructor === Object;\n}\nfunction pruneObject(partial, defaultObj) {\n    if (!isPlainObject(partial))\n        return partial;\n    var result = {};\n    for (var key in partial) {\n        var val = partial[key];\n        var defVal = defaultObj[key];\n        if (val === defVal)\n            continue;\n        if (Array.isArray(val)) {\n            var prunedArray = pruneArray(val, defaultObj[key] || []);\n            if (prunedArray.length > 0)\n                result[key] = prunedArray;\n        }\n        else if (isPlainObject(val)) {\n            var pruned = pruneObject(val, defVal || {});\n            if (Object.keys(pruned).length > 0)\n                result[key] = pruned;\n        }\n        else {\n            result[key] = val;\n        }\n    }\n    return result;\n}\nfunction pruneArray(partialArray, defaultArray) {\n    var result = [];\n    for (var i = 0; i < partialArray.length; i++) {\n        var partialItem = partialArray[i];\n        var defaultItem = defaultArray[i] || getDefaultLayer(partialItem);\n        var prunedItem = pruneObject(partialItem, defaultItem);\n        if (isImageLayerPartial(partialItem) && prunedItem.mode === undefined) {\n            prunedItem.mode = 'image';\n        }\n        result.push(prunedItem);\n    }\n    return tidyUp(result, defaultArray);\n}\nfunction getDefaultLayer(partialLayer) {\n    if (isImageLayerPartial(partialLayer)) {\n        return _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_IMAGE_LAYER;\n    }\n    else {\n        return _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_SIMPLE_LAYER;\n    }\n}\nfunction isImageLayerPartial(partial) {\n    return (partial.mode === 'image' ||\n        partial.image !== undefined ||\n        partial.rotate !== undefined);\n}\nfunction tidyUp(layers, defaultLayers) {\n    return layers.filter(function (layer, index) {\n        if (layers.length > defaultLayers.length) {\n            return true;\n        }\n        if (Object.keys(layer).length > 0) {\n            return true;\n        }\n        // Check if there are any layers after this one that are not empty\n        if (!layers.slice(index).every(function (obj) { return Object.keys(obj).length === 0; })) {\n            return true;\n        }\n        return false;\n    });\n}\nfunction diff(config) {\n    var defaultConfig = _defaults__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_USER_CONFIG;\n    return pruneObject(config, defaultConfig);\n}\n\n\n//# sourceURL=webpack://snowfall/./src/config.ts?");
 
 /***/ }),
 
@@ -5558,7 +5558,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	var __webpack_module_cache__ = {};
 /******/ 	
 /******/ 	// The require function
-/******/ 	function __nested_webpack_require_281979__(moduleId) {
+/******/ 	function __nested_webpack_require_282055__(moduleId) {
 /******/ 		// Check if module is in cache
 /******/ 		var cachedModule = __webpack_module_cache__[moduleId];
 /******/ 		if (cachedModule !== undefined) {
@@ -5572,7 +5572,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __nested_webpack_require_281979__);
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __nested_webpack_require_282055__);
 /******/ 	
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
@@ -5584,24 +5584,24 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /************************************************************************/
 /******/ 	/* webpack/runtime/amd define */
 /******/ 	(() => {
-/******/ 		__nested_webpack_require_281979__.amdD = function () {
+/******/ 		__nested_webpack_require_282055__.amdD = function () {
 /******/ 			throw new Error('define cannot be used indirect');
 /******/ 		};
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/amd options */
 /******/ 	(() => {
-/******/ 		__nested_webpack_require_281979__.amdO = {};
+/******/ 		__nested_webpack_require_282055__.amdO = {};
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__nested_webpack_require_281979__.n = (module) => {
+/******/ 		__nested_webpack_require_282055__.n = (module) => {
 /******/ 			var getter = module && module.__esModule ?
 /******/ 				() => (module['default']) :
 /******/ 				() => (module);
-/******/ 			__nested_webpack_require_281979__.d(getter, { a: getter });
+/******/ 			__nested_webpack_require_282055__.d(getter, { a: getter });
 /******/ 			return getter;
 /******/ 		};
 /******/ 	})();
@@ -5609,9 +5609,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__nested_webpack_require_281979__.d = (exports, definition) => {
+/******/ 		__nested_webpack_require_282055__.d = (exports, definition) => {
 /******/ 			for(var key in definition) {
-/******/ 				if(__nested_webpack_require_281979__.o(definition, key) && !__nested_webpack_require_281979__.o(exports, key)) {
+/******/ 				if(__nested_webpack_require_282055__.o(definition, key) && !__nested_webpack_require_282055__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
@@ -5620,13 +5620,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
-/******/ 		__nested_webpack_require_281979__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 		__nested_webpack_require_282055__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
-/******/ 		__nested_webpack_require_281979__.r = (exports) => {
+/******/ 		__nested_webpack_require_282055__.r = (exports) => {
 /******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
@@ -5636,7 +5636,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	
 /******/ 	/* webpack/runtime/node module decorator */
 /******/ 	(() => {
-/******/ 		__nested_webpack_require_281979__.nmd = (module) => {
+/******/ 		__nested_webpack_require_282055__.nmd = (module) => {
 /******/ 			module.paths = [];
 /******/ 			if (!module.children) module.children = [];
 /******/ 			return module;
@@ -5648,7 +5648,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __nested_webpack_exports__ = __nested_webpack_require_281979__("./src/index.ts");
+/******/ 	var __nested_webpack_exports__ = __nested_webpack_require_282055__("./src/index.ts");
 /******/ 	
 /******/ 	return __nested_webpack_exports__;
 /******/ })()
@@ -23835,6 +23835,9 @@ video {
 .min-w-\\[36px\\] {
   min-width: 36px;
 }
+.min-w-\\[75px\\] {
+  min-width: 75px;
+}
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -23963,7 +23966,7 @@ video {
 .focus\\:ring-blue-500:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity, 1));
-}`, "",{"version":3,"sources":["webpack://./src/index.css"],"names":[],"mappings":"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","sourcesContent":["@tailwind base;\n@tailwind components;\n@tailwind utilities;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/index.css"],"names":[],"mappings":"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","sourcesContent":["@tailwind base;\n@tailwind components;\n@tailwind utilities;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -72733,7 +72736,6 @@ const App = () => {
         if (value) {
             dispatch((0, config_slice_1.setUserConfig)(value.userConfig));
             dispatch((0, editor_settings_slice_1.setEditorSettings)(value.editorConfig));
-            console.log('test');
         }
     }, []);
     return ((0, jsx_runtime_1.jsxs)("div", { id: "app", children: [(0, jsx_runtime_1.jsx)(sidebar_1.Sidebar, { config: config, editorConfig: editorConfig, difference: difference }), (0, jsx_runtime_1.jsx)(snowfall_3.Snowfall, { config: difference })] }));
@@ -72756,8 +72758,10 @@ exports.Button = void 0;
 const jsx_runtime_1 = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
 const react_tooltip_1 = __webpack_require__(/*! react-tooltip */ "./node_modules/.pnpm/react-tooltip@5.28.0_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/react-tooltip/dist/react-tooltip.min.cjs");
 const Button = ({ onClick, kind, children, tooltip, disabled }) => {
+    const normal = " h-9 bg-slate-500 hover:bg-slate-700 text-white font-bold py-1 px-2 border border-slate-700 rounded";
     const styles = {
-        normal: "min-w-[36px] h-9 bg-slate-500 hover:bg-slate-700 text-white font-bold py-1 px-2 border border-slate-700 rounded",
+        normal_fat: `min-w-[75px] ${normal}`,
+        normal: `min-w-[36px] ${normal}`,
         warn: "w-9 h-9 bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-700 rounded",
         error: "w-9 h-9 bg-red-700 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-700 rounded",
         transparent: "w-9 h-9 bg-transparent hover:bg-slate-100 font-bold py-1 px-2 rounded",
@@ -72854,7 +72858,6 @@ const Control = ({ name, children, reset, value, onChange, showOutput, tooltip, 
         setV(value);
         setDisplayValue(isPrimitive ? String(value) : JSON.stringify(value));
     }, [value, isPrimitive]); // Recompute on value change
-    console.log({ value, v });
     return ((0, jsx_runtime_1.jsx)("div", { className: "control-wrapper", children: (0, jsx_runtime_1.jsx)("div", { className: "control", children: (0, jsx_runtime_1.jsxs)("div", { className: "children", children: [(0, jsx_runtime_1.jsxs)("div", { className: "label-row", children: [(0, jsx_runtime_1.jsxs)("label", { children: [name, ":"] }), value && onChange && showOutput && ((0, jsx_runtime_1.jsx)("input", { value: displayValue, onChange: (evt) => setDisplayValue(evt.target.value), className: "border-0 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-2", type: "text", onBlur: (evt) => {
                                     try {
                                         const parsedValue = isPrimitive ? displayValue : JSON.parse(displayValue);
@@ -73003,9 +73006,6 @@ function stringify(obj, replacer, space) {
     const jsonString = JSON.stringify(obj, replacer, space);
     return jsonString.replace(/"(\w+)":/g, "$1:");
 }
-function log(label, obj) {
-    console.log(label, JSON.stringify(obj));
-}
 const Output = ({ title, config, largeConfig, reset, copy, isMinified, isReact, schedule, }) => {
     const [output, setOutput] = (0, react_1.useState)(`snowfall.start()`);
     core_1.default.registerLanguage("javascript", javascript_1.default);
@@ -73047,9 +73047,6 @@ const Output = ({ title, config, largeConfig, reset, copy, isMinified, isReact, 
             setOutput(core_1.default.highlight(snowfallDotStart, { language: "js" }).value);
         }
     }, [isReact]);
-    (0, react_1.useEffect)(() => {
-        log('output', { config, largeConfig });
-    }, [config, largeConfig]);
     return ((0, jsx_runtime_1.jsx)("div", { className: "output-wrapper", children: (0, jsx_runtime_1.jsxs)("div", { className: "output", children: [(0, jsx_runtime_1.jsxs)("div", { className: "output-header", children: [(0, jsx_runtime_1.jsx)("h2", { children: title }), (0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsx)(button_1.Button, { onClick: () => copy(isReact ? snowfallReact : snowfallDotStart), tooltip: "Copy to clipboard", children: (0, jsx_runtime_1.jsx)(react_fontawesome_1.FontAwesomeIcon, { icon: free_solid_svg_icons_1.faClone }) }), (0, jsx_runtime_1.jsx)(button_1.Button, { kind: "error", onClick: reset, tooltip: "Reset ", children: (0, jsx_runtime_1.jsx)(react_fontawesome_1.FontAwesomeIcon, { icon: free_solid_svg_icons_1.faUndo }) })] })] }), (0, jsx_runtime_1.jsx)("pre", { children: (0, jsx_runtime_1.jsx)("code", { className: "js", id: "output", dangerouslySetInnerHTML: { __html: output } }) })] }) }));
 };
 exports.Output = Output;
@@ -73117,6 +73114,7 @@ const fallout_1 = __webpack_require__(/*! ../../../presets/fallout */ "./src/pre
 const lava_1 = __webpack_require__(/*! ../../../presets/lava */ "./src/presets/lava.ts");
 const space_1 = __webpack_require__(/*! ../../../presets/space */ "./src/presets/space.ts");
 const classic_1 = __webpack_require__(/*! ../../../presets/classic */ "./src/presets/classic.ts");
+const pride_1 = __webpack_require__(/*! ../../../presets/pride */ "./src/presets/pride.ts");
 const select_1 = __webpack_require__(/*! ../../select/select */ "./src/components/select/select.tsx");
 const snow2_1 = __webpack_require__(/*! ../../../presets/snow2 */ "./src/presets/snow2.ts");
 const EditorSettings = ({ editorConfig }) => {
@@ -73161,13 +73159,18 @@ const EditorSettings = ({ editorConfig }) => {
                                     dispatch((0, config_slice_1.setUserConfig)(classic_1.PRESET_CLASSIC.userConfig));
                                     dispatch((0, editor_settings_slice_1.setEditorSettings)(classic_1.PRESET_CLASSIC.editorConfig));
                                     break;
+                                case "pride":
+                                    dispatch((0, editor_settings_slice_1.setPreset)(value));
+                                    dispatch((0, config_slice_1.setUserConfig)(pride_1.PRESET_PRIDE.userConfig));
+                                    dispatch((0, editor_settings_slice_1.setEditorSettings)(pride_1.PRESET_PRIDE.editorConfig));
+                                    break;
                                 default:
                                     dispatch((0, editor_settings_slice_1.setPreset)('none'));
                                     dispatch((0, config_slice_1.resetUserConfig)());
                                     dispatch((0, editor_settings_slice_1.resetEditorSettings)());
                                     break;
                             }
-                        }, children: (0, jsx_runtime_1.jsxs)(select_1.Select, { children: [(0, jsx_runtime_1.jsx)("option", { value: "snow", children: "Snow" }), (0, jsx_runtime_1.jsx)("option", { value: "classic", children: "Classic snow" }), (0, jsx_runtime_1.jsx)("option", { value: "snow2", children: "Snow with images" }), (0, jsx_runtime_1.jsx)("option", { value: "lava", children: "Lava" }), (0, jsx_runtime_1.jsx)("option", { value: "space", children: "Space" })] }) }), (0, jsx_runtime_1.jsx)(control_1.Control, { name: "Background", tooltip: "The background colour of the snowfall simulation", showOutput: true, reset: () => {
+                        }, children: (0, jsx_runtime_1.jsxs)(select_1.Select, { children: [(0, jsx_runtime_1.jsx)("option", { value: "snow", children: "Snow" }), (0, jsx_runtime_1.jsx)("option", { value: "classic", children: "Classic snow" }), (0, jsx_runtime_1.jsx)("option", { value: "snow2", children: "Snow with images" }), (0, jsx_runtime_1.jsx)("option", { value: "lava", children: "Lava" }), (0, jsx_runtime_1.jsx)("option", { value: "space", children: "Space" }), (0, jsx_runtime_1.jsx)("option", { value: "pride", children: "Pride" })] }) }), (0, jsx_runtime_1.jsx)(control_1.Control, { name: "Background", tooltip: "The background colour of the snowfall simulation", showOutput: true, reset: () => {
                             dispatch((0, editor_settings_slice_1.setBackground)(snow_1.PRESET_SNOW.editorConfig.background));
                         }, value: background, onChange: (event) => dispatch((0, editor_settings_slice_1.setBackground)(event.target.value)), children: (0, jsx_runtime_1.jsx)(colour_1.Colour, {}) })] })] })
     // </Group>
@@ -73752,11 +73755,12 @@ const fallout_1 = __webpack_require__(/*! ../../../presets/fallout */ "./src/pre
 const space_1 = __webpack_require__(/*! ../../../presets/space */ "./src/presets/space.ts");
 const checkbox_1 = __webpack_require__(/*! ../../checkbox/checkbox */ "./src/components/checkbox/checkbox.tsx");
 const size_1 = __webpack_require__(/*! ./size/size */ "./src/components/sidebar/layer-settings/size/size.tsx");
+const opacity_1 = __webpack_require__(/*! ./opacity/opacity */ "./src/components/sidebar/layer-settings/opacity/opacity.tsx");
 const LayerSettings = ({ layers, advancedSettings, preset, }) => {
     var _a;
     const dispatch = (0, react_redux_1.useDispatch)();
     const layerTitles = layers === null || layers === void 0 ? void 0 : layers.map((x, i) => {
-        return (x.mode === 'simple')
+        return x.mode === "simple"
             ? `Simple layer ${i + 1}`
             : `Image layer ${i + 1}`;
     });
@@ -73765,20 +73769,18 @@ const LayerSettings = ({ layers, advancedSettings, preset, }) => {
     (0, react_1.useEffect)(() => {
         setTitles(layerTitles);
     }, [layers]);
-    console.log('layers', layers);
-    console.log('titles', titles);
-    const [b64, setb64] = (0, react_1.useState)('');
-    return ((0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsxs)("div", { className: "layers-header", children: [(0, jsx_runtime_1.jsx)("h2", { children: "Layer settings" }), (0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsxs)(button_1.Button, { tooltip: "New simple layer", onClick: () => {
+    const [b64, setb64] = (0, react_1.useState)("");
+    return ((0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsxs)("div", { className: "layers-header", children: [(0, jsx_runtime_1.jsx)("h2", { children: "Layer settings" }), (0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsxs)(button_1.Button, { kind: "normal_fat", tooltip: "New simple layer", onClick: () => {
                                     dispatch((0, config_slice_1.addLayer)(snowfall_1.DEFAULT_SIMPLE_LAYER));
-                                    setTitles(titles => {
-                                        titles = (titles || []);
+                                    setTitles((titles) => {
+                                        titles = titles || [];
                                         const name = `Simple layer ${titles.length + 1}`;
                                         return [...titles, name];
                                     });
-                                }, children: ["New ", (0, jsx_runtime_1.jsx)(react_fontawesome_1.FontAwesomeIcon, { icon: free_solid_svg_icons_1.faCircle })] }), (0, jsx_runtime_1.jsxs)(button_1.Button, { tooltip: "New image layer", onClick: () => {
+                                }, children: ["New ", (0, jsx_runtime_1.jsx)(react_fontawesome_1.FontAwesomeIcon, { icon: free_solid_svg_icons_1.faCircle })] }), (0, jsx_runtime_1.jsxs)(button_1.Button, { kind: "normal_fat", tooltip: "New image layer", onClick: () => {
                                     dispatch((0, config_slice_1.addLayer)(snowfall_1.DEFAULT_IMAGE_LAYER));
-                                    setTitles(titles => {
-                                        titles = (titles || []);
+                                    setTitles((titles) => {
+                                        titles = titles || [];
                                         const name = `Image layer ${titles.length + 1}`;
                                         return [...titles, name];
                                     });
@@ -73815,17 +73817,23 @@ const LayerSettings = ({ layers, advancedSettings, preset, }) => {
                     }, layerUp: () => {
                         dispatch((0, config_slice_1.moveLayerUp)({ index }));
                         setTitles((prevTitles) => {
-                            prevTitles = (prevTitles || []);
+                            prevTitles = prevTitles || [];
                             const newTitles = [...prevTitles];
-                            [newTitles[index], newTitles[index - 1]] = [newTitles[index - 1], newTitles[index]];
+                            [newTitles[index], newTitles[index - 1]] = [
+                                newTitles[index - 1],
+                                newTitles[index],
+                            ];
                             return newTitles;
                         });
                     }, layerDown: () => {
                         dispatch((0, config_slice_1.moveLayerDown)({ index }));
                         setTitles((prevTitles) => {
-                            prevTitles = (prevTitles || []);
+                            prevTitles = prevTitles || [];
                             const newTitles = [...prevTitles];
-                            [newTitles[index], newTitles[index + 1]] = [newTitles[index + 1], newTitles[index]];
+                            [newTitles[index], newTitles[index + 1]] = [
+                                newTitles[index + 1],
+                                newTitles[index],
+                            ];
                             return newTitles;
                         });
                     }, children: [(0, jsx_runtime_1.jsx)(controlGroup_1.ControlGroup, { children: (0, jsx_runtime_1.jsx)(control_1.Control, { name: "Title", onChange: (event) => {
@@ -73840,29 +73848,26 @@ const LayerSettings = ({ layers, advancedSettings, preset, }) => {
                                         newTitles[index] = `Layer ${index + 1}`;
                                         return newTitles;
                                     });
-                                }, value: titles ? titles[index] : `Layer ${index + 1} :)`, children: (0, jsx_runtime_1.jsx)(text_1.Text, {}) }) }), (0, jsx_runtime_1.jsxs)(group_1.Group, { name: "Snow", colour: "secondary", children: [(0, snowfall_2.isSimpleLayer)(layer) &&
-                                    (0, jsx_runtime_1.jsx)(colour_1.SnowflakeColour, { layer: layer, index: index }), !(0, snowfall_2.isSimpleLayer)(layer) &&
-                                    (0, jsx_runtime_1.jsx)(jsx_runtime_1.Fragment, { children: (0, jsx_runtime_1.jsx)(control_1.Control, { name: "Image", tooltip: "Upload an image file", reset: () => { }, value: layer.image, onChange: (event) => {
-                                                var _a;
-                                                const input = event.target;
-                                                const file = (_a = input.files) === null || _a === void 0 ? void 0 : _a[0]; // Access files safely
-                                                if (file) {
-                                                    const reader = new FileReader();
-                                                    reader.onload = () => {
-                                                        const base64String = reader.result; // Base64 encoded image
-                                                        dispatch((0, config_slice_1.setLayerImage)({ index, image: base64String }));
-                                                    };
-                                                    reader.readAsDataURL(file);
-                                                }
-                                            }, children: (0, jsx_runtime_1.jsx)("input", { type: "file", accept: "image/*" }) }) }), (0, jsx_runtime_1.jsx)(density_1.SnowflakeDensity, { layer: layer, index: index }), (0, jsx_runtime_1.jsx)(mass_1.SnowflakeMass, { layer: layer, index: index }), (0, jsx_runtime_1.jsx)(size_1.SnowflakeSize, { layer: layer, index: index })] }), (0, jsx_runtime_1.jsxs)(group_1.Group, { name: "Motion", colour: "secondary", children: [!(0, snowfall_2.isSimpleLayer)(layer) &&
-                                    (0, jsx_runtime_1.jsx)(control_1.Control, { name: "Rotate", tooltip: "Should the snowflakes rotate or not?", reset: () => {
-                                            // 
-                                        }, value: layer.rotate, onChange: (event) => {
-                                            dispatch((0, config_slice_1.setLayerRotation)({
-                                                index,
-                                                rotate: event.target.checked,
-                                            }));
-                                        }, children: (0, jsx_runtime_1.jsx)(checkbox_1.CheckBox, {}) }), advancedSettings && ((0, jsx_runtime_1.jsx)(group_1.Group, { name: "Gravity", colour: "grey-2", children: (0, jsx_runtime_1.jsxs)(controlGroup_1.ControlGroup, { children: [(0, jsx_runtime_1.jsx)(angle_1.SnowflakeGravityAngle, { layer: layer, index: index }), (0, jsx_runtime_1.jsx)(strength_1.SnowflakeGravityStrength, { layer: layer, index: index })] }) })), advancedSettings && ((0, jsx_runtime_1.jsx)(group_1.Group, { name: "Sway", colour: "grey-2", children: (0, jsx_runtime_1.jsxs)(controlGroup_1.ControlGroup, { children: [(0, jsx_runtime_1.jsx)(amplitude_1.SnowflakeSwayAmplitude, { layer: layer, index: index }), (0, jsx_runtime_1.jsx)(frequency_1.SnowflakeSwayFrequency, { layer: layer, index: index })] }) })), (0, jsx_runtime_1.jsxs)(group_1.Group, { name: "Wind", colour: "grey-2", children: [(0, jsx_runtime_1.jsxs)(controlGroup_1.ControlGroup, { children: [advancedSettings && ((0, jsx_runtime_1.jsx)(angle_2.SnowflakeWindAngle, { layer: layer, index: index })), (0, jsx_runtime_1.jsx)(strength_2.SnowflakeWindStrength, { layer: layer, index: index })] }), (0, jsx_runtime_1.jsxs)(group_1.Group, { name: "Gusts", colour: "secondary", children: [(0, jsx_runtime_1.jsxs)(controlGroup_1.ControlGroup, { children: [(0, jsx_runtime_1.jsx)(active_1.SnowflakeGustActive, { layer: layer, index: index }), layer.wind.gusts.active && ((0, jsx_runtime_1.jsx)(change_chance_1.SnowflakeGustChangeChange, { layer: layer, index: index }))] }), layer.wind.gusts.active && advancedSettings && ((0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsxs)(group_1.Group, { name: "In", colour: "grey-2", children: [(0, jsx_runtime_1.jsx)(additional_strength_1.SnowflakeGustAdditionalStrength, { layer: layer, index: index }), (0, jsx_runtime_1.jsx)(in_delay_1.SnowflakeGustInDelay, { layer: layer, index: index }), (0, jsx_runtime_1.jsx)(in_duration_1.SnowflakeGustInDuration, { layer: layer, index: index })] }), (0, jsx_runtime_1.jsxs)(group_1.Group, { name: "Out", colour: "grey-2", children: [(0, jsx_runtime_1.jsx)(out_delay_1.SnowflakeGustOutDelay, { layer: layer, index: index }), (0, jsx_runtime_1.jsx)(out_duration_1.SnowflakeGustOutDuration, { layer: layer, index: index })] })] }))] })] })] })] }, index) })))] }));
+                                }, value: titles ? titles[index] : `Layer ${index + 1} :)`, children: (0, jsx_runtime_1.jsx)(text_1.Text, {}) }) }), (0, jsx_runtime_1.jsxs)(group_1.Group, { name: "Snow", colour: "secondary", children: [(0, snowfall_2.isSimpleLayer)(layer) && ((0, jsx_runtime_1.jsx)(colour_1.SnowflakeColour, { layer: layer, index: index })), !(0, snowfall_2.isSimpleLayer)(layer) && ((0, jsx_runtime_1.jsx)(jsx_runtime_1.Fragment, { children: (0, jsx_runtime_1.jsx)(control_1.Control, { name: "Image", tooltip: "Upload an image file", reset: () => { }, value: layer.image, onChange: (event) => {
+                                            var _a;
+                                            const input = event.target;
+                                            const file = (_a = input.files) === null || _a === void 0 ? void 0 : _a[0]; // Access files safely
+                                            if (file) {
+                                                const reader = new FileReader();
+                                                reader.onload = () => {
+                                                    const base64String = reader.result; // Base64 encoded image
+                                                    dispatch((0, config_slice_1.setLayerImage)({ index, image: base64String }));
+                                                };
+                                                reader.readAsDataURL(file);
+                                            }
+                                        }, children: (0, jsx_runtime_1.jsx)("input", { type: "file", accept: "image/*" }) }) })), (0, jsx_runtime_1.jsx)(density_1.SnowflakeDensity, { layer: layer, index: index }), (0, jsx_runtime_1.jsx)(mass_1.SnowflakeMass, { layer: layer, index: index }), (0, jsx_runtime_1.jsx)(size_1.SnowflakeSize, { layer: layer, index: index }), (0, jsx_runtime_1.jsx)(opacity_1.SnowflakeOpacity, { layer: layer, index: index })] }), (0, jsx_runtime_1.jsxs)(group_1.Group, { name: "Motion", colour: "secondary", children: [!(0, snowfall_2.isSimpleLayer)(layer) && ((0, jsx_runtime_1.jsx)(control_1.Control, { name: "Rotate", tooltip: "Should the snowflakes rotate or not?", reset: () => {
+                                        //
+                                    }, value: layer.rotate, onChange: (event) => {
+                                        dispatch((0, config_slice_1.setLayerRotation)({
+                                            index,
+                                            rotate: event.target.checked,
+                                        }));
+                                    }, children: (0, jsx_runtime_1.jsx)(checkbox_1.CheckBox, {}) })), advancedSettings && ((0, jsx_runtime_1.jsx)(group_1.Group, { name: "Gravity", colour: "grey-2", children: (0, jsx_runtime_1.jsxs)(controlGroup_1.ControlGroup, { children: [(0, jsx_runtime_1.jsx)(angle_1.SnowflakeGravityAngle, { layer: layer, index: index }), (0, jsx_runtime_1.jsx)(strength_1.SnowflakeGravityStrength, { layer: layer, index: index })] }) })), advancedSettings && ((0, jsx_runtime_1.jsx)(group_1.Group, { name: "Sway", colour: "grey-2", children: (0, jsx_runtime_1.jsxs)(controlGroup_1.ControlGroup, { children: [(0, jsx_runtime_1.jsx)(amplitude_1.SnowflakeSwayAmplitude, { layer: layer, index: index }), (0, jsx_runtime_1.jsx)(frequency_1.SnowflakeSwayFrequency, { layer: layer, index: index })] }) })), (0, jsx_runtime_1.jsxs)(group_1.Group, { name: "Wind", colour: "grey-2", children: [(0, jsx_runtime_1.jsxs)(controlGroup_1.ControlGroup, { children: [advancedSettings && ((0, jsx_runtime_1.jsx)(angle_2.SnowflakeWindAngle, { layer: layer, index: index })), (0, jsx_runtime_1.jsx)(strength_2.SnowflakeWindStrength, { layer: layer, index: index })] }), (0, jsx_runtime_1.jsxs)(group_1.Group, { name: "Gusts", colour: "secondary", children: [(0, jsx_runtime_1.jsxs)(controlGroup_1.ControlGroup, { children: [(0, jsx_runtime_1.jsx)(active_1.SnowflakeGustActive, { layer: layer, index: index }), layer.wind.gusts.active && ((0, jsx_runtime_1.jsx)(change_chance_1.SnowflakeGustChangeChange, { layer: layer, index: index }))] }), layer.wind.gusts.active && advancedSettings && ((0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsxs)(group_1.Group, { name: "In", colour: "grey-2", children: [(0, jsx_runtime_1.jsx)(additional_strength_1.SnowflakeGustAdditionalStrength, { layer: layer, index: index }), (0, jsx_runtime_1.jsx)(in_delay_1.SnowflakeGustInDelay, { layer: layer, index: index }), (0, jsx_runtime_1.jsx)(in_duration_1.SnowflakeGustInDuration, { layer: layer, index: index })] }), (0, jsx_runtime_1.jsxs)(group_1.Group, { name: "Out", colour: "grey-2", children: [(0, jsx_runtime_1.jsx)(out_delay_1.SnowflakeGustOutDelay, { layer: layer, index: index }), (0, jsx_runtime_1.jsx)(out_duration_1.SnowflakeGustOutDuration, { layer: layer, index: index })] })] }))] })] })] })] }, index) })))] }));
 };
 exports.LayerSettings = LayerSettings;
 
@@ -73914,6 +73919,55 @@ const SnowflakeMass = ({ index, layer }) => {
                         })), children: (0, jsx_runtime_1.jsx)(range_1.Range, { min: "0", max: "10", step: "1" }) })] }) }, index) }));
 };
 exports.SnowflakeMass = SnowflakeMass;
+
+
+/***/ }),
+
+/***/ "./src/components/sidebar/layer-settings/opacity/opacity.tsx":
+/*!*******************************************************************!*\
+  !*** ./src/components/sidebar/layer-settings/opacity/opacity.tsx ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.SnowflakeOpacity = void 0;
+const jsx_runtime_1 = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
+const snowfall_1 = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.js");
+const control_1 = __webpack_require__(/*! ../../../control/control */ "./src/components/control/control.tsx");
+const react_redux_1 = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/cjs/index.js");
+const range_1 = __webpack_require__(/*! ../../../range/range */ "./src/components/range/range.tsx");
+const config_slice_1 = __webpack_require__(/*! ../../../../features/config/config.slice */ "./src/features/config/config.slice.ts");
+const controlGroup_1 = __webpack_require__(/*! ../../../controlGroup/controlGroup */ "./src/components/controlGroup/controlGroup.tsx");
+const group_1 = __webpack_require__(/*! ../../../group/group */ "./src/components/group/group.tsx");
+const SnowflakeOpacity = ({ index, layer }) => {
+    const dispatch = (0, react_redux_1.useDispatch)();
+    return ((0, jsx_runtime_1.jsx)(jsx_runtime_1.Fragment, { children: (0, jsx_runtime_1.jsx)(group_1.Group, { colour: "grey-2", name: "Opacity", children: (0, jsx_runtime_1.jsxs)(controlGroup_1.ControlGroup, { children: [(0, jsx_runtime_1.jsx)(control_1.Control, { name: "Minimum", tooltip: "The minimum opacity of the snowflakes", showOutput: true, reset: () => {
+                            const min = index < snowfall_1.DEFAULT_LAYERS.length
+                                ? snowfall_1.DEFAULT_LAYERS[index].opacity.min
+                                : snowfall_1.DEFAULT_OPACITY_MIN;
+                            dispatch((0, config_slice_1.setOpacityMin)({
+                                index,
+                                min,
+                            }));
+                        }, value: layer.opacity.min, onChange: (event) => dispatch((0, config_slice_1.setOpacityMin)({
+                            index,
+                            min: Number(event.target.value),
+                        })), children: (0, jsx_runtime_1.jsx)(range_1.Range, { min: "0", max: "1", step: "0.01" }) }), (0, jsx_runtime_1.jsx)(control_1.Control, { name: "Maximum", tooltip: "The maximum opacity of the snowflakes", showOutput: true, reset: () => {
+                            const max = index < snowfall_1.DEFAULT_LAYERS.length
+                                ? snowfall_1.DEFAULT_LAYERS[index].opacity.max
+                                : snowfall_1.DEFAULT_OPACITY_MAX;
+                            dispatch((0, config_slice_1.setOpacityMax)({
+                                index,
+                                max,
+                            }));
+                        }, value: layer.opacity.max, onChange: (event) => dispatch((0, config_slice_1.setOpacityMax)({
+                            index,
+                            max: Number(event.target.value),
+                        })), children: (0, jsx_runtime_1.jsx)(range_1.Range, { min: "0", max: "1", step: "0.01" }) })] }) }, index) }));
+};
+exports.SnowflakeOpacity = SnowflakeOpacity;
 
 
 /***/ }),
@@ -74190,13 +74244,11 @@ __webpack_require__(/*! ./snowfall.css */ "./src/components/snowfall/snowfall.cs
 const snowfall_1 = __importStar(__webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.js"));
 const Snowfall = ({ config }) => {
     (0, react_1.useEffect)(() => {
-        console.log('starting snowfall from the editor');
         snowfall_1.default.start();
     }, []);
     (0, react_1.useEffect)(() => {
         // the user may change the container id, but we're always going to render _our_ component to the default container
         const copy = Object.assign(Object.assign({}, config), { attachTo: snowfall_1.DEFAULT_CONTAINER_ID });
-        console.log('restarting snowfall from the editor');
         snowfall_1.default.restart(copy);
     }, [config]);
     return ((0, jsx_runtime_1.jsx)("div", { id: 'snowfall' }));
@@ -74235,7 +74287,7 @@ exports.Text = Text;
 
 var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.setSize = exports.setSizeMax = exports.setSizeMin = exports.setLayerImage = exports.setLayerRotation = exports.moveLayerDown = exports.moveLayerUp = exports.setWindAngle = exports.setSwayFrequency = exports.setSwayAmplitude = exports.setSway = exports.setMass = exports.setWindGustsOutDurationMin = exports.setWindGustsOutDurationMax = exports.setWindGustsOutDuration = exports.setWindGustsOutDelayMin = exports.setWindGustsOutDelayMax = exports.setWindGustsOutDelay = exports.setWindGustsInDurationMin = exports.setWindGustsInDurationMax = exports.setWindGustsInDuration = exports.setWindGustsInDelayMin = exports.setWindGustsInDelayMax = exports.setWindGustsInDelay = exports.setWindGustsInAdditionalStrengthMin = exports.setWindGustsInAdditionalStrengthMax = exports.setWindGustsInAdditionalStrength = exports.setGravityStrength = exports.setGravityAngle = exports.resetLayer = exports.duplicateLayer = exports.removeLayer = exports.resetLayers = exports.addLayer = exports.setWindGustsChangeChance = exports.setWindStrength = exports.setMassMin = exports.setMassMax = exports.setWindGustsActive = exports.setDensity = exports.setColour = exports.setAttachTo = exports.resetAttachTo = exports.setUserConfig = exports.resetUserConfig = void 0;
+exports.setOpacityMax = exports.setOpacityMin = exports.setOpacity = exports.setSize = exports.setSizeMax = exports.setSizeMin = exports.setLayerImage = exports.setLayerRotation = exports.moveLayerDown = exports.moveLayerUp = exports.setWindAngle = exports.setSwayFrequency = exports.setSwayAmplitude = exports.setSway = exports.setMass = exports.setWindGustsOutDurationMin = exports.setWindGustsOutDurationMax = exports.setWindGustsOutDuration = exports.setWindGustsOutDelayMin = exports.setWindGustsOutDelayMax = exports.setWindGustsOutDelay = exports.setWindGustsInDurationMin = exports.setWindGustsInDurationMax = exports.setWindGustsInDuration = exports.setWindGustsInDelayMin = exports.setWindGustsInDelayMax = exports.setWindGustsInDelay = exports.setWindGustsInAdditionalStrengthMin = exports.setWindGustsInAdditionalStrengthMax = exports.setWindGustsInAdditionalStrength = exports.setGravityStrength = exports.setGravityAngle = exports.resetLayer = exports.duplicateLayer = exports.removeLayer = exports.resetLayers = exports.addLayer = exports.setWindGustsChangeChance = exports.setWindStrength = exports.setMassMin = exports.setMassMax = exports.setWindGustsActive = exports.setDensity = exports.setColour = exports.setAttachTo = exports.resetAttachTo = exports.setUserConfig = exports.resetUserConfig = void 0;
 const toolkit_1 = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/.pnpm/@reduxjs+toolkit@2.5.0_react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1__react@19.0.0/node_modules/@reduxjs/toolkit/dist/cjs/index.js");
 const snowfall_1 = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.js");
 const snowfall_2 = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.js");
@@ -74263,9 +74315,10 @@ const configSlice = (0, toolkit_1.createSlice)({
             state.layers = snowfall_1.DEFAULT_LAYERS;
         },
         resetLayer: (state, action) => {
-            state.layers[action.payload] = (state.layers[action.payload].mode === 'simple')
-                ? snowfall_1.DEFAULT_SIMPLE_LAYER
-                : snowfall_1.DEFAULT_IMAGE_LAYER;
+            state.layers[action.payload] =
+                state.layers[action.payload].mode === "simple"
+                    ? snowfall_1.DEFAULT_SIMPLE_LAYER
+                    : snowfall_1.DEFAULT_IMAGE_LAYER;
         },
         setLayers: (state, action) => {
             state.layers = action.payload;
@@ -74299,7 +74352,7 @@ const configSlice = (0, toolkit_1.createSlice)({
         setColour: (state, action) => {
             var _a;
             const layer = (_a = state.layers) === null || _a === void 0 ? void 0 : _a[action.payload.index];
-            if (layer && layer.mode === 'simple') {
+            if (layer && layer.mode === "simple") {
                 layer.colour = action.payload.colour;
             }
         },
@@ -74392,6 +74445,83 @@ const configSlice = (0, toolkit_1.createSlice)({
                 });
             }
         },
+        setOpacity: (state, action) => {
+            state.layers[action.payload.index].opacity = action.payload.opacity;
+        },
+        setOpacityMax: (state, action) => {
+            const apply = (layer) => {
+                layer.opacity.max = action.payload.max;
+                if (layer.opacity.min > layer.opacity.max) {
+                    layer.opacity.min = layer.opacity.max;
+                }
+            };
+            if (action.payload.index !== undefined) {
+                apply(state.layers[action.payload.index]);
+            }
+            else {
+                state.layers.forEach(apply);
+            }
+        },
+        setOpacityMin: (state, action) => {
+            const apply = (layer) => {
+                layer.opacity.min = action.payload.min;
+                if (layer.opacity.max < layer.opacity.min) {
+                    layer.opacity.max = layer.opacity.min;
+                }
+            };
+            if (action.payload.index !== undefined) {
+                apply(state.layers[action.payload.index]);
+            }
+            else {
+                state.layers.forEach(apply);
+            }
+        },
+        // setOpacity: (
+        //   state,
+        //   action: PayloadAction<{ index: number; opacity: Types.SizeBounds }>,
+        // ) => {
+        //   if (state.layers) {
+        //     state.layers[action.payload.index].opacity = action.payload.opacity;
+        //   }
+        // },
+        // setOpacityMax: (
+        //   state,
+        //   action: PayloadAction<{ index?: number; max: number }>,
+        // ) => {
+        //   if (action.payload.index !== undefined) {
+        //     const layer = state.layers[action.payload.index];
+        //     if (action.payload.max < layer.opacity.min) {
+        //       layer.opacity.min = action.payload.max;
+        //     }
+        //     layer.opacity.max = action.payload.max;
+        //   } else {
+        //     state.layers.forEach((layer) => {
+        //       if (action.payload.max < layer.opacity.min) {
+        //         layer.opacity.min = action.payload.max;
+        //       }
+        //       layer.opacity.max = action.payload.max;
+        //     });
+        //   }
+        // },
+        // setOpacityMin: (
+        //   state,
+        //   action: PayloadAction<{ index?: number; min: number }>,
+        // ) => {
+        //   if (action.payload.index !== undefined) {
+        //     const layer = state.layers[action.payload.index];
+        //     if (action.payload.min > layer.opacity.max) {
+        //       layer.opacity.max = action.payload.min;
+        //     }
+        //     layer.opacity.min = action.payload.min;
+        //   } else {
+        //     state.layers.forEach((layer) => {
+        //       if (action.payload.min > layer.opacity.max) {
+        //         layer.opacity.max = action.payload.min;
+        //       }
+        //       layer.opacity.min = action.payload.min;
+        //     });
+        //   }
+        // },
         setGravity: (state, action) => {
             state.layers[action.payload.index].gravity = action.payload.gravity;
         },
@@ -74550,7 +74680,7 @@ const configSlice = (0, toolkit_1.createSlice)({
         },
     },
 });
-_a = configSlice.actions, exports.resetUserConfig = _a.resetUserConfig, exports.setUserConfig = _a.setUserConfig, exports.resetAttachTo = _a.resetAttachTo, exports.setAttachTo = _a.setAttachTo, exports.setColour = _a.setColour, exports.setDensity = _a.setDensity, exports.setWindGustsActive = _a.setWindGustsActive, exports.setMassMax = _a.setMassMax, exports.setMassMin = _a.setMassMin, exports.setWindStrength = _a.setWindStrength, exports.setWindGustsChangeChance = _a.setWindGustsChangeChance, exports.addLayer = _a.addLayer, exports.resetLayers = _a.resetLayers, exports.removeLayer = _a.removeLayer, exports.duplicateLayer = _a.duplicateLayer, exports.resetLayer = _a.resetLayer, exports.setGravityAngle = _a.setGravityAngle, exports.setGravityStrength = _a.setGravityStrength, exports.setWindGustsInAdditionalStrength = _a.setWindGustsInAdditionalStrength, exports.setWindGustsInAdditionalStrengthMax = _a.setWindGustsInAdditionalStrengthMax, exports.setWindGustsInAdditionalStrengthMin = _a.setWindGustsInAdditionalStrengthMin, exports.setWindGustsInDelay = _a.setWindGustsInDelay, exports.setWindGustsInDelayMax = _a.setWindGustsInDelayMax, exports.setWindGustsInDelayMin = _a.setWindGustsInDelayMin, exports.setWindGustsInDuration = _a.setWindGustsInDuration, exports.setWindGustsInDurationMax = _a.setWindGustsInDurationMax, exports.setWindGustsInDurationMin = _a.setWindGustsInDurationMin, exports.setWindGustsOutDelay = _a.setWindGustsOutDelay, exports.setWindGustsOutDelayMax = _a.setWindGustsOutDelayMax, exports.setWindGustsOutDelayMin = _a.setWindGustsOutDelayMin, exports.setWindGustsOutDuration = _a.setWindGustsOutDuration, exports.setWindGustsOutDurationMax = _a.setWindGustsOutDurationMax, exports.setWindGustsOutDurationMin = _a.setWindGustsOutDurationMin, exports.setMass = _a.setMass, exports.setSway = _a.setSway, exports.setSwayAmplitude = _a.setSwayAmplitude, exports.setSwayFrequency = _a.setSwayFrequency, exports.setWindAngle = _a.setWindAngle, exports.moveLayerUp = _a.moveLayerUp, exports.moveLayerDown = _a.moveLayerDown, exports.setLayerRotation = _a.setLayerRotation, exports.setLayerImage = _a.setLayerImage, exports.setSizeMin = _a.setSizeMin, exports.setSizeMax = _a.setSizeMax, exports.setSize = _a.setSize;
+_a = configSlice.actions, exports.resetUserConfig = _a.resetUserConfig, exports.setUserConfig = _a.setUserConfig, exports.resetAttachTo = _a.resetAttachTo, exports.setAttachTo = _a.setAttachTo, exports.setColour = _a.setColour, exports.setDensity = _a.setDensity, exports.setWindGustsActive = _a.setWindGustsActive, exports.setMassMax = _a.setMassMax, exports.setMassMin = _a.setMassMin, exports.setWindStrength = _a.setWindStrength, exports.setWindGustsChangeChance = _a.setWindGustsChangeChance, exports.addLayer = _a.addLayer, exports.resetLayers = _a.resetLayers, exports.removeLayer = _a.removeLayer, exports.duplicateLayer = _a.duplicateLayer, exports.resetLayer = _a.resetLayer, exports.setGravityAngle = _a.setGravityAngle, exports.setGravityStrength = _a.setGravityStrength, exports.setWindGustsInAdditionalStrength = _a.setWindGustsInAdditionalStrength, exports.setWindGustsInAdditionalStrengthMax = _a.setWindGustsInAdditionalStrengthMax, exports.setWindGustsInAdditionalStrengthMin = _a.setWindGustsInAdditionalStrengthMin, exports.setWindGustsInDelay = _a.setWindGustsInDelay, exports.setWindGustsInDelayMax = _a.setWindGustsInDelayMax, exports.setWindGustsInDelayMin = _a.setWindGustsInDelayMin, exports.setWindGustsInDuration = _a.setWindGustsInDuration, exports.setWindGustsInDurationMax = _a.setWindGustsInDurationMax, exports.setWindGustsInDurationMin = _a.setWindGustsInDurationMin, exports.setWindGustsOutDelay = _a.setWindGustsOutDelay, exports.setWindGustsOutDelayMax = _a.setWindGustsOutDelayMax, exports.setWindGustsOutDelayMin = _a.setWindGustsOutDelayMin, exports.setWindGustsOutDuration = _a.setWindGustsOutDuration, exports.setWindGustsOutDurationMax = _a.setWindGustsOutDurationMax, exports.setWindGustsOutDurationMin = _a.setWindGustsOutDurationMin, exports.setMass = _a.setMass, exports.setSway = _a.setSway, exports.setSwayAmplitude = _a.setSwayAmplitude, exports.setSwayFrequency = _a.setSwayFrequency, exports.setWindAngle = _a.setWindAngle, exports.moveLayerUp = _a.moveLayerUp, exports.moveLayerDown = _a.moveLayerDown, exports.setLayerRotation = _a.setLayerRotation, exports.setLayerImage = _a.setLayerImage, exports.setSizeMin = _a.setSizeMin, exports.setSizeMax = _a.setSizeMax, exports.setSize = _a.setSize, exports.setOpacity = _a.setOpacity, exports.setOpacityMin = _a.setOpacityMin, exports.setOpacityMax = _a.setOpacityMax;
 exports["default"] = configSlice.reducer;
 
 
@@ -74651,11 +74781,11 @@ exports.PRESET_CLASSIC = void 0;
 const snowfall_1 = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.js");
 // const wind = { ...DEFAULT_WIND };
 const ClassicUserConfig = Object.assign(Object.assign({}, snowfall_1.DEFAULT_USER_CONFIG), { layers: [
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { opacity: { min: 100, max: 100 }, density: 50, size: {
+        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { density: 50, size: {
                 min: 3,
                 max: 9
             }, gravity: Object.assign(Object.assign({}, snowfall_1.DEFAULT_GRAVITY), { strength: 1.5 }), wind: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND), { gusts: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS), { active: false }) }) }),
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { opacity: { min: 100, max: 100 }, density: 50, colour: '#8d90b7', size: {
+        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { density: 50, colour: '#8d90b7', size: {
                 min: 3,
                 max: 9
             }, gravity: Object.assign(Object.assign({}, snowfall_1.DEFAULT_GRAVITY), { strength: 1.5 }), wind: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND), { gusts: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS), { active: false }) }) }),
@@ -74669,7 +74799,7 @@ exports.PRESET_CLASSIC = {
         isReact: false,
         background: "#0d0014",
         schedule: undefined,
-        preset: 'snow'
+        preset: 'classic'
     }
 };
 
@@ -74731,47 +74861,38 @@ const snowfall_1 = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modul
 const LavaUserConfig = {
     attachTo: "snowfall",
     layers: [
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { colour: "#b5b7b2", density: 65, mode: 'simple', mass: {
-                min: 1,
-                max: 3,
-            }, sway: {
-                frequency: 0.02,
-                amplitude: 1,
+        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { colour: "#170707", opacity: {
+                min: 0.133,
+                max: 0.966
+            }, density: 300, mass: {
+                min: 0.1,
+                max: 0.2
+            }, size: {
+                min: 50,
+                max: 100
             }, gravity: {
                 angle: 270,
-                strength: 1,
-            }, wind: {
-                angle: 0,
-                strength: 0,
-                gusts: {
-                    active: true,
-                    changeChance: 0.25,
-                    in: {
-                        additionalStrength: {
-                            min: 1,
-                            max: 3,
-                        },
-                        duration: {
-                            min: 1000,
-                            max: 3000,
-                        },
-                        delay: {
-                            min: 1000,
-                            max: 10000,
-                        },
-                    },
-                    out: {
-                        duration: {
-                            min: 1000,
-                            max: 10000,
-                        },
-                        delay: {
-                            min: 5000,
-                            max: 10000,
-                        },
-                    },
-                },
-            } }),
+                strength: 5
+            }, wind: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND), { gusts: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS), { in: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS_IN), { additionalStrength: {
+                            min: 10,
+                            max: 20
+                        } }) }) }) }),
+        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { colour: "#280a04", opacity: {
+                min: 0.133,
+                max: 0.966
+            }, density: 25, mass: {
+                min: 0.1,
+                max: 0.2
+            }, size: {
+                min: 20,
+                max: 50
+            }, gravity: {
+                angle: 270,
+                strength: 5
+            }, wind: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND), { gusts: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS), { in: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS_IN), { additionalStrength: {
+                            min: 10,
+                            max: 20
+                        } }) }) }) }),
         Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { colour: "#efd73b", density: 65, mode: 'simple', mass: {
                 min: 1,
                 max: 3,
@@ -74867,6 +74988,55 @@ exports.PRESET_LAVA = {
         schedule: undefined,
         preset: 'lava'
     }
+};
+
+
+/***/ }),
+
+/***/ "./src/presets/pride.ts":
+/*!******************************!*\
+  !*** ./src/presets/pride.ts ***!
+  \******************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.PRESET_PRIDE = void 0;
+const snowfall_1 = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.js");
+const snowfall_2 = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.js");
+// const wind = { ...DEFAULT_WIND };
+const x = Object.assign(Object.assign({}, snowfall_1.DEFAULT_IMAGE_LAYER), { density: 10, image: "./assets/red.png", size: {
+        min: 16,
+        max: 32,
+    }, sway: {
+        frequency: 0.784,
+        amplitude: 0.18,
+    }, gravity: {
+        angle: 270,
+        strength: 0.3,
+    }, wind: Object.assign(Object.assign({}, snowfall_2.DEFAULT_WIND), { gusts: Object.assign(Object.assign({}, snowfall_2.DEFAULT_WIND_GUSTS), { active: false }) }), mode: "image" });
+const PrideUserConfig = Object.assign(Object.assign({}, snowfall_2.DEFAULT_USER_CONFIG), { layers: [
+        Object.assign({}, x),
+        Object.assign(Object.assign({}, x), { image: "./assets/orange.png" }),
+        Object.assign(Object.assign({}, x), { image: "./assets/yellow.png" }),
+        Object.assign(Object.assign({}, x), { image: "./assets/cowboy.png", rotate: false, size: { min: 36, max: 56 }, sway: { frequency: 0, amplitude: 0 } }),
+        Object.assign(Object.assign({}, x), { image: "./assets/green.png" }),
+        Object.assign(Object.assign({}, x), { image: "./assets/light-blue.png" }),
+        Object.assign(Object.assign({}, x), { image: "./assets/purple.png" }),
+        Object.assign(Object.assign({}, x), { image: "./assets/eggplant.png", rotate: true, gravity: snowfall_2.DEFAULT_GRAVITY, size: { min: 36, max: 56 }, sway: { frequency: 0, amplitude: 0 } }),
+    ] });
+exports.PRESET_PRIDE = {
+    name: "Pride",
+    userConfig: PrideUserConfig,
+    editorConfig: {
+        advancedSettings: true,
+        isMinified: true,
+        isReact: false,
+        background: "#db84d4",
+        schedule: undefined,
+        preset: "pride",
+    },
 };
 
 
@@ -75008,7 +75178,7 @@ const Snow2UserConfig = {
     ]
 };
 exports.PRESET_SNOW2 = {
-    name: "Snow",
+    name: "Snow2",
     userConfig: Snow2UserConfig,
     editorConfig: {
         advancedSettings: true,
@@ -75016,7 +75186,7 @@ exports.PRESET_SNOW2 = {
         isReact: false,
         background: "#0d0014",
         schedule: undefined,
-        preset: 'snow'
+        preset: 'snow2'
     }
 };
 
@@ -75034,215 +75204,61 @@ exports.PRESET_SNOW2 = {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PRESET_SPACE = exports.SpaceUserConfig = void 0;
 const snowfall_1 = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.js");
+const strength = 0.25;
 exports.SpaceUserConfig = {
-    "layers": [
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { "colour": "#f4d7d7", "density": 100, mode: 'simple', "mass": {
-                "min": 0,
-                "max": 2
-            }, "sway": {
-                "frequency": 0,
-                "amplitude": 0
-            }, "gravity": {
-                "angle": 90,
-                "strength": 0
-            }, "wind": {
-                "angle": 0,
-                "strength": 1,
-                "gusts": {
-                    "active": false,
-                    "changeChance": 0,
-                    "in": {
-                        "additionalStrength": {
-                            "min": 1,
-                            "max": 3
-                        },
-                        "duration": {
-                            "min": 1000,
-                            "max": 3000
-                        },
-                        "delay": {
-                            "min": 1000,
-                            "max": 10000
-                        }
-                    },
-                    "out": {
-                        "duration": {
-                            "min": 1000,
-                            "max": 10000
-                        },
-                        "delay": {
-                            "min": 5000,
-                            "max": 10000
-                        }
-                    }
-                }
-            } }),
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { "colour": "#ffffff", "density": 200, mode: 'simple', "mass": {
-                "min": 0,
-                "max": 2
-            }, "sway": {
-                "frequency": 0,
-                "amplitude": 0
-            }, "gravity": {
-                "angle": 90,
-                "strength": 0
-            }, "wind": {
-                "angle": 0,
-                "strength": 1,
-                "gusts": {
-                    "active": false,
-                    "changeChance": 0,
-                    "in": {
-                        "additionalStrength": {
-                            "min": 1,
-                            "max": 3
-                        },
-                        "duration": {
-                            "min": 1000,
-                            "max": 3000
-                        },
-                        "delay": {
-                            "min": 1000,
-                            "max": 10000
-                        }
-                    },
-                    "out": {
-                        "duration": {
-                            "min": 1000,
-                            "max": 10000
-                        },
-                        "delay": {
-                            "min": 5000,
-                            "max": 10000
-                        }
-                    }
-                }
-            } }),
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { "colour": "#d7e0f4", "density": 100, mode: 'simple', "mass": {
-                "min": 0,
-                "max": 2
-            }, "sway": {
-                "frequency": 0,
-                "amplitude": 0
-            }, "gravity": {
-                "angle": 90,
-                "strength": 0
-            }, "wind": {
-                "angle": 0,
-                "strength": 1,
-                "gusts": {
-                    "active": false,
-                    "changeChance": 0,
-                    "in": {
-                        "additionalStrength": {
-                            "min": 1,
-                            "max": 3
-                        },
-                        "duration": {
-                            "min": 1000,
-                            "max": 3000
-                        },
-                        "delay": {
-                            "min": 1000,
-                            "max": 10000
-                        }
-                    },
-                    "out": {
-                        "duration": {
-                            "min": 1000,
-                            "max": 10000
-                        },
-                        "delay": {
-                            "min": 5000,
-                            "max": 10000
-                        }
-                    }
-                }
-            } }),
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_IMAGE_LAYER), { "density": 2, rotate: false, mode: 'image', image: "data:image/png;base64,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", "mass": {
-                "min": 3,
-                "max": 6
-            }, "sway": {
-                "frequency": 0,
-                "amplitude": 0
-            }, "gravity": {
-                "angle": 90,
-                "strength": 0
-            }, "wind": {
-                "angle": 0,
-                "strength": 1,
-                "gusts": {
-                    "active": false,
-                    "changeChance": 0,
-                    "in": {
-                        "additionalStrength": {
-                            "min": 1,
-                            "max": 3
-                        },
-                        "duration": {
-                            "min": 1000,
-                            "max": 3000
-                        },
-                        "delay": {
-                            "min": 1000,
-                            "max": 10000
-                        }
-                    },
-                    "out": {
-                        "duration": {
-                            "min": 1000,
-                            "max": 10000
-                        },
-                        "delay": {
-                            "min": 5000,
-                            "max": 10000
-                        }
-                    }
-                }
-            } }),
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { "colour": "#ffffff", "density": 50, mode: 'simple', "mass": {
-                "min": 2,
-                "max": 4
-            }, "sway": {
-                "frequency": 0,
-                "amplitude": 0
-            }, "gravity": {
-                "angle": 90,
-                "strength": 0
-            }, "wind": {
-                "angle": 0,
-                "strength": 2,
-                "gusts": {
-                    "active": false,
-                    "changeChance": 0,
-                    "in": {
-                        "additionalStrength": {
-                            "min": 1,
-                            "max": 3
-                        },
-                        "duration": {
-                            "min": 1000,
-                            "max": 3000
-                        },
-                        "delay": {
-                            "min": 1000,
-                            "max": 10000
-                        }
-                    },
-                    "out": {
-                        "duration": {
-                            "min": 1000,
-                            "max": 10000
-                        },
-                        "delay": {
-                            "min": 5000,
-                            "max": 10000
-                        }
-                    }
-                }
-            } }),
+    layers: [
+        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { colour: "#f4d7d7", opacity: { min: 1, max: 1 }, density: 100, mass: {
+                min: 0.5,
+                max: 1,
+            }, size: {
+                min: 0.5,
+                max: 1,
+            }, sway: {
+                frequency: 0,
+                amplitude: 0,
+            }, gravity: Object.assign(Object.assign({}, snowfall_1.DEFAULT_GRAVITY), { strength: 0 }), wind: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND), { strength, gusts: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS), { active: false, changeChance: 0 }) }) }),
+        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { opacity: { min: 1, max: 1 }, mass: {
+                min: 1,
+                max: 2,
+            }, size: {
+                min: 1,
+                max: 2,
+            }, sway: {
+                frequency: 0,
+                amplitude: 0,
+            }, gravity: Object.assign(Object.assign({}, snowfall_1.DEFAULT_GRAVITY), { strength: 0 }), wind: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND), { strength, gusts: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS), { active: false, changeChance: 0 }) }) }),
+        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { opacity: { min: 1, max: 1 }, colour: "#d7e0f4", density: 100, mass: {
+                min: 1,
+                max: 2,
+            }, size: {
+                min: 1,
+                max: 2,
+            }, sway: {
+                frequency: 0,
+                amplitude: 0,
+            }, gravity: Object.assign(Object.assign({}, snowfall_1.DEFAULT_GRAVITY), { strength: 0 }), wind: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND), { strength, gusts: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS), { active: false, changeChance: 0 }) }) }),
+        Object.assign(Object.assign({}, snowfall_1.DEFAULT_IMAGE_LAYER), { opacity: { min: 1, max: 1 }, density: 3, image: "data:image/png;base64,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", mass: {
+                min: 12,
+                max: 17,
+            }, size: {
+                min: 12,
+                max: 36,
+            }, sway: {
+                frequency: 0,
+                amplitude: 0,
+            }, gravity: Object.assign(Object.assign({}, snowfall_1.DEFAULT_GRAVITY), { strength: 0 }), wind: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND), { strength, gusts: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS), { active: false, changeChance: 0 }) }), mode: "image" }),
+        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { opacity: { min: 1, max: 1 }, density: 50, mass: {
+                min: 1,
+                max: 3,
+            }, size: {
+                min: 1,
+                max: 3,
+            }, sway: {
+                frequency: 0,
+                amplitude: 0,
+            }, gravity: Object.assign(Object.assign({}, snowfall_1.DEFAULT_GRAVITY), { strength: 0 }), wind: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND), { strength, gusts: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS), { active: false, changeChance: 0 }) }) }),
     ],
-    "attachTo": "snowfall"
+    attachTo: "snowfall",
 };
 exports.PRESET_SPACE = {
     name: "Space",
@@ -75253,8 +75269,8 @@ exports.PRESET_SPACE = {
         isReact: false,
         background: "#0d0014",
         schedule: undefined,
-        preset: 'space'
-    }
+        preset: "space",
+    },
 };
 
 
