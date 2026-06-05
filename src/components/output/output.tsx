@@ -31,10 +31,6 @@ function stringify(
   return jsonString.replace(/"(\w+)":/g, "$1:");
 }
 
-function log(label: string, obj: Object) {
-  console.log(label, JSON.stringify(obj));
-}
-
 export const Output = ({
   title,
   config,
@@ -92,10 +88,6 @@ export const Output = ({
       setOutput(hljs.highlight(snowfallDotStart, { language: "js" }).value);
     }
   }, [isReact]);
-
-  useEffect(() => {
-    log('output', { config, largeConfig });
-  }, [config, largeConfig]);
 
   return (
     <div className="output-wrapper">

@@ -38,8 +38,6 @@ export const Control = ({
     setDisplayValue(isPrimitive ? String(value) : JSON.stringify(value));
   }, [value, isPrimitive]); // Recompute on value change
 
-  console.log({ value, v });
-
   return (
     <div className="control-wrapper">
       <div className="control">

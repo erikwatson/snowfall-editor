@@ -9,7 +9,6 @@ const ClassicUserConfig: CompleteUserConfig = {
    layers: [
     {
       ...DEFAULT_SIMPLE_LAYER,
-      opacity: { min: 100, max: 100 },
       density: 50,
       size: {
         min: 3,
@@ -29,7 +28,6 @@ const ClassicUserConfig: CompleteUserConfig = {
     },
     {
       ...DEFAULT_SIMPLE_LAYER,
-      opacity: { min: 100, max: 100 },
       density: 50,
       colour: '#8d90b7',
       size: {
@@ -60,6 +58,6 @@ export const PRESET_CLASSIC: Preset = {
     isReact: false,
     background: "#0d0014",
     schedule: undefined,
-    preset: 'snow'
+    preset: 'classic'
   }
 };

@@ -17,6 +17,7 @@ import { PRESET_FALLOUT } from "../../../presets/fallout";
 import { PRESET_LAVA } from "../../../presets/lava";
 import { PRESET_SPACE } from "../../../presets/space";
 import { PRESET_CLASSIC } from '../../../presets/classic'
+import { PRESET_PRIDE } from "../../../presets/pride";
 import { Select } from "../../select/select";
 import { PRESET_SNOW2 } from "../../../presets/snow2";
 import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
@@ -82,6 +83,11 @@ export const EditorSettings = ({ editorConfig }: EditorSettingsProps) => {
                 dispatch(setUserConfig(PRESET_CLASSIC.userConfig));
                 dispatch(setEditorSettings(PRESET_CLASSIC.editorConfig));
                 break;
+              case "pride":
+                dispatch(setPreset(value))
+                dispatch(setUserConfig(PRESET_PRIDE.userConfig));
+                dispatch(setEditorSettings(PRESET_PRIDE.editorConfig));
+                break;
               default:
                 dispatch(setPreset('none'));
                 dispatch(resetUserConfig())
@@ -96,6 +102,7 @@ export const EditorSettings = ({ editorConfig }: EditorSettingsProps) => {
             <option value="snow2">Snow with images</option>
             <option value="lava">Lava</option>
             <option value="space">Space</option>
+            <option value="pride">Pride</option>
             {/* <option value="fallout">Fallout</option> */}
           </Select>
         </Control>

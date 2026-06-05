@@ -3,15 +3,16 @@ import { Tooltip } from "react-tooltip";
 
 type ButtonProps = PropsWithChildren<{
   onClick: (event: MouseEvent<HTMLButtonElement>) => void;
-  kind?: "normal" | "warn" | "error" | "transparent";
+  kind?: "normal" | "warn" | "error" | "transparent" | "normal_fat";
   tooltip?: string;
   disabled?: boolean
 }>;
 
 export const Button = ({ onClick, kind, children, tooltip, disabled }: ButtonProps) => {
+  const normal = " h-9 bg-slate-500 hover:bg-slate-700 text-white font-bold py-1 px-2 border border-slate-700 rounded"
   const styles = {
-    normal:
-      "min-w-[36px] h-9 bg-slate-500 hover:bg-slate-700 text-white font-bold py-1 px-2 border border-slate-700 rounded",
+    normal_fat: `min-w-[75px] ${normal}`,
+    normal: `min-w-[36px] ${normal}`,
     warn: "w-9 h-9 bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-700 rounded",
     error:
       "w-9 h-9 bg-red-700 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-700 rounded",

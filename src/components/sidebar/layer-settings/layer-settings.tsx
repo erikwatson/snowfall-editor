@@ -1,6 +1,16 @@
-import { clone, DEFAULT_IMAGE_LAYER, DEFAULT_SIMPLE_LAYER } from "@erikwatson/snowfall";
+import {
+  clone,
+  DEFAULT_IMAGE_LAYER,
+  DEFAULT_SIMPLE_LAYER,
+} from "@erikwatson/snowfall";
 import { Types, isSimpleLayer } from "@erikwatson/snowfall";
-import { faCircle, faImage, faPlus, faTrash, faUndo } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCircle,
+  faImage,
+  faPlus,
+  faTrash,
+  faUndo,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "../../button/button";
 import { Control } from "../../control/control";
@@ -39,7 +49,7 @@ import {
   moveLayerDown,
   moveLayerUp,
   setLayerRotation,
-  setLayerImage
+  setLayerImage,
 } from "../../../features/config/config.slice";
 import { PRESET_SNOW } from "../../../presets/snow";
 import {
@@ -53,6 +63,7 @@ import { PRESET_SPACE } from "../../../presets/space";
 import { CheckBox } from "../../checkbox/checkbox";
 import { ImageLayerConfig } from "@erikwatson/snowfall";
 import { SnowflakeSize } from "./size/size";
+import { SnowflakeOpacity } from "./opacity/opacity";
 
 type LayerSettingsProps = {
   layers?: Types.DeepPartial<Types.ConfigLayer>[];
@@ -68,9 +79,9 @@ export const LayerSettings = ({
   const dispatch = useDispatch();
 
   const layerTitles = layers?.map((x, i) => {
-    return (x.mode === 'simple')
+    return x.mode === "simple"
       ? `Simple layer ${i + 1}`
-      : `Image layer ${i + 1}`
+      : `Image layer ${i + 1}`;
   });
   const [titles, setTitles] = useState(layerTitles);
 
@@ -79,10 +90,7 @@ export const LayerSettings = ({
     setTitles(layerTitles);
   }, [layers]);
 
-  console.log('layers', layers)
-  console.log('titles', titles);
-
-  const [b64, setb64] = useState('');
+  const [b64, setb64] = useState("");
 
   return (
     <>
@@ -91,28 +99,30 @@ export const LayerSettings = ({
 
         <div>
           <Button
+            kind="normal_fat"
             tooltip="New simple layer"
             onClick={() => {
               dispatch(addLayer(DEFAULT_SIMPLE_LAYER));
-              setTitles(titles => {
-                titles = (titles || []);
-                const name = `Simple layer ${titles.length + 1}`
+              setTitles((titles) => {
+                titles = titles || [];
+                const name = `Simple layer ${titles.length + 1}`;
                 return [...titles, name];
-              })
+              });
             }}
           >
             New <FontAwesomeIcon icon={faCircle} />
           </Button>
 
           <Button
+            kind="normal_fat"
             tooltip="New image layer"
             onClick={() => {
               dispatch(addLayer(DEFAULT_IMAGE_LAYER));
-              setTitles(titles => {
-                titles = (titles || []);
-                const name = `Image layer ${titles.length + 1}`
+              setTitles((titles) => {
+                titles = titles || [];
+                const name = `Image layer ${titles.length + 1}`;
                 return [...titles, name];
-              })
+              });
             }}
           >
             New <FontAwesomeIcon icon={faImage} />
@@ -191,18 +201,24 @@ export const LayerSettings = ({
               layerUp={() => {
                 dispatch(moveLayerUp({ index }));
                 setTitles((prevTitles) => {
-                  prevTitles = (prevTitles || [])
+                  prevTitles = prevTitles || [];
                   const newTitles = [...prevTitles];
-                  [newTitles[index], newTitles[index - 1]] = [newTitles[index - 1], newTitles[index]];
+                  [newTitles[index], newTitles[index - 1]] = [
+                    newTitles[index - 1],
+                    newTitles[index],
+                  ];
                   return newTitles;
                 });
               }}
               layerDown={() => {
                 dispatch(moveLayerDown({ index }));
                 setTitles((prevTitles) => {
-                  prevTitles = (prevTitles || [])
+                  prevTitles = prevTitles || [];
                   const newTitles = [...prevTitles];
-                  [newTitles[index], newTitles[index + 1]] = [newTitles[index + 1], newTitles[index]];
+                  [newTitles[index], newTitles[index + 1]] = [
+                    newTitles[index + 1],
+                    newTitles[index],
+                  ];
                   return newTitles;
                 });
               }}
@@ -231,41 +247,48 @@ export const LayerSettings = ({
               </ControlGroup>
 
               <Group name="Snow" colour="secondary">
-                {isSimpleLayer(layer) &&
+                {isSimpleLayer(layer) && (
                   <SnowflakeColour layer={layer} index={index} />
-                }
-                {!isSimpleLayer(layer) &&
+                )}
+                {!isSimpleLayer(layer) && (
                   <>
-                    <Control name="Image" tooltip="Upload an image file" reset={() => { }} value={layer.image} onChange={(event: ChangeEvent<HTMLInputElement>) => {
+                    <Control
+                      name="Image"
+                      tooltip="Upload an image file"
+                      reset={() => {}}
+                      value={layer.image}
+                      onChange={(event: ChangeEvent<HTMLInputElement>) => {
                         const input = event.target as HTMLInputElement;
                         const file = input.files?.[0]; // Access files safely
                         if (file) {
                           const reader = new FileReader();
                           reader.onload = () => {
                             const base64String = reader.result as string; // Base64 encoded image
-                            dispatch(setLayerImage({ index, image: base64String }));
+                            dispatch(
+                              setLayerImage({ index, image: base64String }),
+                            );
                           };
                           reader.readAsDataURL(file);
                         }
-                      }}>
+                      }}
+                    >
                       <input type="file" accept="image/*"></input>
                     </Control>
-
-                    
                   </>
-                }
+                )}
                 <SnowflakeDensity layer={layer} index={index} />
                 <SnowflakeMass layer={layer} index={index} />
                 <SnowflakeSize layer={layer} index={index} />
+                <SnowflakeOpacity layer={layer} index={index} />
               </Group>
 
               <Group name="Motion" colour="secondary">
-                {!isSimpleLayer(layer) &&
+                {!isSimpleLayer(layer) && (
                   <Control
                     name="Rotate"
                     tooltip="Should the snowflakes rotate or not?"
                     reset={() => {
-                      // 
+                      //
                     }}
                     value={(layer as ImageLayerConfig).rotate}
                     onChange={(event) => {
@@ -273,13 +296,13 @@ export const LayerSettings = ({
                         setLayerRotation({
                           index,
                           rotate: event.target.checked,
-                        })
+                        }),
                       );
                     }}
                   >
                     <CheckBox />
                   </Control>
-                }
+                )}
 
                 {advancedSettings && (
                   <Group name="Gravity" colour="grey-2">
@@ -310,7 +333,10 @@ export const LayerSettings = ({
                     <ControlGroup>
                       <SnowflakeGustActive layer={layer} index={index} />
                       {layer.wind.gusts.active && (
-                        <SnowflakeGustChangeChange layer={layer} index={index} />
+                        <SnowflakeGustChangeChange
+                          layer={layer}
+                          index={index}
+                        />
                       )}
                     </ControlGroup>
 
@@ -322,12 +348,18 @@ export const LayerSettings = ({
                             index={index}
                           />
                           <SnowflakeGustInDelay layer={layer} index={index} />
-                          <SnowflakeGustInDuration layer={layer} index={index} />
+                          <SnowflakeGustInDuration
+                            layer={layer}
+                            index={index}
+                          />
                         </Group>
 
                         <Group name="Out" colour="grey-2">
                           <SnowflakeGustOutDelay layer={layer} index={index} />
-                          <SnowflakeGustOutDuration layer={layer} index={index} />
+                          <SnowflakeGustOutDuration
+                            layer={layer}
+                            index={index}
+                          />
                         </Group>
                       </>
                     )}

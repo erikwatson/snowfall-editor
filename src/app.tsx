@@ -60,7 +60,6 @@ export const App = () => {
     if (value) {
       dispatch(setUserConfig(value.userConfig));
       dispatch(setEditorSettings(value.editorConfig));
-      console.log('test')
     }
   }, []);
 

@@ -14,10 +14,13 @@ import { layerReducer } from "./layer/layer.slice";
 import { faRotate } from "@fortawesome/free-solid-svg-icons";
 import { Action } from "@dnd-kit/core/dist/store";
 
-type ConfigLayer = (SimpleLayerConfig | ImageLayerConfig);
+type ConfigLayer = SimpleLayerConfig | ImageLayerConfig;
 type LabeledConfigLayer = ConfigLayer & { label?: string };
 
-export interface EditorCompleteUserConfig extends Omit<Types.CompleteUserConfig, 'layers'> {
+export interface EditorCompleteUserConfig extends Omit<
+  Types.CompleteUserConfig,
+  "layers"
+> {
   layers: LabeledConfigLayer[];
 }
 
@@ -50,9 +53,10 @@ const configSlice = createSlice({
     },
 
     resetLayer: (state, action: PayloadAction<number>) => {
-      state.layers[action.payload] = (state.layers[action.payload].mode === 'simple') 
-        ? DEFAULT_SIMPLE_LAYER
-        : DEFAULT_IMAGE_LAYER;
+      state.layers[action.payload] =
+        state.layers[action.payload].mode === "simple"
+          ? DEFAULT_SIMPLE_LAYER
+          : DEFAULT_IMAGE_LAYER;
     },
 
     setLayers: (state, action: PayloadAction<ConfigLayer[]>) => {
@@ -61,7 +65,7 @@ const configSlice = createSlice({
 
     setLayer: (
       state,
-      action: PayloadAction<{ index: number; layer: LabeledConfigLayer }>
+      action: PayloadAction<{ index: number; layer: LabeledConfigLayer }>,
     ) => {
       if (state.layers) {
         state.layers[action.payload.index] = action.payload.layer;
@@ -82,7 +86,7 @@ const configSlice = createSlice({
 
     updateLayer: (
       state,
-      action: PayloadAction<{ index: number; layer: LabeledConfigLayer }>
+      action: PayloadAction<{ index: number; layer: LabeledConfigLayer }>,
     ) => {
       if (state.layers) {
         state.layers[action.payload.index] = action.payload.layer;
@@ -98,17 +102,17 @@ const configSlice = createSlice({
     // layer properties (colour, density, size, etc)
     setColour: (
       state,
-      action: PayloadAction<{ index: number; colour: string }>
+      action: PayloadAction<{ index: number; colour: string }>,
     ) => {
       const layer = state.layers?.[action.payload.index];
-      if (layer && layer.mode === 'simple') {
+      if (layer && layer.mode === "simple") {
         (layer as SimpleLayerConfig).colour = action.payload.colour;
       }
     },
 
     setDensity: (
       state,
-      action: PayloadAction<{ index?: number; density: number }>
+      action: PayloadAction<{ index?: number; density: number }>,
     ) => {
       if (action.payload.index !== undefined) {
         if (state.layers) {
@@ -123,7 +127,7 @@ const configSlice = createSlice({
 
     setMass: (
       state,
-      action: PayloadAction<{ index: number; mass: Types.SizeBounds }>
+      action: PayloadAction<{ index: number; mass: Types.SizeBounds }>,
     ) => {
       if (state.layers) {
         state.layers[action.payload.index].mass = action.payload.mass;
@@ -132,7 +136,7 @@ const configSlice = createSlice({
 
     setMassMax: (
       state,
-      action: PayloadAction<{ index?: number; max: number }>
+      action: PayloadAction<{ index?: number; max: number }>,
     ) => {
       if (action.payload.index !== undefined) {
         if (action.payload.max < state.layers[action.payload.index].mass.min) {
@@ -151,7 +155,7 @@ const configSlice = createSlice({
 
     setMassMin: (
       state,
-      action: PayloadAction<{ index?: number; min: number }>
+      action: PayloadAction<{ index?: number; min: number }>,
     ) => {
       // we need to set the max mass to the min mass if it's less than the min mass
       if (action.payload.index !== undefined) {
@@ -171,7 +175,7 @@ const configSlice = createSlice({
 
     setSize: (
       state,
-      action: PayloadAction<{ index: number; size: Types.SizeBounds }>
+      action: PayloadAction<{ index: number; size: Types.SizeBounds }>,
     ) => {
       if (state.layers) {
         state.layers[action.payload.index].mass = action.payload.size;
@@ -180,7 +184,7 @@ const configSlice = createSlice({
 
     setSizeMax: (
       state,
-      action: PayloadAction<{ index?: number; max: number }>
+      action: PayloadAction<{ index?: number; max: number }>,
     ) => {
       if (action.payload.index !== undefined) {
         if (action.payload.max < state.layers[action.payload.index].size.min) {
@@ -199,7 +203,7 @@ const configSlice = createSlice({
 
     setSizeMin: (
       state,
-      action: PayloadAction<{ index?: number; min: number }>
+      action: PayloadAction<{ index?: number; min: number }>,
     ) => {
       // we need to set the max size to the min size if it's less than the min size
       if (action.payload.index !== undefined) {
@@ -217,26 +221,121 @@ const configSlice = createSlice({
       }
     },
 
+    setOpacity: (
+      state,
+      action: PayloadAction<{ index: number; opacity: Types.SizeBounds }>,
+    ) => {
+      state.layers[action.payload.index].opacity = action.payload.opacity;
+    },
+
+    setOpacityMax: (
+      state,
+      action: PayloadAction<{ index?: number; max: number }>,
+    ) => {
+      const apply = (layer: any) => {
+        layer.opacity.max = action.payload.max;
+        if (layer.opacity.min > layer.opacity.max) {
+          layer.opacity.min = layer.opacity.max;
+        }
+      };
+
+      if (action.payload.index !== undefined) {
+        apply(state.layers[action.payload.index]);
+      } else {
+        state.layers.forEach(apply);
+      }
+    },
+
+    setOpacityMin: (
+      state,
+      action: PayloadAction<{ index?: number; min: number }>,
+    ) => {
+      const apply = (layer: any) => {
+        layer.opacity.min = action.payload.min;
+        if (layer.opacity.max < layer.opacity.min) {
+          layer.opacity.max = layer.opacity.min;
+        }
+      };
+
+      if (action.payload.index !== undefined) {
+        apply(state.layers[action.payload.index]);
+      } else {
+        state.layers.forEach(apply);
+      }
+    },
+    // setOpacity: (
+    //   state,
+    //   action: PayloadAction<{ index: number; opacity: Types.SizeBounds }>,
+    // ) => {
+    //   if (state.layers) {
+    //     state.layers[action.payload.index].opacity = action.payload.opacity;
+    //   }
+    // },
+
+    // setOpacityMax: (
+    //   state,
+    //   action: PayloadAction<{ index?: number; max: number }>,
+    // ) => {
+    //   if (action.payload.index !== undefined) {
+    //     const layer = state.layers[action.payload.index];
+
+    //     if (action.payload.max < layer.opacity.min) {
+    //       layer.opacity.min = action.payload.max;
+    //     }
+
+    //     layer.opacity.max = action.payload.max;
+    //   } else {
+    //     state.layers.forEach((layer) => {
+    //       if (action.payload.max < layer.opacity.min) {
+    //         layer.opacity.min = action.payload.max;
+    //       }
+    //       layer.opacity.max = action.payload.max;
+    //     });
+    //   }
+    // },
+
+    // setOpacityMin: (
+    //   state,
+    //   action: PayloadAction<{ index?: number; min: number }>,
+    // ) => {
+    //   if (action.payload.index !== undefined) {
+    //     const layer = state.layers[action.payload.index];
+
+    //     if (action.payload.min > layer.opacity.max) {
+    //       layer.opacity.max = action.payload.min;
+    //     }
+
+    //     layer.opacity.min = action.payload.min;
+    //   } else {
+    //     state.layers.forEach((layer) => {
+    //       if (action.payload.min > layer.opacity.max) {
+    //         layer.opacity.max = action.payload.min;
+    //       }
+    //       layer.opacity.min = action.payload.min;
+    //     });
+    //   }
+    // },
+
     setGravity: (
       state,
       action: PayloadAction<{
         index: number;
         gravity: { angle: number; strength: number };
-      }>
+      }>,
     ) => {
       state.layers[action.payload.index].gravity = action.payload.gravity;
     },
 
     setGravityAngle: (
       state,
-      action: PayloadAction<{ index: number; angle: number }>
+      action: PayloadAction<{ index: number; angle: number }>,
     ) => {
       state.layers[action.payload.index].gravity.angle = action.payload.angle;
     },
 
     setGravityStrength: (
       state,
-      action: PayloadAction<{ index: number; strength: number }>
+      action: PayloadAction<{ index: number; strength: number }>,
     ) => {
       state.layers[action.payload.index].gravity.strength =
         action.payload.strength;
@@ -244,21 +343,21 @@ const configSlice = createSlice({
 
     setWind: (
       state,
-      action: PayloadAction<{ index: number; wind: Types.Wind }>
+      action: PayloadAction<{ index: number; wind: Types.Wind }>,
     ) => {
       state.layers[action.payload.index].wind = action.payload.wind;
     },
 
     setWindAngle: (
       state,
-      action: PayloadAction<{ index: number; angle: number }>
+      action: PayloadAction<{ index: number; angle: number }>,
     ) => {
       state.layers[action.payload.index].wind.angle = action.payload.angle;
     },
 
     setWindStrength: (
       state,
-      action: PayloadAction<{ index?: number; strength: number }>
+      action: PayloadAction<{ index?: number; strength: number }>,
     ) => {
       if (action.payload.index !== undefined) {
         state.layers[action.payload.index].wind.strength =
@@ -272,14 +371,14 @@ const configSlice = createSlice({
 
     setWindGusts: (
       state,
-      action: PayloadAction<{ index: number; gusts: Types.Gusts }>
+      action: PayloadAction<{ index: number; gusts: Types.Gusts }>,
     ) => {
       state.layers[action.payload.index].wind.gusts = action.payload.gusts;
     },
 
     setWindGustsActive: (
       state,
-      action: PayloadAction<{ index?: number; active: boolean }>
+      action: PayloadAction<{ index?: number; active: boolean }>,
     ) => {
       // state.layers[action.payload.index].wind.gusts.active = action.payload.active
       if (action.payload.index !== undefined) {
@@ -294,14 +393,14 @@ const configSlice = createSlice({
 
     setWindGustsIn: (
       state,
-      action: PayloadAction<{ index: number; in: Types.In }>
+      action: PayloadAction<{ index: number; in: Types.In }>,
     ) => {
       state.layers[action.payload.index].wind.gusts.in = action.payload.in;
     },
 
     setWindGustsInDuration: (
       state,
-      action: PayloadAction<{ index: number; duration: Types.SizeBounds }>
+      action: PayloadAction<{ index: number; duration: Types.SizeBounds }>,
     ) => {
       state.layers[action.payload.index].wind.gusts.in.duration =
         action.payload.duration;
@@ -309,7 +408,7 @@ const configSlice = createSlice({
 
     setWindGustsInDurationMax: (
       state,
-      action: PayloadAction<{ index: number; max: number }>
+      action: PayloadAction<{ index: number; max: number }>,
     ) => {
       state.layers[action.payload.index].wind.gusts.in.duration.max =
         action.payload.max;
@@ -317,7 +416,7 @@ const configSlice = createSlice({
 
     setWindGustsInDurationMin: (
       state,
-      action: PayloadAction<{ index: number; min: number }>
+      action: PayloadAction<{ index: number; min: number }>,
     ) => {
       state.layers[action.payload.index].wind.gusts.in.duration.min =
         action.payload.min;
@@ -328,7 +427,7 @@ const configSlice = createSlice({
       action: PayloadAction<{
         index: number;
         additionalStrength: Types.SizeBounds;
-      }>
+      }>,
     ) => {
       state.layers[action.payload.index].wind.gusts.in.additionalStrength =
         action.payload.additionalStrength;
@@ -336,7 +435,7 @@ const configSlice = createSlice({
 
     setWindGustsInAdditionalStrengthMax: (
       state,
-      action: PayloadAction<{ index: number; max: number }>
+      action: PayloadAction<{ index: number; max: number }>,
     ) => {
       state.layers[action.payload.index].wind.gusts.in.additionalStrength.max =
         action.payload.max;
@@ -344,7 +443,7 @@ const configSlice = createSlice({
 
     setWindGustsInAdditionalStrengthMin: (
       state,
-      action: PayloadAction<{ index: number; min: number }>
+      action: PayloadAction<{ index: number; min: number }>,
     ) => {
       state.layers[action.payload.index].wind.gusts.in.additionalStrength.min =
         action.payload.min;
@@ -352,7 +451,7 @@ const configSlice = createSlice({
 
     setWindGustsInDelay: (
       state,
-      action: PayloadAction<{ index: number; delay: Types.SizeBounds }>
+      action: PayloadAction<{ index: number; delay: Types.SizeBounds }>,
     ) => {
       state.layers[action.payload.index].wind.gusts.in.delay =
         action.payload.delay;
@@ -360,7 +459,7 @@ const configSlice = createSlice({
 
     setWindGustsInDelayMax: (
       state,
-      action: PayloadAction<{ index: number; max: number }>
+      action: PayloadAction<{ index: number; max: number }>,
     ) => {
       state.layers[action.payload.index].wind.gusts.in.delay.max =
         action.payload.max;
@@ -368,7 +467,7 @@ const configSlice = createSlice({
 
     setWindGustsInDelayMin: (
       state,
-      action: PayloadAction<{ index: number; min: number }>
+      action: PayloadAction<{ index: number; min: number }>,
     ) => {
       state.layers[action.payload.index].wind.gusts.in.delay.min =
         action.payload.min;
@@ -376,14 +475,14 @@ const configSlice = createSlice({
 
     setWindGustsOut: (
       state,
-      action: PayloadAction<{ index: number; out: Types.Out }>
+      action: PayloadAction<{ index: number; out: Types.Out }>,
     ) => {
       state.layers[action.payload.index].wind.gusts.out = action.payload.out;
     },
 
     setWindGustsOutDuration: (
       state,
-      action: PayloadAction<{ index: number; duration: Types.SizeBounds }>
+      action: PayloadAction<{ index: number; duration: Types.SizeBounds }>,
     ) => {
       state.layers[action.payload.index].wind.gusts.out.duration =
         action.payload.duration;
@@ -391,7 +490,7 @@ const configSlice = createSlice({
 
     setWindGustsOutDurationMax: (
       state,
-      action: PayloadAction<{ index: number; max: number }>
+      action: PayloadAction<{ index: number; max: number }>,
     ) => {
       state.layers[action.payload.index].wind.gusts.out.duration.max =
         action.payload.max;
@@ -399,7 +498,7 @@ const configSlice = createSlice({
 
     setWindGustsOutDurationMin: (
       state,
-      action: PayloadAction<{ index: number; min: number }>
+      action: PayloadAction<{ index: number; min: number }>,
     ) => {
       state.layers[action.payload.index].wind.gusts.out.duration.min =
         action.payload.min;
@@ -407,7 +506,7 @@ const configSlice = createSlice({
 
     setWindGustsOutDelay: (
       state,
-      action: PayloadAction<{ index: number; delay: Types.SizeBounds }>
+      action: PayloadAction<{ index: number; delay: Types.SizeBounds }>,
     ) => {
       state.layers[action.payload.index].wind.gusts.out.delay =
         action.payload.delay;
@@ -415,7 +514,7 @@ const configSlice = createSlice({
 
     setWindGustsOutDelayMax: (
       state,
-      action: PayloadAction<{ index: number; max: number }>
+      action: PayloadAction<{ index: number; max: number }>,
     ) => {
       state.layers[action.payload.index].wind.gusts.out.delay.max =
         action.payload.max;
@@ -423,7 +522,7 @@ const configSlice = createSlice({
 
     setWindGustsOutDelayMin: (
       state,
-      action: PayloadAction<{ index: number; min: number }>
+      action: PayloadAction<{ index: number; min: number }>,
     ) => {
       state.layers[action.payload.index].wind.gusts.out.delay.min =
         action.payload.min;
@@ -431,14 +530,14 @@ const configSlice = createSlice({
 
     setSway: (
       state,
-      action: PayloadAction<{ index: number; sway: Types.Sway }>
+      action: PayloadAction<{ index: number; sway: Types.Sway }>,
     ) => {
       state.layers[action.payload.index].sway = action.payload.sway;
     },
 
     setSwayAmplitude: (
       state,
-      action: PayloadAction<{ index: number; amplitude: number }>
+      action: PayloadAction<{ index: number; amplitude: number }>,
     ) => {
       state.layers[action.payload.index].sway.amplitude =
         action.payload.amplitude;
@@ -446,7 +545,7 @@ const configSlice = createSlice({
 
     setSwayFrequency: (
       state,
-      action: PayloadAction<{ index: number; frequency: number }>
+      action: PayloadAction<{ index: number; frequency: number }>,
     ) => {
       state.layers[action.payload.index].sway.frequency =
         action.payload.frequency;
@@ -454,7 +553,7 @@ const configSlice = createSlice({
 
     setWindGustsChangeChance: (
       state,
-      action: PayloadAction<{ index?: number; chance: number }>
+      action: PayloadAction<{ index?: number; chance: number }>,
     ) => {
       if (action.payload.index !== undefined) {
         state.layers[action.payload.index].wind.gusts.changeChance =
@@ -486,13 +585,19 @@ const configSlice = createSlice({
       }
     },
 
-    setLayerRotation: (state, action: PayloadAction<{ index: number, rotate: boolean }>) => {
-      const {rotate, index} = action.payload;
+    setLayerRotation: (
+      state,
+      action: PayloadAction<{ index: number; rotate: boolean }>,
+    ) => {
+      const { rotate, index } = action.payload;
       (state.layers[index] as ImageLayerConfig).rotate = rotate;
     },
 
-    setLayerImage: (state, action: PayloadAction<{ index: number, image: string }>) => {
-      const {image, index} = action.payload;
+    setLayerImage: (
+      state,
+      action: PayloadAction<{ index: number; image: string }>,
+    ) => {
+      const { image, index } = action.payload;
       (state.layers[index] as ImageLayerConfig).image = image;
     },
   },
@@ -544,6 +649,9 @@ export const {
   setSizeMin,
   setSizeMax,
   setSize,
+  setOpacity,
+  setOpacityMin,
+  setOpacityMax,
 } = configSlice.actions;
 
 export default configSlice.reducer;

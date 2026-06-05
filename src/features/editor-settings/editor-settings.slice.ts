@@ -4,7 +4,7 @@ import {
 } from "@erikwatson/snowfall";
 import { UserSchedule } from "@erikwatson/snowfall";
 
-export type PresetVariation = 'none' | 'snow' | 'lava' | 'space' | 'fallout' | 'snow2' | 'classic';
+export type PresetVariation = 'none' | 'snow' | 'lava' | 'space' | 'fallout' | 'snow2' | 'classic' | 'pride';
 
 export type EditorState = {
   advancedSettings: boolean;

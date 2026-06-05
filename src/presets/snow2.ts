@@ -24,7 +24,7 @@ const Snow2UserConfig: CompleteUserConfig = {
 }
 
 export const PRESET_SNOW2: Preset = {
-  name: "Snow",
+  name: "Snow2",
   userConfig: Snow2UserConfig,
   editorConfig: {
     advancedSettings: true,
@@ -32,6 +32,6 @@ export const PRESET_SNOW2: Preset = {
     isReact: false,
     background: "#0d0014",
     schedule: undefined,
-    preset: 'snow'
+    preset: 'snow2'
   }
 };
