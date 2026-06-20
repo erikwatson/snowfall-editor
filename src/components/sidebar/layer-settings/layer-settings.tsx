@@ -7,7 +7,6 @@ import { Types, isSimpleLayer } from "@erikwatson/snowfall";
 import {
   faCircle,
   faImage,
-  faPlus,
   faTrash,
   faUndo,
 } from "@fortawesome/free-solid-svg-icons";
@@ -35,7 +34,7 @@ import { SnowflakeGustInDuration } from "./gust-settings/in-duration";
 import { SnowflakeGustOutDelay } from "./gust-settings/out-delay";
 import { SnowflakeGustOutDuration } from "./gust-settings/out-duration";
 import { Text } from "../../text/text";
-import { ChangeEvent, useEffect, useState } from "react";
+import { cache, ChangeEvent, useEffect, useState } from "react";
 
 import "./layer-settings.css";
 import {
@@ -71,6 +70,14 @@ type LayerSettingsProps = {
   preset?: PresetVariation;
 };
 
+export let cachedLayerTitles: null | string[] = null;
+
+function layerName(layers: any, index: number) {
+  return layers?.[index].mode === "simple"
+                    ? `Simple layer ${index + 1}`
+                    : `Image layer ${index + 1}`
+}
+
 export const LayerSettings = ({
   layers,
   advancedSettings,
@@ -87,10 +94,11 @@ export const LayerSettings = ({
 
   // Sync titles with layerTitles when layers change
   useEffect(() => {
-    setTitles(layerTitles);
+    if (cachedLayerTitles) {
+      setTitles(layerTitles);
+      cachedLayerTitles = layerTitles ?? null;
+    }
   }, [layers]);
-
-  const [b64, setb64] = useState("");
 
   return (
     <>
@@ -150,6 +158,9 @@ export const LayerSettings = ({
                 dispatch(resetUserConfig());
                 dispatch(resetEditorSettings());
               }
+
+              cachedLayerTitles = null;
+              setTitles(layerTitles);
             }}
           >
             <FontAwesomeIcon icon={faUndo} />
@@ -187,7 +198,11 @@ export const LayerSettings = ({
               id={index}
               size={layers.length - 1}
               key={index}
-              name={titles ? titles[index] : `Layer ${index + 1}`}
+              name={
+                titles
+                  ? titles[index]
+                  : layerName(layers, index)
+              }
               mode={layer.mode}
               remove={() => {
                 dispatch(removeLayer(index));
@@ -197,6 +212,11 @@ export const LayerSettings = ({
               }}
               reset={() => {
                 dispatch(resetLayer(index));
+                setTitles((prev) =>
+                  prev && prev.length
+                    ? prev.toSpliced(index, 1, layerName(layers, index))
+                    : prev,
+                );
               }}
               layerUp={() => {
                 dispatch(moveLayerUp({ index }));
@@ -236,11 +256,15 @@ export const LayerSettings = ({
                   reset={() => {
                     setTitles((titles) => {
                       const newTitles = [...(titles || [])];
-                      newTitles[index] = `Layer ${index + 1}`;
+                      newTitles[index] = layerName(layers, index);
                       return newTitles;
                     });
                   }}
-                  value={titles ? titles[index] : `Layer ${index + 1} :)`}
+                  value={
+                    titles
+                      ? titles[index]
+                      : layerName(layers, index)
+                  }
                 >
                   <Text />
                 </Control>
