@@ -21,7 +21,7 @@ const DEFAULT_STATE: EditorState = {
   isReact: false,
   background: "#0d0014",
   schedule: undefined,
-  preset: 'snow',
+  preset: 'snow2',
 };
 
 const initialState = DEFAULT_STATE;

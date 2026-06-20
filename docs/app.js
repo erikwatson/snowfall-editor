@@ -72703,6 +72703,7 @@ const snow_1 = __webpack_require__(/*! ./presets/snow */ "./src/presets/snow.ts"
 const space_1 = __webpack_require__(/*! ./presets/space */ "./src/presets/space.ts");
 const config_slice_1 = __webpack_require__(/*! ./features/config/config.slice */ "./src/features/config/config.slice.ts");
 const editor_settings_slice_1 = __webpack_require__(/*! ./features/editor-settings/editor-settings.slice */ "./src/features/editor-settings/editor-settings.slice.ts");
+const snow2_1 = __webpack_require__(/*! ./presets/snow2 */ "./src/presets/snow2.ts");
 const App = () => {
     const dispatch = (0, react_redux_1.useDispatch)();
     const config = (0, react_redux_1.useSelector)((state) => state.userConfig);
@@ -72728,11 +72729,17 @@ const App = () => {
     }, [editorConfig.background]);
     (0, react_1.useEffect)(() => {
         const preset = editorConfig.preset;
-        const value = preset === 'snow' ? snow_1.PRESET_SNOW :
-            preset === 'lava' ? lava_1.PRESET_LAVA :
-                preset === 'space' ? space_1.PRESET_SPACE :
-                    preset === 'fallout' ? fallout_1.PRESET_FALLOUT :
-                        null;
+        const value = preset === "snow"
+            ? snow_1.PRESET_SNOW
+            : preset === "snow2"
+                ? snow2_1.PRESET_SNOW2
+                : preset === "lava"
+                    ? lava_1.PRESET_LAVA
+                    : preset === "space"
+                        ? space_1.PRESET_SPACE
+                        : preset === "fallout"
+                            ? fallout_1.PRESET_FALLOUT
+                            : null;
         if (value) {
             dispatch((0, config_slice_1.setUserConfig)(value.userConfig));
             dispatch((0, editor_settings_slice_1.setEditorSettings)(value.editorConfig));
@@ -73121,11 +73128,9 @@ const pride_1 = __webpack_require__(/*! ../../../presets/pride */ "./src/presets
 const select_1 = __webpack_require__(/*! ../../select/select */ "./src/components/select/select.tsx");
 const snow2_1 = __webpack_require__(/*! ../../../presets/snow2 */ "./src/presets/snow2.ts");
 const EditorSettings = ({ editorConfig }) => {
-    const { background } = editorConfig;
+    const { background, isReact } = editorConfig;
     const dispatch = (0, react_redux_1.useDispatch)();
-    return (
-    // <Group name="Editor settings" colour="grey-2" open={true}>
-    (0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsx)("h2", { children: "Editor settings" }), (0, jsx_runtime_1.jsxs)("p", { children: ["These settings are ", (0, jsx_runtime_1.jsx)("b", { children: "not" }), " exported with your config."] }), (0, jsx_runtime_1.jsxs)(controlGroup_1.ControlGroup, { children: [(0, jsx_runtime_1.jsx)(control_1.Control, { name: "Preset", tooltip: "Select a preset", value: editorConfig.preset, reset: () => {
+    return ((0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsx)("h2", { children: "Editor settings" }), (0, jsx_runtime_1.jsxs)("p", { children: ["These settings are ", (0, jsx_runtime_1.jsx)("b", { children: "not" }), " exported with your config."] }), (0, jsx_runtime_1.jsxs)(controlGroup_1.ControlGroup, { children: [(0, jsx_runtime_1.jsx)(control_1.Control, { name: "Preset", tooltip: "Select a preset", value: editorConfig.preset, reset: () => {
                             dispatch((0, editor_settings_slice_1.setPreset)('none'));
                             dispatch((0, config_slice_1.resetUserConfig)());
                             dispatch((0, editor_settings_slice_1.resetEditorSettings)());
@@ -73173,7 +73178,11 @@ const EditorSettings = ({ editorConfig }) => {
                                     dispatch((0, editor_settings_slice_1.resetEditorSettings)());
                                     break;
                             }
-                        }, children: (0, jsx_runtime_1.jsxs)(select_1.Select, { children: [(0, jsx_runtime_1.jsx)("option", { value: "snow", children: "Snow" }), (0, jsx_runtime_1.jsx)("option", { value: "classic", children: "Classic snow" }), (0, jsx_runtime_1.jsx)("option", { value: "snow2", children: "Snow with images" }), (0, jsx_runtime_1.jsx)("option", { value: "lava", children: "Lava" }), (0, jsx_runtime_1.jsx)("option", { value: "space", children: "Space" }), (0, jsx_runtime_1.jsx)("option", { value: "pride", children: "Pride" })] }) }), (0, jsx_runtime_1.jsx)(control_1.Control, { name: "Background", tooltip: "The background colour of the snowfall simulation", showOutput: true, reset: () => {
+                        }, children: (0, jsx_runtime_1.jsxs)(select_1.Select, { children: [(0, jsx_runtime_1.jsx)("option", { value: "snow", children: "Snow" }), (0, jsx_runtime_1.jsx)("option", { value: "classic", children: "Classic snow" }), (0, jsx_runtime_1.jsx)("option", { value: "snow2", children: "Snow with images" }), (0, jsx_runtime_1.jsx)("option", { value: "lava", children: "Lava" }), (0, jsx_runtime_1.jsx)("option", { value: "space", children: "Space" }), (0, jsx_runtime_1.jsx)("option", { value: "pride", children: "Pride" })] }) }), (0, jsx_runtime_1.jsx)(control_1.Control, { name: "Export", tooltip: "Which environment do you want your config generated for?", showOutput: false, reset: () => {
+                            dispatch((0, editor_settings_slice_1.setBackground)(snow_1.PRESET_SNOW.editorConfig.background));
+                        }, value: isReact ? 'jsx' : 'js', onChange: (event) => {
+                            dispatch((0, editor_settings_slice_1.setIsReact)(event.target.value === 'jsx'));
+                        }, children: (0, jsx_runtime_1.jsxs)(select_1.Select, { children: [(0, jsx_runtime_1.jsx)("option", { value: "js", children: "JavaScript" }), (0, jsx_runtime_1.jsx)("option", { value: "jsx", children: "JSX (React)" })] }) }), (0, jsx_runtime_1.jsx)(control_1.Control, { name: "Background", tooltip: "The background colour of the snowfall simulation", showOutput: true, reset: () => {
                             dispatch((0, editor_settings_slice_1.setBackground)(snow_1.PRESET_SNOW.editorConfig.background));
                         }, value: background, onChange: (event) => dispatch((0, editor_settings_slice_1.setBackground)(event.target.value)), children: (0, jsx_runtime_1.jsx)(colour_1.Colour, {}) })] })] })
     // </Group>
@@ -74722,7 +74731,7 @@ const DEFAULT_STATE = {
     isReact: false,
     background: "#0d0014",
     schedule: undefined,
-    preset: 'snow',
+    preset: 'snow2',
 };
 const initialState = DEFAULT_STATE;
 const editorSettingsSlice = (0, toolkit_1.createSlice)({

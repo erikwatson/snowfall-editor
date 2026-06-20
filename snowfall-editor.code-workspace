@@ -11,6 +11,9 @@
 		{
 			"name": "Bramble",
 			"path": "../Bramble"
+		},
+		{
+			"path": "../react-snowfall"
 		}
 	],
 	"settings": {
