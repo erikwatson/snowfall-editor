@@ -72862,7 +72862,10 @@ const Control = ({ name, children, reset, value, onChange, showOutput, tooltip, 
                                     try {
                                         const parsedValue = isPrimitive ? displayValue : JSON.parse(displayValue);
                                         // Fake a ChangeEvent with the parsed value for onChange
-                                        const fakeEvent = Object.assign(Object.assign({}, evt), { target: Object.assign(Object.assign({}, evt.target), { value: parsedValue }) });
+                                        const fakeEvent = {
+                                            ...evt,
+                                            target: { ...evt.target, value: parsedValue },
+                                        };
                                         onChange(fakeEvent);
                                     }
                                     catch (error) {
@@ -72966,13 +72969,13 @@ children, name, remove, duplicate, reset, layerUp, layerDown, colour, size, mode
         : undefined;
     const className = `layer ${colour}`;
     const dispatch = (0, react_redux_1.useDispatch)();
-    return ((0, jsx_runtime_1.jsxs)("div", Object.assign({ className: className, ref: setNodeRef, style: style }, listeners, attributes, { children: [(0, jsx_runtime_1.jsxs)("div", { className: closed ? 'layerBar closed' : 'layerBar', onClick: () => setClosed(!closed), children: [(0, jsx_runtime_1.jsxs)("div", { className: "layerType", children: [(mode === 'simple') && (0, jsx_runtime_1.jsx)(react_fontawesome_1.FontAwesomeIcon, { icon: free_solid_svg_icons_1.faCircle }), (mode === 'image') && (0, jsx_runtime_1.jsx)(react_fontawesome_1.FontAwesomeIcon, { icon: free_solid_svg_icons_1.faImage })] }), (0, jsx_runtime_1.jsx)("h4", { children: name }), (0, jsx_runtime_1.jsxs)("div", { className: "controls", children: [(id !== 0) && (0, jsx_runtime_1.jsx)(button_1.Button, { kind: "transparent", onClick: (event) => {
+    return ((0, jsx_runtime_1.jsxs)("div", { className: className, ref: setNodeRef, style: style, ...listeners, ...attributes, children: [(0, jsx_runtime_1.jsxs)("div", { className: closed ? 'layerBar closed' : 'layerBar', onClick: () => setClosed(!closed), children: [(0, jsx_runtime_1.jsxs)("div", { className: "layerType", children: [(mode === 'simple') && (0, jsx_runtime_1.jsx)(react_fontawesome_1.FontAwesomeIcon, { icon: free_solid_svg_icons_1.faCircle }), (mode === 'image') && (0, jsx_runtime_1.jsx)(react_fontawesome_1.FontAwesomeIcon, { icon: free_solid_svg_icons_1.faImage })] }), (0, jsx_runtime_1.jsx)("h4", { children: name }), (0, jsx_runtime_1.jsxs)("div", { className: "controls", children: [(id !== 0) && (0, jsx_runtime_1.jsx)(button_1.Button, { kind: "transparent", onClick: (event) => {
                                     event.stopPropagation();
                                     layerUp();
                                 }, tooltip: "Move up", children: (0, jsx_runtime_1.jsx)(react_fontawesome_1.FontAwesomeIcon, { icon: free_solid_svg_icons_1.faChevronUp, style: { color: '#64748b' } }) }), (id < size) && (0, jsx_runtime_1.jsx)(button_1.Button, { kind: "transparent", onClick: (event) => {
                                     event.stopPropagation();
                                     layerDown();
-                                }, tooltip: "Move down", children: (0, jsx_runtime_1.jsx)(react_fontawesome_1.FontAwesomeIcon, { icon: free_solid_svg_icons_1.faChevronDown, style: { color: '#64748b' } }) }), (0, jsx_runtime_1.jsx)(button_1.Button, { onClick: () => duplicate(), kind: "transparent", tooltip: "Duplicate", children: (0, jsx_runtime_1.jsx)(react_fontawesome_1.FontAwesomeIcon, { icon: free_solid_svg_icons_1.faClone, style: { color: '#64748b' } }) }), (0, jsx_runtime_1.jsx)(button_1.Button, { kind: "transparent", onClick: () => reset(), tooltip: (mode === 'simple') ? "Reset to default simple layer" : "Reset to default image layer", children: (0, jsx_runtime_1.jsx)(react_fontawesome_1.FontAwesomeIcon, { icon: faUndo_1.faUndo, style: { color: '#b91c1c' } }) }), (0, jsx_runtime_1.jsx)(button_1.Button, { kind: "transparent", onClick: () => remove(), tooltip: "Remove", children: (0, jsx_runtime_1.jsx)(react_fontawesome_1.FontAwesomeIcon, { icon: free_solid_svg_icons_1.faTrash, style: { color: '#b91c1c' } }) })] })] }), (0, jsx_runtime_1.jsx)("div", { className: closed ? "layers closed" : "layers", children: children })] })));
+                                }, tooltip: "Move down", children: (0, jsx_runtime_1.jsx)(react_fontawesome_1.FontAwesomeIcon, { icon: free_solid_svg_icons_1.faChevronDown, style: { color: '#64748b' } }) }), (0, jsx_runtime_1.jsx)(button_1.Button, { onClick: () => duplicate(), kind: "transparent", tooltip: "Duplicate", children: (0, jsx_runtime_1.jsx)(react_fontawesome_1.FontAwesomeIcon, { icon: free_solid_svg_icons_1.faClone, style: { color: '#64748b' } }) }), (0, jsx_runtime_1.jsx)(button_1.Button, { kind: "transparent", onClick: () => reset(), tooltip: (mode === 'simple') ? "Reset to default simple layer" : "Reset to default image layer", children: (0, jsx_runtime_1.jsx)(react_fontawesome_1.FontAwesomeIcon, { icon: faUndo_1.faUndo, style: { color: '#b91c1c' } }) }), (0, jsx_runtime_1.jsx)(button_1.Button, { kind: "transparent", onClick: () => remove(), tooltip: "Remove", children: (0, jsx_runtime_1.jsx)(react_fontawesome_1.FontAwesomeIcon, { icon: free_solid_svg_icons_1.faTrash, style: { color: '#b91c1c' } }) })] })] }), (0, jsx_runtime_1.jsx)("div", { className: closed ? "layers closed" : "layers", children: children })] }));
 };
 exports.Layer = Layer;
 
@@ -73716,7 +73719,7 @@ exports.SnowflakeGustOutDuration = SnowflakeGustOutDuration;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.LayerSettings = void 0;
+exports.LayerSettings = exports.cachedLayerTitles = void 0;
 const jsx_runtime_1 = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
 const snowfall_1 = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.js");
 const snowfall_2 = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.js");
@@ -73756,10 +73759,15 @@ const space_1 = __webpack_require__(/*! ../../../presets/space */ "./src/presets
 const checkbox_1 = __webpack_require__(/*! ../../checkbox/checkbox */ "./src/components/checkbox/checkbox.tsx");
 const size_1 = __webpack_require__(/*! ./size/size */ "./src/components/sidebar/layer-settings/size/size.tsx");
 const opacity_1 = __webpack_require__(/*! ./opacity/opacity */ "./src/components/sidebar/layer-settings/opacity/opacity.tsx");
+exports.cachedLayerTitles = null;
+function layerName(layers, index) {
+    return layers?.[index].mode === "simple"
+        ? `Simple layer ${index + 1}`
+        : `Image layer ${index + 1}`;
+}
 const LayerSettings = ({ layers, advancedSettings, preset, }) => {
-    var _a;
     const dispatch = (0, react_redux_1.useDispatch)();
-    const layerTitles = layers === null || layers === void 0 ? void 0 : layers.map((x, i) => {
+    const layerTitles = layers?.map((x, i) => {
         return x.mode === "simple"
             ? `Simple layer ${i + 1}`
             : `Image layer ${i + 1}`;
@@ -73767,9 +73775,11 @@ const LayerSettings = ({ layers, advancedSettings, preset, }) => {
     const [titles, setTitles] = (0, react_1.useState)(layerTitles);
     // Sync titles with layerTitles when layers change
     (0, react_1.useEffect)(() => {
-        setTitles(layerTitles);
+        if (exports.cachedLayerTitles) {
+            setTitles(layerTitles);
+            exports.cachedLayerTitles = layerTitles ?? null;
+        }
     }, [layers]);
-    const [b64, setb64] = (0, react_1.useState)("");
     return ((0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsxs)("div", { className: "layers-header", children: [(0, jsx_runtime_1.jsx)("h2", { children: "Layer settings" }), (0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsxs)(button_1.Button, { kind: "normal_fat", tooltip: "New simple layer", onClick: () => {
                                     dispatch((0, config_slice_1.addLayer)(snowfall_1.DEFAULT_SIMPLE_LAYER));
                                     setTitles((titles) => {
@@ -73802,18 +73812,27 @@ const LayerSettings = ({ layers, advancedSettings, preset, }) => {
                                         dispatch((0, config_slice_1.resetUserConfig)());
                                         dispatch((0, editor_settings_slice_1.resetEditorSettings)());
                                     }
+                                    exports.cachedLayerTitles = null;
+                                    setTitles(layerTitles);
                                 }, children: (0, jsx_runtime_1.jsx)(react_fontawesome_1.FontAwesomeIcon, { icon: free_solid_svg_icons_1.faUndo }) }), (0, jsx_runtime_1.jsx)(button_1.Button, { tooltip: "Remove all layers", kind: "error", onClick: () => {
                                     dispatch((0, config_slice_1.resetLayers)());
-                                }, children: (0, jsx_runtime_1.jsx)(react_fontawesome_1.FontAwesomeIcon, { icon: free_solid_svg_icons_1.faTrash }) })] })] }), (layers === null || layers === void 0 ? void 0 : layers.length) === 0 && ((0, jsx_runtime_1.jsxs)("div", { className: "empty-layers", children: [(0, jsx_runtime_1.jsx)("p", { children: "No layers yet." }), (0, jsx_runtime_1.jsx)("p", { children: "Add one to get started!" })] })), (_a = layers === null || layers === void 0 ? void 0 : layers.map((x, i) => {
+                                }, children: (0, jsx_runtime_1.jsx)(react_fontawesome_1.FontAwesomeIcon, { icon: free_solid_svg_icons_1.faTrash }) })] })] }), layers?.length === 0 && ((0, jsx_runtime_1.jsxs)("div", { className: "empty-layers", children: [(0, jsx_runtime_1.jsx)("p", { children: "No layers yet." }), (0, jsx_runtime_1.jsx)("p", { children: "Add one to get started!" })] })), layers
+                ?.map((x, i) => {
                 const result = (0, snowfall_1.clone)(x);
                 result.id = i;
                 return result;
-            })) === null || _a === void 0 ? void 0 : _a.map((layer, index) => ((0, jsx_runtime_1.jsx)(jsx_runtime_1.Fragment, { children: (0, jsx_runtime_1.jsxs)(layer_1.Layer, { colour: "grey-2", id: index, size: layers.length - 1, name: titles ? titles[index] : `Layer ${index + 1}`, mode: layer.mode, remove: () => {
+            })
+                ?.map((layer, index) => ((0, jsx_runtime_1.jsx)(jsx_runtime_1.Fragment, { children: (0, jsx_runtime_1.jsxs)(layer_1.Layer, { colour: "grey-2", id: index, size: layers.length - 1, name: titles
+                        ? titles[index]
+                        : layerName(layers, index), mode: layer.mode, remove: () => {
                         dispatch((0, config_slice_1.removeLayer)(index));
                     }, duplicate: () => {
                         dispatch((0, config_slice_1.duplicateLayer)(index));
                     }, reset: () => {
                         dispatch((0, config_slice_1.resetLayer)(index));
+                        setTitles((prev) => prev && prev.length
+                            ? prev.toSpliced(index, 1, layerName(layers, index))
+                            : prev);
                     }, layerUp: () => {
                         dispatch((0, config_slice_1.moveLayerUp)({ index }));
                         setTitles((prevTitles) => {
@@ -73845,13 +73864,14 @@ const LayerSettings = ({ layers, advancedSettings, preset, }) => {
                                 }, reset: () => {
                                     setTitles((titles) => {
                                         const newTitles = [...(titles || [])];
-                                        newTitles[index] = `Layer ${index + 1}`;
+                                        newTitles[index] = layerName(layers, index);
                                         return newTitles;
                                     });
-                                }, value: titles ? titles[index] : `Layer ${index + 1} :)`, children: (0, jsx_runtime_1.jsx)(text_1.Text, {}) }) }), (0, jsx_runtime_1.jsxs)(group_1.Group, { name: "Snow", colour: "secondary", children: [(0, snowfall_2.isSimpleLayer)(layer) && ((0, jsx_runtime_1.jsx)(colour_1.SnowflakeColour, { layer: layer, index: index })), !(0, snowfall_2.isSimpleLayer)(layer) && ((0, jsx_runtime_1.jsx)(jsx_runtime_1.Fragment, { children: (0, jsx_runtime_1.jsx)(control_1.Control, { name: "Image", tooltip: "Upload an image file", reset: () => { }, value: layer.image, onChange: (event) => {
-                                            var _a;
+                                }, value: titles
+                                    ? titles[index]
+                                    : layerName(layers, index), children: (0, jsx_runtime_1.jsx)(text_1.Text, {}) }) }), (0, jsx_runtime_1.jsxs)(group_1.Group, { name: "Snow", colour: "secondary", children: [(0, snowfall_2.isSimpleLayer)(layer) && ((0, jsx_runtime_1.jsx)(colour_1.SnowflakeColour, { layer: layer, index: index })), !(0, snowfall_2.isSimpleLayer)(layer) && ((0, jsx_runtime_1.jsx)(jsx_runtime_1.Fragment, { children: (0, jsx_runtime_1.jsx)(control_1.Control, { name: "Image", tooltip: "Upload an image file", reset: () => { }, value: layer.image, onChange: (event) => {
                                             const input = event.target;
-                                            const file = (_a = input.files) === null || _a === void 0 ? void 0 : _a[0]; // Access files safely
+                                            const file = input.files?.[0]; // Access files safely
                                             if (file) {
                                                 const reader = new FileReader();
                                                 reader.onload = () => {
@@ -74248,7 +74268,7 @@ const Snowfall = ({ config }) => {
     }, []);
     (0, react_1.useEffect)(() => {
         // the user may change the container id, but we're always going to render _our_ component to the default container
-        const copy = Object.assign(Object.assign({}, config), { attachTo: snowfall_1.DEFAULT_CONTAINER_ID });
+        const copy = { ...config, attachTo: snowfall_1.DEFAULT_CONTAINER_ID };
         snowfall_1.default.restart(copy);
     }, [config]);
     return ((0, jsx_runtime_1.jsx)("div", { id: 'snowfall' }));
@@ -74350,21 +74370,19 @@ const configSlice = (0, toolkit_1.createSlice)({
         },
         // layer properties (colour, density, size, etc)
         setColour: (state, action) => {
-            var _a;
-            const layer = (_a = state.layers) === null || _a === void 0 ? void 0 : _a[action.payload.index];
+            const layer = state.layers?.[action.payload.index];
             if (layer && layer.mode === "simple") {
                 layer.colour = action.payload.colour;
             }
         },
         setDensity: (state, action) => {
-            var _a;
             if (action.payload.index !== undefined) {
                 if (state.layers) {
                     state.layers[action.payload.index].density = action.payload.density;
                 }
             }
             else {
-                (_a = state.layers) === null || _a === void 0 ? void 0 : _a.forEach((layer) => {
+                state.layers?.forEach((layer) => {
                     layer.density = action.payload.density;
                 });
             }
@@ -74780,16 +74798,50 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PRESET_CLASSIC = void 0;
 const snowfall_1 = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.js");
 // const wind = { ...DEFAULT_WIND };
-const ClassicUserConfig = Object.assign(Object.assign({}, snowfall_1.DEFAULT_USER_CONFIG), { layers: [
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { density: 50, size: {
+const ClassicUserConfig = {
+    ...snowfall_1.DEFAULT_USER_CONFIG,
+    layers: [
+        {
+            ...snowfall_1.DEFAULT_SIMPLE_LAYER,
+            density: 50,
+            size: {
                 min: 3,
                 max: 9
-            }, gravity: Object.assign(Object.assign({}, snowfall_1.DEFAULT_GRAVITY), { strength: 1.5 }), wind: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND), { gusts: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS), { active: false }) }) }),
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { density: 50, colour: '#8d90b7', size: {
+            },
+            gravity: {
+                ...snowfall_1.DEFAULT_GRAVITY,
+                strength: 1.5
+            },
+            wind: {
+                ...snowfall_1.DEFAULT_WIND,
+                gusts: {
+                    ...snowfall_1.DEFAULT_WIND_GUSTS,
+                    active: false,
+                }
+            }
+        },
+        {
+            ...snowfall_1.DEFAULT_SIMPLE_LAYER,
+            density: 50,
+            colour: '#8d90b7',
+            size: {
                 min: 3,
                 max: 9
-            }, gravity: Object.assign(Object.assign({}, snowfall_1.DEFAULT_GRAVITY), { strength: 1.5 }), wind: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND), { gusts: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS), { active: false }) }) }),
-    ] });
+            },
+            gravity: {
+                ...snowfall_1.DEFAULT_GRAVITY,
+                strength: 1.5
+            },
+            wind: {
+                ...snowfall_1.DEFAULT_WIND,
+                gusts: {
+                    ...snowfall_1.DEFAULT_WIND_GUSTS,
+                    active: false,
+                }
+            }
+        },
+    ]
+};
 exports.PRESET_CLASSIC = {
     name: "Classic",
     userConfig: ClassicUserConfig,
@@ -74820,13 +74872,26 @@ const snowfall_1 = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modul
 // Bubbles 
 const FalloutUserConfig = {
     layers: [
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_IMAGE_LAYER), { image: './assets/bubbles.png', density: 15, wind: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND), { gusts: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS), { active: false }) }), gravity: {
+        {
+            ...snowfall_1.DEFAULT_IMAGE_LAYER,
+            image: './assets/bubbles.png',
+            density: 15,
+            wind: {
+                ...snowfall_1.DEFAULT_WIND,
+                gusts: {
+                    ...snowfall_1.DEFAULT_WIND_GUSTS,
+                    active: false
+                }
+            },
+            gravity: {
                 angle: 270,
                 strength: 1
-            }, sway: {
+            },
+            sway: {
                 amplitude: 1,
                 frequency: 1
-            } })
+            }
+        }
     ],
     attachTo: "snowfall"
 };
@@ -74861,48 +74926,92 @@ const snowfall_1 = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modul
 const LavaUserConfig = {
     attachTo: "snowfall",
     layers: [
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { colour: "#170707", opacity: {
+        {
+            ...snowfall_1.DEFAULT_SIMPLE_LAYER,
+            colour: "#170707",
+            opacity: {
                 min: 0.133,
                 max: 0.966
-            }, density: 300, mass: {
+            },
+            density: 300,
+            mass: {
                 min: 0.1,
                 max: 0.2
-            }, size: {
+            },
+            size: {
                 min: 50,
                 max: 100
-            }, gravity: {
+            },
+            gravity: {
                 angle: 270,
                 strength: 5
-            }, wind: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND), { gusts: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS), { in: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS_IN), { additionalStrength: {
+            },
+            wind: {
+                ...snowfall_1.DEFAULT_WIND,
+                gusts: {
+                    ...snowfall_1.DEFAULT_WIND_GUSTS,
+                    in: {
+                        ...snowfall_1.DEFAULT_WIND_GUSTS_IN,
+                        additionalStrength: {
                             min: 10,
                             max: 20
-                        } }) }) }) }),
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { colour: "#280a04", opacity: {
+                        }
+                    }
+                }
+            }
+        },
+        {
+            ...snowfall_1.DEFAULT_SIMPLE_LAYER,
+            colour: "#280a04",
+            opacity: {
                 min: 0.133,
                 max: 0.966
-            }, density: 25, mass: {
+            },
+            density: 25,
+            mass: {
                 min: 0.1,
                 max: 0.2
-            }, size: {
+            },
+            size: {
                 min: 20,
                 max: 50
-            }, gravity: {
+            },
+            gravity: {
                 angle: 270,
                 strength: 5
-            }, wind: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND), { gusts: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS), { in: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS_IN), { additionalStrength: {
+            },
+            wind: {
+                ...snowfall_1.DEFAULT_WIND,
+                gusts: {
+                    ...snowfall_1.DEFAULT_WIND_GUSTS,
+                    in: {
+                        ...snowfall_1.DEFAULT_WIND_GUSTS_IN,
+                        additionalStrength: {
                             min: 10,
                             max: 20
-                        } }) }) }) }),
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { colour: "#efd73b", density: 65, mode: 'simple', mass: {
+                        }
+                    }
+                }
+            }
+        },
+        {
+            ...snowfall_1.DEFAULT_SIMPLE_LAYER,
+            colour: "#efd73b",
+            density: 65,
+            mode: 'simple',
+            mass: {
                 min: 1,
                 max: 3,
-            }, sway: {
+            },
+            sway: {
                 frequency: 0.02,
                 amplitude: 1,
-            }, gravity: {
+            },
+            gravity: {
                 angle: 270,
                 strength: 1,
-            }, wind: {
+            },
+            wind: {
                 angle: 0,
                 strength: 0,
                 gusts: {
@@ -74933,17 +75042,26 @@ const LavaUserConfig = {
                         },
                     },
                 },
-            } }),
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { colour: "#ef101d", density: 65, mode: 'simple', mass: {
+            },
+        },
+        {
+            ...snowfall_1.DEFAULT_SIMPLE_LAYER,
+            colour: "#ef101d",
+            density: 65,
+            mode: 'simple',
+            mass: {
                 min: 1,
                 max: 3,
-            }, sway: {
+            },
+            sway: {
                 frequency: 0.02,
                 amplitude: 1,
-            }, gravity: {
+            },
+            gravity: {
                 angle: 270,
                 strength: 1,
-            }, wind: {
+            },
+            wind: {
                 angle: 0,
                 strength: 0,
                 gusts: {
@@ -74974,7 +75092,8 @@ const LavaUserConfig = {
                         },
                     },
                 },
-            } }),
+            },
+        },
     ],
 };
 exports.PRESET_LAVA = {
@@ -75006,26 +75125,44 @@ exports.PRESET_PRIDE = void 0;
 const snowfall_1 = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.js");
 const snowfall_2 = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.js");
 // const wind = { ...DEFAULT_WIND };
-const x = Object.assign(Object.assign({}, snowfall_1.DEFAULT_IMAGE_LAYER), { density: 10, image: "./assets/red.png", size: {
+const x = {
+    ...snowfall_1.DEFAULT_IMAGE_LAYER,
+    density: 10,
+    image: "./assets/red.png",
+    size: {
         min: 16,
         max: 32,
-    }, sway: {
+    },
+    sway: {
         frequency: 0.784,
         amplitude: 0.18,
-    }, gravity: {
+    },
+    gravity: {
         angle: 270,
         strength: 0.3,
-    }, wind: Object.assign(Object.assign({}, snowfall_2.DEFAULT_WIND), { gusts: Object.assign(Object.assign({}, snowfall_2.DEFAULT_WIND_GUSTS), { active: false }) }), mode: "image" });
-const PrideUserConfig = Object.assign(Object.assign({}, snowfall_2.DEFAULT_USER_CONFIG), { layers: [
-        Object.assign({}, x),
-        Object.assign(Object.assign({}, x), { image: "./assets/orange.png" }),
-        Object.assign(Object.assign({}, x), { image: "./assets/yellow.png" }),
-        Object.assign(Object.assign({}, x), { image: "./assets/cowboy.png", rotate: false, size: { min: 36, max: 56 }, sway: { frequency: 0, amplitude: 0 } }),
-        Object.assign(Object.assign({}, x), { image: "./assets/green.png" }),
-        Object.assign(Object.assign({}, x), { image: "./assets/light-blue.png" }),
-        Object.assign(Object.assign({}, x), { image: "./assets/purple.png" }),
-        Object.assign(Object.assign({}, x), { image: "./assets/eggplant.png", rotate: true, gravity: snowfall_2.DEFAULT_GRAVITY, size: { min: 36, max: 56 }, sway: { frequency: 0, amplitude: 0 } }),
-    ] });
+    },
+    wind: {
+        ...snowfall_2.DEFAULT_WIND,
+        gusts: {
+            ...snowfall_2.DEFAULT_WIND_GUSTS,
+            active: false,
+        },
+    },
+    mode: "image",
+};
+const PrideUserConfig = {
+    ...snowfall_2.DEFAULT_USER_CONFIG,
+    layers: [
+        { ...x },
+        { ...x, image: "./assets/orange.png" },
+        { ...x, image: "./assets/yellow.png" },
+        { ...x, image: "./assets/cowboy.png", rotate: false, size: { min: 36, max: 56 }, sway: { frequency: 0, amplitude: 0 }, },
+        { ...x, image: "./assets/green.png" },
+        { ...x, image: "./assets/light-blue.png" },
+        { ...x, image: "./assets/purple.png" },
+        { ...x, image: "./assets/eggplant.png", rotate: true, gravity: snowfall_2.DEFAULT_GRAVITY, size: { min: 36, max: 56 }, sway: { frequency: 0, amplitude: 0 }, },
+    ],
+};
 exports.PRESET_PRIDE = {
     name: "Pride",
     userConfig: PrideUserConfig,
@@ -75056,16 +75193,24 @@ const snowfall_1 = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modul
 const SnowUserConfig = {
     attachTo: "snowfall",
     layers: [
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { colour: "#8d90b7", density: 200, mode: 'simple', mass: {
+        {
+            ...snowfall_1.DEFAULT_SIMPLE_LAYER,
+            colour: "#8d90b7",
+            density: 200,
+            mode: 'simple',
+            mass: {
                 min: 1,
                 max: 3
-            }, sway: {
+            },
+            sway: {
                 frequency: 0.02,
                 amplitude: 1
-            }, gravity: {
+            },
+            gravity: {
                 angle: 90,
                 strength: 0.7
-            }, wind: {
+            },
+            wind: {
                 angle: 0,
                 strength: 0,
                 gusts: {
@@ -75096,17 +75241,26 @@ const SnowUserConfig = {
                         }
                     }
                 }
-            } }),
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { colour: "#ffffff", density: 200, mode: 'simple', mass: {
+            }
+        },
+        {
+            ...snowfall_1.DEFAULT_SIMPLE_LAYER,
+            colour: "#ffffff",
+            density: 200,
+            mode: 'simple',
+            mass: {
                 min: 1,
                 max: 3
-            }, sway: {
+            },
+            sway: {
                 frequency: 0.02,
                 amplitude: 1
-            }, gravity: {
+            },
+            gravity: {
                 angle: 90,
                 strength: 0.7
-            }, wind: {
+            },
+            wind: {
                 angle: 0,
                 strength: 0,
                 gusts: {
@@ -75137,7 +75291,8 @@ const SnowUserConfig = {
                         }
                     }
                 }
-            } })
+            }
+        }
     ],
 };
 exports.PRESET_SNOW = {
@@ -75170,11 +75325,21 @@ const snowfall_1 = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modul
 const Snow2UserConfig = {
     attachTo: "snowfall",
     layers: [
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_IMAGE_LAYER), { density: 50, image: "./assets/snowflake.png", rotate: true, size: {
+        {
+            ...snowfall_1.DEFAULT_IMAGE_LAYER,
+            density: 50,
+            image: "./assets/snowflake.png",
+            rotate: true,
+            size: {
                 min: 10,
                 max: 10
-            }, mode: "image" }),
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { density: 150 })
+            },
+            mode: "image"
+        },
+        {
+            ...snowfall_1.DEFAULT_SIMPLE_LAYER,
+            density: 150
+        }
     ]
 };
 exports.PRESET_SNOW2 = {
@@ -75207,56 +75372,159 @@ const snowfall_1 = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modul
 const strength = 0.25;
 exports.SpaceUserConfig = {
     layers: [
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { colour: "#f4d7d7", opacity: { min: 1, max: 1 }, density: 100, mass: {
+        {
+            ...snowfall_1.DEFAULT_SIMPLE_LAYER,
+            colour: "#f4d7d7",
+            opacity: { min: 1, max: 1 },
+            density: 100,
+            mass: {
                 min: 0.5,
                 max: 1,
-            }, size: {
+            },
+            size: {
                 min: 0.5,
                 max: 1,
-            }, sway: {
+            },
+            sway: {
                 frequency: 0,
                 amplitude: 0,
-            }, gravity: Object.assign(Object.assign({}, snowfall_1.DEFAULT_GRAVITY), { strength: 0 }), wind: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND), { strength, gusts: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS), { active: false, changeChance: 0 }) }) }),
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { opacity: { min: 1, max: 1 }, mass: {
+            },
+            gravity: {
+                ...snowfall_1.DEFAULT_GRAVITY,
+                strength: 0,
+            },
+            wind: {
+                ...snowfall_1.DEFAULT_WIND,
+                strength,
+                gusts: {
+                    ...snowfall_1.DEFAULT_WIND_GUSTS,
+                    active: false,
+                    changeChance: 0,
+                },
+            },
+        },
+        {
+            ...snowfall_1.DEFAULT_SIMPLE_LAYER,
+            opacity: { min: 1, max: 1 },
+            mass: {
                 min: 1,
                 max: 2,
-            }, size: {
+            },
+            size: {
                 min: 1,
                 max: 2,
-            }, sway: {
+            },
+            sway: {
                 frequency: 0,
                 amplitude: 0,
-            }, gravity: Object.assign(Object.assign({}, snowfall_1.DEFAULT_GRAVITY), { strength: 0 }), wind: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND), { strength, gusts: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS), { active: false, changeChance: 0 }) }) }),
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { opacity: { min: 1, max: 1 }, colour: "#d7e0f4", density: 100, mass: {
+            },
+            gravity: {
+                ...snowfall_1.DEFAULT_GRAVITY,
+                strength: 0,
+            },
+            wind: {
+                ...snowfall_1.DEFAULT_WIND,
+                strength,
+                gusts: {
+                    ...snowfall_1.DEFAULT_WIND_GUSTS,
+                    active: false,
+                    changeChance: 0,
+                },
+            },
+        },
+        {
+            ...snowfall_1.DEFAULT_SIMPLE_LAYER,
+            opacity: { min: 1, max: 1 },
+            colour: "#d7e0f4",
+            density: 100,
+            mass: {
                 min: 1,
                 max: 2,
-            }, size: {
+            },
+            size: {
                 min: 1,
                 max: 2,
-            }, sway: {
+            },
+            sway: {
                 frequency: 0,
                 amplitude: 0,
-            }, gravity: Object.assign(Object.assign({}, snowfall_1.DEFAULT_GRAVITY), { strength: 0 }), wind: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND), { strength, gusts: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS), { active: false, changeChance: 0 }) }) }),
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_IMAGE_LAYER), { opacity: { min: 1, max: 1 }, density: 3, image: "data:image/png;base64,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", mass: {
+            },
+            gravity: {
+                ...snowfall_1.DEFAULT_GRAVITY,
+                strength: 0,
+            },
+            wind: {
+                ...snowfall_1.DEFAULT_WIND,
+                strength,
+                gusts: {
+                    ...snowfall_1.DEFAULT_WIND_GUSTS,
+                    active: false,
+                    changeChance: 0,
+                },
+            },
+        },
+        {
+            ...snowfall_1.DEFAULT_IMAGE_LAYER,
+            opacity: { min: 1, max: 1 },
+            density: 3,
+            image: "data:image/png;base64,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",
+            mass: {
                 min: 12,
                 max: 17,
-            }, size: {
+            },
+            size: {
                 min: 12,
                 max: 36,
-            }, sway: {
+            },
+            sway: {
                 frequency: 0,
                 amplitude: 0,
-            }, gravity: Object.assign(Object.assign({}, snowfall_1.DEFAULT_GRAVITY), { strength: 0 }), wind: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND), { strength, gusts: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS), { active: false, changeChance: 0 }) }), mode: "image" }),
-        Object.assign(Object.assign({}, snowfall_1.DEFAULT_SIMPLE_LAYER), { opacity: { min: 1, max: 1 }, density: 50, mass: {
+            },
+            gravity: {
+                ...snowfall_1.DEFAULT_GRAVITY,
+                strength: 0,
+            },
+            wind: {
+                ...snowfall_1.DEFAULT_WIND,
+                strength,
+                gusts: {
+                    ...snowfall_1.DEFAULT_WIND_GUSTS,
+                    active: false,
+                    changeChance: 0,
+                },
+            },
+            mode: "image",
+        },
+        {
+            ...snowfall_1.DEFAULT_SIMPLE_LAYER,
+            opacity: { min: 1, max: 1 },
+            density: 50,
+            mass: {
                 min: 1,
                 max: 3,
-            }, size: {
+            },
+            size: {
                 min: 1,
                 max: 3,
-            }, sway: {
+            },
+            sway: {
                 frequency: 0,
                 amplitude: 0,
-            }, gravity: Object.assign(Object.assign({}, snowfall_1.DEFAULT_GRAVITY), { strength: 0 }), wind: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND), { strength, gusts: Object.assign(Object.assign({}, snowfall_1.DEFAULT_WIND_GUSTS), { active: false, changeChance: 0 }) }) }),
+            },
+            gravity: {
+                ...snowfall_1.DEFAULT_GRAVITY,
+                strength: 0,
+            },
+            wind: {
+                ...snowfall_1.DEFAULT_WIND,
+                strength,
+                gusts: {
+                    ...snowfall_1.DEFAULT_WIND_GUSTS,
+                    active: false,
+                    changeChance: 0,
+                },
+            },
+        },
     ],
     attachTo: "snowfall",
 };
