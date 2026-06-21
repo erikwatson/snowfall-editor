@@ -20,6 +20,7 @@ import { PRESET_CLASSIC } from '../../../presets/classic'
 import { PRESET_PRIDE } from "../../../presets/pride";
 import { Select } from "../../select/select";
 import { PRESET_SNOW2 } from "../../../presets/snow2";
+import e from "express";
 
 type EditorSettingsProps = {
   editorConfig: EditorState;
@@ -39,9 +40,9 @@ export const EditorSettings = ({ editorConfig }: EditorSettingsProps) => {
           tooltip="Select a preset"
           value={editorConfig.preset}
           reset={() => {
-            dispatch(setPreset('none'));
-            dispatch(resetUserConfig())
-            dispatch(resetEditorSettings())
+            dispatch(setPreset('snow2'))
+            dispatch(setUserConfig(PRESET_SNOW2.userConfig));
+            dispatch(setEditorSettings(PRESET_SNOW2.editorConfig));
           }}
           onChange={(event) => {
             const value = event.target.value as PresetVariation
@@ -81,11 +82,6 @@ export const EditorSettings = ({ editorConfig }: EditorSettingsProps) => {
                 dispatch(setUserConfig(PRESET_PRIDE.userConfig));
                 dispatch(setEditorSettings(PRESET_PRIDE.editorConfig));
                 break;
-              default:
-                dispatch(setPreset('none'));
-                dispatch(resetUserConfig())
-                dispatch(resetEditorSettings())
-                break;
             }
           }}
         >
@@ -104,7 +100,7 @@ export const EditorSettings = ({ editorConfig }: EditorSettingsProps) => {
           tooltip="Which environment do you want your config generated for?"
           showOutput={false}
           reset={() => {
-            dispatch(setBackground(PRESET_SNOW.editorConfig.background));
+            dispatch(setIsReact(false));
           }}
           value={isReact ? 'jsx' : 'js'}
           onChange={(event) => {
@@ -112,7 +108,7 @@ export const EditorSettings = ({ editorConfig }: EditorSettingsProps) => {
           }}
         >
           <Select>
-            <option value="js">JavaScript</option>
+            <option selected value="js">JavaScript</option>
             <option value="jsx">JSX (React)</option>
           </Select>
         </Control>
@@ -131,6 +127,5 @@ export const EditorSettings = ({ editorConfig }: EditorSettingsProps) => {
         </Control>
       </ControlGroup>
     </>
-    // </Group>
   );
 };

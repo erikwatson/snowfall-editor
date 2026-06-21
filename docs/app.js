@@ -73131,9 +73131,9 @@ const EditorSettings = ({ editorConfig }) => {
     const { background, isReact } = editorConfig;
     const dispatch = (0, react_redux_1.useDispatch)();
     return ((0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsx)("h2", { children: "Editor settings" }), (0, jsx_runtime_1.jsxs)("p", { children: ["These settings are ", (0, jsx_runtime_1.jsx)("b", { children: "not" }), " exported with your config."] }), (0, jsx_runtime_1.jsxs)(controlGroup_1.ControlGroup, { children: [(0, jsx_runtime_1.jsx)(control_1.Control, { name: "Preset", tooltip: "Select a preset", value: editorConfig.preset, reset: () => {
-                            dispatch((0, editor_settings_slice_1.setPreset)('none'));
-                            dispatch((0, config_slice_1.resetUserConfig)());
-                            dispatch((0, editor_settings_slice_1.resetEditorSettings)());
+                            dispatch((0, editor_settings_slice_1.setPreset)('snow2'));
+                            dispatch((0, config_slice_1.setUserConfig)(snow2_1.PRESET_SNOW2.userConfig));
+                            dispatch((0, editor_settings_slice_1.setEditorSettings)(snow2_1.PRESET_SNOW2.editorConfig));
                         }, onChange: (event) => {
                             const value = event.target.value;
                             switch (value) {
@@ -73172,21 +73172,14 @@ const EditorSettings = ({ editorConfig }) => {
                                     dispatch((0, config_slice_1.setUserConfig)(pride_1.PRESET_PRIDE.userConfig));
                                     dispatch((0, editor_settings_slice_1.setEditorSettings)(pride_1.PRESET_PRIDE.editorConfig));
                                     break;
-                                default:
-                                    dispatch((0, editor_settings_slice_1.setPreset)('none'));
-                                    dispatch((0, config_slice_1.resetUserConfig)());
-                                    dispatch((0, editor_settings_slice_1.resetEditorSettings)());
-                                    break;
                             }
                         }, children: (0, jsx_runtime_1.jsxs)(select_1.Select, { children: [(0, jsx_runtime_1.jsx)("option", { value: "snow", children: "Snow" }), (0, jsx_runtime_1.jsx)("option", { value: "classic", children: "Classic snow" }), (0, jsx_runtime_1.jsx)("option", { value: "snow2", children: "Snow with images" }), (0, jsx_runtime_1.jsx)("option", { value: "lava", children: "Lava" }), (0, jsx_runtime_1.jsx)("option", { value: "space", children: "Space" }), (0, jsx_runtime_1.jsx)("option", { value: "pride", children: "Pride" })] }) }), (0, jsx_runtime_1.jsx)(control_1.Control, { name: "Export", tooltip: "Which environment do you want your config generated for?", showOutput: false, reset: () => {
-                            dispatch((0, editor_settings_slice_1.setBackground)(snow_1.PRESET_SNOW.editorConfig.background));
+                            dispatch((0, editor_settings_slice_1.setIsReact)(false));
                         }, value: isReact ? 'jsx' : 'js', onChange: (event) => {
                             dispatch((0, editor_settings_slice_1.setIsReact)(event.target.value === 'jsx'));
-                        }, children: (0, jsx_runtime_1.jsxs)(select_1.Select, { children: [(0, jsx_runtime_1.jsx)("option", { value: "js", children: "JavaScript" }), (0, jsx_runtime_1.jsx)("option", { value: "jsx", children: "JSX (React)" })] }) }), (0, jsx_runtime_1.jsx)(control_1.Control, { name: "Background", tooltip: "The background colour of the snowfall simulation", showOutput: true, reset: () => {
+                        }, children: (0, jsx_runtime_1.jsxs)(select_1.Select, { children: [(0, jsx_runtime_1.jsx)("option", { selected: true, value: "js", children: "JavaScript" }), (0, jsx_runtime_1.jsx)("option", { value: "jsx", children: "JSX (React)" })] }) }), (0, jsx_runtime_1.jsx)(control_1.Control, { name: "Background", tooltip: "The background colour of the snowfall simulation", showOutput: true, reset: () => {
                             dispatch((0, editor_settings_slice_1.setBackground)(snow_1.PRESET_SNOW.editorConfig.background));
-                        }, value: background, onChange: (event) => dispatch((0, editor_settings_slice_1.setBackground)(event.target.value)), children: (0, jsx_runtime_1.jsx)(colour_1.Colour, {}) })] })] })
-    // </Group>
-    );
+                        }, value: background, onChange: (event) => dispatch((0, editor_settings_slice_1.setBackground)(event.target.value)), children: (0, jsx_runtime_1.jsx)(colour_1.Colour, {}) })] })] }));
 };
 exports.EditorSettings = EditorSettings;
 
@@ -73231,7 +73224,7 @@ const control_1 = __webpack_require__(/*! ../../control/control */ "./src/compon
 const controlGroup_1 = __webpack_require__(/*! ../../controlGroup/controlGroup */ "./src/components/controlGroup/controlGroup.tsx");
 const text_1 = __webpack_require__(/*! ../../text/text */ "./src/components/text/text.tsx");
 const config_slice_1 = __webpack_require__(/*! ../../../features/config/config.slice */ "./src/features/config/config.slice.ts");
-const GeneralSettings = ({ attachTo, background }) => {
+const GeneralSettings = ({ attachTo }) => {
     const dispatch = (0, react_redux_1.useDispatch)();
     return ((0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsx)("h2", { children: "Snowfall settings" }), (0, jsx_runtime_1.jsxs)("p", { children: ["Everything below here (except for Layer Titles) ", (0, jsx_runtime_1.jsx)("b", { children: "will" }), " be exported with your config."] }), (0, jsx_runtime_1.jsx)(controlGroup_1.ControlGroup, { children: (0, jsx_runtime_1.jsx)(control_1.Control, { name: "Attach to", tooltip: "The element to attach the snowfall simulation to", reset: () => {
                         dispatch((0, config_slice_1.resetAttachTo)());
