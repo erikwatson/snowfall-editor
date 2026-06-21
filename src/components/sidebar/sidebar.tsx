@@ -29,7 +29,7 @@ export const Sidebar = ({ config, editorConfig, difference }: SidebarProps) => {
 
   return (
     <div id="sidebar">
-      <Heading advanced={editorConfig.advancedSettings}></Heading>
+      <Heading advanced={editorConfig.advancedSettings} isReact={editorConfig.isReact}></Heading>
       <div className="snow-layers-gap">
         <div className="layers-container">
           <EditorSettings editorConfig={editorConfig}></EditorSettings>
@@ -63,7 +63,7 @@ export const Sidebar = ({ config, editorConfig, difference }: SidebarProps) => {
           copyToClipboard(value);
         }}
       />
-      <Footer advanced={editorConfig.advancedSettings}></Footer>
+      <Footer advanced={editorConfig.advancedSettings} isReact={editorConfig.isReact}></Footer>
     </div>
   );
 };

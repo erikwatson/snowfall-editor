@@ -4,17 +4,18 @@ import './footer.css';
 
 type HeadingProps = {
   advanced: boolean;
+  isReact: boolean;
 }
 
-export const Footer = ({advanced}: HeadingProps) => {
+export const Footer = ({ advanced, isReact }: HeadingProps) => {
   return (
     <div className="footer">
       {!advanced && <h1>Snowfall :: stay cool ☃️</h1>}
       {advanced && <h1>Snowfall :: stay frosty 🥶</h1>}
       <p>An <a href="https://erikwatson.me">Erik Watson</a> project</p>
       <ul>
-        <li><a href='https://github.com/erikwatson/snowfall.js'><FontAwesomeIcon icon={faGithub}></FontAwesomeIcon></a></li>
-        <li><a href='https://www.npmjs.com/package/@erikwatson/snowfall'><FontAwesomeIcon icon={faNpm}></FontAwesomeIcon></a></li>
+        <li><a href={isReact ? 'https://github.com/erikwatson/react-snowfall' : 'https://github.com/erikwatson/snowfall'}><FontAwesomeIcon icon={faGithub}></FontAwesomeIcon></a></li>
+        <li><a href={isReact ? 'https://www.npmjs.com/package/@erikwatson/react-snowfall' : 'https://www.npmjs.com/package/@erikwatson/snowfall'}><FontAwesomeIcon icon={faNpm}></FontAwesomeIcon></a></li>
       </ul>
     </div>
   );
