@@ -73233,7 +73233,7 @@ const text_1 = __webpack_require__(/*! ../../text/text */ "./src/components/text
 const config_slice_1 = __webpack_require__(/*! ../../../features/config/config.slice */ "./src/features/config/config.slice.ts");
 const GeneralSettings = ({ attachTo, background }) => {
     const dispatch = (0, react_redux_1.useDispatch)();
-    return ((0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsx)("h2", { children: "Snowfall settings" }), (0, jsx_runtime_1.jsxs)("p", { children: ["Everything below here ", (0, jsx_runtime_1.jsx)("b", { children: "will" }), " be exported with your config."] }), (0, jsx_runtime_1.jsx)(controlGroup_1.ControlGroup, { children: (0, jsx_runtime_1.jsx)(control_1.Control, { name: "Attach to", tooltip: "The element to attach the snowfall simulation to", reset: () => {
+    return ((0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsx)("h2", { children: "Snowfall settings" }), (0, jsx_runtime_1.jsxs)("p", { children: ["Everything below here (except for Layer Titles) ", (0, jsx_runtime_1.jsx)("b", { children: "will" }), " be exported with your config."] }), (0, jsx_runtime_1.jsx)(controlGroup_1.ControlGroup, { children: (0, jsx_runtime_1.jsx)(control_1.Control, { name: "Attach to", tooltip: "The element to attach the snowfall simulation to", reset: () => {
                         dispatch((0, config_slice_1.resetAttachTo)());
                     }, value: attachTo, onChange: (event) => dispatch((0, config_slice_1.setAttachTo)(event.target.value)), children: (0, jsx_runtime_1.jsx)(text_1.Text, {}) }) })] }));
 };

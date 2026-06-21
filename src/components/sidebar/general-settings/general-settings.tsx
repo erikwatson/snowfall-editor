@@ -23,7 +23,7 @@ export const GeneralSettings = ({ attachTo, background }: GeneralSettingsProps) 
       {/* <Button kind="transparent" onClick={() => null} tooltip={'Everything below here WILL be exported with your config.'}>
               <FontAwesomeIcon icon={faQuestionCircle} style={{ color: '#64748b' }} />
             </Button> */}
-      <p>Everything below here <b>will</b> be exported with your config.</p>
+      <p>Everything below here (except for Layer Titles) <b>will</b> be exported with your config.</p>
       <ControlGroup>
         <Control
           name="Attach to"
