@@ -75328,21 +75328,26 @@ const Snow2UserConfig = {
     attachTo: "snowfall",
     layers: [
         {
+            ...snowfall_1.DEFAULT_SIMPLE_LAYER,
+            colour: "#8d90b7",
+            density: 150
+        },
+        {
             ...snowfall_1.DEFAULT_IMAGE_LAYER,
             density: 50,
             image: "./assets/snowflake.png",
             rotate: true,
             size: {
                 min: 10,
-                max: 10
+                max: 10,
             },
-            mode: "image"
+            mode: "image",
         },
         {
             ...snowfall_1.DEFAULT_SIMPLE_LAYER,
-            density: 150
-        }
-    ]
+            density: 150,
+        },
+    ],
 };
 exports.PRESET_SNOW2 = {
     name: "Snow2",
@@ -75353,8 +75358,8 @@ exports.PRESET_SNOW2 = {
         isReact: false,
         background: "#0d0014",
         schedule: undefined,
-        preset: 'snow2'
-    }
+        preset: "snow2",
+    },
 };
 
 

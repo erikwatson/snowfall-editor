@@ -1,10 +1,18 @@
-import { CompleteUserConfig, DEFAULT_IMAGE } from "@erikwatson/snowfall";
-import { Preset } from "./presets";
-import { DEFAULT_IMAGE_LAYER, DEFAULT_SIMPLE_LAYER } from "@erikwatson/snowfall";
+import { CompleteUserConfig, DEFAULT_IMAGE } from "@erikwatson/snowfall"
+import { Preset } from "./presets"
+import {
+  DEFAULT_IMAGE_LAYER,
+  DEFAULT_SIMPLE_LAYER,
+} from "@erikwatson/snowfall"
 
 const Snow2UserConfig: CompleteUserConfig = {
   attachTo: "snowfall",
   layers: [
+    {
+      ...DEFAULT_SIMPLE_LAYER,
+      colour: "#8d90b7",
+      density: 150
+    },
     {
       ...DEFAULT_IMAGE_LAYER,
       density: 50,
@@ -12,15 +20,15 @@ const Snow2UserConfig: CompleteUserConfig = {
       rotate: true,
       size: {
         min: 10,
-        max: 10
+        max: 10,
       },
-      mode: "image"
+      mode: "image",
     },
     {
       ...DEFAULT_SIMPLE_LAYER,
-      density: 150
-    }
-  ]
+      density: 150,
+    },
+  ],
 }
 
 export const PRESET_SNOW2: Preset = {
@@ -32,6 +40,6 @@ export const PRESET_SNOW2: Preset = {
     isReact: false,
     background: "#0d0014",
     schedule: undefined,
-    preset: 'snow2'
-  }
-};
+    preset: "snow2",
+  },
+}
