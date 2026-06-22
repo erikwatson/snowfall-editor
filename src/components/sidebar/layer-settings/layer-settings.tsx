@@ -2,6 +2,8 @@ import {
   clone,
   DEFAULT_IMAGE_LAYER,
   DEFAULT_SIMPLE_LAYER,
+  DEFAULT_TRAIL,
+  SimpleLayerConfig,
 } from "@erikwatson/snowfall";
 import { Types, isSimpleLayer } from "@erikwatson/snowfall";
 import {
@@ -49,7 +51,9 @@ import {
   moveLayerUp,
   setLayerRotation,
   setLayerImage,
+  setTrail
 } from "../../../features/config/config.slice";
+// import {} from '../../../features/config/'
 import { PRESET_SNOW } from "../../../presets/snow";
 import {
   PresetVariation,
@@ -301,6 +305,26 @@ export const LayerSettings = ({
                   </>
                 )}
                 <SnowflakeDensity layer={layer} index={index} />
+                {isSimpleLayer(layer) && (
+                  <Control
+                    name="Trail"
+                    tooltip="Draw a small motion trail behind the snowflakes?"
+                    reset={() => {
+                      dispatch(setTrail({index, trail: DEFAULT_TRAIL}))
+                    }}
+                    value={(layer as SimpleLayerConfig).trail}
+                    onChange={(event) => {
+                      dispatch(
+                        setTrail({
+                          index,
+                          trail: event.target.checked,
+                        }),
+                      );
+                    }}
+                  >
+                    <CheckBox />
+                  </Control>
+                )}
                 <SnowflakeMass layer={layer} index={index} />
                 <SnowflakeSize layer={layer} index={index} />
                 <SnowflakeOpacity layer={layer} index={index} />

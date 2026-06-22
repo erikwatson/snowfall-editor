@@ -99,7 +99,6 @@ const configSlice = createSlice({
       }
     },
 
-    // layer properties (colour, density, size, etc)
     setColour: (
       state,
       action: PayloadAction<{ index: number; colour: string }>,
@@ -107,6 +106,16 @@ const configSlice = createSlice({
       const layer = state.layers?.[action.payload.index];
       if (layer && layer.mode === "simple") {
         (layer as SimpleLayerConfig).colour = action.payload.colour;
+      }
+    },
+
+    setTrail: (
+      state,
+      action: PayloadAction<{ index: number; trail: boolean }>,
+    ) => {
+      const layer = state.layers?.[action.payload.index];
+      if (layer && layer.mode === "simple") {
+        (layer as SimpleLayerConfig).trail = action.payload.trail;
       }
     },
 
@@ -652,6 +661,7 @@ export const {
   setOpacity,
   setOpacityMin,
   setOpacityMax,
+  setTrail
 } = configSlice.actions;
 
 export default configSlice.reducer;

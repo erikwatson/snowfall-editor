@@ -233,8 +233,14 @@ export const layersSlice = createSlice({
           layer.wind.gusts.changeChance = action.payload.chance
         })
       }
-    }
+    },
 
+    setTrail: (state, action: PayloadAction<{ index: number, trail: boolean }>) => {
+      const layer = state[action.payload.index];
+      if (layer && isSimpleLayer(layer)) {
+        layer.trail = action.payload.trail;
+      } 
+    },
   },
 })
 
