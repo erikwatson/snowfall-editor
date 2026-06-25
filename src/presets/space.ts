@@ -1,23 +1,72 @@
 import {
+  ConfigLayer,
   DEFAULT_GRAVITY,
   DEFAULT_IMAGE,
   DEFAULT_IMAGE_LAYER,
   DEFAULT_SIMPLE_LAYER,
   DEFAULT_WIND,
   DEFAULT_WIND_GUSTS,
+  DEFAULT_WIND_GUSTS_IN,
+  DEFAULT_WIND_GUSTS_OUT,
+  DEFAULT_WIND_IN_ADDITIONAL_STRENGTH,
   Types,
 } from "@erikwatson/snowfall";
 import { Preset } from "./presets";
 
 const strength = 0.25;
+const second = 1000
+const minute = 60 * second
+const max_delay = minute * 1
+const min_delay = 1000 // minute * 2
+const delay = {
+  min: min_delay,
+  max: max_delay
+}
+const wind = {
+  ...DEFAULT_WIND,
+  strength,
+  gusts: {
+    ...DEFAULT_WIND_GUSTS,
+    active: true,
+    changeChance: 0,
+    in: {
+      ...DEFAULT_WIND_GUSTS_IN,
+      additionalStrength: {
+        min: 8, max: 10
+      }
+    },
+    out: {
+      ...DEFAULT_WIND_GUSTS_OUT,
+      // delay,
+      duration: {
+        min: 500,
+        max: 1000
+      }
+    }
+  }
+}
+const STARS_COMMON: ConfigLayer = {
+  ...DEFAULT_SIMPLE_LAYER,
+  trail: true,
+  density: 400,
+  sway: {
+    frequency: 0,
+    amplitude: 0,
+  },
+  gravity: {
+    ...DEFAULT_GRAVITY,
+    strength: 0,
+  },
+  wind
+}
 
 export const SpaceUserConfig: Types.CompleteUserConfig = {
   layers: [
     {
-      ...DEFAULT_SIMPLE_LAYER,
+      ...STARS_COMMON,
       colour: "#f4d7d7",
       opacity: { min: 1, max: 1 },
-      density: 100,
+      density: 400,
       mass: {
         min: 0.5,
         max: 1,
@@ -26,26 +75,9 @@ export const SpaceUserConfig: Types.CompleteUserConfig = {
         min: 0.5,
         max: 1,
       },
-      sway: {
-        frequency: 0,
-        amplitude: 0,
-      },
-      gravity: {
-        ...DEFAULT_GRAVITY,
-        strength: 0,
-      },
-      wind: {
-        ...DEFAULT_WIND,
-        strength,
-        gusts: {
-          ...DEFAULT_WIND_GUSTS,
-          active: false,
-          changeChance: 0,
-        },
-      },
     },
     {
-      ...DEFAULT_SIMPLE_LAYER,
+      ...STARS_COMMON,
       opacity: { min: 1, max: 1 },
       mass: {
         min: 1,
@@ -55,29 +87,12 @@ export const SpaceUserConfig: Types.CompleteUserConfig = {
         min: 1,
         max: 2,
       },
-      sway: {
-        frequency: 0,
-        amplitude: 0,
-      },
-      gravity: {
-        ...DEFAULT_GRAVITY,
-        strength: 0,
-      },
-      wind: {
-        ...DEFAULT_WIND,
-        strength,
-        gusts: {
-          ...DEFAULT_WIND_GUSTS,
-          active: false,
-          changeChance: 0,
-        },
-      },
     },
     {
-      ...DEFAULT_SIMPLE_LAYER,
+      ...STARS_COMMON,
       opacity: { min: 1, max: 1 },
       colour: "#d7e0f4",
-      density: 100,
+      density: 400,
       mass: {
         min: 1,
         max: 2,
@@ -85,23 +100,6 @@ export const SpaceUserConfig: Types.CompleteUserConfig = {
       size: {
         min: 1,
         max: 2,
-      },
-      sway: {
-        frequency: 0,
-        amplitude: 0,
-      },
-      gravity: {
-        ...DEFAULT_GRAVITY,
-        strength: 0,
-      },
-      wind: {
-        ...DEFAULT_WIND,
-        strength,
-        gusts: {
-          ...DEFAULT_WIND_GUSTS,
-          active: false,
-          changeChance: 0,
-        },
       },
     },
     {
@@ -126,20 +124,12 @@ export const SpaceUserConfig: Types.CompleteUserConfig = {
         ...DEFAULT_GRAVITY,
         strength: 0,
       },
-      wind: {
-        ...DEFAULT_WIND,
-        strength,
-        gusts: {
-          ...DEFAULT_WIND_GUSTS,
-          active: false,
-          changeChance: 0,
-        },
-      },
+      wind,
       mode: "image",
     },
 
     {
-      ...DEFAULT_SIMPLE_LAYER,
+      ...STARS_COMMON,
       opacity: { min: 1, max: 1 },
       density: 50,
       mass: {
@@ -149,23 +139,6 @@ export const SpaceUserConfig: Types.CompleteUserConfig = {
       size: {
         min: 1,
         max: 3,
-      },
-      sway: {
-        frequency: 0,
-        amplitude: 0,
-      },
-      gravity: {
-        ...DEFAULT_GRAVITY,
-        strength: 0,
-      },
-      wind: {
-        ...DEFAULT_WIND,
-        strength,
-        gusts: {
-          ...DEFAULT_WIND_GUSTS,
-          active: false,
-          changeChance: 0,
-        },
       },
     },
   ],

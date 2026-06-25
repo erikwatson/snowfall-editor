@@ -18,6 +18,9 @@ export const Snowfall = ({ config }: SnowfallProps) => {
   }, [config]);
 
   return (
-    <div id='snowfall'></div>
+    <>
+      <div id='snowfall'></div>
+      <div id="content"></div>
+    </>
   );
 };

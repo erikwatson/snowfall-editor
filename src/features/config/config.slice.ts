@@ -609,6 +609,14 @@ const configSlice = createSlice({
       const { image, index } = action.payload;
       (state.layers[index] as ImageLayerConfig).image = image;
     },
+
+    setLayerScroll: (
+      state,
+      action: PayloadAction<{ index: number; scroll: boolean }>,
+    ) => {
+      const { scroll, index } = action.payload;
+      (state.layers[index]).scroll = scroll;
+    },
   },
 });
 
@@ -654,6 +662,7 @@ export const {
   moveLayerUp,
   moveLayerDown,
   setLayerRotation,
+  setLayerScroll,
   setLayerImage,
   setSizeMin,
   setSizeMax,

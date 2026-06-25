@@ -51,7 +51,8 @@ import {
   moveLayerUp,
   setLayerRotation,
   setLayerImage,
-  setTrail
+  setTrail,
+  setLayerScroll
 } from "../../../features/config/config.slice";
 // import {} from '../../../features/config/'
 import { PRESET_SNOW } from "../../../presets/snow";
@@ -351,6 +352,25 @@ export const LayerSettings = ({
                     <CheckBox />
                   </Control>
                 )}
+
+                 <Control
+                    name="Scroll"
+                    tooltip="Should the snowflakes scroll with the page or not?"
+                    reset={() => {
+                      //
+                    }}
+                    value={(layer).scroll}
+                    onChange={(event) => {
+                      dispatch(
+                        setLayerScroll({
+                          index,
+                          scroll: event.target.checked,
+                        }),
+                      );
+                    }}
+                  >
+                    <CheckBox />
+                  </Control>
 
                 {advancedSettings && (
                   <Group name="Gravity" colour="grey-2">
