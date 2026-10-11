@@ -12,6 +12,7 @@ const links = {
   snowfallNpm: "https://www.npmjs.com/package/@erikwatson/snowfall",
   reactSnowfallNpm: "https://www.npmjs.com/package/@erikwatson/react-snowfall",
   jsdelivr: "https://www.jsdelivr.com/package/npm/@erikwatson/snowfall",
+  snowfallEditorGithub: "https://github.com/erikwatson/snowfall-editor"
 };
 
 export const Heading = ({ advanced }: HeadingProps) => {
@@ -30,11 +31,11 @@ export const Heading = ({ advanced }: HeadingProps) => {
       <ul>
         <li>
           <a
-            href={links.snowfallGithub}
+            href={links.snowfallEditorGithub}
             target="_blank"
             rel="noreferrer"
-            aria-label="Snowfall on GitHub"
-            title="Snowfall on GitHub"
+            aria-label="Snowfall editor on GitHub"
+            title="Snowfall editor on GitHub"
           >
             <FontAwesomeIcon icon={faGithub} />
             <span>Snowfall Editor on GitHub</span>
