@@ -1,9 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faJs,
-  faNpm,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faJs, faNpm } from "@fortawesome/free-brands-svg-icons";
 import "./heading.css";
 
 type HeadingProps = {
@@ -41,6 +37,19 @@ export const Heading = ({ advanced }: HeadingProps) => {
             title="Snowfall on GitHub"
           >
             <FontAwesomeIcon icon={faGithub} />
+            <span>Snowfall Editor on GitHub</span>
+          </a>
+        </li>
+
+        <li>
+          <a
+            href={links.snowfallGithub}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Snowfall on GitHub"
+            title="Snowfall on GitHub"
+          >
+            <FontAwesomeIcon icon={faGithub} />
             <span>Snowfall on GitHub</span>
           </a>
         </li>
@@ -57,7 +66,9 @@ export const Heading = ({ advanced }: HeadingProps) => {
             <span>React Snowfall on GitHub</span>
           </a>
         </li>
+      </ul>
 
+      <ul>
         <li>
           <a
             href={links.snowfallNpm}
@@ -83,7 +94,9 @@ export const Heading = ({ advanced }: HeadingProps) => {
             <span>React Snowfall on NPM</span>
           </a>
         </li>
+      </ul>
 
+      <ul>
         <li>
           <a
             href={links.jsdelivr}

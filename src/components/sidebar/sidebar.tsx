@@ -67,10 +67,7 @@ export const Sidebar = ({
         }}
       />
 
-      <Footer
-        advanced={editorConfig.advancedSettings}
-        isReact={editorConfig.isReact}
-      />
+      <Footer />
     </div>
   );
 };

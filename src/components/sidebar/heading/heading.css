@@ -49,6 +49,10 @@
   color: rgb(176, 12, 127);
 }
 
+.heading p {
+  margin-bottom: 56px;
+}
+
 @media (max-width: 1050px) {
   .heading {
     display: none;
