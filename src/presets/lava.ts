@@ -75,6 +75,7 @@ const LavaUserConfig: Types.CompleteUserConfig = {
     {
       ...DEFAULT_SIMPLE_LAYER,
       colour: "#efd73b",
+      trail: true,
       density: 65,
       mode: 'simple',
       mass: {
@@ -125,6 +126,7 @@ const LavaUserConfig: Types.CompleteUserConfig = {
     {
       ...DEFAULT_SIMPLE_LAYER,
       colour: "#ef101d",
+      trail: true,
       density: 65,
       mode: 'simple',
       mass: {

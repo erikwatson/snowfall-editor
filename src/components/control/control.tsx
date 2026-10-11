@@ -44,7 +44,8 @@ export const Control = ({
         <div className="children">
           <div className="label-row">
             <label>{name}:</label>
-            {value && onChange && showOutput && (
+            {/* <p>hi</p> */}
+            {value !== null && onChange && showOutput && (
               <input
                 value={displayValue}
                 onChange={(evt) => setDisplayValue(evt.target.value)}

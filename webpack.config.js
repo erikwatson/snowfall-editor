@@ -1,30 +1,28 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import CopyPlugin from "copy-webpack-plugin";
 
-module.exports = {
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+export default {
   mode: "development",
   entry: "./src/index.tsx",
   plugins: [
     new HtmlWebpackPlugin({ template: "./assets/template.html" }),
     new CopyPlugin({
-      patterns: [
-        {
-          from: "assets/images",
-          to: "assets",
-        },
-      ],
+      patterns: [{ from: "assets/images", to: "assets" }],
     }),
   ],
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /.tsx?$/,
         use: "ts-loader",
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/i,
+        test: /.css$/i,
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
     ],
@@ -39,8 +37,8 @@ module.exports = {
   },
   devServer: {
     static: path.resolve(__dirname, "docs"),
-    hot: true, // enables hot module replacement (HMR)
-    watchFiles: ["src/**/*", "assets/**/*"], // ensures CSS/template changes trigger reload
+    hot: true,
+    watchFiles: ["src/**/*", "assets/**/*"],
     port: 3000,
   },
   devtool: "source-map",

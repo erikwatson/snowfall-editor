@@ -1,64 +1,76 @@
-import { createSlice } from "@reduxjs/toolkit";
-import {
-  Types,
-} from "@erikwatson/snowfall";
-import { UserSchedule } from "@erikwatson/snowfall";
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
+import { Types, type UserSchedule } from "@erikwatson/snowfall";
 
-export type PresetVariation = 'none' | 'snow' | 'lava' | 'space' | 'fallout' | 'snow2' | 'classic' | 'pride';
+export type PresetVariation =
+  | "none"
+  | "snow"
+  | "lava"
+  | "space"
+  | "fallout"
+  | "snow2"
+  | "classic"
+  | "pride"
+  | "rain";
+
+export type ExportMode = "js" | "jsx" | "ts" | "tsx" | "html";
 
 export type EditorState = {
   advancedSettings: boolean;
   isMinified: boolean;
   isReact: boolean;
+  exportMode?: ExportMode;
   background: string;
   schedule?: Types.UserSchedule;
   preset?: PresetVariation;
-}
+};
 
 const DEFAULT_STATE: EditorState = {
   advancedSettings: true,
   isMinified: true,
   isReact: false,
+  exportMode: "js",
   background: "#0d0014",
   schedule: undefined,
-  preset: 'snow2',
+  preset: "snow2",
 };
-
-const initialState = DEFAULT_STATE;
 
 const editorSettingsSlice = createSlice({
   name: "editorSettings",
-  initialState,
+  initialState: DEFAULT_STATE,
   reducers: {
-    resetEditorSettings: (state) => {
-      return DEFAULT_STATE;
-    },
+    resetEditorSettings: () => DEFAULT_STATE,
 
-    setEditorSettings: (state, action: { payload: EditorState }) => {
+    setEditorSettings: (_state, action: PayloadAction<EditorState>) => {
       return action.payload;
     },
 
-    setAdvancedSettings: (state, action: { payload: boolean }) => {
+    setAdvancedSettings: (state, action: PayloadAction<boolean>) => {
       state.advancedSettings = action.payload;
     },
 
-    setIsMinified: (state, action: { payload: boolean }) => {
+    setIsMinified: (state, action: PayloadAction<boolean>) => {
       state.isMinified = action.payload;
     },
 
-    setIsReact: (state, action: { payload: boolean }) => {
+    setIsReact: (state, action: PayloadAction<boolean>) => {
       state.isReact = action.payload;
+      state.exportMode = action.payload ? "jsx" : "js";
     },
 
-    setBackground: (state, action: { payload: string }) => {
+    setExportMode: (state, action: PayloadAction<ExportMode>) => {
+      state.exportMode = action.payload;
+      state.isReact = action.payload === "jsx" || action.payload === "tsx";
+    },
+
+    setBackground: (state, action: PayloadAction<string>) => {
       state.background = action.payload;
     },
 
-    setSchedule: (state, action: { payload?: UserSchedule }) => {
+    setSchedule: (state, action: PayloadAction<UserSchedule | undefined>) => {
       state.schedule = action.payload;
     },
 
-    setPreset: (state, action: { payload: PresetVariation }) => {
+    setPreset: (state, action: PayloadAction<PresetVariation>) => {
       state.preset = action.payload;
     },
   },
@@ -70,6 +82,7 @@ export const {
   setAdvancedSettings,
   setIsMinified,
   setIsReact,
+  setExportMode,
   setBackground,
   setSchedule,
   setPreset,

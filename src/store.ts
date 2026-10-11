@@ -1,10 +1,12 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import configReducer from './features/config/config.slice'
+import scheduleReducer from './features/config/schedule.slice'
 import editorSettingsReducer from './features/editor-settings/editor-settings.slice'
 
 export const store = configureStore({
   reducer: combineReducers({
     userConfig: configReducer,
+    userSchedule: scheduleReducer,
     editorSettings: editorSettingsReducer,
   }),
 })

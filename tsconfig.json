@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
     "target": "ES2023",
-    "module": "NodeNext",
+    // "module": "NodeNext",
     "outDir": "./dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "jsx": "react-jsx",
   },
 }

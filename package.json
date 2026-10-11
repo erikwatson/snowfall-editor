@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "An Editor for @erikwatson/snowfall configs",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "build": "pnpm exec webpack --config ./webpack.config.js",
     "watch": "pnpm exec webpack --config ./webpack.config.js --watch",
@@ -38,8 +39,8 @@
     "@dnd-kit/sortable": "^10.0.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
-    "@erikwatson/bramble": "file:../Bramble",
-    "@erikwatson/snowfall": "file:../snowfall",
+    "@erikwatson/bramble": "^0.16.0",
+    "@erikwatson/snowfall": "^4.5.1",
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",

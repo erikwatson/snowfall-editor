@@ -6,15 +6,11 @@ import { GeneralSettings } from "./general-settings/general-settings";
 import { useDispatch } from "react-redux";
 import { LayerSettings } from "./layer-settings/layer-settings";
 import copyToClipboard from "copy-to-clipboard";
-import {
-  resetUserConfig,
-} from "../../features/config/config.slice";
-import {
-  EditorState,
-} from "../../features/editor-settings/editor-settings.slice";
+import { resetUserConfig } from "../../features/config/config.slice";
+import { EditorState } from "../../features/editor-settings/editor-settings.slice";
 import { EditorSettings } from "./editor-settings/editor-settings";
-import { DragDropContext } from '@hello-pangea/dnd';
 import { Footer } from "./footer/footer";
+import { ScheduleSettings } from "./schedule-settings/schedule-settings";
 
 type SidebarProps = {
   config: Types.UserConfig;
@@ -22,29 +18,38 @@ type SidebarProps = {
   difference: Types.UserConfig;
 };
 
-export const Sidebar = ({ config, editorConfig, difference }: SidebarProps) => {
+export const Sidebar = ({
+  config,
+  editorConfig,
+  difference,
+}: SidebarProps) => {
   const dispatch = useDispatch();
-
-  const onDragEnd = () => {}
 
   return (
     <div id="sidebar">
-      <Heading advanced={editorConfig.advancedSettings} isReact={editorConfig.isReact}></Heading>
+      <Heading
+        advanced={editorConfig.advancedSettings}
+      />
+
       <div className="snow-layers-gap">
         <div className="layers-container">
-          <EditorSettings editorConfig={editorConfig}></EditorSettings>
+          <EditorSettings editorConfig={editorConfig} />
 
-          <div style={{ padding: '36px 0' }}>
-          <GeneralSettings
-            attachTo={config.attachTo}
-            background={config.background}
-          />
+          <div style={{ padding: "36px 0" }}>
+            <GeneralSettings
+              attachTo={config.attachTo}
+              background={config.background}
+            />
 
-          <LayerSettings
-            advancedSettings={editorConfig.advancedSettings}
-            preset={editorConfig.preset}
-            layers={config.layers}
-          ></LayerSettings>        
+            <div style={{ padding: "36px 0 0 0" }}>
+              <ScheduleSettings />
+            </div>
+
+            <LayerSettings
+              advancedSettings={editorConfig.advancedSettings}
+              preset={editorConfig.preset}
+              layers={config.layers}
+            />
           </div>
         </div>
       </div>
@@ -54,8 +59,6 @@ export const Sidebar = ({ config, editorConfig, difference }: SidebarProps) => {
         largeConfig={config}
         title="Config"
         isMinified={editorConfig.isMinified}
-        isReact={editorConfig.isReact}
-        schedule={editorConfig.schedule}
         reset={() => {
           dispatch(resetUserConfig());
         }}
@@ -63,7 +66,11 @@ export const Sidebar = ({ config, editorConfig, difference }: SidebarProps) => {
           copyToClipboard(value);
         }}
       />
-      <Footer advanced={editorConfig.advancedSettings} isReact={editorConfig.isReact}></Footer>
+
+      <Footer
+        advanced={editorConfig.advancedSettings}
+        isReact={editorConfig.isReact}
+      />
     </div>
   );
 };
