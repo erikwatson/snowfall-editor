@@ -93,7 +93,7 @@ export const Heading = ({ advanced }: HeadingProps) => {
             title="JSDelivr"
           >
             <FontAwesomeIcon icon={faJs} />
-            <span>JSDelivr</span>
+            <span>Snowfall on JSDelivr</span>
           </a>
         </li>
       </ul>
