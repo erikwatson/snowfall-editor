@@ -6753,44 +6753,56 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.heading {
   text-align: center;
   padding: 56px;
   background-color: #f5f5f5;
-  border-bottom-color: rgb(195, 195, 195);
-  /* container-type: inline-size; */
 }
 
-h1 {
+.heading h1 {
   font-size: 32px;
   font-weight: 700;
 }
 
-ul {
-  margin-top: 24px;
-  text-align: center;
-  justify-content: center;
+.heading ul {
+  margin: 24px 0 0;
+  padding: 0;
   display: flex;
-  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px 32px;
 }
 
-li {
-  list-style-type: none;
-  font-size: 24pt;
+.heading li {
+  list-style: none;
+  font-size: 12px;
 }
 
-a {
+.heading li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
   text-decoration: none;
   color: rgb(37, 85, 174);
-  /* color: #8d90b7; */
   font-weight: 700;
 }
 
-a:hover {
+.heading li a svg {
+  font-size: 24pt;
+}
+
+.heading li a span {
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.heading li a:hover {
   color: rgb(176, 12, 127);
 }
 
-@media (max-width:1050px)  { 
+@media (max-width: 1050px) {
   .heading {
     display: none;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/sidebar/heading/heading.css"],"names":[],"mappings":"AAAA;EACE,uBAAuB;EACvB,mBAAmB;EACnB,kBAAkB;EAClB,aAAa;EACb,yBAAyB;EACzB,uCAAuC;EACvC,iCAAiC;AACnC;;AAEA;EACE,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;EAChB,kBAAkB;EAClB,uBAAuB;EACvB,aAAa;EACb,SAAS;AACX;;AAEA;EACE,qBAAqB;EACrB,eAAe;AACjB;;AAEA;EACE,qBAAqB;EACrB,uBAAuB;EACvB,oBAAoB;EACpB,gBAAgB;AAClB;;AAEA;EACE,wBAAwB;AAC1B;;AAEA;EACE;IACE,aAAa;EACf;AACF","sourcesContent":[".heading {\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  padding: 56px;\n  background-color: #f5f5f5;\n  border-bottom-color: rgb(195, 195, 195);\n  /* container-type: inline-size; */\n}\n\nh1 {\n  font-size: 32px;\n  font-weight: 700;\n}\n\nul {\n  margin-top: 24px;\n  text-align: center;\n  justify-content: center;\n  display: flex;\n  gap: 32px;\n}\n\nli {\n  list-style-type: none;\n  font-size: 24pt;\n}\n\na {\n  text-decoration: none;\n  color: rgb(37, 85, 174);\n  /* color: #8d90b7; */\n  font-weight: 700;\n}\n\na:hover {\n  color: rgb(176, 12, 127);\n}\n\n@media (max-width:1050px)  { \n  .heading {\n    display: none;\n  }\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/sidebar/heading/heading.css"],"names":[],"mappings":"AAAA;EACE,uBAAuB;EACvB,mBAAmB;EACnB,kBAAkB;EAClB,aAAa;EACb,yBAAyB;AAC3B;;AAEA;EACE,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;EAChB,UAAU;EACV,aAAa;EACb,eAAe;EACf,uBAAuB;EACvB,uBAAuB;EACvB,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,eAAe;AACjB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,QAAQ;EACR,qBAAqB;EACrB,uBAAuB;EACvB,gBAAgB;AAClB;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,wBAAwB;AAC1B;;AAEA;EACE;IACE,aAAa;EACf;AACF","sourcesContent":[".heading {\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  padding: 56px;\n  background-color: #f5f5f5;\n}\n\n.heading h1 {\n  font-size: 32px;\n  font-weight: 700;\n}\n\n.heading ul {\n  margin: 24px 0 0;\n  padding: 0;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  align-items: flex-start;\n  gap: 24px 32px;\n}\n\n.heading li {\n  list-style: none;\n  font-size: 12px;\n}\n\n.heading li a {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 4px;\n  text-decoration: none;\n  color: rgb(37, 85, 174);\n  font-weight: 700;\n}\n\n.heading li a svg {\n  font-size: 24pt;\n}\n\n.heading li a span {\n  font-size: 11px;\n  line-height: 1.3;\n}\n\n.heading li a:hover {\n  color: rgb(176, 12, 127);\n}\n\n@media (max-width: 1050px) {\n  .heading {\n    display: none;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6954,22 +6966,54 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_pnpm_css_loader_7_1_2_webpack_5_97_1_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_pnpm_css_loader_7_1_2_webpack_5_97_1_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `#snowfall {
-  width: 61.8%; /* Golden ratio */
-  background-color: black;
+___CSS_LOADER_EXPORT___.push([module.id, `.snowfall-preview {
+  position: relative;
+  width: 61.8%;
   height: 100vh;
+  background-color: black;
 }
 
+#snowfall {
+  width: 100%;
+  height: 100%;
+}
 
+.snowfall-notice {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
 
-@media (max-width:1050px)  { 
-  #snowfall {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  box-sizing: border-box;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  pointer-events: none;
+  text-shadow: 0 0 4px black;
+}
+
+.snowfall-notice strong {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.2;
+}
+
+.snowfall-notice span {
+  max-width: 36rem;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  line-height: 1.5;
+}
+
+@media (max-width: 1050px) {
+  .snowfall-preview {
     width: 100%;
-    height: calc(100vh - 61.8vh); /* Golden ratio */
+    height: calc(100vh - 61.8vh);
   }
-}
-
-`, "",{"version":3,"sources":["webpack://./src/components/snowfall/snowfall.css"],"names":[],"mappings":"AAAA;EACE,YAAY,EAAE,iBAAiB;EAC/B,uBAAuB;EACvB,aAAa;AACf;;;;AAIA;EACE;IACE,WAAW;IACX,4BAA4B,EAAE,iBAAiB;EACjD;AACF","sourcesContent":["#snowfall {\n  width: 61.8%; /* Golden ratio */\n  background-color: black;\n  height: 100vh;\n}\n\n\n\n@media (max-width:1050px)  { \n  #snowfall {\n    width: 100%;\n    height: calc(100vh - 61.8vh); /* Golden ratio */\n  }\n}\n\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/snowfall/snowfall.css"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,YAAY;EACZ,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,WAAW;EACX,YAAY;AACd;;AAEA;EACE,kBAAkB;EAClB,QAAQ;EACR,WAAW;;EAEX,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,uBAAuB;EACvB,SAAS;;EAET,sBAAsB;EACtB,aAAa;EACb,kBAAkB;EAClB,YAAY;EACZ,oBAAoB;EACpB,0BAA0B;AAC5B;;AAEA;EACE,mCAAmC;EACnC,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;EAChB,qCAAqC;EACrC,gBAAgB;AAClB;;AAEA;EACE;IACE,WAAW;IACX,4BAA4B;EAC9B;AACF","sourcesContent":[".snowfall-preview {\n  position: relative;\n  width: 61.8%;\n  height: 100vh;\n  background-color: black;\n}\n\n#snowfall {\n  width: 100%;\n  height: 100%;\n}\n\n.snowfall-notice {\n  position: absolute;\n  inset: 0;\n  z-index: 10;\n\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 1rem;\n\n  box-sizing: border-box;\n  padding: 2rem;\n  text-align: center;\n  color: white;\n  pointer-events: none;\n  text-shadow: 0 0 4px black;\n}\n\n.snowfall-notice strong {\n  font-size: clamp(2rem, 4vw, 3.5rem);\n  line-height: 1.2;\n}\n\n.snowfall-notice span {\n  max-width: 36rem;\n  font-size: clamp(1.1rem, 2vw, 1.5rem);\n  line-height: 1.5;\n}\n\n@media (max-width: 1050px) {\n  .snowfall-preview {\n    width: 100%;\n    height: calc(100vh - 61.8vh);\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -7497,39 +7541,6 @@ video {
 [hidden]:where(:not([hidden="until-found"])) {
   display: none;
 }
-.container {
-  width: 100%;
-}
-@media (min-width: 640px) {
-
-  .container {
-    max-width: 640px;
-  }
-}
-@media (min-width: 768px) {
-
-  .container {
-    max-width: 768px;
-  }
-}
-@media (min-width: 1024px) {
-
-  .container {
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1280px) {
-
-  .container {
-    max-width: 1280px;
-  }
-}
-@media (min-width: 1536px) {
-
-  .container {
-    max-width: 1536px;
-  }
-}
 .relative {
   position: relative;
 }
@@ -7651,6 +7662,9 @@ video {
 .opacity-50 {
   opacity: 0.5;
 }
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
 .hover\\:bg-red-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(185 28 28 / var(--tw-bg-opacity, 1));
@@ -7682,7 +7696,7 @@ video {
 .focus\\:ring-blue-500:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity, 1));
-}`, "",{"version":3,"sources":["webpack://./src/index.css"],"names":[],"mappings":"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","sourcesContent":["@tailwind base;\n@tailwind components;\n@tailwind utilities;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/index.css"],"names":[],"mappings":"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","sourcesContent":["@tailwind base;\n@tailwind components;\n@tailwind utilities;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -55114,7 +55128,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash */ "./node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 /* harmony import */ var _components_sidebar_sidebar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/sidebar/sidebar */ "./src/components/sidebar/sidebar.tsx");
 /* harmony import */ var _components_snowfall_snowfall__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/snowfall/snowfall */ "./src/components/snowfall/snowfall.tsx");
 /* harmony import */ var _app_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.css */ "./src/app.css");
@@ -55141,14 +55155,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 const App = () => {
     const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_13__.useDispatch)();
     const config = (0,react_redux__WEBPACK_IMPORTED_MODULE_13__.useSelector)((state) => state.userConfig);
+    const schedule = (0,react_redux__WEBPACK_IMPORTED_MODULE_13__.useSelector)((state) => state.userSchedule);
     const editorConfig = (0,react_redux__WEBPACK_IMPORTED_MODULE_13__.useSelector)((state) => state.editorSettings);
     const [difference, setDifference] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(() => {
         const d = (0,_erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_14__.diff)(config || _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_14__.DEFAULT_USER_CONFIG);
-        return Object.freeze(d); // prevents mutation
+        return Object.freeze(d);
     });
     const debouncedSetDifference = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)((0,lodash__WEBPACK_IMPORTED_MODULE_2__.debounce)((newDifference) => {
         setDifference(newDifference);
@@ -55158,7 +55172,12 @@ const App = () => {
         if (JSON.stringify(diffConfig) !== JSON.stringify(difference)) {
             debouncedSetDifference(diffConfig);
         }
-    }, [config]);
+    }, [config, difference, debouncedSetDifference]);
+    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+        return () => {
+            debouncedSetDifference.cancel();
+        };
+    }, [debouncedSetDifference]);
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
         const element = document.getElementById(_erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_14__.DEFAULT_CONTAINER_ID);
         if (element) {
@@ -55182,8 +55201,8 @@ const App = () => {
             dispatch((0,_features_config_config_slice__WEBPACK_IMPORTED_MODULE_10__.setUserConfig)(value.userConfig));
             dispatch((0,_features_editor_settings_editor_settings_slice__WEBPACK_IMPORTED_MODULE_11__.setEditorSettings)(value.editorConfig));
         }
-    }, []);
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { id: "app", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_sidebar_sidebar__WEBPACK_IMPORTED_MODULE_3__.Sidebar, { config: config, editorConfig: editorConfig, difference: difference }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_snowfall_snowfall__WEBPACK_IMPORTED_MODULE_4__.Snowfall, { config: difference })] }));
+    }, [dispatch]);
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { id: "app", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_sidebar_sidebar__WEBPACK_IMPORTED_MODULE_3__.Sidebar, { config: config, editorConfig: editorConfig, difference: difference }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_snowfall_snowfall__WEBPACK_IMPORTED_MODULE_4__.Snowfall, { config: difference, schedule: schedule })] }));
 };
 
 
@@ -55311,7 +55330,7 @@ const Control = ({ name, children, reset, value, onChange, showOutput, tooltip, 
         setV(value);
         setDisplayValue(isPrimitive ? String(value) : JSON.stringify(value));
     }, [value, isPrimitive]); // Recompute on value change
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "control-wrapper", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "control", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "children", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "label-row", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("label", { children: [name, ":"] }), value && onChange && showOutput && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", { value: displayValue, onChange: (evt) => setDisplayValue(evt.target.value), className: "border-0 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-2", type: "text", onBlur: (evt) => {
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "control-wrapper", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "control", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "children", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "label-row", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("label", { children: [name, ":"] }), value !== null && onChange && showOutput && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", { value: displayValue, onChange: (evt) => setDisplayValue(evt.target.value), className: "border-0 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-2", type: "text", onBlur: (evt) => {
                                     try {
                                         const parsedValue = isPrimitive ? displayValue : JSON.parse(displayValue);
                                         // Fake a ChangeEvent with the parsed value for onChange
@@ -55464,14 +55483,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
 /* harmony import */ var highlight_js_lib_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! highlight.js/lib/core */ "./node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/es/core.js");
 /* harmony import */ var highlight_js_lib_languages_javascript__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! highlight.js/lib/languages/javascript */ "./node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/es/languages/javascript.js");
-/* harmony import */ var highlight_js_styles_base16_tomorrow_night_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! highlight.js/styles/base16/tomorrow-night.css */ "./node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/styles/base16/tomorrow-night.css");
-/* harmony import */ var react_tooltip_dist_react_tooltip_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-tooltip/dist/react-tooltip.css */ "./node_modules/.pnpm/react-tooltip@5.28.0_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/react-tooltip/dist/react-tooltip.min.css");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _output_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./output.css */ "./src/components/output/output.css");
-/* harmony import */ var _button_button__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../button/button */ "./src/components/button/button.tsx");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.7.2/node_modules/@fortawesome/free-solid-svg-icons/index.mjs");
-/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/.pnpm/@fortawesome+react-fontawesome@0.2.2_@fortawesome+fontawesome-svg-core@6.7.2_react@19.0.0/node_modules/@fortawesome/react-fontawesome/index.es.js");
+/* harmony import */ var highlight_js_lib_languages_typescript__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! highlight.js/lib/languages/typescript */ "./node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/es/languages/typescript.js");
+/* harmony import */ var highlight_js_lib_languages_xml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! highlight.js/lib/languages/xml */ "./node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/es/languages/xml.js");
+/* harmony import */ var highlight_js_styles_base16_tomorrow_night_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! highlight.js/styles/base16/tomorrow-night.css */ "./node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/styles/base16/tomorrow-night.css");
+/* harmony import */ var react_tooltip_dist_react_tooltip_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-tooltip/dist/react-tooltip.css */ "./node_modules/.pnpm/react-tooltip@5.28.0_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/react-tooltip/dist/react-tooltip.min.css");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
+/* harmony import */ var _output_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./output.css */ "./src/components/output/output.css");
+/* harmony import */ var _button_button__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../button/button */ "./src/components/button/button.tsx");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.7.2/node_modules/@fortawesome/free-solid-svg-icons/index.mjs");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/.pnpm/@fortawesome+react-fontawesome@0.2.2_@fortawesome+fontawesome-svg-core@6.7.2_react@19.0.0/node_modules/@fortawesome/react-fontawesome/index.es.js");
 
 
 
@@ -55482,52 +55504,144 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function stringify(obj, replacer, space) {
-    const jsonString = JSON.stringify(obj, replacer, space);
-    return jsonString.replace(/"(\w+)":/g, "$1:");
+
+
+
+function stringify(obj, space = 2) {
+    return JSON.stringify(obj, null, space) ?? "{}";
 }
-const Output = ({ title, config, largeConfig, reset, copy, isMinified, isReact, schedule, }) => {
-    const [output, setOutput] = (0,react__WEBPACK_IMPORTED_MODULE_5__.useState)(`snowfall.start()`);
-    highlight_js_lib_core__WEBPACK_IMPORTED_MODULE_1__["default"].registerLanguage("javascript", highlight_js_lib_languages_javascript__WEBPACK_IMPORTED_MODULE_2__["default"]);
-    const [snowfallDotStart, setSnowfallDotStart] = (0,react__WEBPACK_IMPORTED_MODULE_5__.useState)(`snowfall.start()`);
-    const [snowfallReact, setSnowfallReact] = (0,react__WEBPACK_IMPORTED_MODULE_5__.useState)(`<Snowfall />`);
-    (0,react__WEBPACK_IMPORTED_MODULE_5__.useEffect)(() => {
-        const stringifiedConfig = isMinified
-            ? stringify(config, null, 2)
-            : stringify(largeConfig, null, 2);
-        const stringifiedSchedule = stringify(schedule || {}, null, 2);
-        if (stringifiedConfig.length === 2) {
-            setSnowfallDotStart(`snowfall.start()`);
-            setSnowfallReact(`<Snowfall />`);
+const Output = ({ title, config, largeConfig, reset, copy, isMinified, }) => {
+    const schedule = (0,react_redux__WEBPACK_IMPORTED_MODULE_11__.useSelector)((state) => state.userSchedule);
+    const exportMode = (0,react_redux__WEBPACK_IMPORTED_MODULE_11__.useSelector)((state) => state.editorSettings.exportMode ??
+        (state.editorSettings.isReact ? "jsx" : "js"));
+    const [output, setOutput] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)("");
+    const [plainOutput, setPlainOutput] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)("");
+    (0,react__WEBPACK_IMPORTED_MODULE_7__.useEffect)(() => {
+        highlight_js_lib_core__WEBPACK_IMPORTED_MODULE_1__["default"].registerLanguage("javascript", highlight_js_lib_languages_javascript__WEBPACK_IMPORTED_MODULE_2__["default"]);
+        highlight_js_lib_core__WEBPACK_IMPORTED_MODULE_1__["default"].registerLanguage("typescript", highlight_js_lib_languages_typescript__WEBPACK_IMPORTED_MODULE_3__["default"]);
+        highlight_js_lib_core__WEBPACK_IMPORTED_MODULE_1__["default"].registerLanguage("xml", highlight_js_lib_languages_xml__WEBPACK_IMPORTED_MODULE_4__["default"]);
+    }, []);
+    (0,react__WEBPACK_IMPORTED_MODULE_7__.useEffect)(() => {
+        const selectedConfig = isMinified ? config : largeConfig;
+        const hasConfig = Object.keys(selectedConfig).length > 0;
+        const configCode = stringify(selectedConfig);
+        // A schedule is applied only when enabled and both dates are complete.
+        // Otherwise, snowfall runs continuously.
+        const hasSchedule = schedule.enabled &&
+            schedule.from.month !== null &&
+            schedule.from.day !== null &&
+            schedule.to.month !== null &&
+            schedule.to.day !== null;
+        const scheduleCode = hasSchedule
+            ? stringify({
+                from: {
+                    month: schedule.from.month + 1,
+                    day: schedule.from.day,
+                },
+                to: {
+                    month: schedule.to.month + 1,
+                    day: schedule.to.day,
+                },
+            })
+            : "";
+        const isReact = exportMode === "jsx" || exportMode === "tsx";
+        const isTypeScript = exportMode === "ts" || exportMode === "tsx";
+        let code;
+        let language = isTypeScript ? "typescript" : "javascript";
+        if (exportMode === "html") {
+            language = "xml";
+            const scriptCode = hasSchedule
+                ? `const schedule = ${scheduleCode};
+
+const config = ${configCode};
+
+snowfall.schedule(schedule, config);`
+                : hasConfig
+                    ? `snowfall.start(${configCode});`
+                    : "snowfall.start();";
+            const indentedScriptCode = scriptCode
+                .split("\n")
+                .map((line) => (line ? `    ${line}` : line))
+                .join("\n");
+            code = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snowfall</title>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/@erikwatson/snowfall@4/dist/index.min.js"></script>
+  <script>
+${indentedScriptCode}
+  </script>
+</body>
+</html>`;
+        }
+        else if (isReact) {
+            // React projects use the dedicated React wrapper package.
+            const imports = isTypeScript
+                ? `import { Snowfall${hasConfig ? ", type UserConfig" : ""}${hasSchedule ? ", type UserSchedule" : ""} } from "@erikwatson/react-snowfall";`
+                : `import { Snowfall } from "@erikwatson/react-snowfall";`;
+            const declarations = [];
+            if (hasConfig) {
+                declarations.push(isTypeScript
+                    ? `const config: UserConfig = ${configCode};`
+                    : `const config = ${configCode};`);
+            }
+            if (hasSchedule) {
+                declarations.push(isTypeScript
+                    ? `const schedule: UserSchedule = ${scheduleCode};`
+                    : `const schedule = ${scheduleCode};`);
+            }
+            const declarationCode = declarations.join("\n\n");
+            const props = [
+                hasConfig ? "config={config}" : "",
+                hasSchedule ? "schedule={schedule}" : "",
+            ]
+                .filter(Boolean)
+                .join(" ");
+            const componentCode = `export default function SnowfallExample() {
+  return <Snowfall${props ? ` ${props}` : ""} />;
+}`;
+            code = [
+                imports,
+                declarationCode ? `\n\n${declarationCode}` : "",
+                `\n\n${componentCode}`,
+            ].join("");
         }
         else {
-            if (schedule) {
-                const str_js = `const schedule = ${stringifiedSchedule};\n\nconst config = ${stringifiedConfig};\n\nsnowfall.schedule(schedule, config);`;
-                const str_react = `const schedule = ${stringifiedSchedule};\n\nconst config = ${stringifiedConfig};\n\nreturn <Snowfall schedule={schedule} config={config} />`;
-                setSnowfallDotStart(str_js);
-                setSnowfallReact(str_react);
+            // Regular JS and TS continue to use the core snowfall package.
+            const imports = isTypeScript
+                ? `import snowfall, { type UserConfig${hasSchedule ? ", type UserSchedule" : ""} } from "@erikwatson/snowfall";`
+                : `import snowfall from "@erikwatson/snowfall";`;
+            const declarations = [];
+            if (hasConfig) {
+                declarations.push(isTypeScript
+                    ? `const config: UserConfig = ${configCode};`
+                    : `const config = ${configCode};`);
             }
-            else {
-                setSnowfallDotStart(`snowfall.start(${stringifiedConfig})`);
-                setSnowfallReact(`<Snowfall config={${stringifiedConfig}} />`);
+            if (hasSchedule) {
+                declarations.push(isTypeScript
+                    ? `const schedule: UserSchedule = ${scheduleCode};`
+                    : `const schedule = ${scheduleCode};`);
             }
+            const declarationCode = declarations.join("\n\n");
+            const invocation = hasSchedule
+                ? `snowfall.schedule(schedule, ${hasConfig ? "config" : "{}"});`
+                : hasConfig
+                    ? "snowfall.start(config);"
+                    : "snowfall.start();";
+            code = [
+                imports,
+                declarationCode ? `\n\n${declarationCode}` : "",
+                `\n\n${invocation}`,
+            ].join("");
         }
-    }, [config, isMinified, isReact, largeConfig]);
-    (0,react__WEBPACK_IMPORTED_MODULE_5__.useEffect)(() => {
-        setOutput(highlight_js_lib_core__WEBPACK_IMPORTED_MODULE_1__["default"].highlight(snowfallReact, { language: "jsx" }).value);
-    }, [snowfallReact]);
-    (0,react__WEBPACK_IMPORTED_MODULE_5__.useEffect)(() => {
-        setOutput(highlight_js_lib_core__WEBPACK_IMPORTED_MODULE_1__["default"].highlight(snowfallDotStart, { language: "js" }).value);
-    }, [snowfallDotStart]);
-    (0,react__WEBPACK_IMPORTED_MODULE_5__.useEffect)(() => {
-        if (isReact) {
-            setOutput(highlight_js_lib_core__WEBPACK_IMPORTED_MODULE_1__["default"].highlight(snowfallReact, { language: "jsx" }).value);
-        }
-        else {
-            setOutput(highlight_js_lib_core__WEBPACK_IMPORTED_MODULE_1__["default"].highlight(snowfallDotStart, { language: "js" }).value);
-        }
-    }, [isReact]);
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "output-wrapper", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "output", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "output-header", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h2", { children: title }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_button_button__WEBPACK_IMPORTED_MODULE_7__.Button, { onClick: () => copy(isReact ? snowfallReact : snowfallDotStart), tooltip: "Copy to clipboard", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_8__.FontAwesomeIcon, { icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__.faClone }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_button_button__WEBPACK_IMPORTED_MODULE_7__.Button, { kind: "error", onClick: reset, tooltip: "Reset ", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_8__.FontAwesomeIcon, { icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__.faUndo }) })] })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("pre", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("code", { className: "js", id: "output", dangerouslySetInnerHTML: { __html: output } }) })] }) }));
+        setPlainOutput(code);
+        setOutput(highlight_js_lib_core__WEBPACK_IMPORTED_MODULE_1__["default"].highlight(code, { language }).value);
+    }, [config, largeConfig, isMinified, schedule, exportMode]);
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "output-wrapper", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "output", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "output-header", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h2", { children: title }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_button_button__WEBPACK_IMPORTED_MODULE_9__.Button, { onClick: () => copy(plainOutput), tooltip: "Copy to clipboard", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_10__.FontAwesomeIcon, { icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_12__.faClone }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_button_button__WEBPACK_IMPORTED_MODULE_9__.Button, { kind: "error", onClick: reset, tooltip: "Reset", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_10__.FontAwesomeIcon, { icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_12__.faUndo }) })] })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("pre", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("code", { className: exportMode, id: "output", dangerouslySetInnerHTML: { __html: output } }) })] }) }));
 };
 
 
@@ -55585,7 +55699,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   EditorSettings: () => (/* binding */ EditorSettings)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _features_editor_settings_editor_settings_slice__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../features/editor-settings/editor-settings.slice */ "./src/features/editor-settings/editor-settings.slice.ts");
 /* harmony import */ var _colour_colour__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../colour/colour */ "./src/components/colour/colour.tsx");
 /* harmony import */ var _control_control__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../control/control */ "./src/components/control/control.tsx");
@@ -55599,6 +55713,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _presets_pride__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../presets/pride */ "./src/presets/pride.ts");
 /* harmony import */ var _select_select__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../select/select */ "./src/components/select/select.tsx");
 /* harmony import */ var _presets_snow2__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../../presets/snow2 */ "./src/presets/snow2.ts");
+/* harmony import */ var _presets_rain__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../../presets/rain */ "./src/presets/rain.ts");
+
 
 
 
@@ -55615,9 +55731,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const EditorSettings = ({ editorConfig }) => {
-    const { background, isReact } = editorConfig;
-    const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_14__.useDispatch)();
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h2", { children: "Editor settings" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", { children: ["These settings are ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("b", { children: "not" }), " exported with your config."] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_controlGroup_controlGroup__WEBPACK_IMPORTED_MODULE_4__.ControlGroup, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_control_control__WEBPACK_IMPORTED_MODULE_3__.Control, { name: "Preset", tooltip: "Select a preset", value: editorConfig.preset, reset: () => {
+    const { background } = editorConfig;
+    const exportMode = editorConfig.exportMode ?? (editorConfig.isReact ? "jsx" : "js");
+    const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_15__.useDispatch)();
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h2", { children: "Editor settings" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", { children: ["These settings are ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("b", { children: "not" }), " exported with your config."] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_controlGroup_controlGroup__WEBPACK_IMPORTED_MODULE_4__.ControlGroup, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_control_control__WEBPACK_IMPORTED_MODULE_3__.Control, { name: "Preset", tooltip: "Some fun and inspiring presets to try", value: editorConfig.preset, reset: () => {
                             dispatch((0,_features_editor_settings_editor_settings_slice__WEBPACK_IMPORTED_MODULE_1__.setPreset)('snow2'));
                             dispatch((0,_features_config_config_slice__WEBPACK_IMPORTED_MODULE_6__.setUserConfig)(_presets_snow2__WEBPACK_IMPORTED_MODULE_13__.PRESET_SNOW2.userConfig));
                             dispatch((0,_features_editor_settings_editor_settings_slice__WEBPACK_IMPORTED_MODULE_1__.setEditorSettings)(_presets_snow2__WEBPACK_IMPORTED_MODULE_13__.PRESET_SNOW2.editorConfig));
@@ -55659,12 +55776,15 @@ const EditorSettings = ({ editorConfig }) => {
                                     dispatch((0,_features_config_config_slice__WEBPACK_IMPORTED_MODULE_6__.setUserConfig)(_presets_pride__WEBPACK_IMPORTED_MODULE_11__.PRESET_PRIDE.userConfig));
                                     dispatch((0,_features_editor_settings_editor_settings_slice__WEBPACK_IMPORTED_MODULE_1__.setEditorSettings)(_presets_pride__WEBPACK_IMPORTED_MODULE_11__.PRESET_PRIDE.editorConfig));
                                     break;
+                                case "rain":
+                                    dispatch((0,_features_editor_settings_editor_settings_slice__WEBPACK_IMPORTED_MODULE_1__.setPreset)(value));
+                                    dispatch((0,_features_config_config_slice__WEBPACK_IMPORTED_MODULE_6__.setUserConfig)(_presets_rain__WEBPACK_IMPORTED_MODULE_14__.PRESET_RAIN.userConfig));
+                                    dispatch((0,_features_editor_settings_editor_settings_slice__WEBPACK_IMPORTED_MODULE_1__.setEditorSettings)(_presets_rain__WEBPACK_IMPORTED_MODULE_14__.PRESET_RAIN.editorConfig));
+                                    break;
                             }
-                        }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_select_select__WEBPACK_IMPORTED_MODULE_12__.Select, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: "snow", children: "Snow" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: "classic", children: "Classic snow" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: "snow2", children: "Snow with images" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: "lava", children: "Lava" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: "space", children: "Space" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: "pride", children: "Pride" })] }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_control_control__WEBPACK_IMPORTED_MODULE_3__.Control, { name: "Export", tooltip: "Which environment do you want your config generated for?", showOutput: false, reset: () => {
-                            dispatch((0,_features_editor_settings_editor_settings_slice__WEBPACK_IMPORTED_MODULE_1__.setIsReact)(false));
-                        }, value: isReact ? 'jsx' : 'js', onChange: (event) => {
-                            dispatch((0,_features_editor_settings_editor_settings_slice__WEBPACK_IMPORTED_MODULE_1__.setIsReact)(event.target.value === 'jsx'));
-                        }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_select_select__WEBPACK_IMPORTED_MODULE_12__.Select, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { selected: true, value: "js", children: "JavaScript" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: "jsx", children: "JSX (React)" })] }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_control_control__WEBPACK_IMPORTED_MODULE_3__.Control, { name: "Background", tooltip: "The background colour of the snowfall simulation", showOutput: true, reset: () => {
+                        }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_select_select__WEBPACK_IMPORTED_MODULE_12__.Select, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: "snow", children: "Snow" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: "snow2", children: "Snow with images" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: "lava", children: "Lava" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: "space", children: "Space" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: "rain", children: "Rain" })] }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_control_control__WEBPACK_IMPORTED_MODULE_3__.Control, { name: "Export", tooltip: "Choose the language and environment for the generated code.", showOutput: false, reset: () => dispatch((0,_features_editor_settings_editor_settings_slice__WEBPACK_IMPORTED_MODULE_1__.setExportMode)("js")), value: exportMode, onChange: (event) => {
+                            dispatch((0,_features_editor_settings_editor_settings_slice__WEBPACK_IMPORTED_MODULE_1__.setExportMode)(event.target.value));
+                        }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_select_select__WEBPACK_IMPORTED_MODULE_12__.Select, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: "html", children: "HTML (CDN)" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: "js", children: "JavaScript" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: "jsx", children: "JSX (React)" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: "ts", children: "TypeScript" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: "tsx", children: "TSX (React)" })] }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_control_control__WEBPACK_IMPORTED_MODULE_3__.Control, { name: "Background", tooltip: "For testing purposes, you can set the background colour of the page here", showOutput: true, reset: () => {
                             dispatch((0,_features_editor_settings_editor_settings_slice__WEBPACK_IMPORTED_MODULE_1__.setBackground)(_presets_snow__WEBPACK_IMPORTED_MODULE_5__.PRESET_SNOW.editorConfig.background));
                         }, value: background, onChange: (event) => dispatch((0,_features_editor_settings_editor_settings_slice__WEBPACK_IMPORTED_MODULE_1__.setBackground)(event.target.value)), children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_colour_colour__WEBPACK_IMPORTED_MODULE_2__.Colour, {}) })] })] }));
 };
@@ -55750,8 +55870,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const Heading = ({ advanced, isReact }) => {
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "heading", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h1", { children: "Snowfall :: stay cool \u2603\uFE0F" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", { children: ["An ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", { href: "https://erikwatson.me", children: "Erik Watson" }), " project"] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("li", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", { href: isReact ? 'https://github.com/erikwatson/react-snowfall' : 'https://github.com/erikwatson/snowfall', children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, { icon: _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faGithub }) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("li", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", { href: isReact ? 'https://www.npmjs.com/package/@erikwatson/react-snowfall' : 'https://www.npmjs.com/package/@erikwatson/snowfall', children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, { icon: _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faNpm }) }) })] })] }));
+const links = {
+    snowfallGithub: "https://github.com/erikwatson/snowfall",
+    reactSnowfallGithub: "https://github.com/erikwatson/react-snowfall",
+    snowfallNpm: "https://www.npmjs.com/package/@erikwatson/snowfall",
+    reactSnowfallNpm: "https://www.npmjs.com/package/@erikwatson/react-snowfall",
+    jsdelivr: "https://www.jsdelivr.com/package/npm/@erikwatson/snowfall",
+};
+const Heading = ({ advanced }) => {
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "heading", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h1", { children: "Snowfall :: stay cool \u2603\uFE0F" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", { children: ["An", " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", { href: "https://erikwatson.me", target: "_blank", rel: "noreferrer", children: "Erik Watson" }), " ", "project"] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("li", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("a", { href: links.snowfallGithub, target: "_blank", rel: "noreferrer", "aria-label": "Snowfall on GitHub", title: "Snowfall on GitHub", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, { icon: _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faGithub }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { children: "Snowfall on GitHub" })] }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("li", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("a", { href: links.reactSnowfallGithub, target: "_blank", rel: "noreferrer", "aria-label": "React Snowfall on GitHub", title: "React Snowfall on GitHub", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, { icon: _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faGithub }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { children: "React Snowfall on GitHub" })] }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("li", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("a", { href: links.snowfallNpm, target: "_blank", rel: "noreferrer", "aria-label": "Snowfall on npm", title: "Snowfall on npm", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, { icon: _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faNpm }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { children: "Snowfall on NPM" })] }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("li", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("a", { href: links.reactSnowfallNpm, target: "_blank", rel: "noreferrer", "aria-label": "React Snowfall on npm", title: "React Snowfall on npm", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, { icon: _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faNpm }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { children: "React Snowfall on NPM" })] }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("li", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("a", { href: links.jsdelivr, target: "_blank", rel: "noreferrer", "aria-label": "JSDelivr page", title: "JSDelivr", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, { icon: _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faJs }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { children: "JSDelivr" })] }) })] })] }));
 };
 
 
@@ -55769,7 +55896,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SnowflakeColour: () => (/* binding */ SnowflakeColour)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 /* harmony import */ var _colour_colour__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../colour/colour */ "./src/components/colour/colour.tsx");
 /* harmony import */ var _control_control__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../control/control */ "./src/components/control/control.tsx");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
@@ -55809,7 +55936,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SnowflakeDensity: () => (/* binding */ SnowflakeDensity)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 /* harmony import */ var _control_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../control/control */ "./src/components/control/control.tsx");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _range_range__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../range/range */ "./src/components/range/range.tsx");
@@ -55851,7 +55978,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SnowflakeGravityAngle: () => (/* binding */ SnowflakeGravityAngle)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _range_range__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../range/range */ "./src/components/range/range.tsx");
 /* harmony import */ var _control_control__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../control/control */ "./src/components/control/control.tsx");
@@ -55891,7 +56018,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SnowflakeGravityStrength: () => (/* binding */ SnowflakeGravityStrength)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _control_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../control/control */ "./src/components/control/control.tsx");
 /* harmony import */ var _range_range__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../range/range */ "./src/components/range/range.tsx");
@@ -55933,7 +56060,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
 /* harmony import */ var _control_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../control/control */ "./src/components/control/control.tsx");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 /* harmony import */ var _checkbox_checkbox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../checkbox/checkbox */ "./src/components/checkbox/checkbox.tsx");
 /* harmony import */ var _features_config_config_slice__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../features/config/config.slice */ "./src/features/config/config.slice.ts");
 
@@ -55973,7 +56100,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SnowflakeGustAdditionalStrength: () => (/* binding */ SnowflakeGustAdditionalStrength)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 /* harmony import */ var _control_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../control/control */ "./src/components/control/control.tsx");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _range_range__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../range/range */ "./src/components/range/range.tsx");
@@ -56032,7 +56159,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
 /* harmony import */ var _control_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../control/control */ "./src/components/control/control.tsx");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 /* harmony import */ var _range_range__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../range/range */ "./src/components/range/range.tsx");
 /* harmony import */ var _features_config_config_slice__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../features/config/config.slice */ "./src/features/config/config.slice.ts");
 
@@ -56072,7 +56199,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _control_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../control/control */ "./src/components/control/control.tsx");
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 /* harmony import */ var _range_range__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../range/range */ "./src/components/range/range.tsx");
 /* harmony import */ var _features_config_config_slice__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../features/config/config.slice */ "./src/features/config/config.slice.ts");
 /* harmony import */ var _controlGroup_controlGroup__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../controlGroup/controlGroup */ "./src/components/controlGroup/controlGroup.tsx");
@@ -56127,7 +56254,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SnowflakeGustInDuration: () => (/* binding */ SnowflakeGustInDuration)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 /* harmony import */ var _control_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../control/control */ "./src/components/control/control.tsx");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _range_range__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../range/range */ "./src/components/range/range.tsx");
@@ -56186,7 +56313,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SnowflakeGustOutDelay: () => (/* binding */ SnowflakeGustOutDelay)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 /* harmony import */ var _control_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../control/control */ "./src/components/control/control.tsx");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _range_range__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../range/range */ "./src/components/range/range.tsx");
@@ -56243,7 +56370,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SnowflakeGustOutDuration: () => (/* binding */ SnowflakeGustOutDuration)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _control_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../control/control */ "./src/components/control/control.tsx");
 /* harmony import */ var _range_range__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../range/range */ "./src/components/range/range.tsx");
@@ -56301,7 +56428,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   cachedLayerTitles: () => (/* binding */ cachedLayerTitles)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 /* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.7.2/node_modules/@fortawesome/free-solid-svg-icons/index.mjs");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/.pnpm/@fortawesome+react-fontawesome@0.2.2_@fortawesome+fontawesome-svg-core@6.7.2_react@19.0.0/node_modules/@fortawesome/react-fontawesome/index.es.js");
 /* harmony import */ var _button_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../button/button */ "./src/components/button/button.tsx");
@@ -56539,7 +56666,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SnowflakeMass: () => (/* binding */ SnowflakeMass)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 /* harmony import */ var _control_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../control/control */ "./src/components/control/control.tsx");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _range_range__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../range/range */ "./src/components/range/range.tsx");
@@ -56596,7 +56723,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SnowflakeOpacity: () => (/* binding */ SnowflakeOpacity)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 /* harmony import */ var _control_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../control/control */ "./src/components/control/control.tsx");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _range_range__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../range/range */ "./src/components/range/range.tsx");
@@ -56653,7 +56780,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SnowflakeSize: () => (/* binding */ SnowflakeSize)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 /* harmony import */ var _control_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../control/control */ "./src/components/control/control.tsx");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _range_range__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../range/range */ "./src/components/range/range.tsx");
@@ -56710,7 +56837,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SnowflakeSwayAmplitude: () => (/* binding */ SnowflakeSwayAmplitude)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _range_range__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../range/range */ "./src/components/range/range.tsx");
 /* harmony import */ var _control_control__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../control/control */ "./src/components/control/control.tsx");
@@ -56750,7 +56877,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SnowflakeSwayFrequency: () => (/* binding */ SnowflakeSwayFrequency)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _control_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../control/control */ "./src/components/control/control.tsx");
 /* harmony import */ var _range_range__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../range/range */ "./src/components/range/range.tsx");
@@ -56790,7 +56917,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SnowflakeWindAngle: () => (/* binding */ SnowflakeWindAngle)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _range_range__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../range/range */ "./src/components/range/range.tsx");
 /* harmony import */ var _control_control__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../control/control */ "./src/components/control/control.tsx");
@@ -56830,7 +56957,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SnowflakeWindStrength: () => (/* binding */ SnowflakeWindStrength)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _control_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../control/control */ "./src/components/control/control.tsx");
 /* harmony import */ var _range_range__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../range/range */ "./src/components/range/range.tsx");
@@ -56858,6 +56985,84 @@ const SnowflakeWindStrength = ({ index, layer, }) => {
 
 /***/ }),
 
+/***/ "./src/components/sidebar/schedule-settings/schedule-settings.tsx":
+/*!************************************************************************!*\
+  !*** ./src/components/sidebar/schedule-settings/schedule-settings.tsx ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ScheduleSettings: () => (/* binding */ ScheduleSettings)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
+/* harmony import */ var _control_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../control/control */ "./src/components/control/control.tsx");
+/* harmony import */ var _controlGroup_controlGroup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../controlGroup/controlGroup */ "./src/components/controlGroup/controlGroup.tsx");
+/* harmony import */ var _select_select__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../select/select */ "./src/components/select/select.tsx");
+/* harmony import */ var _checkbox_checkbox__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../checkbox/checkbox */ "./src/components/checkbox/checkbox.tsx");
+/* harmony import */ var _features_config_schedule_slice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../features/config/schedule.slice */ "./src/features/config/schedule.slice.ts");
+
+
+
+
+
+
+
+const dateMap = {
+    january: { days: 31 },
+    february: { days: 29 },
+    march: { days: 31 },
+    april: { days: 30 },
+    may: { days: 31 },
+    june: { days: 30 },
+    july: { days: 31 },
+    august: { days: 31 },
+    september: { days: 30 },
+    october: { days: 31 },
+    november: { days: 30 },
+    december: { days: 31 },
+};
+// Use zero-based month numbers in Redux: January = 0, December = 11.
+const months = Object.keys(dateMap);
+const getDays = (month) => {
+    if (month === null)
+        return [];
+    const monthName = months[month];
+    const count = dateMap[monthName]?.days ?? 0;
+    return Array.from({ length: count }, (_, index) => index + 1);
+};
+const ScheduleSettings = () => {
+    const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useDispatch)();
+    const schedule = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useSelector)((state) => state.userSchedule);
+    const clearStartDay = () => dispatch((0,_features_config_schedule_slice__WEBPACK_IMPORTED_MODULE_5__.setStartDay)(null));
+    const clearEndDay = () => dispatch((0,_features_config_schedule_slice__WEBPACK_IMPORTED_MODULE_5__.setEndDay)(null));
+    const monthOptions = ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: "", children: "Select a month" }), months.map((month, index) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: index, children: month.charAt(0).toUpperCase() + month.slice(1) }, month)))] }));
+    const dayOptions = (month) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: "", children: "Select a day" }), getDays(month).map((day) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", { value: day, children: day }, day)))] }));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h2", { children: "Schedule settings" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { children: "These will only be exported if they're enabled and everything is set." }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_controlGroup_controlGroup__WEBPACK_IMPORTED_MODULE_2__.ControlGroup, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_control_control__WEBPACK_IMPORTED_MODULE_1__.Control, { name: "Enable", tooltip: "Should snowfall only run at a certain time of the year?", value: schedule.enabled, reset: () => dispatch((0,_features_config_schedule_slice__WEBPACK_IMPORTED_MODULE_5__.setScheduleEnabled)(false)), showOutput: false, onChange: (event) => {
+                            const checked = event.target.checked;
+                            dispatch((0,_features_config_schedule_slice__WEBPACK_IMPORTED_MODULE_5__.setScheduleEnabled)(checked));
+                        }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_checkbox_checkbox__WEBPACK_IMPORTED_MODULE_4__.CheckBox, {}) }), schedule.enabled && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_control_control__WEBPACK_IMPORTED_MODULE_1__.Control, { name: "Start month", tooltip: "The month to start from", value: schedule.from.month ?? "", reset: () => dispatch((0,_features_config_schedule_slice__WEBPACK_IMPORTED_MODULE_5__.setStartMonth)(null)), onChange: (event) => {
+                                    const value = event.target.value;
+                                    dispatch((0,_features_config_schedule_slice__WEBPACK_IMPORTED_MODULE_5__.setStartMonth)(value === "" ? null : Number(value)));
+                                }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_select_select__WEBPACK_IMPORTED_MODULE_3__.Select, { children: monthOptions }) }), schedule.from.month !== null && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_control_control__WEBPACK_IMPORTED_MODULE_1__.Control, { name: "Start day", tooltip: "The day to start from", value: schedule.from.day ?? "", reset: clearStartDay, onChange: (event) => {
+                                    const value = event.target.value;
+                                    dispatch((0,_features_config_schedule_slice__WEBPACK_IMPORTED_MODULE_5__.setStartDay)(value === "" ? null : Number(value)));
+                                }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_select_select__WEBPACK_IMPORTED_MODULE_3__.Select, { children: dayOptions(schedule.from.month) }) })), schedule.from.month !== null && schedule.from.day !== null && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_control_control__WEBPACK_IMPORTED_MODULE_1__.Control, { name: "End month", tooltip: "The month to end on", value: schedule.to.month ?? "", reset: () => dispatch((0,_features_config_schedule_slice__WEBPACK_IMPORTED_MODULE_5__.setEndMonth)(null)), onChange: (event) => {
+                                    const value = event.target.value;
+                                    dispatch((0,_features_config_schedule_slice__WEBPACK_IMPORTED_MODULE_5__.setEndMonth)(value === "" ? null : Number(value)));
+                                }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_select_select__WEBPACK_IMPORTED_MODULE_3__.Select, { children: monthOptions }) })), schedule.from.month !== null &&
+                                schedule.from.day !== null &&
+                                schedule.to.month !== null && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_control_control__WEBPACK_IMPORTED_MODULE_1__.Control, { name: "End day", tooltip: "The day to end on", value: schedule.to.day ?? "", reset: clearEndDay, onChange: (event) => {
+                                    const value = event.target.value;
+                                    dispatch((0,_features_config_schedule_slice__WEBPACK_IMPORTED_MODULE_5__.setEndDay)(value === "" ? null : Number(value)));
+                                }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_select_select__WEBPACK_IMPORTED_MODULE_3__.Select, { children: dayOptions(schedule.to.month) }) }))] }))] })] }));
+};
+
+
+/***/ }),
+
 /***/ "./src/components/sidebar/sidebar.tsx":
 /*!********************************************!*\
   !*** ./src/components/sidebar/sidebar.tsx ***!
@@ -56874,13 +57079,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sidebar_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sidebar.css */ "./src/components/sidebar/sidebar.css");
 /* harmony import */ var _output_output__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../output/output */ "./src/components/output/output.tsx");
 /* harmony import */ var _general_settings_general_settings__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./general-settings/general-settings */ "./src/components/sidebar/general-settings/general-settings.tsx");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _layer_settings_layer_settings__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./layer-settings/layer-settings */ "./src/components/sidebar/layer-settings/layer-settings.tsx");
 /* harmony import */ var copy_to_clipboard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! copy-to-clipboard */ "./node_modules/.pnpm/copy-to-clipboard@3.3.3/node_modules/copy-to-clipboard/index.js");
 /* harmony import */ var copy_to_clipboard__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(copy_to_clipboard__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _features_config_config_slice__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../features/config/config.slice */ "./src/features/config/config.slice.ts");
 /* harmony import */ var _editor_settings_editor_settings__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./editor-settings/editor-settings */ "./src/components/sidebar/editor-settings/editor-settings.tsx");
 /* harmony import */ var _footer_footer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./footer/footer */ "./src/components/sidebar/footer/footer.tsx");
+/* harmony import */ var _schedule_settings_schedule_settings__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./schedule-settings/schedule-settings */ "./src/components/sidebar/schedule-settings/schedule-settings.tsx");
 
 
 
@@ -56892,10 +57098,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const Sidebar = ({ config, editorConfig, difference }) => {
-    const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_10__.useDispatch)();
-    const onDragEnd = () => { };
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { id: "sidebar", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_heading_heading__WEBPACK_IMPORTED_MODULE_1__.Heading, { advanced: editorConfig.advancedSettings, isReact: editorConfig.isReact }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "snow-layers-gap", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "layers-container", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_editor_settings_editor_settings__WEBPACK_IMPORTED_MODULE_8__.EditorSettings, { editorConfig: editorConfig }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: '36px 0' }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_general_settings_general_settings__WEBPACK_IMPORTED_MODULE_4__.GeneralSettings, { attachTo: config.attachTo, background: config.background }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layer_settings_layer_settings__WEBPACK_IMPORTED_MODULE_5__.LayerSettings, { advancedSettings: editorConfig.advancedSettings, preset: editorConfig.preset, layers: config.layers })] })] }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_output_output__WEBPACK_IMPORTED_MODULE_3__.Output, { config: difference, largeConfig: config, title: "Config", isMinified: editorConfig.isMinified, isReact: editorConfig.isReact, schedule: editorConfig.schedule, reset: () => {
+
+const Sidebar = ({ config, editorConfig, difference, }) => {
+    const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_11__.useDispatch)();
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { id: "sidebar", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_heading_heading__WEBPACK_IMPORTED_MODULE_1__.Heading, { advanced: editorConfig.advancedSettings }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "snow-layers-gap", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "layers-container", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_editor_settings_editor_settings__WEBPACK_IMPORTED_MODULE_8__.EditorSettings, { editorConfig: editorConfig }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { style: { padding: "36px 0" }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_general_settings_general_settings__WEBPACK_IMPORTED_MODULE_4__.GeneralSettings, { attachTo: config.attachTo, background: config.background }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { style: { padding: "36px 0 0 0" }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_schedule_settings_schedule_settings__WEBPACK_IMPORTED_MODULE_10__.ScheduleSettings, {}) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layer_settings_layer_settings__WEBPACK_IMPORTED_MODULE_5__.LayerSettings, { advancedSettings: editorConfig.advancedSettings, preset: editorConfig.preset, layers: config.layers })] })] }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_output_output__WEBPACK_IMPORTED_MODULE_3__.Output, { config: difference, largeConfig: config, title: "Config", isMinified: editorConfig.isMinified, reset: () => {
                     dispatch((0,_features_config_config_slice__WEBPACK_IMPORTED_MODULE_7__.resetUserConfig)());
                 }, copy: (value) => {
                     copy_to_clipboard__WEBPACK_IMPORTED_MODULE_6___default()(value);
@@ -56920,21 +57126,72 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@19.0.0/node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _snowfall_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./snowfall.css */ "./src/components/snowfall/snowfall.css");
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 
 
 
 
-const Snowfall = ({ config }) => {
+const isValidDate = (month, day) => {
+    if (month == null || day == null)
+        return false;
+    const date = new Date(Date.UTC(2024, month, day));
+    return (month >= 0 &&
+        month <= 11 &&
+        day >= 1 &&
+        date.getUTCMonth() === month &&
+        date.getUTCDate() === day);
+};
+const isWithinSchedule = (from, to) => {
+    if (from.month == null ||
+        from.day == null ||
+        to.month == null ||
+        to.day == null) {
+        return false;
+    }
+    const today = new Date();
+    const current = (today.getMonth() + 1) * 100 + today.getDate();
+    const start = (from.month + 1) * 100 + from.day;
+    const end = (to.month + 1) * 100 + to.day;
+    // Supports schedules that cross the end of the calendar year.
+    return start <= end
+        ? current >= start && current <= end
+        : current >= start || current <= end;
+};
+const Snowfall = ({ config, schedule }) => {
+    const hasValidSchedule = schedule?.enabled === true &&
+        isValidDate(schedule.from.month, schedule.from.day) &&
+        isValidDate(schedule.to.month, schedule.to.day);
+    const isSnowfallPaused = hasValidSchedule &&
+        schedule !== undefined &&
+        !isWithinSchedule(schedule.from, schedule.to);
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
-        _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_3__["default"].start();
-    }, []);
-    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
-        // the user may change the container id, but we're always going to render _our_ component to the default container
-        const copy = { ...config, attachTo: _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_3__.DEFAULT_CONTAINER_ID };
-        _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_3__["default"].restart(copy);
-    }, [config]);
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { id: 'snowfall' }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { id: "content" })] }));
+        const snowfallConfig = {
+            ...config,
+            attachTo: _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_3__.DEFAULT_CONTAINER_ID,
+        };
+        _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_3__["default"].stop();
+        if (hasValidSchedule && schedule) {
+            const librarySchedule = {
+                from: {
+                    month: schedule.from.month + 1,
+                    day: schedule.from.day,
+                },
+                to: {
+                    month: schedule.to.month + 1,
+                    day: schedule.to.day,
+                },
+            };
+            _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_3__["default"].schedule(librarySchedule, snowfallConfig);
+        }
+        else {
+            // Run continuously if scheduling is disabled or either date is incomplete.
+            _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_3__["default"].start(snowfallConfig);
+        }
+        return () => {
+            _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_3__["default"].stop();
+        };
+    }, [config, schedule, hasValidSchedule]);
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "snowfall-preview", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { id: _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_3__.DEFAULT_CONTAINER_ID }), isSnowfallPaused && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "snowfall-notice", role: "status", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("strong", { children: "Snowfall is disabled" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { children: "Today's date is outside of your scheduled range." })] }))] }));
 };
 
 
@@ -57022,7 +57279,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   setWindStrength: () => (/* binding */ setWindStrength)
 /* harmony export */ });
 /* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/.pnpm/@reduxjs+toolkit@2.5.0_react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1__react@19.0.0/node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs");
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 /* harmony import */ var _presets_snow__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../presets/snow */ "./src/presets/snow.ts");
 
 
@@ -57429,6 +57686,61 @@ const { resetUserConfig, setUserConfig, resetAttachTo, setAttachTo, setColour, s
 
 /***/ }),
 
+/***/ "./src/features/config/schedule.slice.ts":
+/*!***********************************************!*\
+  !*** ./src/features/config/schedule.slice.ts ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   resetSchedule: () => (/* binding */ resetSchedule),
+/* harmony export */   setEndDay: () => (/* binding */ setEndDay),
+/* harmony export */   setEndMonth: () => (/* binding */ setEndMonth),
+/* harmony export */   setScheduleEnabled: () => (/* binding */ setScheduleEnabled),
+/* harmony export */   setStartDay: () => (/* binding */ setStartDay),
+/* harmony export */   setStartMonth: () => (/* binding */ setStartMonth)
+/* harmony export */ });
+/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/.pnpm/@reduxjs+toolkit@2.5.0_react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1__react@19.0.0/node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs");
+
+const initialState = {
+    enabled: false,
+    from: { day: null, month: null },
+    to: { day: null, month: null },
+};
+const scheduleSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createSlice)({
+    name: "userSchedule",
+    initialState,
+    reducers: {
+        setScheduleEnabled: (state, action) => {
+            state.enabled = action.payload;
+        },
+        setStartMonth: (state, action) => {
+            state.from.month = action.payload;
+            state.from.day = null;
+            state.to = { day: null, month: null };
+        },
+        setStartDay: (state, action) => {
+            state.from.day = action.payload;
+        },
+        setEndMonth: (state, action) => {
+            state.to.month = action.payload;
+            state.to.day = null;
+        },
+        setEndDay: (state, action) => {
+            state.to.day = action.payload;
+        },
+        resetSchedule: () => initialState,
+    },
+});
+const { setScheduleEnabled, setStartMonth, setStartDay, setEndMonth, setEndDay, resetSchedule, } = scheduleSlice.actions;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scheduleSlice.reducer);
+
+
+/***/ }),
+
 /***/ "./src/features/editor-settings/editor-settings.slice.ts":
 /*!***************************************************************!*\
   !*** ./src/features/editor-settings/editor-settings.slice.ts ***!
@@ -57443,6 +57755,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   setAdvancedSettings: () => (/* binding */ setAdvancedSettings),
 /* harmony export */   setBackground: () => (/* binding */ setBackground),
 /* harmony export */   setEditorSettings: () => (/* binding */ setEditorSettings),
+/* harmony export */   setExportMode: () => (/* binding */ setExportMode),
 /* harmony export */   setIsMinified: () => (/* binding */ setIsMinified),
 /* harmony export */   setIsReact: () => (/* binding */ setIsReact),
 /* harmony export */   setPreset: () => (/* binding */ setPreset),
@@ -57454,19 +57767,17 @@ const DEFAULT_STATE = {
     advancedSettings: true,
     isMinified: true,
     isReact: false,
+    exportMode: "js",
     background: "#0d0014",
     schedule: undefined,
-    preset: 'snow2',
+    preset: "snow2",
 };
-const initialState = DEFAULT_STATE;
 const editorSettingsSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createSlice)({
     name: "editorSettings",
-    initialState,
+    initialState: DEFAULT_STATE,
     reducers: {
-        resetEditorSettings: (state) => {
-            return DEFAULT_STATE;
-        },
-        setEditorSettings: (state, action) => {
+        resetEditorSettings: () => DEFAULT_STATE,
+        setEditorSettings: (_state, action) => {
             return action.payload;
         },
         setAdvancedSettings: (state, action) => {
@@ -57477,6 +57788,11 @@ const editorSettingsSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.cre
         },
         setIsReact: (state, action) => {
             state.isReact = action.payload;
+            state.exportMode = action.payload ? "jsx" : "js";
+        },
+        setExportMode: (state, action) => {
+            state.exportMode = action.payload;
+            state.isReact = action.payload === "jsx" || action.payload === "tsx";
         },
         setBackground: (state, action) => {
             state.background = action.payload;
@@ -57489,7 +57805,7 @@ const editorSettingsSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.cre
         },
     },
 });
-const { resetEditorSettings, setEditorSettings, setAdvancedSettings, setIsMinified, setIsReact, setBackground, setSchedule, setPreset, } = editorSettingsSlice.actions;
+const { resetEditorSettings, setEditorSettings, setAdvancedSettings, setIsMinified, setIsReact, setExportMode, setBackground, setSchedule, setPreset, } = editorSettingsSlice.actions;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (editorSettingsSlice.reducer);
 
 
@@ -57506,7 +57822,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   PRESET_CLASSIC: () => (/* binding */ PRESET_CLASSIC)
 /* harmony export */ });
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 
 // const wind = { ...DEFAULT_WIND };
 const ClassicUserConfig = {
@@ -57580,7 +57896,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   PRESET_FALLOUT: () => (/* binding */ PRESET_FALLOUT)
 /* harmony export */ });
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 
 // Bubbles 
 const FalloutUserConfig = {
@@ -57636,7 +57952,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   PRESET_LAVA: () => (/* binding */ PRESET_LAVA)
 /* harmony export */ });
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 
 const LavaUserConfig = {
     attachTo: "snowfall",
@@ -57712,6 +58028,7 @@ const LavaUserConfig = {
         {
             ..._erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_SIMPLE_LAYER,
             colour: "#efd73b",
+            trail: true,
             density: 65,
             mode: 'simple',
             mass: {
@@ -57762,6 +58079,7 @@ const LavaUserConfig = {
         {
             ..._erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_SIMPLE_LAYER,
             colour: "#ef101d",
+            trail: true,
             density: 65,
             mode: 'simple',
             mass: {
@@ -57838,7 +58156,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   PRESET_PRIDE: () => (/* binding */ PRESET_PRIDE)
 /* harmony export */ });
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 
 
 // const wind = { ...DEFAULT_WIND };
@@ -57896,6 +58214,70 @@ const PRESET_PRIDE = {
 
 /***/ }),
 
+/***/ "./src/presets/rain.ts":
+/*!*****************************!*\
+  !*** ./src/presets/rain.ts ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   PRESET_RAIN: () => (/* binding */ PRESET_RAIN)
+/* harmony export */ });
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+
+
+const RainUserConfig = {
+    ..._erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_USER_CONFIG,
+    layers: [
+        {
+            ..._erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_SIMPLE_LAYER,
+            trail: true,
+            density: 450,
+            mass: {
+                min: 5,
+                max: 8
+            },
+            opacity: {
+                ..._erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_OPACITY,
+                min: 0.56
+            },
+            gravity: {
+                ..._erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_GRAVITY,
+                strength: 2.5
+            },
+            sway: {
+                frequency: 0,
+                amplitude: 0,
+            },
+            wind: {
+                ..._erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND,
+                strength: 1,
+                gusts: {
+                    ..._erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_WIND_GUSTS,
+                    active: false,
+                }
+            }
+        },
+    ]
+};
+const PRESET_RAIN = {
+    name: "Rain",
+    userConfig: RainUserConfig,
+    editorConfig: {
+        advancedSettings: true,
+        isMinified: true,
+        isReact: false,
+        background: "#818792",
+        schedule: undefined,
+        preset: 'classic'
+    }
+};
+
+
+/***/ }),
+
 /***/ "./src/presets/snow.ts":
 /*!*****************************!*\
   !*** ./src/presets/snow.ts ***!
@@ -57907,7 +58289,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   PRESET_SNOW: () => (/* binding */ PRESET_SNOW)
 /* harmony export */ });
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 
 const SnowUserConfig = {
     attachTo: "snowfall",
@@ -58041,7 +58423,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   PRESET_SNOW2: () => (/* binding */ PRESET_SNOW2)
 /* harmony export */ });
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 
 const Snow2UserConfig = {
     attachTo: "snowfall",
@@ -58096,7 +58478,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   PRESET_SPACE: () => (/* binding */ PRESET_SPACE),
 /* harmony export */   SpaceUserConfig: () => (/* binding */ SpaceUserConfig)
 /* harmony export */ });
-/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js");
+/* harmony import */ var _erikwatson_snowfall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @erikwatson/snowfall */ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js");
 
 const strength = 0.25;
 const second = 1000;
@@ -58253,17 +58635,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   store: () => (/* binding */ store)
 /* harmony export */ });
-/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/.pnpm/@reduxjs+toolkit@2.5.0_react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1__react@19.0.0/node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs");
-/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/.pnpm/redux@5.0.1/node_modules/redux/dist/redux.mjs");
+/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/.pnpm/@reduxjs+toolkit@2.5.0_react-redux@9.2.0_@types+react@19.0.2_react@19.0.0_redux@5.0.1__react@19.0.0/node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs");
+/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/.pnpm/redux@5.0.1/node_modules/redux/dist/redux.mjs");
 /* harmony import */ var _features_config_config_slice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./features/config/config.slice */ "./src/features/config/config.slice.ts");
-/* harmony import */ var _features_editor_settings_editor_settings_slice__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./features/editor-settings/editor-settings.slice */ "./src/features/editor-settings/editor-settings.slice.ts");
+/* harmony import */ var _features_config_schedule_slice__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./features/config/schedule.slice */ "./src/features/config/schedule.slice.ts");
+/* harmony import */ var _features_editor_settings_editor_settings_slice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./features/editor-settings/editor-settings.slice */ "./src/features/editor-settings/editor-settings.slice.ts");
 
 
 
-const store = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.configureStore)({
-    reducer: (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_3__.combineReducers)({
+
+const store = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_3__.configureStore)({
+    reducer: (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_4__.combineReducers)({
         userConfig: _features_config_config_slice__WEBPACK_IMPORTED_MODULE_0__["default"],
-        editorSettings: _features_editor_settings_editor_settings_slice__WEBPACK_IMPORTED_MODULE_1__["default"],
+        userSchedule: _features_config_schedule_slice__WEBPACK_IMPORTED_MODULE_1__["default"],
+        editorSettings: _features_editor_settings_editor_settings_slice__WEBPACK_IMPORTED_MODULE_2__["default"],
     }),
 });
 
@@ -61097,34 +61482,34 @@ highlight.default = highlight;
 
 /***/ }),
 
-/***/ "./node_modules/.pnpm/@erikwatson+bramble@0.15.0/node_modules/@erikwatson/bramble/dist/bramble.esm.js":
+/***/ "./node_modules/.pnpm/@erikwatson+bramble@0.16.0/node_modules/@erikwatson/bramble/dist/bramble.esm.js":
 /*!************************************************************************************************************!*\
-  !*** ./node_modules/.pnpm/@erikwatson+bramble@0.15.0/node_modules/@erikwatson/bramble/dist/bramble.esm.js ***!
+  !*** ./node_modules/.pnpm/@erikwatson+bramble@0.16.0/node_modules/@erikwatson/bramble/dist/bramble.esm.js ***!
   \************************************************************************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   collisions: () => (/* binding */ ye),
-/* harmony export */   game: () => (/* binding */ re),
-/* harmony export */   graphics: () => (/* binding */ U),
-/* harmony export */   grid: () => (/* binding */ de),
-/* harmony export */   keyboard: () => (/* binding */ ae),
-/* harmony export */   load: () => (/* binding */ fe),
-/* harmony export */   mouse: () => (/* binding */ ne),
-/* harmony export */   save: () => (/* binding */ he),
-/* harmony export */   sprite: () => (/* binding */ ue),
+/* harmony export */   collisions: () => (/* binding */ pe),
+/* harmony export */   game: () => (/* binding */ se),
+/* harmony export */   graphics: () => (/* binding */ H),
+/* harmony export */   grid: () => (/* binding */ le),
+/* harmony export */   keyboard: () => (/* binding */ ne),
+/* harmony export */   load: () => (/* binding */ he),
+/* harmony export */   mouse: () => (/* binding */ oe),
+/* harmony export */   save: () => (/* binding */ ue),
+/* harmony export */   sprite: () => (/* binding */ de),
 /* harmony export */   vec2: () => (/* binding */ t)
 /* harmony export */ });
-const e={d:(t,o)=>{if(Array.isArray(o))for(var n=0;n<o.length;){var a=o[n++],i=o[n++];e.o(t,a)?0===i&&n++:0===i?Object.defineProperty(t,a,{enumerable:!0,value:o[n++]}):Object.defineProperty(t,a,{enumerable:!0,get:i})}else for(var a in o)e.o(o,a)&&!e.o(t,a)&&Object.defineProperty(t,a,{enumerable:!0,get:o[a]})},o:(e,t)=>Object.prototype.hasOwnProperty.call(e,t),r:e=>{Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})}};var t={};e.r(t),e.d(t,{clone:()=>X,create:()=>B,degreesToRadians:()=>I,radiansToDegrees:()=>W,vec2FromDegrees:()=>q,vec2ToDegrees:()=>z});const o=function(e){const t={images:new Map,sounds:new Map,data:new Map};return{add:async(o,n,a)=>{switch(n){case"image":{const e=await function(e){return new Promise((t,o)=>{const n=new Image;n.addEventListener("load",e=>{t(n)}),n.addEventListener("error",e=>{o(e)}),n.src=e})}(a);t.images.set(o,e);break}case"sound":{const n=await function(e){return new Promise((t,o)=>{const n=new XMLHttpRequest;n.responseType="arraybuffer",n.addEventListener("load",e=>{t(n.response)}),n.addEventListener("error",e=>{o(e)}),n.open("GET",e),n.send()})}(a),i=await e.decodeAudioData(n);t.sounds.set(o,i);break}default:{const e=await function(e){return new Promise((t,o)=>{const n=new XMLHttpRequest;n.addEventListener("load",e=>{t(n.responseText)}),n.addEventListener("error",e=>{o(e)}),n.open("GET",e),n.send()})}(a);t.data.set(o,e)}}},remove:(e,o)=>{switch(o){case"image":t.images.delete(e);break;case"sound":t.sounds.delete(e);break;default:t.data.delete(e)}},assets:t}};function n(e,t,o=!0){return!0===o?function(e,t){const o={};return Object.keys(e).forEach(a=>{"object"==typeof e[a]?o[a]=void 0===t[a]?e[a]:n(e[a],t[a]):o[a]=void 0===t[a]?e[a]:t[a]}),Object.keys(t).forEach(n=>{void 0===e[n]&&(o[n]=t[n])}),o}(e,t):function(e,t){return Object.assign(Object.assign({},e),t)}(e,t)}const a={shadowColour:"#000000",shadowBlur:6,shadowOffsetX:4,shadowOffsetY:4},i={fill:{colour:"#000000",opacity:1},line:{width:1,colour:"#FFFFFF",opacity:1}},s={width:1,colour:"#FFFFFF",opacity:1,cap:"round"},r={fill:{colour:"#000000",opacity:1},line:{colour:"#FFFFFF",opacity:1,width:1}},c={colour:"#000000",size:"16pt",family:"sans-serif",align:"left",baseline:"top"},l={rotation:0,scale:1,around:{x:0,y:0}};function d(e,t){e.save(),t(),e.restore()}function u(e,t,o=a){o=n(a,o),e.shadowColor=o.shadowColour,e.shadowBlur=o.shadowBlur,e.shadowOffsetX=o.shadowOffsetX,e.shadowOffsetY=o.shadowOffsetY,t()}function h(e,t){e.globalCompositeOperation="color-dodge",t()}function f(e,t){e.globalCompositeOperation="overlay",t()}function p(e,t,o=.25){e.globalAlpha*=o,t()}function y(e,t){e.globalCompositeOperation="multiply",t()}function m(e,t){e.globalCompositeOperation="screen",t()}function g(e,t,o=4){e.filter=`blur(${o}px)`,t()}const w={hue:0,saturate:1};function x(e,t,o=w){const{hue:n,saturate:a}=o;e.filter=`hue-rotate(${n}deg) saturate(${a})`,t()}const b={color:"white",blur:8};function v(e,t,o=b){d(e,()=>{var n,a;e.shadowColor=null!==(n=o.colour)&&void 0!==n?n:"white",e.shadowBlur=null!==(a=o.blur)&&void 0!==a?a:8,e.shadowOffsetX=0,e.shadowOffsetY=0,t()})}function k(e){return 0!==e.opacity&&0!==e.width}function M(e){return 0!==e.line.opacity&&0!==e.line.width}function S(e){return 0!==e.fill.opacity}function O(e){return 1===e.fill.opacity&&1===e.line.opacity&&e.line.width>0}function F(e,t,o,n=i){P(e,{x:t.x,y:t.y,width:o,height:o},n)}function P(e,t,o=i){O(o=n(i,o))?function(e,t,o){e.fillStyle=o.fill.colour,e.strokeStyle=o.line.colour,e.lineWidth=o.line.width,e.fillRect(t.x,t.y,t.width,t.height),e.strokeRect(t.x,t.y,t.width,t.height)}(e,t,o):(S(o)&&p(e,()=>function(e,t,o){e.fillStyle=o.fill.colour,e.fillRect(t.x,t.y,t.width,t.height)}(e,t,o),o.fill.opacity),M(o)&&p(e,()=>function(e,t,o){e.strokeStyle=o.line.colour,e.lineWidth=o.line.width,e.strokeRect(t.x,t.y,t.width,t.height)}(e,t,o),o.line.opacity))}function j(e,t,o,a=s){k(a=n(s,a))&&p(e,()=>{e.strokeStyle=a.colour,e.lineWidth=a.width,e.lineCap=a.cap,e.beginPath(),e.moveTo(t.x,t.y),e.lineTo(o.x,o.y),e.stroke(),e.closePath()},a.opacity)}function R(e,t,o,a,i=s){a.cp1&&a.cp2?function(e,t,o,a,i,r=s){k(r=n(s,r))&&p(e,()=>{e.strokeStyle=r.colour,e.lineWidth=r.width,e.beginPath(),e.moveTo(t.x,t.y),e.bezierCurveTo(a.x,a.y,i.x,i.y,o.x,o.y),e.stroke(),e.closePath()},r.opacity)}(e,t,o,a.cp1,a.cp2,i):a.cp1&&!a.cp2?function(e,t,o,a,i=s){k(i=n(s,i))&&p(e,()=>{e.strokeStyle=i.colour,e.lineWidth=i.width,e.beginPath(),e.moveTo(t.x,t.y),e.quadraticCurveTo(a.x,a.y,o.x,o.y),e.stroke(),e.closePath()})}(e,t,o,a.cp1,i):j(e,t,o,i)}function L(e,t,o,a=r){O(a=n(r,a))?function(e,t,o,n){e.fillStyle=n.fill.colour,e.strokeStyle=n.line.colour,e.lineWidth=n.line.width,e.beginPath(),e.arc(t.x,t.y,o,0,2*Math.PI),e.closePath(),e.fill(),e.stroke()}(e,t,o,a):(S(a)&&p(e,()=>function(e,t,o,n){e.fillStyle=n.fill.colour,e.beginPath(),e.arc(t.x,t.y,o,0,2*Math.PI),e.closePath(),e.fill()}(e,t,o,a),a.fill.opacity),M(a)&&p(e,()=>function(e,t,o,n){e.strokeStyle=n.line.colour,e.lineWidth=n.line.width,e.beginPath(),e.arc(t.x,t.y,o,0,2*Math.PI),e.closePath(),e.stroke()}(e,t,o,a),a.line.opacity))}function C(e,t){t?P(e,{x:0,y:0,width:e.canvas.width,height:e.canvas.height},{fill:{colour:t},line:{width:0}}):e.clearRect(0,0,e.canvas.width,e.canvas.height)}function E(e,t,o){o?P(e,t,{fill:{colour:o},line:{width:0}}):e.clearRect(t.x,t.y,t.width,t.height)}function T(e,t,o,n){n?e.drawImage(t,o.x,o.y,n.width,n.height):e.drawImage(t,o.x,o.y,t.width,t.height)}function A(e,t,o,n,a,i){e.drawImage(t,a.x,a.y,i.width,i.height,o.x,o.y,n.width,n.height)}function D(e,t,o="",a=c){d(e,()=>{a=n(c,a),e.fillStyle=a.colour,e.font=`${a.size} ${a.family}`,e.textAlign=a.align,e.textBaseline=a.baseline,e.fillText(o,t.x,t.y)})}function N(e,t,o,n,a,i,s){A(e,o,{x:t.x+i*(n.x*s.width),y:t.y+i*(n.y*s.height)},{width:i*s.width,height:i*s.height},{x:s.width*a.x,y:s.height*a.y},{width:s.width,height:s.height})}function K(e,t,o,n,a){for(let i=0;i<o.length;i++)for(let s=0;s<o[i].length;s++){if(0===o[i][s])continue;const r=i>0?o[i-1][s-1]:0,c=i>0?o[i-1][s]:0,l=i>0?o[i-1][s+1]:0,d=o[i][s-1],u=o[i][s],h=o[i][s+1],f=i<o.length-1?o[i+1][s-1]:0,p=i<o.length-1?o[i+1][s]:0,y=i<o.length-1?o[i+1][s+1]:0,m=1*(u===c&&u===d&&u===r?1:0)+2*(u===c?1:0)+4*(u===c&&u===h&&u===l?1:0)+8*(u===h?1:0)+16*(u===p&&u===h&&u===y?1:0)+32*(u===p?1:0)+64*(u===p&&u===d&&u===f?1:0)+128*(u===d?1:0);let g=n.filter(e=>e.type===o[i][s])[0];if(!g)return void console.error(`Sheet ${o[i][s]} not found!`);const w=g.tiles.filter(e=>e.type===m),x=w[Math.floor(Math.random()*w.length)];x?N(e,t,g.image,{x:s,y:i},x.position,a,x.size):console.error(`Tile not defined ${m}`)}}function B(e,t){let o=e,n=t;const a=()=>Math.sqrt(o*o+n*n),i=e=>{o*=e,n*=e},s=()=>{let e=a();o/=e,n/=e};return{add:e=>{o+=e.x,n+=e.y},addScalar:e=>{o+=e,n+=e},clone:X,divide:e=>{o/=e.x,n/=e.y},divideScalar:e=>{o/=e,n/=e},dot:e=>o*e.x+n*e.y,getLength:a,getOpposite:()=>B(-o,-n),getPerp:()=>B(-n,o),isEqualTo:e=>o==e.x&&n==e.y,multiply:e=>{o*=e.x,n*=e.y},multiplyScalar:i,normalise:s,setLength:e=>{s(),i(e)},subtract:e=>{o-=e.x,n-=e.y},subtractScalar:e=>{o-=e,n-=e},set x(e){o=e},get x(){return o},set y(e){n=e},get y(){return n}}}function I(e){return e*(Math.PI/180)}const q=e=>{const t=e*(Math.PI/180);return B(Math.cos(t),Math.sin(t))},z=e=>Math.atan2(e.y,e.x)*(180/Math.PI);function W(e){return e*(180/Math.PI)}const X=e=>B(e.x,e.y);function Y(e,t,o,n){d(e,()=>{e.translate(n.x,n.y),e.rotate(I(o)),e.translate(-n.x,-n.y),t()})}function $(e,t,o,n={x:0,y:0}){d(e,()=>{e.translate(n.x,n.y),"number"==typeof o?e.scale(o,o):e.scale(o.x,o.y),e.translate(-n.x,-n.y),t()})}function G(e,t,o=l){o=n(l,o),$(e,()=>{Y(e,t,o.rotation,o.around)},o.scale,o.around)}function H(e,t){d(e,()=>{const o=t.size.width/2,n=t.size.height/2;e.translate(t.position.x+o,t.position.y+n),e.rotate(I(t.rotation)),t.frames.length>1?A(e,t.texture,{x:-o,y:-n},{width:t.size.width,height:t.size.height},{x:t.frames[t.frame].position.x,y:t.frames[t.frame].position.y},{width:t.frames[t.frame].size.width,height:t.frames[t.frame].size.height}):T(e,t.texture,{x:-o,y:-n},{width:t.size.width,height:t.size.height})})}const U={circle:L,clear:C,clearRect:E,create:function(e){return{circle:(t,o,n=r)=>{L(e,t,o,n)},clear:t=>{C(e,t)},clearRect:(t,o)=>{E(e,t,o)},curve:(t,o,n,a)=>{R(e,t,o,n,a)},square:(t,o,n=i)=>{F(e,t,o,n)},rect:(t,o=i)=>{P(e,t,o)},image:(t,o,n)=>{T(e,t,o,n)},line:(t,o,n=s)=>{j(e,t,o,n)},sprite:t=>{H(e,t)},subImage:(t,o,n,a,i)=>{A(e,t,o,n,a,i)},text:(t={x:0,y:0},o="",n=c)=>{D(e,t,o,n)},tiles:(t,o,n,a)=>{K(e,t,o,n,a)},shadow:(t,o=a)=>{u(e,t,o)},dodge:t=>{h(e,t)},overlay:t=>{f(e,t)},transparency:(t,o=.25)=>{p(e,t,o)},rotation:(t,o=0,n={x:0,y:0})=>{Y(e,t,o,n)},transform:(t,o=l)=>{G(e,t,o)},scale:(t,o)=>{$(e,t,o)},multiply:t=>{y(e,t)},screen:t=>{m(e,t)},blur:(t,o=4)=>{g(e,t,o)},colourShift:(t,o=w)=>{x(e,t,o)},strokeGlow:(t,o=b)=>{v(e,t,o)}}},curve:R,dodge:h,image:T,line:j,overlay:f,rotation:Y,rect:P,shadow:u,sprite:H,square:F,subImage:A,text:D,tiles:K,transparency:p,transform:G,multiply:y,screen:m,blur:g,colourShift:x,strokeGlow:v},V=function(e){const t=()=>({position:{x:0,y:0},left:o(),wheel:n(),right:o()}),o=()=>({pressed:!1,justPressed:!1,released:!1,justReleased:!1}),n=()=>{const e=o();return Object.assign(Object.assign({},e),{moved:!1,direction:"up",delta:0})};let a=t(),i=t();const s=t=>{const o=(t=>{const o=e.getBoundingClientRect();return{x:t.clientX-o.left,y:t.clientY-o.top}})(t);i.position=o},r=e=>{switch(e.which){case 1:i.left.pressed||(i.left.justPressed=!0),i.left.pressed=!0;break;case 2:i.wheel.pressed||(i.wheel.justPressed=!0),i.wheel.pressed=!0;break;case 3:i.right.pressed||(i.right.justPressed=!0),i.right.pressed=!0}},c=e=>{switch(e.which){case 1:i.left.released||(i.left.justReleased=!0),i.left.released=!0,i.left.pressed=!1;break;case 2:i.wheel.released||(i.wheel.justReleased=!0),i.wheel.released=!0,i.wheel.pressed=!1;break;case 3:i.right.released||(i.right.justReleased=!0),i.right.released=!0,i.right.pressed=!1}},l=e=>{let t=e.deltaY;e.deltaMode===WheelEvent.DOM_DELTA_LINE?t*=16:e.deltaMode===WheelEvent.DOM_DELTA_PAGE&&(t*=window.innerHeight),i.wheel.delta+=t,i.wheel.moved=0!==t,i.wheel.moved&&(i.wheel.direction=t<0?"up":"down")};return{getState:()=>i,start:()=>{e.addEventListener("mousemove",s),e.addEventListener("mousedown",r),e.addEventListener("mouseup",c),document.scrollingElement.addEventListener("wheel",l),i.position.x=e.width/2,i.position.y=e.height/2},update:()=>{var e;i.wheel.moved=!1,i.left.justPressed=!1,i.right.justPressed=!1,i.left.justReleased=!1,i.right.justReleased=!1,i.wheel.justPressed=!1,i.wheel.justReleased=!1,i.wheel.delta=0,e=i,a=Object.assign({},e)}}},_=[{code:"Backspace",name:"backspace"},{code:"Tab",name:"tab"},{code:"Enter",name:"enter"},{code:"ShiftLeft",name:"shiftLeft"},{code:"ShiftRight",name:"shiftRight"},{code:"ControlLeft",name:"ctrlLeft"},{code:"ControlRight",name:"ctrlRight"},{code:"AltLeft",name:"altLeft"},{code:"AltRight",name:"altRight"},{code:"CapsLock",name:"caps"},{code:"Escape",name:"escape"},{code:"Space",name:"space"},{code:"PageUp",name:"pageUp"},{code:"PageDown",name:"pageDown"},{code:"End",name:"end"},{code:"Home",name:"home"},{code:"ArrowLeft",name:"left"},{code:"ArrowUp",name:"up"},{code:"ArrowRight",name:"right"},{code:"ArrowDown",name:"down"},{code:"Insert",name:"insert"},{code:"Delete",name:"delete"},{code:"Digit0",name:"zero"},{code:"Digit1",name:"one"},{code:"Digit2",name:"two"},{code:"Digit3",name:"three"},{code:"Digit4",name:"four"},{code:"Digit5",name:"five"},{code:"Digit6",name:"six"},{code:"Digit7",name:"seven"},{code:"Digit8",name:"eight"},{code:"Digit9",name:"nine"},{code:"KeyA",name:"A"},{code:"KeyB",name:"B"},{code:"KeyC",name:"C"},{code:"KeyD",name:"D"},{code:"KeyE",name:"E"},{code:"KeyF",name:"F"},{code:"KeyG",name:"G"},{code:"KeyH",name:"H"},{code:"KeyI",name:"I"},{code:"KeyJ",name:"J"},{code:"KeyK",name:"K"},{code:"KeyL",name:"L"},{code:"KeyM",name:"M"},{code:"KeyN",name:"N"},{code:"KeyO",name:"O"},{code:"KeyP",name:"P"},{code:"KeyQ",name:"Q"},{code:"KeyR",name:"R"},{code:"KeyS",name:"S"},{code:"KeyT",name:"T"},{code:"KeyU",name:"U"},{code:"KeyV",name:"V"},{code:"KeyW",name:"W"},{code:"KeyX",name:"X"},{code:"KeyY",name:"Y"},{code:"KeyZ",name:"Z"},{code:"OSLeft",name:"superLeft"},{code:"OSRight",name:"superRight"},{code:"ContextMenu",name:"menu"},{code:"Numpad0",name:"num0"},{code:"Numpad1",name:"num1"},{code:"Numpad2",name:"num2"},{code:"Numpad3",name:"num3"},{code:"Numpad4",name:"num4"},{code:"Numpad5",name:"num5"},{code:"Numpad6",name:"num6"},{code:"Numpad7",name:"num7"},{code:"Numpad8",name:"num8"},{code:"Numpad9",name:"num9"},{code:"NumpadMultiply",name:"multiply"},{code:"NumpadAdd",name:"add"},{code:"NumpadDivide",name:"divide"},{code:"NumpadDecimal",name:"point"},{code:"NumpadMinus",name:"minus"},{code:"NumpadEnter",name:"numEnter"},{code:"F1",name:"F1"},{code:"F2",name:"F2"},{code:"F3",name:"F3"},{code:"F4",name:"F4"},{code:"F5",name:"F5"},{code:"F6",name:"F6"},{code:"F7",name:"F7"},{code:"F8",name:"F8"},{code:"F9",name:"F9"},{code:"F10",name:"F10"},{code:"F11",name:"F11"},{code:"F12",name:"F12"},{code:"NumLock",name:"numLock"},{code:"ScrollLock",name:"scrollLock"},{code:"Semicolon",name:"semiColon"},{code:"Equal",name:"equals"},{code:"Comma",name:"comma"},{code:"Minus",name:"dash"},{code:"Period",name:"dot"},{code:"Slash",name:"slash"},{code:"Backquote",name:"backtick"},{code:"Backslash",name:"backSlash"},{code:"IntlBackslash",name:"intlBackslash"},{code:"BracketLeft",name:"openBracket"},{code:"BracketRight",name:"closeBracket"},{code:"Quote",name:"quote"},{code:"MetaLeft",name:"metaLeft"},{code:"MetaRight",name:"metaRight"}];let Q=function(){const e={pressed:!1,justPressed:!1,released:!1,justReleased:!1};return _.reduce((t,o)=>{const n=o.name;return delete o.label,t[n]=Object.assign(Object.assign({},o),e),t},{})}();function J(e,t){let o=null;const n=Object.keys(t);for(let a=0;a<n.length;a++)t[n[a]].code===e.code&&(o=t[n[a]]);return o||console.error(`No key definition found for ${e.code}`),o}function Z(e){!function(e){["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"," "].includes(e.key)&&e.preventDefault()}(e);const t=J(e,Q);t.pressed||(t.justPressed=!0),t.pressed=!0}function ee(e){const t=J(e,Q);t.released||(t.justReleased=!0),t.pressed=!1,t.released=!0}function te(){Object.keys(Q).forEach(e=>{Q[e].justPressed=!1,Q[e].justReleased=!1})}const oe=function(e){return{start:()=>{e.addEventListener("keydown",Z),e.addEventListener("keyup",ee)},update:te,getState:()=>Q}},ne={create:function(e){const t=V(e);return{start:()=>t.start(),update:()=>t.update(),getState:()=>t.getState()}}},ae={create:function(e){const t=oe(e);return{start:()=>t.start(),update:()=>t.update(),getState:()=>t.getState()}}},ie=function(e){let t=[],o=[],i=[],c=[],d=[],u=[];function h(){e.setTransform(1,0,0,1,0,0);for(const t of c){const o=t;if("scale"in o){const t=o.scale;e.translate(o.around.x,o.around.y),"number"==typeof t?e.scale(t,t):e.scale(t.x,t.y),e.translate(-o.around.x,-o.around.y)}"rotate"in o&&(e.translate(o.around.x,o.around.y),e.rotate(o.rotate*Math.PI/180),e.translate(-o.around.x,-o.around.y))}}function f(){e.globalAlpha=d.reduce((e,t)=>e*t,1)}function p(){const t=u[u.length-1];if(!t)return e.shadowColor="transparent",e.shadowBlur=0,e.shadowOffsetX=0,void(e.shadowOffsetY=0);e.shadowColor=t.shadowColour,e.shadowBlur=t.shadowBlur,e.shadowOffsetX=t.shadowOffsetX,e.shadowOffsetY=t.shadowOffsetY}function y(){t.push({type:"popShadow"})}function m(){t.push({type:"popFilter"})}function g(e){t.push({type:"pushComposite",op:e})}function x(){t.push({type:"popComposite"})}function v(e,o,n={x:0,y:0}){!function(e,o={x:0,y:0}){t.push({type:"pushTransform",transform:{scale:e,around:o}})}(o,n),e(),t.push({type:"popTransform"})}function k(e,o,n={x:0,y:0}){!function(e,o){t.push({type:"pushTransform",transform:{rotate:e,around:o}})}(o,n),e(),t.push({type:"popTransform"})}return{circle:function(o,n,a=r){t.push({type:"draw",fn:()=>L(e,o,n,a)})},clear:function(o){t.push({type:"draw",fn:()=>C(e,o)})},clearRect:function(o,n){t.push({type:"draw",fn:()=>E(e,o,n)})},curve:function(o,n,a,i=s){t.push({type:"draw",fn:()=>R(e,o,n,a,i)})},dodge:function(e){g("color-dodge"),e(),x()},image:function(o,n,a){t.push({type:"draw",fn:()=>T(e,o,n,a)})},line:function(o,n,a){t.push({type:"draw",fn:()=>j(e,o,n,a)})},overlay:function(e){g("overlay"),e(),x()},rotation:k,rect:function(o,n){t.push({type:"draw",fn:()=>P(e,o,n)})},shadow:function(e,o=a){!function(e){t.push({type:"pushShadow",shadow:e})}(n(a,o)),e(),y()},sprite:function(o){t.push({type:"draw",fn:()=>H(e,o)})},scale:v,square:function(o,n,a){t.push({type:"draw",fn:()=>F(e,o,n,a)})},subImage:function(o,n,a,i,s){t.push({type:"draw",fn:()=>A(e,o,n,a,i,s)})},text:function(o,n="",a){t.push({type:"draw",fn:()=>D(e,o,n,a)})},tiles:function(o,n,a,i){t.push({type:"draw",fn:()=>K(e,o,n,a,i)})},transparency:function(e,o=.25){!function(e){t.push({type:"pushAlpha",alpha:e})}(o),e(),t.push({type:"popAlpha"})},transform:function(e,t=l){const o=n(l,t);v(()=>{k(e,o.rotation,o.around)},o.scale,o.around)},multiply:function(e){g("multiply"),e(),x()},screen:function(e){g("screen"),e(),x()},blur:function(e,o=4){var n;n=o,t.push({type:"pushFilter",filter:`blur(${n}px)`}),e(),m()},colourShift:function(e,o=w){!function(e){const{hue:o,saturate:n}=e;t.push({type:"pushFilter",filter:`hue-rotate(${o}deg) saturate(${n})`})}(o),e(),m()},strokeGlow:function(e,o=b){!function(e=b){var o,n;t.push({type:"pushShadow",shadow:{shadowColour:null!==(o=e.colour)&&void 0!==o?o:"white",shadowBlur:null!==(n=e.blur)&&void 0!==n?n:8,shadowOffsetX:0,shadowOffsetY:0}})}(o),e(),y()},render:function(){for(const n of t)switch(n.type){case"pushFilter":o.push(n.filter),e.filter=o.join(" ");break;case"popFilter":o.pop(),e.filter=o.join(" ");break;case"pushAlpha":d.push(n.alpha),f();break;case"popAlpha":d.pop(),f();break;case"pushComposite":i.push(n.op),e.globalCompositeOperation=i[i.length-1];break;case"popComposite":i.pop(),e.globalCompositeOperation=i[i.length-1]||"source-over";break;case"pushTransform":c.push(n.transform),h();break;case"popTransform":c.pop(),h();break;case"pushShadow":u.push(n.shadow),p();break;case"popShadow":u.pop(),p();break;case"draw":n.fn()}t=[],o=[],i=[],c=[],d=[],u=[],e.shadowColor="transparent",e.shadowBlur=0,e.shadowOffsetX=0,e.shadowOffsetY=0,e.filter="none",e.globalAlpha=1,e.globalCompositeOperation="source-over",e.setTransform(1,0,0,1,0,0)}}},se=function(e,t){const o=new Map;return{play(n){const a=t.sounds.get(n);if(void 0===a)return;const i=e.createGain(),s=e.createBufferSource();s.buffer=a,s.connect(i).connect(e.destination),s.start(),o.set(n,{source:s,gain:i})},stop(e){const t=o.get(e);void 0!==t&&(t.source.stop(),o.delete(e))},mute(e){const t=o.get(e);void 0!==t&&(t.gain.gain.value=0)},volume(e,t){const n=o.get(e);void 0!==n&&(n.gain.gain.value=t)}}},re={create:()=>{let e=null,t=null,n=null,a=0;const i=document.createElement("canvas"),s=i.getContext("2d"),r=new AudioContext,c=U.create(s),l=o(r),d=se(r,l.assets),u=ie(s);i.id="bramble-game";let h=ne.create(i),f=ae.create(i);const p={keyboard:f.getState(),mouse:h.getState()},y=()=>{t&&(p.keyboard=f.getState(),p.mouse=h.getState(),t({dt:(performance.now()-a)/1e3,input:p,sfx:d,assets:l.assets})),n&&(e&&c.clear(e),n({gfx:u,assets:l.assets}),u.render()),h.update(),f.update(),window.requestAnimationFrame(y),a=performance.now()};return{attachTo:e=>{e.appendChild(i)},setSize:(e,t)=>{i.width=e,i.height=t},setUpdate:e=>{t=e},setRender:e=>{n=e},setBackgroundColor:t=>{e=t},canvas:i,disableContextMenu:()=>{i.addEventListener("contextmenu",e=>{e.preventDefault()})},setSmoothing:(e=!0)=>{s.imageSmoothingEnabled=e},start:()=>{h.start(),f.start(),window.requestAnimationFrame(y)},stop:()=>{i.remove()},assets:l}}};function ce(e){return e.map(e=>e.slice())}const le={pos:{x:0,y:0},visible:!0,divisions:4,tileWidth:8,tileHeight:8,scale:1},de={create:function(e,t=le){t=Object.assign(Object.assign({},le),t);let o=function(e=1,t=1,o=null){let n=[];for(let a=0;a<t;a++){let t=[];for(let n=0;n<e;n++)t.push(o);n.push(t)}return n}(e.width,e.height,0),n={x:t.pos.x,y:t.pos.y},a=t.visible,i=t.divisions,s=t.tileWidth;return{divisions:i,pos:n,tileHeight:t.tileHeight,tiles:o,tileWidth:s,visible:a,size:e,tileSize:t.tileWidth,scale:t.scale}},fill:function(e,t,o,n){let a=ce(e);return function e(t,o,n){o!==n&&a[t.y][t.x]===o&&t.x<a[t.y].length&&t.x>=0&&t.y<a.length&&t.y>=0&&(a[t.y][t.x]=n,t.y<a.length-1&&e({x:t.x,y:t.y+1},o,n),t.y>0&&e({x:t.x,y:t.y-1},o,n),t.x<a[0].length-1&&e({x:t.x+1,y:t.y},o,n),t.x>0&&e({x:t.x-1,y:t.y},o,n))}(t,o,n),a},copyTiles:ce},ue={create:function(e,t,o=0,n,a="#ffffff"){let i=[];return{size:t,texture:n,colour:a,frame:0,position:e,setFrames:e=>{i=e},addFrame:e=>{i.push(e)},get frames(){return i},get rotation(){return o},set rotation(e){o=e>=360?360-e:e}}}};function he(e,t){localStorage.setItem(e,t)}function fe(e){return localStorage.getItem(e)}function pe(e,t){const o=B(e.from.x,e.from.y),n=B(e.to.x,e.to.y),a=X(n);a.subtract(o);const i=1/a.x,s=1/a.y,r={x:(t.x-e.from.x)*i,y:(t.y-e.from.y)*s},c={x:(t.x+t.width-e.from.x)*i,y:(t.y+t.height-e.from.y)*s};if(isNaN(r.x)||isNaN(r.y))return!1;if(isNaN(c.x)||isNaN(c.y))return!1;let l=Object.assign({},r),d=Object.assign({},c);if(l.x>d.x&&(r.x=d.x,c.x=l.x),l=Object.assign({},r),d=Object.assign({},c),l.y>d.y&&(r.y=d.y,c.y=l.y),r.x>c.y||r.y>c.x)return!1;const u=Math.max(r.x,r.y),h=Math.min(c.x,c.y);if(h<0)return!1;if(u>1)return!1;if(u<0)return!1;const f=B(0,0);return r.x>r.y?i<0?(f.x=1,f.y=0):(f.x=-1,f.y=0):r.x<r.y?s<0?(f.x=0,f.y=1):(f.x=0,f.y=-1):r.x===r.y&&(i<0&&s<0?(f.x=-1,f.y=1):i>0&&s<0?(f.x=1,f.y=1):i<0&&s>0?(f.x=-1,f.y=-1):i>0&&s>0&&(f.x=1,f.y=-1)),{normal:f,near:B(o.x+u*a.x,o.y+u*a.y),far:B(o.x+h*a.x,o.y+h*a.y),timeOfCollision:u}}const ye={dynamicRectVsStaticRect:function(e,t){if(0===e.velocity.x&&0===e.velocity.y)return!1;const o=e.width/2,n=e.height/2,a=X(e.position);return a.add(e.velocity),a.x+=e.width/2,a.y+=e.height/2,pe({from:{x:e.position.x+o,y:e.position.y+n},to:a},{x:t.position.x-o,y:t.position.y-n,width:t.width+e.width,height:t.height+e.height})},rectVsRect:function(e,t){return e.x<t.x+t.width&&e.x+e.width>t.x&&e.y<t.y+t.height&&e.y+e.height>t.y},lineVsRect:pe,pointVsRect:function(e,t){return e.x>=t.x&&e.y>=t.y&&e.x<t.x+t.width&&e.y<t.y+t.height},lineVsCubicBezierCurve:function(e,t,o,n,a,i){const s=[],r=-e.x+3*t.x-3*o.x+n.x,c=-e.y+3*t.y-3*o.y+n.y,l=3*e.x-6*t.x+3*o.x,d=3*e.y-6*t.y+3*o.y,u=-3*e.x+3*t.x,h=-3*e.y+3*t.y,f=e.x,p=e.y,y=i.x-a.x,m=i.y-a.y,g=a.x,w=a.y;return function(e,t,o,n){if(Math.abs(e)<1e-10)return function(e,t,o){const n=t*t-4*e*o;if(n<0)return[];if(0===n)return[-t/(2*e)];{const o=Math.sqrt(n);return[(-t+o)/(2*e),(-t-o)/(2*e)]}}(t,o,n);const a=t/e,i=o/e,s=(3*i-a*a)/3,r=(2*a*a*a-9*a*i+n/e*27)/27,c=r*r/4+s*s*s/27,l=[];if(c>0){const e=Math.cbrt(-r/2+Math.sqrt(c)),t=Math.cbrt(-r/2-Math.sqrt(c));l.push(e+t-a/3)}else if(0===c){const e=Math.cbrt(-r/2);l.push(2*e-a/3),l.push(-e-a/3)}else{const e=Math.sqrt(-s*s*s/27),t=Math.acos(-r/(2*e));l.push(2*Math.cbrt(e)*Math.cos(t/3)-a/3),l.push(2*Math.cbrt(e)*Math.cos((t+2*Math.PI)/3)-a/3),l.push(2*Math.cbrt(e)*Math.cos((t+4*Math.PI)/3)-a/3)}return l.filter(e=>e>=0&&e<=1)}(r*m-c*y,l*m-d*y,u*m-h*y,(f-g)*m-(p-w)*y).forEach(i=>{const r=function(e,t,o,n,a){return B((1-a)*(1-a)*(1-a)*e.x+3*(1-a)*(1-a)*a*t.x+3*(1-a)*a*a*o.x+a*a*a*n.x,(1-a)*(1-a)*(1-a)*e.y+3*(1-a)*(1-a)*a*t.y+3*(1-a)*a*a*o.y+a*a*a*n.y)}(e,t,o,n,i),c=function(e,t,o,n,a){return B(3*(1-a)*(1-a)*(t.x-e.x)+6*(1-a)*a*(o.x-t.x)+3*a*a*(n.x-o.x),3*(1-a)*(1-a)*(t.y-e.y)+6*(1-a)*a*(o.y-t.y)+3*a*a*(n.y-o.y))}(e,t,o,n,i),l=Math.atan2(c.y,c.x),d=l*(180/Math.PI),u=q(d),h=B(u.y,-u.x),f=r.x-a.x,p=r.y-a.y,x=Math.sqrt(f*f+p*p),b=Math.sqrt(y*y+m*m)-x,v=(r.x-g)/y,k=(r.y-w)/m;(v>=0&&v<=1||k>=0&&k<=1)&&s.push({point:B(r.x,r.y),distance:x,remainderLength:b,angleRadians:l,angleDegrees:d,direction:q(d),normal:h})}),s}};
+const e={d:(t,o)=>{if(Array.isArray(o))for(var n=0;n<o.length;){var a=o[n++],i=o[n++];e.o(t,a)?0===i&&n++:0===i?Object.defineProperty(t,a,{enumerable:!0,value:o[n++]}):Object.defineProperty(t,a,{enumerable:!0,get:i})}else for(var a in o)e.o(o,a)&&!e.o(t,a)&&Object.defineProperty(t,a,{enumerable:!0,get:o[a]})},o:(e,t)=>Object.prototype.hasOwnProperty.call(e,t),r:e=>{Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})}};var t={};e.r(t),e.d(t,{clone:()=>W,create:()=>K,degreesToRadians:()=>B,radiansToDegrees:()=>z,vec2FromDegrees:()=>I,vec2ToDegrees:()=>q});const o=function(e){const t={images:new Map,sounds:new Map,data:new Map};return{add:async(o,n,a)=>{switch(n){case"image":{const e=await function(e){return new Promise((t,o)=>{const n=new Image;n.addEventListener("load",e=>{t(n)}),n.addEventListener("error",e=>{o(e)}),n.src=e})}(a);t.images.set(o,e);break}case"sound":{const n=await function(e){return new Promise((t,o)=>{const n=new XMLHttpRequest;n.responseType="arraybuffer",n.addEventListener("load",e=>{t(n.response)}),n.addEventListener("error",e=>{o(e)}),n.open("GET",e),n.send()})}(a),i=await e.decodeAudioData(n);t.sounds.set(o,i);break}default:{const e=await function(e){return new Promise((t,o)=>{const n=new XMLHttpRequest;n.addEventListener("load",e=>{t(n.responseText)}),n.addEventListener("error",e=>{o(e)}),n.open("GET",e),n.send()})}(a);t.data.set(o,e)}}},remove:(e,o)=>{switch(o){case"image":t.images.delete(e);break;case"sound":t.sounds.delete(e);break;default:t.data.delete(e)}},assets:t}};function n(e,t,o=!0){return!0===o?function(e,t){const o={};return Object.keys(e).forEach(a=>{"object"==typeof e[a]?o[a]=void 0===t[a]?e[a]:n(e[a],t[a]):o[a]=void 0===t[a]?e[a]:t[a]}),Object.keys(t).forEach(n=>{void 0===e[n]&&(o[n]=t[n])}),o}(e,t):function(e,t){return Object.assign(Object.assign({},e),t)}(e,t)}const a={shadowColour:"#000000",shadowBlur:6,shadowOffsetX:4,shadowOffsetY:4},i={fill:{colour:"#000000",opacity:1},line:{width:1,colour:"#FFFFFF",opacity:1}},s={width:1,colour:"#FFFFFF",opacity:1,cap:"round"},r={fill:{colour:"#000000",opacity:1},line:{colour:"#FFFFFF",opacity:1,width:1}},c={colour:"#000000",size:"16pt",family:"sans-serif",align:"left",baseline:"top"},l={angle:0,scale:1,around:{x:0,y:0}};function d(e,t,o=a){o=n(a,o),e.shadowColor=o.shadowColour,e.shadowBlur=o.shadowBlur,e.shadowOffsetX=o.shadowOffsetX,e.shadowOffsetY=o.shadowOffsetY,t()}function u(e,t){e.globalCompositeOperation="color-dodge",t()}function h(e,t){e.globalCompositeOperation="overlay",t()}function f(e,t,o=.25){e.globalAlpha*=o,t()}function p(e,t){e.globalCompositeOperation="multiply",t()}function y(e,t){e.globalCompositeOperation="screen",t()}function m(e,t,o=4){e.filter=`blur(${o}px)`,t()}const g={hue:0,saturate:1};function w(e,t,o=g){const{hue:n,saturate:a}=o;e.filter=`hue-rotate(${n}deg) saturate(${a})`,t()}const x={colour:"white",blur:8};function b(e,t,o=x){var n,a;e.shadowColor=null!==(n=o.colour)&&void 0!==n?n:"white",e.shadowBlur=null!==(a=o.blur)&&void 0!==a?a:8,e.shadowOffsetX=0,e.shadowOffsetY=0,t()}function v(e){return 0!==e.opacity&&0!==e.width}function k(e){return 0!==e.line.opacity&&0!==e.line.width}function M(e){return 0!==e.fill.opacity}function S(e){return 1===e.fill.opacity&&1===e.line.opacity&&e.line.width>0}function O(e,t,o,n=i){F(e,{x:t.x,y:t.y,width:o,height:o},n)}function F(e,t,o=i){S(o=n(i,o))?function(e,t,o){e.fillStyle=o.fill.colour,e.strokeStyle=o.line.colour,e.lineWidth=o.line.width,e.fillRect(t.x,t.y,t.width,t.height),e.strokeRect(t.x,t.y,t.width,t.height)}(e,t,o):(M(o)&&f(e,()=>function(e,t,o){e.fillStyle=o.fill.colour,e.fillRect(t.x,t.y,t.width,t.height)}(e,t,o),o.fill.opacity),k(o)&&f(e,()=>function(e,t,o){e.strokeStyle=o.line.colour,e.lineWidth=o.line.width,e.strokeRect(t.x,t.y,t.width,t.height)}(e,t,o),o.line.opacity))}function P(e,t,o,a=s){v(a=n(s,a))&&f(e,()=>{e.strokeStyle=a.colour,e.lineWidth=a.width,e.lineCap=a.cap,e.beginPath(),e.moveTo(t.x,t.y),e.lineTo(o.x,o.y),e.stroke(),e.closePath()},a.opacity)}function j(e,t,o,a,i=s){a.cp1&&a.cp2?function(e,t,o,a,i,r=s){v(r=n(s,r))&&f(e,()=>{e.strokeStyle=r.colour,e.lineWidth=r.width,e.beginPath(),e.moveTo(t.x,t.y),e.bezierCurveTo(a.x,a.y,i.x,i.y,o.x,o.y),e.stroke(),e.closePath()},r.opacity)}(e,t,o,a.cp1,a.cp2,i):a.cp1&&!a.cp2?function(e,t,o,a,i=s){v(i=n(s,i))&&f(e,()=>{e.strokeStyle=i.colour,e.lineWidth=i.width,e.beginPath(),e.moveTo(t.x,t.y),e.quadraticCurveTo(a.x,a.y,o.x,o.y),e.stroke(),e.closePath()})}(e,t,o,a.cp1,i):P(e,t,o,i)}function R(e,t,o,a=r){S(a=n(r,a))?function(e,t,o,n){e.fillStyle=n.fill.colour,e.strokeStyle=n.line.colour,e.lineWidth=n.line.width,e.beginPath(),e.arc(t.x,t.y,o,0,2*Math.PI),e.closePath(),e.fill(),e.stroke()}(e,t,o,a):(M(a)&&f(e,()=>function(e,t,o,n){e.fillStyle=n.fill.colour,e.beginPath(),e.arc(t.x,t.y,o,0,2*Math.PI),e.closePath(),e.fill()}(e,t,o,a),a.fill.opacity),k(a)&&f(e,()=>function(e,t,o,n){e.strokeStyle=n.line.colour,e.lineWidth=n.line.width,e.beginPath(),e.arc(t.x,t.y,o,0,2*Math.PI),e.closePath(),e.stroke()}(e,t,o,a),a.line.opacity))}function L(e,t){t?F(e,{x:0,y:0,width:e.canvas.width,height:e.canvas.height},{fill:{colour:t},line:{width:0}}):e.clearRect(0,0,e.canvas.width,e.canvas.height)}function C(e,t,o){o?F(e,t,{fill:{colour:o},line:{width:0}}):e.clearRect(t.x,t.y,t.width,t.height)}function E(e,t,o,n){n?e.drawImage(t,o.x,o.y,n.width,n.height):e.drawImage(t,o.x,o.y,t.width,t.height)}function T(e,t,o,n,a,i){e.drawImage(t,a.x,a.y,i.width,i.height,o.x,o.y,n.width,n.height)}function A(e,t,o="",a=c){a=n(c,a),e.fillStyle=a.colour,e.font=`${a.size} ${a.family}`,e.textAlign=a.align,e.textBaseline=a.baseline,e.fillText(o,t.x,t.y)}function D(e,t,o,n,a,i,s){T(e,o,{x:t.x+i*(n.x*s.width),y:t.y+i*(n.y*s.height)},{width:i*s.width,height:i*s.height},{x:s.width*a.x,y:s.height*a.y},{width:s.width,height:s.height})}function N(e,t,o,n,a){for(let i=0;i<o.length;i++)for(let s=0;s<o[i].length;s++){if(0===o[i][s])continue;const r=i>0?o[i-1][s-1]:0,c=i>0?o[i-1][s]:0,l=i>0?o[i-1][s+1]:0,d=o[i][s-1],u=o[i][s],h=o[i][s+1],f=i<o.length-1?o[i+1][s-1]:0,p=i<o.length-1?o[i+1][s]:0,y=i<o.length-1?o[i+1][s+1]:0,m=1*(u===c&&u===d&&u===r?1:0)+2*(u===c?1:0)+4*(u===c&&u===h&&u===l?1:0)+8*(u===h?1:0)+16*(u===p&&u===h&&u===y?1:0)+32*(u===p?1:0)+64*(u===p&&u===d&&u===f?1:0)+128*(u===d?1:0);let g=n.filter(e=>e.type===o[i][s])[0];if(!g)return void console.error(`Sheet ${o[i][s]} not found!`);const w=g.tiles.filter(e=>e.type===m),x=w[Math.floor(Math.random()*w.length)];x?D(e,t,g.image,{x:s,y:i},x.position,a,x.size):console.error(`Tile not defined ${m}`)}}function K(e,t){let o=e,n=t;const a=()=>Math.sqrt(o*o+n*n),i=e=>{o*=e,n*=e},s=()=>{let e=a();o/=e,n/=e};return{add:e=>{o+=e.x,n+=e.y},addScalar:e=>{o+=e,n+=e},clone:()=>K(o,n),divide:e=>{o/=e.x,n/=e.y},divideScalar:e=>{o/=e,n/=e},dot:e=>o*e.x+n*e.y,getLength:a,getOpposite:()=>K(-o,-n),getPerp:()=>K(-n,o),isEqualTo:e=>o==e.x&&n==e.y,multiply:e=>{o*=e.x,n*=e.y},multiplyScalar:i,normalise:s,setLength:e=>{s(),i(e)},subtract:e=>{o-=e.x,n-=e.y},subtractScalar:e=>{o-=e,n-=e},set x(e){o=e},get x(){return o},set y(e){n=e},get y(){return n}}}function B(e){return e*(Math.PI/180)}const I=e=>{const t=e*(Math.PI/180);return K(Math.cos(t),Math.sin(t))},q=e=>Math.atan2(e.y,e.x)*(180/Math.PI);function z(e){return e*(180/Math.PI)}const W=e=>K(e.x,e.y);function X(e,t,o,n){e.translate(n.x,n.y),e.rotate(B(o)),e.translate(-n.x,-n.y),t()}function Y(e,t,o,n={x:0,y:0}){e.translate(n.x,n.y),"number"==typeof o?e.scale(o,o):e.scale(o.x,o.y),e.translate(-n.x,-n.y),t()}function $(e,t,o=l){o=n(l,o),Y(e,()=>{X(e,t,o.angle,o.around)},o.scale,o.around)}function G(e,t){const o=t.size.width/2,n=t.size.height/2;e.translate(t.position.x+o,t.position.y+n),e.rotate(B(t.angle)),t.frames.length>1?T(e,t.texture,{x:-o,y:-n},{width:t.size.width,height:t.size.height},{x:t.frames[t.frame].position.x,y:t.frames[t.frame].position.y},{width:t.frames[t.frame].size.width,height:t.frames[t.frame].size.height}):E(e,t.texture,{x:-o,y:-n},{width:t.size.width,height:t.size.height})}const H={circle:R,clear:L,clearRect:C,create:function(e){return{circle:(t,o,n=r)=>{R(e,t,o,n)},clear:t=>{L(e,t)},clearRect:(t,o)=>{C(e,t,o)},curve:(t,o,n,a)=>{j(e,t,o,n,a)},square:(t,o,n=i)=>{O(e,t,o,n)},rect:(t,o=i)=>{F(e,t,o)},image:(t,o,n)=>{E(e,t,o,n)},line:(t,o,n=s)=>{P(e,t,o,n)},sprite:t=>{G(e,t)},subImage:(t,o,n,a,i)=>{T(e,t,o,n,a,i)},text:(t={x:0,y:0},o="",n=c)=>{A(e,t,o,n)},tiles:(t,o,n,a)=>{N(e,t,o,n,a)},shadow:(t,o=a)=>{d(e,t,o)},dodge:t=>{u(e,t)},overlay:t=>{h(e,t)},opacity:(t,o=.25)=>{f(e,t,o)},rotate:(t,o=0,n={x:0,y:0})=>{X(e,t,o,n)},transform:(t,o=l)=>{$(e,t,o)},scale:(t,o)=>{Y(e,t,o)},multiply:t=>{p(e,t)},screen:t=>{y(e,t)},blur:(t,o=4)=>{m(e,t,o)},colourShift:(t,o=g)=>{w(e,t,o)},strokeGlow:(t,o=x)=>{b(e,t,o)}}},curve:j,dodge:u,image:E,line:P,overlay:h,rotate:X,rect:F,shadow:d,sprite:G,square:O,subImage:T,text:A,tiles:N,opacity:f,transform:$,multiply:p,screen:y,blur:m,colourShift:w,strokeGlow:b},U=function(e){const t=()=>({position:{x:0,y:0},left:o(),wheel:n(),right:o()}),o=()=>({pressed:!1,justPressed:!1,released:!1,justReleased:!1}),n=()=>{const e=o();return Object.assign(Object.assign({},e),{moved:!1,direction:"up",delta:0})};let a=t(),i=t();const s=t=>{const o=(t=>{const o=e.getBoundingClientRect();return{x:t.clientX-o.left,y:t.clientY-o.top}})(t);i.position=o},r=e=>{switch(e.which){case 1:i.left.pressed||(i.left.justPressed=!0),i.left.pressed=!0;break;case 2:i.wheel.pressed||(i.wheel.justPressed=!0),i.wheel.pressed=!0;break;case 3:i.right.pressed||(i.right.justPressed=!0),i.right.pressed=!0}},c=e=>{switch(e.which){case 1:i.left.released||(i.left.justReleased=!0),i.left.released=!0,i.left.pressed=!1;break;case 2:i.wheel.released||(i.wheel.justReleased=!0),i.wheel.released=!0,i.wheel.pressed=!1;break;case 3:i.right.released||(i.right.justReleased=!0),i.right.released=!0,i.right.pressed=!1}},l=e=>{let t=e.deltaY;e.deltaMode===WheelEvent.DOM_DELTA_LINE?t*=16:e.deltaMode===WheelEvent.DOM_DELTA_PAGE&&(t*=window.innerHeight),i.wheel.delta+=t,i.wheel.moved=0!==t,i.wheel.moved&&(i.wheel.direction=t<0?"up":"down")};return{getState:()=>i,start:()=>{e.addEventListener("mousemove",s),e.addEventListener("mousedown",r),e.addEventListener("mouseup",c),document.scrollingElement.addEventListener("wheel",l),i.position.x=e.width/2,i.position.y=e.height/2},update:()=>{var e;i.wheel.moved=!1,i.left.justPressed=!1,i.right.justPressed=!1,i.left.justReleased=!1,i.right.justReleased=!1,i.wheel.justPressed=!1,i.wheel.justReleased=!1,i.wheel.delta=0,e=i,a=Object.assign({},e)}}},V=[{code:"Backspace",name:"backspace"},{code:"Tab",name:"tab"},{code:"Enter",name:"enter"},{code:"ShiftLeft",name:"shiftLeft"},{code:"ShiftRight",name:"shiftRight"},{code:"ControlLeft",name:"ctrlLeft"},{code:"ControlRight",name:"ctrlRight"},{code:"AltLeft",name:"altLeft"},{code:"AltRight",name:"altRight"},{code:"CapsLock",name:"caps"},{code:"Escape",name:"escape"},{code:"Space",name:"space"},{code:"PageUp",name:"pageUp"},{code:"PageDown",name:"pageDown"},{code:"End",name:"end"},{code:"Home",name:"home"},{code:"ArrowLeft",name:"left"},{code:"ArrowUp",name:"up"},{code:"ArrowRight",name:"right"},{code:"ArrowDown",name:"down"},{code:"Insert",name:"insert"},{code:"Delete",name:"delete"},{code:"Digit0",name:"zero"},{code:"Digit1",name:"one"},{code:"Digit2",name:"two"},{code:"Digit3",name:"three"},{code:"Digit4",name:"four"},{code:"Digit5",name:"five"},{code:"Digit6",name:"six"},{code:"Digit7",name:"seven"},{code:"Digit8",name:"eight"},{code:"Digit9",name:"nine"},{code:"KeyA",name:"A"},{code:"KeyB",name:"B"},{code:"KeyC",name:"C"},{code:"KeyD",name:"D"},{code:"KeyE",name:"E"},{code:"KeyF",name:"F"},{code:"KeyG",name:"G"},{code:"KeyH",name:"H"},{code:"KeyI",name:"I"},{code:"KeyJ",name:"J"},{code:"KeyK",name:"K"},{code:"KeyL",name:"L"},{code:"KeyM",name:"M"},{code:"KeyN",name:"N"},{code:"KeyO",name:"O"},{code:"KeyP",name:"P"},{code:"KeyQ",name:"Q"},{code:"KeyR",name:"R"},{code:"KeyS",name:"S"},{code:"KeyT",name:"T"},{code:"KeyU",name:"U"},{code:"KeyV",name:"V"},{code:"KeyW",name:"W"},{code:"KeyX",name:"X"},{code:"KeyY",name:"Y"},{code:"KeyZ",name:"Z"},{code:"OSLeft",name:"superLeft"},{code:"OSRight",name:"superRight"},{code:"ContextMenu",name:"menu"},{code:"Numpad0",name:"num0"},{code:"Numpad1",name:"num1"},{code:"Numpad2",name:"num2"},{code:"Numpad3",name:"num3"},{code:"Numpad4",name:"num4"},{code:"Numpad5",name:"num5"},{code:"Numpad6",name:"num6"},{code:"Numpad7",name:"num7"},{code:"Numpad8",name:"num8"},{code:"Numpad9",name:"num9"},{code:"NumpadMultiply",name:"multiply"},{code:"NumpadAdd",name:"add"},{code:"NumpadDivide",name:"divide"},{code:"NumpadDecimal",name:"point"},{code:"NumpadMinus",name:"minus"},{code:"NumpadEnter",name:"numEnter"},{code:"F1",name:"F1"},{code:"F2",name:"F2"},{code:"F3",name:"F3"},{code:"F4",name:"F4"},{code:"F5",name:"F5"},{code:"F6",name:"F6"},{code:"F7",name:"F7"},{code:"F8",name:"F8"},{code:"F9",name:"F9"},{code:"F10",name:"F10"},{code:"F11",name:"F11"},{code:"F12",name:"F12"},{code:"NumLock",name:"numLock"},{code:"ScrollLock",name:"scrollLock"},{code:"Semicolon",name:"semiColon"},{code:"Equal",name:"equals"},{code:"Comma",name:"comma"},{code:"Minus",name:"dash"},{code:"Period",name:"dot"},{code:"Slash",name:"slash"},{code:"Backquote",name:"backtick"},{code:"Backslash",name:"backSlash"},{code:"IntlBackslash",name:"intlBackslash"},{code:"BracketLeft",name:"openBracket"},{code:"BracketRight",name:"closeBracket"},{code:"Quote",name:"quote"},{code:"MetaLeft",name:"metaLeft"},{code:"MetaRight",name:"metaRight"}];let _=function(){const e={pressed:!1,justPressed:!1,released:!1,justReleased:!1};return V.reduce((t,o)=>{const n=o.name;return delete o.label,t[n]=Object.assign(Object.assign({},o),e),t},{})}();function Q(e,t){let o=null;const n=Object.keys(t);for(let a=0;a<n.length;a++)t[n[a]].code===e.code&&(o=t[n[a]]);return o||console.error(`No key definition found for ${e.code}`),o}function J(e){!function(e){["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"," "].includes(e.key)&&e.preventDefault()}(e);const t=Q(e,_);t.pressed||(t.justPressed=!0),t.pressed=!0}function Z(e){const t=Q(e,_);t.released||(t.justReleased=!0),t.pressed=!1,t.released=!0}function ee(){Object.keys(_).forEach(e=>{_[e].justPressed=!1,_[e].justReleased=!1})}const te=function(e){return{start:()=>{window.addEventListener("keydown",J),window.addEventListener("keyup",Z)},update:ee,getState:()=>_}},oe={create:function(e){const t=U(e);return{start:()=>t.start(),update:()=>t.update(),getState:()=>t.getState()}}},ne={create:function(e){const t=te(e);return{start:()=>t.start(),update:()=>t.update(),getState:()=>t.getState()}}},ae=function(e){let t=[],o=[],i=[],c=[],d=[],u=[];function h(){e.setTransform(1,0,0,1,0,0);for(const t of c){const o=t;if("scale"in o){const t=o.scale;e.translate(o.around.x,o.around.y),"number"==typeof t?e.scale(t,t):e.scale(t.x,t.y),e.translate(-o.around.x,-o.around.y)}"rotate"in o&&(e.translate(o.around.x,o.around.y),e.rotate(o.rotate*Math.PI/180),e.translate(-o.around.x,-o.around.y))}}function f(){e.globalAlpha=d.reduce((e,t)=>e*t,1)}function p(){const t=u[u.length-1];if(!t)return e.shadowColor="transparent",e.shadowBlur=0,e.shadowOffsetX=0,void(e.shadowOffsetY=0);e.shadowColor=t.shadowColour,e.shadowBlur=t.shadowBlur,e.shadowOffsetX=t.shadowOffsetX,e.shadowOffsetY=t.shadowOffsetY}function y(){t.push({type:"popShadow"})}function m(){t.push({type:"popFilter"})}function w(e){t.push({type:"pushComposite",op:e})}function b(){t.push({type:"popComposite"})}function v(e,o,n={x:0,y:0}){!function(e,o={x:0,y:0}){t.push({type:"pushTransform",transform:{scale:e,around:o}})}(o,n),e(),t.push({type:"popTransform"})}function k(e,o,n={x:0,y:0}){!function(e,o){t.push({type:"pushTransform",transform:{rotate:e,around:o}})}(o,n),e(),t.push({type:"popTransform"})}return{circle:function(o,n,a=r){t.push({type:"draw",fn:()=>R(e,o,n,a)})},clear:function(o){t.push({type:"draw",fn:()=>L(e,o)})},clearRect:function(o,n){t.push({type:"draw",fn:()=>C(e,o,n)})},curve:function(o,n,a,i=s){t.push({type:"draw",fn:()=>j(e,o,n,a,i)})},dodge:function(e){w("color-dodge"),e(),b()},image:function(o,n,a){t.push({type:"draw",fn:()=>E(e,o,n,a)})},line:function(o,n,a){t.push({type:"draw",fn:()=>P(e,o,n,a)})},overlay:function(e){w("overlay"),e(),b()},rotate:k,rect:function(o,n){t.push({type:"draw",fn:()=>F(e,o,n)})},shadow:function(e,o=a){!function(e){t.push({type:"pushShadow",shadow:e})}(n(a,o)),e(),y()},sprite:function(o){t.push({type:"draw",fn:()=>G(e,o)})},scale:v,square:function(o,n,a){t.push({type:"draw",fn:()=>O(e,o,n,a)})},subImage:function(o,n,a,i,s){t.push({type:"draw",fn:()=>T(e,o,n,a,i,s)})},text:function(o,n="",a){t.push({type:"draw",fn:()=>A(e,o,n,a)})},tiles:function(o,n,a,i){t.push({type:"draw",fn:()=>N(e,o,n,a,i)})},opacity:function(e,o=.25){!function(e){t.push({type:"pushAlpha",alpha:e})}(o),e(),t.push({type:"popAlpha"})},transform:function(e,t=l){const o=n(l,t);v(()=>{k(e,o.angle,o.around)},o.scale,o.around)},multiply:function(e){w("multiply"),e(),b()},screen:function(e){w("screen"),e(),b()},blur:function(e,o=4){var n;n=o,t.push({type:"pushFilter",filter:`blur(${n}px)`}),e(),m()},colourShift:function(e,o=g){!function(e){const{hue:o,saturate:n}=e;t.push({type:"pushFilter",filter:`hue-rotate(${o}deg) saturate(${n})`})}(o),e(),m()},strokeGlow:function(e,o=x){!function(e=x){var o,n;t.push({type:"pushShadow",shadow:{shadowColour:null!==(o=e.colour)&&void 0!==o?o:"white",shadowBlur:null!==(n=e.blur)&&void 0!==n?n:8,shadowOffsetX:0,shadowOffsetY:0}})}(o),e(),y()},render:function(){for(const n of t)switch(n.type){case"pushFilter":o.push(n.filter),e.filter=o.join(" ");break;case"popFilter":o.pop(),e.filter=o.length?o.join(" "):"none";break;case"pushAlpha":d.push(n.alpha),f();break;case"popAlpha":d.pop(),f();break;case"pushComposite":i.push(n.op),e.globalCompositeOperation=i[i.length-1];break;case"popComposite":i.pop(),e.globalCompositeOperation=i[i.length-1]||"source-over";break;case"pushTransform":c.push(n.transform),h();break;case"popTransform":c.pop(),h();break;case"pushShadow":u.push(n.shadow),p();break;case"popShadow":u.pop(),p();break;case"draw":n.fn()}t=[],o=[],i=[],c=[],d=[],u=[],e.shadowColor="transparent",e.shadowBlur=0,e.shadowOffsetX=0,e.shadowOffsetY=0,e.filter="none",e.globalAlpha=1,e.globalCompositeOperation="source-over",e.setTransform(1,0,0,1,0,0)}}},ie=function(e,t){const o=new Map;return{play(n){const a=t.sounds.get(n);if(void 0===a)return;const i=e.createGain(),s=e.createBufferSource();s.buffer=a,s.connect(i).connect(e.destination),s.start(),o.set(n,{source:s,gain:i})},stop(e){const t=o.get(e);void 0!==t&&(t.source.stop(),o.delete(e))},mute(e){const t=o.get(e);void 0!==t&&(t.gain.gain.value=0)},volume(e,t){const n=o.get(e);void 0!==n&&(n.gain.gain.value=t)}}},se={create:()=>{let e=null,t=null,n=null,a=0;const i=document.createElement("canvas"),s=i.getContext("2d"),r=new AudioContext,c=H.create(s),l=o(r),d=ie(r,l.assets),u=ae(s);i.id="bramble-game";let h=oe.create(i),f=ne.create(i);const p={keyboard:f.getState(),mouse:h.getState()},y=()=>{t&&(p.keyboard=f.getState(),p.mouse=h.getState(),t({dt:(performance.now()-a)/1e3,input:p,sfx:d,assets:l.assets})),n&&(e&&c.clear(e),n({gfx:u,assets:l.assets}),u.render()),h.update(),f.update(),window.requestAnimationFrame(y),a=performance.now()};return{attachTo:e=>{e.appendChild(i)},setSize:(e,t)=>{i.width=e,i.height=t},setUpdate:e=>{t=e},setRender:e=>{n=e},setBackgroundColour:t=>{e=t},canvas:i,disableContextMenu:()=>{i.addEventListener("contextmenu",e=>{e.preventDefault()})},setSmoothing:(e=!0)=>{s.imageSmoothingEnabled=e},start:()=>{h.start(),f.start(),window.requestAnimationFrame(y)},stop:()=>{i.remove()},assets:l}}};function re(e){return e.map(e=>e.slice())}const ce={pos:{x:0,y:0},visible:!0,divisions:4,tileWidth:8,tileHeight:8,scale:1},le={create:function(e,t=ce){t=Object.assign(Object.assign({},ce),t);let o=function(e=1,t=1,o=null){let n=[];for(let a=0;a<t;a++){let t=[];for(let n=0;n<e;n++)t.push(o);n.push(t)}return n}(e.width,e.height,0),n={x:t.pos.x,y:t.pos.y},a=t.visible,i=t.divisions,s=t.tileWidth;return{divisions:i,pos:n,tileHeight:t.tileHeight,tiles:o,tileWidth:s,visible:a,size:e,tileSize:t.tileWidth,scale:t.scale}},fill:function(e,t,o,n){let a=re(e);return function e(t,o,n){o!==n&&a[t.y][t.x]===o&&t.x<a[t.y].length&&t.x>=0&&t.y<a.length&&t.y>=0&&(a[t.y][t.x]=n,t.y<a.length-1&&e({x:t.x,y:t.y+1},o,n),t.y>0&&e({x:t.x,y:t.y-1},o,n),t.x<a[0].length-1&&e({x:t.x+1,y:t.y},o,n),t.x>0&&e({x:t.x-1,y:t.y},o,n))}(t,o,n),a},copyTiles:re},de={create:function(e,t,o=0,n,a="#ffffff"){let i=[];return{size:t,texture:n,colour:a,frame:0,position:e,setFrames:e=>{i=e},addFrame:e=>{i.push(e)},get frames(){return i},get angle(){return o},set angle(e){o=e>=360?360-e:e}}}};function ue(e,t){localStorage.setItem(e,t)}function he(e){return localStorage.getItem(e)}function fe(e,t){const o=K(e.from.x,e.from.y),n=K(e.to.x,e.to.y),a=W(n);a.subtract(o);const i=1/a.x,s=1/a.y,r={x:(t.x-e.from.x)*i,y:(t.y-e.from.y)*s},c={x:(t.x+t.width-e.from.x)*i,y:(t.y+t.height-e.from.y)*s};if(isNaN(r.x)||isNaN(r.y))return!1;if(isNaN(c.x)||isNaN(c.y))return!1;let l=Object.assign({},r),d=Object.assign({},c);if(l.x>d.x&&(r.x=d.x,c.x=l.x),l=Object.assign({},r),d=Object.assign({},c),l.y>d.y&&(r.y=d.y,c.y=l.y),r.x>c.y||r.y>c.x)return!1;const u=Math.max(r.x,r.y),h=Math.min(c.x,c.y);if(h<0)return!1;if(u>1)return!1;if(u<0)return!1;const f=K(0,0);return r.x>r.y?i<0?(f.x=1,f.y=0):(f.x=-1,f.y=0):r.x<r.y?s<0?(f.x=0,f.y=1):(f.x=0,f.y=-1):r.x===r.y&&(i<0&&s<0?(f.x=-1,f.y=1):i>0&&s<0?(f.x=1,f.y=1):i<0&&s>0?(f.x=-1,f.y=-1):i>0&&s>0&&(f.x=1,f.y=-1)),{normal:f,near:K(o.x+u*a.x,o.y+u*a.y),far:K(o.x+h*a.x,o.y+h*a.y),timeOfCollision:u}}const pe={dynamicRectVsStaticRect:function(e,t){if(0===e.velocity.x&&0===e.velocity.y)return!1;const o=e.width/2,n=e.height/2,a=W(e.position);return a.add(e.velocity),a.x+=e.width/2,a.y+=e.height/2,fe({from:{x:e.position.x+o,y:e.position.y+n},to:a},{x:t.position.x-o,y:t.position.y-n,width:t.width+e.width,height:t.height+e.height})},rectVsRect:function(e,t){return e.x<t.x+t.width&&e.x+e.width>t.x&&e.y<t.y+t.height&&e.y+e.height>t.y},lineVsRect:fe,pointVsRect:function(e,t){return e.x>=t.x&&e.y>=t.y&&e.x<t.x+t.width&&e.y<t.y+t.height},lineVsCubicBezierCurve:function(e,t,o,n,a,i){const s=[],r=-e.x+3*t.x-3*o.x+n.x,c=-e.y+3*t.y-3*o.y+n.y,l=3*e.x-6*t.x+3*o.x,d=3*e.y-6*t.y+3*o.y,u=-3*e.x+3*t.x,h=-3*e.y+3*t.y,f=e.x,p=e.y,y=i.x-a.x,m=i.y-a.y,g=a.x,w=a.y;return function(e,t,o,n){if(Math.abs(e)<1e-10)return function(e,t,o){const n=t*t-4*e*o;if(n<0)return[];if(0===n)return[-t/(2*e)];{const o=Math.sqrt(n);return[(-t+o)/(2*e),(-t-o)/(2*e)]}}(t,o,n);const a=t/e,i=o/e,s=(3*i-a*a)/3,r=(2*a*a*a-9*a*i+n/e*27)/27,c=r*r/4+s*s*s/27,l=[];if(c>0){const e=Math.cbrt(-r/2+Math.sqrt(c)),t=Math.cbrt(-r/2-Math.sqrt(c));l.push(e+t-a/3)}else if(0===c){const e=Math.cbrt(-r/2);l.push(2*e-a/3),l.push(-e-a/3)}else{const e=Math.sqrt(-s*s*s/27),t=Math.acos(-r/(2*e));l.push(2*Math.cbrt(e)*Math.cos(t/3)-a/3),l.push(2*Math.cbrt(e)*Math.cos((t+2*Math.PI)/3)-a/3),l.push(2*Math.cbrt(e)*Math.cos((t+4*Math.PI)/3)-a/3)}return l.filter(e=>e>=0&&e<=1)}(r*m-c*y,l*m-d*y,u*m-h*y,(f-g)*m-(p-w)*y).forEach(i=>{const r=function(e,t,o,n,a){return K((1-a)*(1-a)*(1-a)*e.x+3*(1-a)*(1-a)*a*t.x+3*(1-a)*a*a*o.x+a*a*a*n.x,(1-a)*(1-a)*(1-a)*e.y+3*(1-a)*(1-a)*a*t.y+3*(1-a)*a*a*o.y+a*a*a*n.y)}(e,t,o,n,i),c=function(e,t,o,n,a){return K(3*(1-a)*(1-a)*(t.x-e.x)+6*(1-a)*a*(o.x-t.x)+3*a*a*(n.x-o.x),3*(1-a)*(1-a)*(t.y-e.y)+6*(1-a)*a*(o.y-t.y)+3*a*a*(n.y-o.y))}(e,t,o,n,i),l=Math.atan2(c.y,c.x),d=l*(180/Math.PI),u=I(d),h=K(u.y,-u.x),f=r.x-a.x,p=r.y-a.y,x=Math.sqrt(f*f+p*p),b=Math.sqrt(y*y+m*m)-x,v=(r.x-g)/y,k=(r.y-w)/m;(v>=0&&v<=1||k>=0&&k<=1)&&s.push({point:K(r.x,r.y),distance:x,remainderLength:b,angleRadians:l,angleDegrees:d,direction:I(d),normal:h})}),s}};
 
 /***/ }),
 
-/***/ "./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js":
-/*!**********************************************************************************************************************!*\
-  !*** ./node_modules/.pnpm/@erikwatson+snowfall@file+..+snowfall/node_modules/@erikwatson/snowfall/dist/index.esm.js ***!
-  \**********************************************************************************************************************/
+/***/ "./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js":
+/*!***********************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@erikwatson+snowfall@4.5.1/node_modules/@erikwatson/snowfall/dist/index.esm.js ***!
+  \***********************************************************************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -61222,8 +61607,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   stop: () => (/* binding */ ve),
 /* harmony export */   togglePaused: () => (/* binding */ pe)
 /* harmony export */ });
-/* harmony import */ var _erikwatson_bramble__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @erikwatson/bramble */ "./node_modules/.pnpm/@erikwatson+bramble@0.15.0/node_modules/@erikwatson/bramble/dist/bramble.esm.js");
-var n={711:(t,n,i)=>{var e=i(308),o=i(989),r=i(679),s=i(875),a=i(993),u=i(813),d=i(713);d.alea=e,d.xor128=o,d.xorwow=r,d.xorshift7=s,d.xor4096=a,d.tychei=u,t.exports=d},308:function(t,n,i){var e;!function(t,o){function r(t){var n,i=this,e=(n=4022871197,function(t){t=String(t);for(var i=0;i<t.length;i++){var e=.02519603282416938*(n+=t.charCodeAt(i));e-=n=e>>>0,n=(e*=n)>>>0,n+=4294967296*(e-=n)}return 2.3283064365386963e-10*(n>>>0)});i.next=function(){var t=2091639*i.s0+2.3283064365386963e-10*i.c;return i.s0=i.s1,i.s1=i.s2,i.s2=t-(i.c=0|t)},i.c=1,i.s0=e(" "),i.s1=e(" "),i.s2=e(" "),i.s0-=e(t),i.s0<0&&(i.s0+=1),i.s1-=e(t),i.s1<0&&(i.s1+=1),i.s2-=e(t),i.s2<0&&(i.s2+=1),e=null}function s(t,n){return n.c=t.c,n.s0=t.s0,n.s1=t.s1,n.s2=t.s2,n}function a(t,n){var i=new r(t),e=n&&n.state,o=i.next;return o.int32=function(){return 4294967296*i.next()|0},o.double=function(){return o()+11102230246251565e-32*(2097152*o()|0)},o.quick=o,e&&("object"==typeof e&&s(e,i),o.state=function(){return s(i,{})}),o}o&&o.exports?o.exports=a:i.amdD&&i.amdO?void 0===(e=function(){return a}.call(n,i,n,o))||(o.exports=e):this.alea=a}(0,t=i.nmd(t),i.amdD)},813:function(t,n,i){var e;!function(t,o){function r(t){var n=this,i="";n.next=function(){var t=n.b,i=n.c,e=n.d,o=n.a;return t=t<<25^t>>>7^i,i=i-e|0,e=e<<24^e>>>8^o,o=o-t|0,n.b=t=t<<20^t>>>12^i,n.c=i=i-e|0,n.d=e<<16^i>>>16^o,n.a=o-t|0},n.a=0,n.b=0,n.c=-1640531527,n.d=1367130551,t===Math.floor(t)?(n.a=t/4294967296|0,n.b=0|t):i+=t;for(var e=0;e<i.length+20;e++)n.b^=0|i.charCodeAt(e),n.next()}function s(t,n){return n.a=t.a,n.b=t.b,n.c=t.c,n.d=t.d,n}function a(t,n){var i=new r(t),e=n&&n.state,o=function(){return(i.next()>>>0)/4294967296};return o.double=function(){do{var t=((i.next()>>>11)+(i.next()>>>0)/4294967296)/(1<<21)}while(0===t);return t},o.int32=i.next,o.quick=o,e&&("object"==typeof e&&s(e,i),o.state=function(){return s(i,{})}),o}o&&o.exports?o.exports=a:i.amdD&&i.amdO?void 0===(e=function(){return a}.call(n,i,n,o))||(o.exports=e):this.tychei=a}(0,t=i.nmd(t),i.amdD)},989:function(t,n,i){var e;!function(t,o){function r(t){var n=this,i="";n.x=0,n.y=0,n.z=0,n.w=0,n.next=function(){var t=n.x^n.x<<11;return n.x=n.y,n.y=n.z,n.z=n.w,n.w^=n.w>>>19^t^t>>>8},t===(0|t)?n.x=t:i+=t;for(var e=0;e<i.length+64;e++)n.x^=0|i.charCodeAt(e),n.next()}function s(t,n){return n.x=t.x,n.y=t.y,n.z=t.z,n.w=t.w,n}function a(t,n){var i=new r(t),e=n&&n.state,o=function(){return(i.next()>>>0)/4294967296};return o.double=function(){do{var t=((i.next()>>>11)+(i.next()>>>0)/4294967296)/(1<<21)}while(0===t);return t},o.int32=i.next,o.quick=o,e&&("object"==typeof e&&s(e,i),o.state=function(){return s(i,{})}),o}o&&o.exports?o.exports=a:i.amdD&&i.amdO?void 0===(e=function(){return a}.call(n,i,n,o))||(o.exports=e):this.xor128=a}(0,t=i.nmd(t),i.amdD)},993:function(t,n,i){var e;!function(t,o){function r(t){var n=this;n.next=function(){var t,i,e=n.w,o=n.X,r=n.i;return n.w=e=e+1640531527|0,i=o[r+34&127],t=o[r=r+1&127],i^=i<<13,t^=t<<17,i^=i>>>15,t^=t>>>12,i=o[r]=i^t,n.i=r,i+(e^e>>>16)|0},function(t,n){var i,e,o,r,s,a=[],u=128;for(n===(0|n)?(e=n,n=null):(n+="\0",e=0,u=Math.max(u,n.length)),o=0,r=-32;r<u;++r)n&&(e^=n.charCodeAt((r+32)%n.length)),0===r&&(s=e),e^=e<<10,e^=e>>>15,e^=e<<4,e^=e>>>13,r>=0&&(s=s+1640531527|0,o=0==(i=a[127&r]^=e+s)?o+1:0);for(o>=128&&(a[127&(n&&n.length||0)]=-1),o=127,r=512;r>0;--r)e=a[o+34&127],i=a[o=o+1&127],e^=e<<13,i^=i<<17,e^=e>>>15,i^=i>>>12,a[o]=e^i;t.w=s,t.X=a,t.i=o}(n,t)}function s(t,n){return n.i=t.i,n.w=t.w,n.X=t.X.slice(),n}function a(t,n){null==t&&(t=+new Date);var i=new r(t),e=n&&n.state,o=function(){return(i.next()>>>0)/4294967296};return o.double=function(){do{var t=((i.next()>>>11)+(i.next()>>>0)/4294967296)/(1<<21)}while(0===t);return t},o.int32=i.next,o.quick=o,e&&(e.X&&s(e,i),o.state=function(){return s(i,{})}),o}o&&o.exports?o.exports=a:i.amdD&&i.amdO?void 0===(e=function(){return a}.call(n,i,n,o))||(o.exports=e):this.xor4096=a}(0,t=i.nmd(t),i.amdD)},875:function(t,n,i){var e;!function(t,o){function r(t){var n=this;n.next=function(){var t,i,e=n.x,o=n.i;return t=e[o],i=(t^=t>>>7)^t<<24,i^=(t=e[o+1&7])^t>>>10,i^=(t=e[o+3&7])^t>>>3,i^=(t=e[o+4&7])^t<<7,t=e[o+7&7],i^=(t^=t<<13)^t<<9,e[o]=i,n.i=o+1&7,i},function(t,n){var i,e=[];if(n===(0|n))e[0]=n;else for(n=""+n,i=0;i<n.length;++i)e[7&i]=e[7&i]<<15^n.charCodeAt(i)+e[i+1&7]<<13;for(;e.length<8;)e.push(0);for(i=0;i<8&&0===e[i];++i);for(8==i?e[7]=-1:e[i],t.x=e,t.i=0,i=256;i>0;--i)t.next()}(n,t)}function s(t,n){return n.x=t.x.slice(),n.i=t.i,n}function a(t,n){null==t&&(t=+new Date);var i=new r(t),e=n&&n.state,o=function(){return(i.next()>>>0)/4294967296};return o.double=function(){do{var t=((i.next()>>>11)+(i.next()>>>0)/4294967296)/(1<<21)}while(0===t);return t},o.int32=i.next,o.quick=o,e&&(e.x&&s(e,i),o.state=function(){return s(i,{})}),o}o&&o.exports?o.exports=a:i.amdD&&i.amdO?void 0===(e=function(){return a}.call(n,i,n,o))||(o.exports=e):this.xorshift7=a}(0,t=i.nmd(t),i.amdD)},679:function(t,n,i){var e;!function(t,o){function r(t){var n=this,i="";n.next=function(){var t=n.x^n.x>>>2;return n.x=n.y,n.y=n.z,n.z=n.w,n.w=n.v,(n.d=n.d+362437|0)+(n.v=n.v^n.v<<4^t^t<<1)|0},n.x=0,n.y=0,n.z=0,n.w=0,n.v=0,t===(0|t)?n.x=t:i+=t;for(var e=0;e<i.length+64;e++)n.x^=0|i.charCodeAt(e),e==i.length&&(n.d=n.x<<10^n.x>>>4),n.next()}function s(t,n){return n.x=t.x,n.y=t.y,n.z=t.z,n.w=t.w,n.v=t.v,n.d=t.d,n}function a(t,n){var i=new r(t),e=n&&n.state,o=function(){return(i.next()>>>0)/4294967296};return o.double=function(){do{var t=((i.next()>>>11)+(i.next()>>>0)/4294967296)/(1<<21)}while(0===t);return t},o.int32=i.next,o.quick=o,e&&("object"==typeof e&&s(e,i),o.state=function(){return s(i,{})}),o}o&&o.exports?o.exports=a:i.amdD&&i.amdO?void 0===(e=function(){return a}.call(n,i,n,o))||(o.exports=e):this.xorwow=a}(0,t=i.nmd(t),i.amdD)},713:function(t,n,i){var e;!function(o,r,s){var a,u=256,d=s.pow(u,6),l=s.pow(2,52),c=2*l,h=255;function f(t,n,i){var e=[],h=y(g((n=1==n?{entropy:!0}:n||{}).entropy?[t,A(r)]:null==t?function(){try{var t;return a&&(t=a.randomBytes)?t=t(u):(t=new Uint8Array(u),(o.crypto||o.msCrypto).getRandomValues(t)),A(t)}catch(t){var n=o.navigator,i=n&&n.plugins;return[+new Date,o,i,o.screen,A(r)]}}():t,3),e),f=new v(e),w=function(){for(var t=f.g(6),n=d,i=0;t<l;)t=(t+i)*u,n*=u,i=f.g(1);for(;t>=c;)t/=2,n/=2,i>>>=1;return(t+i)/n};return w.int32=function(){return 0|f.g(4)},w.quick=function(){return f.g(4)/4294967296},w.double=w,y(A(f.S),r),(n.pass||i||function(t,n,i,e){return e&&(e.S&&p(e,f),t.state=function(){return p(f,{})}),i?(s.random=t,n):t})(w,h,"global"in n?n.global:this==s,n.state)}function v(t){var n,i=t.length,e=this,o=0,r=e.i=e.j=0,s=e.S=[];for(i||(t=[i++]);o<u;)s[o]=o++;for(o=0;o<u;o++)s[o]=s[r=h&r+t[o%i]+(n=s[o])],s[r]=n;(e.g=function(t){for(var n,i=0,o=e.i,r=e.j,s=e.S;t--;)n=s[o=h&o+1],i=i*u+s[h&(s[o]=s[r=h&r+n])+(s[r]=n)];return e.i=o,e.j=r,i})(u)}function p(t,n){return n.i=t.i,n.j=t.j,n.S=t.S.slice(),n}function g(t,n){var i,e=[],o=typeof t;if(n&&"object"==o)for(i in t)try{e.push(g(t[i],n-1))}catch(t){}return e.length?e:"string"==o?t:t+"\0"}function y(t,n){for(var i,e=t+"",o=0;o<e.length;)n[h&o]=h&(i^=19*n[h&o])+e.charCodeAt(o++);return A(n)}function A(t){return String.fromCharCode.apply(0,t)}if(y(s.random(),r),t.exports){t.exports=f;try{a=i(222)}catch(t){}}else void 0===(e=function(){return f}.call(n,i,n,t))||(t.exports=e)}("undefined"!=typeof self?self:this,[],Math)},222:()=>{}},i={};function e(t){var o=i[t];if(void 0!==o)return o.exports;var r=i[t]={id:t,loaded:!1,exports:{}};return n[t].call(r.exports,r,r.exports,e),r.loaded=!0,r.exports}e.amdD=function(){throw new Error("define cannot be used indirect")},e.amdO={},e.n=t=>{var n=t&&t.__esModule?()=>t.default:()=>t;return e.d(n,{a:n}),n},e.d=(t,n)=>{for(var i in n)e.o(n,i)&&!e.o(t,i)&&Object.defineProperty(t,i,{enumerable:!0,get:n[i]})},e.o=(t,n)=>Object.prototype.hasOwnProperty.call(t,n),e.r=t=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},e.nmd=t=>(t.paths=[],t.children||(t.children=[]),t);var o={};e.d(o,{RW:()=>ct,k7:()=>F,ff:()=>pt,sK:()=>w,F0:()=>_,$A:()=>L,T_:()=>X,zA:()=>j,t6:()=>R,__:()=>O,SX:()=>ft,t2:()=>vt,$m:()=>U,_z:()=>S,sR:()=>x,Cm:()=>I,q0:()=>P,NE:()=>W,dB:()=>E,UZ:()=>M,mt:()=>C,f:()=>ht,_7:()=>N,BZ:()=>T,fL:()=>D,_g:()=>m,n4:()=>G,Pd:()=>b,tx:()=>yt,zH:()=>lt,dQ:()=>k,ex:()=>dt,zp:()=>st,SQ:()=>rt,IN:()=>ut,B0:()=>at,y8:()=>K,C8:()=>B,y7:()=>Y,PT:()=>Q,G8:()=>Z,mp:()=>q,mP:()=>H,Fp:()=>J,N4:()=>V,QK:()=>nt,bK:()=>tt,jD:()=>$,Hm:()=>ot,UC:()=>it,Md:()=>et,nK:()=>z,Or:()=>r,o8:()=>p,Ay:()=>Cn,Ui:()=>Et,Y8:()=>gt,W:()=>y,ld:()=>Dt,S8:()=>tn,_:()=>en,E1:()=>sn,pN:()=>on,bj:()=>rn,Rb:()=>an,JL:()=>vn,_3:()=>pn,uX:()=>gn,bT:()=>fn,Du:()=>En,li:()=>On,XP:()=>un,Oo:()=>bn,SP:()=>Wn,v$:()=>ln,UN:()=>cn,wJ:()=>An,a5:()=>yn,N8:()=>xn,vQ:()=>_n,KK:()=>mn,cO:()=>wn,Hy:()=>In,i0:()=>Mn,Ct:()=>Tn,Bf:()=>Dn,jf:()=>Sn,Sw:()=>hn,ni:()=>$t,ds:()=>nn,Nx:()=>dn});var r={};e.r(r);const s=_erikwatson_bramble__WEBPACK_IMPORTED_MODULE_0__;var a=e(711),u=e.n(a);function d(t,n){return 1===arguments.length&&(n=t,t=0),void 0===t&&void 0===n?Math.random():void 0!==t&&void 0!==n?t+Math.random()*(n-t):0}function l(t,n){var i=u()("layer");return void 0===t&&void 0===n?i():void 0!==t&&void 0!==n?t+i()*(n-t):0}function c(t){return Math.atan2(t.x,t.y)*(180/Math.PI)}function h(t,n){var i=n*(Math.PI/180),e=Math.cos(i),o=Math.sin(i),r=t.x*e-t.y*o,s=t.x*o+t.y*e;return t.x=r,t.y=s,t}function f(t){var n=document.getElementById(t);if(!n)throw new Error("Error: Element #".concat(t," not found."));return n}function v(t,n,i){var e=t*n;return Math.round(i*(e/2073600))}function p(t){return JSON.parse(JSON.stringify(t))}function g(t,n,i,e){return Array.from({length:t},(function(){var t=d(i),o=d(e),r=s.vec2.create(t,o),a=s.vec2.clone(r),u=n.size.min+d()*(n.size.max-n.mass.min);return{position:r,previousPosition:a,mass:n.mass.min+d()*(n.mass.max-n.mass.min),size:u,renderedSize:u,noise:d(10),amplitude:d(n.sway.amplitude),frequency:d(n.sway.frequency),random:d(),rotation:d(360),time:0,opacity:d(n.opacity.min,n.opacity.max)}}))}function y(t){return"simple"===t.mode||void 0===t.mode}var A=function(){return A=Object.assign||function(t){for(var n,i=1,e=arguments.length;i<e;i++)for(var o in n=arguments[i])Object.prototype.hasOwnProperty.call(n,o)&&(t[o]=n[o]);return t},A.apply(this,arguments)},w="snowfall",m="#ffffff",_=200,x=1,S=3,D=1,T=3,M=!1,I="simple",O="data:image/png;base64,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",E=1,W=1,b=!1,C=!1,U={min:x,max:S},N={min:D,max:T},P={min:E,max:W},F=1,L=.02,G={frequency:L,amplitude:F},j=90,R=.7,X={angle:j,strength:R},k=0,z=0,Y=1,B=3,K={min:Y,max:B},V=1e3,J=3e3,H={min:V,max:J},q=1e3,Z=1e4,Q={min:q,max:Z},$=5e3,tt=1e4,nt={min:$,max:tt},it=1e4,et=1e3,ot={min:et,max:it},rt=.25,st=!0,at={duration:ot,delay:nt},ut={additionalStrength:K,duration:H,delay:Q},dt={active:st,changeChance:rt,in:ut,out:at},lt={angle:k,strength:z,gusts:dt},ct={density:_,mass:U,size:N,sway:G,gravity:X,wind:lt,opacity:P,scroll:C},ht=A(A({},ct),{colour:m,trail:b,mode:"simple"}),ft=A(A({},ct),{mode:"image",image:O,rotate:M}),vt=[],pt={layers:vt};function gt(){return A(A({},pt),{attachTo:f(w)})}var yt=A(A({},pt),{attachTo:w}),At=function(){return At=Object.assign||function(t){for(var n,i=1,e=arguments.length;i<e;i++)for(var o in n=arguments[i])Object.prototype.hasOwnProperty.call(n,o)&&(t[o]=n[o]);return t},At.apply(this,arguments)},wt=function(t,n){var i={};for(var e in t)Object.prototype.hasOwnProperty.call(t,e)&&n.indexOf(e)<0&&(i[e]=t[e]);if(null!=t&&"function"==typeof Object.getOwnPropertySymbols){var o=0;for(e=Object.getOwnPropertySymbols(t);o<e.length;o++)n.indexOf(e[o])<0&&Object.prototype.propertyIsEnumerable.call(t,e[o])&&(i[e[o]]=t[e[o]])}return i},mt=function(t,n){var i,e,o,r,s,a,u,d,l,c,h,f,v,p,g,y,A,w,x,S,D,T,M,I,O,E,W,F,L,j,R,k,z,Y,B,V,J,q,Z,$,tt=n<vt.length?vt[n]:ht;return{colour:t.colour||tt.colour||m,opacity:At(At(At({},P),tt.opacity),null==t?void 0:t.opacity),trail:t.trail||tt.trail||b,density:t.density||tt.density||_,scroll:t.scroll||tt.scroll||C,mode:"simple",mass:At(At(At({},U),tt.mass),t.mass),size:At(At(At({},N),tt.size),t.size),sway:At(At(At({},G),tt.sway),t.sway),gravity:At(At(At({},X),tt.gravity),t.gravity),wind:At(At(At(At({},lt),tt.wind),t.wind),{gusts:At(At(At(At({},dt),null===(i=tt.wind)||void 0===i?void 0:i.gusts),null===(e=t.wind)||void 0===e?void 0:e.gusts),{in:At(At(At(At({},ut),null===(r=null===(o=tt.wind)||void 0===o?void 0:o.gusts)||void 0===r?void 0:r.in),null===(a=null===(s=t.wind)||void 0===s?void 0:s.gusts)||void 0===a?void 0:a.in),{additionalStrength:At(At(At({},K),null===(l=null===(d=null===(u=tt.wind)||void 0===u?void 0:u.gusts)||void 0===d?void 0:d.in)||void 0===l?void 0:l.additionalStrength),null===(f=null===(h=null===(c=t.wind)||void 0===c?void 0:c.gusts)||void 0===h?void 0:h.in)||void 0===f?void 0:f.additionalStrength),duration:At(At(At({},H),null===(g=null===(p=null===(v=tt.wind)||void 0===v?void 0:v.gusts)||void 0===p?void 0:p.in)||void 0===g?void 0:g.duration),null===(w=null===(A=null===(y=t.wind)||void 0===y?void 0:y.gusts)||void 0===A?void 0:A.in)||void 0===w?void 0:w.duration),delay:At(At(At({},Q),null===(D=null===(S=null===(x=tt.wind)||void 0===x?void 0:x.gusts)||void 0===S?void 0:S.in)||void 0===D?void 0:D.delay),null===(I=null===(M=null===(T=t.wind)||void 0===T?void 0:T.gusts)||void 0===M?void 0:M.in)||void 0===I?void 0:I.delay)}),out:At(At(At(At({},at),null===(E=null===(O=tt.wind)||void 0===O?void 0:O.gusts)||void 0===E?void 0:E.out),null===(F=null===(W=t.wind)||void 0===W?void 0:W.gusts)||void 0===F?void 0:F.out),{duration:At(At(At({},ot),null===(R=null===(j=null===(L=tt.wind)||void 0===L?void 0:L.gusts)||void 0===j?void 0:j.out)||void 0===R?void 0:R.duration),null===(Y=null===(z=null===(k=t.wind)||void 0===k?void 0:k.gusts)||void 0===z?void 0:z.out)||void 0===Y?void 0:Y.duration),delay:At(At(At({},nt),null===(J=null===(V=null===(B=tt.wind)||void 0===B?void 0:B.gusts)||void 0===V?void 0:V.out)||void 0===J?void 0:J.delay),null===($=null===(Z=null===(q=t.wind)||void 0===q?void 0:q.gusts)||void 0===Z?void 0:Z.out)||void 0===$?void 0:$.delay)})})})}},_t=function(t,n){var i,e,o,r,s,a,u,d,l,c,h,f,v,p,g,y,A,w,m,x,S,D,T,I,E,W,b,F,L,j,R,k,z,Y,B,V,J,q,Z,$,tt=ft;return{density:t.density||tt.density||_,scroll:t.scroll||tt.scroll||C,mode:"image",image:t.image||tt.image||O,opacity:At(At(At({},P),tt.opacity),null==t?void 0:t.opacity),rotate:t.rotate||tt.rotate||M,mass:At(At(At({},U),tt.mass),t.mass),size:At(At(At({},N),tt.size),t.size),sway:At(At(At({},G),tt.sway),t.sway),gravity:At(At(At({},X),tt.gravity),t.gravity),wind:At(At(At(At({},lt),tt.wind),t.wind),{gusts:At(At(At(At({},dt),null===(i=tt.wind)||void 0===i?void 0:i.gusts),null===(e=t.wind)||void 0===e?void 0:e.gusts),{in:At(At(At(At({},ut),null===(r=null===(o=tt.wind)||void 0===o?void 0:o.gusts)||void 0===r?void 0:r.in),null===(a=null===(s=t.wind)||void 0===s?void 0:s.gusts)||void 0===a?void 0:a.in),{additionalStrength:At(At(At({},K),null===(l=null===(d=null===(u=tt.wind)||void 0===u?void 0:u.gusts)||void 0===d?void 0:d.in)||void 0===l?void 0:l.additionalStrength),null===(f=null===(h=null===(c=t.wind)||void 0===c?void 0:c.gusts)||void 0===h?void 0:h.in)||void 0===f?void 0:f.additionalStrength),duration:At(At(At({},H),null===(g=null===(p=null===(v=tt.wind)||void 0===v?void 0:v.gusts)||void 0===p?void 0:p.in)||void 0===g?void 0:g.duration),null===(w=null===(A=null===(y=t.wind)||void 0===y?void 0:y.gusts)||void 0===A?void 0:A.in)||void 0===w?void 0:w.duration),delay:At(At(At({},Q),null===(S=null===(x=null===(m=tt.wind)||void 0===m?void 0:m.gusts)||void 0===x?void 0:x.in)||void 0===S?void 0:S.delay),null===(I=null===(T=null===(D=t.wind)||void 0===D?void 0:D.gusts)||void 0===T?void 0:T.in)||void 0===I?void 0:I.delay)}),out:At(At(At(At({},at),null===(W=null===(E=tt.wind)||void 0===E?void 0:E.gusts)||void 0===W?void 0:W.out),null===(F=null===(b=t.wind)||void 0===b?void 0:b.gusts)||void 0===F?void 0:F.out),{duration:At(At(At({},ot),null===(R=null===(j=null===(L=tt.wind)||void 0===L?void 0:L.gusts)||void 0===j?void 0:j.out)||void 0===R?void 0:R.duration),null===(Y=null===(z=null===(k=t.wind)||void 0===k?void 0:k.gusts)||void 0===z?void 0:z.out)||void 0===Y?void 0:Y.duration),delay:At(At(At({},nt),null===(J=null===(V=null===(B=tt.wind)||void 0===B?void 0:B.gusts)||void 0===V?void 0:V.out)||void 0===J?void 0:J.delay),null===($=null===(Z=null===(q=t.wind)||void 0===q?void 0:q.gusts)||void 0===Z?void 0:Z.out)||void 0===$?void 0:$.delay)})})})}};function xt(t){var n;return At(At(At({},pt),t),{layers:(null!==(n=t.layers)&&void 0!==n?n:[]).map((function(t,n){return y(t)?mt(t,n):_t(t,n)}))})}function St(t){t.attachTo;var n=xt(wt(t,["attachTo"]));return At(At({},n),{attachTo:t.attachTo?f(t.attachTo):f(w)})}function Dt(t){t.attachTo;var n,i=xt(wt(t,["attachTo"]));return At(At({},i),{attachTo:null!==(n=t.attachTo)&&void 0!==n?n:w})}function Tt(t){return null!==t&&"object"==typeof t&&t.constructor===Object}function Mt(t,n){if(!Tt(t))return t;var i={};for(var e in t){var o=t[e],r=n[e];if(o!==r)if(Array.isArray(o)){var s=It(o,n[e]||[]);s.length>0&&(i[e]=s)}else if(Tt(o)){var a=Mt(o,r||{});Object.keys(a).length>0&&(i[e]=a)}else i[e]=o}return i}function It(t,n){for(var i,e,o=[],r=0;r<t.length;r++){var s=t[r],a=Mt(s,n[r]||(Ot(s)?ft:ht));Ot(s)&&void 0===a.mode&&(a.mode="image"),o.push(a)}return e=n,(i=o).filter((function(t,n){return i.length>e.length||Object.keys(t).length>0||!i.slice(n).every((function(t){return 0===Object.keys(t).length}))}))}function Ot(t){return"image"===t.mode||void 0!==t.image||void 0!==t.rotate}function Et(t){return Mt(t,yt)}var Wt,bt=Object.freeze({Linear:Object.freeze({None:function(t){return t},In:function(t){return t},Out:function(t){return t},InOut:function(t){return t}}),Quadratic:Object.freeze({In:function(t){return t*t},Out:function(t){return t*(2-t)},InOut:function(t){return(t*=2)<1?.5*t*t:-.5*(--t*(t-2)-1)}}),Cubic:Object.freeze({In:function(t){return t*t*t},Out:function(t){return--t*t*t+1},InOut:function(t){return(t*=2)<1?.5*t*t*t:.5*((t-=2)*t*t+2)}}),Quartic:Object.freeze({In:function(t){return t*t*t*t},Out:function(t){return 1- --t*t*t*t},InOut:function(t){return(t*=2)<1?.5*t*t*t*t:-.5*((t-=2)*t*t*t-2)}}),Quintic:Object.freeze({In:function(t){return t*t*t*t*t},Out:function(t){return--t*t*t*t*t+1},InOut:function(t){return(t*=2)<1?.5*t*t*t*t*t:.5*((t-=2)*t*t*t*t+2)}}),Sinusoidal:Object.freeze({In:function(t){return 1-Math.sin((1-t)*Math.PI/2)},Out:function(t){return Math.sin(t*Math.PI/2)},InOut:function(t){return.5*(1-Math.sin(Math.PI*(.5-t)))}}),Exponential:Object.freeze({In:function(t){return 0===t?0:Math.pow(1024,t-1)},Out:function(t){return 1===t?1:1-Math.pow(2,-10*t)},InOut:function(t){return 0===t?0:1===t?1:(t*=2)<1?.5*Math.pow(1024,t-1):.5*(2-Math.pow(2,-10*(t-1)))}}),Circular:Object.freeze({In:function(t){return 1-Math.sqrt(1-t*t)},Out:function(t){return Math.sqrt(1- --t*t)},InOut:function(t){return(t*=2)<1?-.5*(Math.sqrt(1-t*t)-1):.5*(Math.sqrt(1-(t-=2)*t)+1)}}),Elastic:Object.freeze({In:function(t){return 0===t?0:1===t?1:-Math.pow(2,10*(t-1))*Math.sin(5*(t-1.1)*Math.PI)},Out:function(t){return 0===t?0:1===t?1:Math.pow(2,-10*t)*Math.sin(5*(t-.1)*Math.PI)+1},InOut:function(t){return 0===t?0:1===t?1:(t*=2)<1?-.5*Math.pow(2,10*(t-1))*Math.sin(5*(t-1.1)*Math.PI):.5*Math.pow(2,-10*(t-1))*Math.sin(5*(t-1.1)*Math.PI)+1}}),Back:Object.freeze({In:function(t){var n=1.70158;return 1===t?1:t*t*((n+1)*t-n)},Out:function(t){var n=1.70158;return 0===t?0:--t*t*((n+1)*t+n)+1},InOut:function(t){var n=2.5949095;return(t*=2)<1?t*t*((n+1)*t-n)*.5:.5*((t-=2)*t*((n+1)*t+n)+2)}}),Bounce:Object.freeze({In:function(t){return 1-bt.Bounce.Out(1-t)},Out:function(t){return t<1/2.75?7.5625*t*t:t<2/2.75?7.5625*(t-=1.5/2.75)*t+.75:t<2.5/2.75?7.5625*(t-=2.25/2.75)*t+.9375:7.5625*(t-=2.625/2.75)*t+.984375},InOut:function(t){return t<.5?.5*bt.Bounce.In(2*t):.5*bt.Bounce.Out(2*t-1)+.5}}),generatePow:function(t){return void 0===t&&(t=4),t=(t=t<Number.EPSILON?Number.EPSILON:t)>1e4?1e4:t,{In:function(n){return Math.pow(n,t)},Out:function(n){return 1-Math.pow(1-n,t)},InOut:function(n){return n<.5?Math.pow(2*n,t)/2:(1-Math.pow(2-2*n,t))/2+.5}}}}),Ct=function(){return performance.now()},Ut=function(){function t(){this._tweens={},this._tweensAddedDuringUpdate={}}return t.prototype.getAll=function(){var t=this;return Object.keys(this._tweens).map((function(n){return t._tweens[n]}))},t.prototype.removeAll=function(){this._tweens={}},t.prototype.add=function(t){this._tweens[t.getId()]=t,this._tweensAddedDuringUpdate[t.getId()]=t},t.prototype.remove=function(t){delete this._tweens[t.getId()],delete this._tweensAddedDuringUpdate[t.getId()]},t.prototype.update=function(t,n){void 0===t&&(t=Ct()),void 0===n&&(n=!1);var i=Object.keys(this._tweens);if(0===i.length)return!1;for(;i.length>0;){this._tweensAddedDuringUpdate={};for(var e=0;e<i.length;e++){var o=this._tweens[i[e]],r=!n;o&&!1===o.update(t,r)&&!n&&delete this._tweens[i[e]]}i=Object.keys(this._tweensAddedDuringUpdate)}return!0},t}(),Nt={Linear:function(t,n){var i=t.length-1,e=i*n,o=Math.floor(e),r=Nt.Utils.Linear;return n<0?r(t[0],t[1],e):n>1?r(t[i],t[i-1],i-e):r(t[o],t[o+1>i?i:o+1],e-o)},Bezier:function(t,n){for(var i=0,e=t.length-1,o=Math.pow,r=Nt.Utils.Bernstein,s=0;s<=e;s++)i+=o(1-n,e-s)*o(n,s)*t[s]*r(e,s);return i},CatmullRom:function(t,n){var i=t.length-1,e=i*n,o=Math.floor(e),r=Nt.Utils.CatmullRom;return t[0]===t[i]?(n<0&&(o=Math.floor(e=i*(1+n))),r(t[(o-1+i)%i],t[o],t[(o+1)%i],t[(o+2)%i],e-o)):n<0?t[0]-(r(t[0],t[0],t[1],t[1],-e)-t[0]):n>1?t[i]-(r(t[i],t[i],t[i-1],t[i-1],e-i)-t[i]):r(t[o?o-1:0],t[o],t[i<o+1?i:o+1],t[i<o+2?i:o+2],e-o)},Utils:{Linear:function(t,n,i){return(n-t)*i+t},Bernstein:function(t,n){var i=Nt.Utils.Factorial;return i(t)/i(n)/i(t-n)},Factorial:(Wt=[1],function(t){var n=1;if(Wt[t])return Wt[t];for(var i=t;i>1;i--)n*=i;return Wt[t]=n,n}),CatmullRom:function(t,n,i,e,o){var r=.5*(i-t),s=.5*(e-n),a=o*o;return(2*n-2*i+r+s)*(o*a)+(-3*n+3*i-2*r-s)*a+r*o+n}}},Pt=function(){function t(){}return t.nextId=function(){return t._nextId++},t._nextId=0,t}(),Ft=new Ut,Lt=function(){function t(t,n){void 0===n&&(n=Ft),this._object=t,this._group=n,this._isPaused=!1,this._pauseStart=0,this._valuesStart={},this._valuesEnd={},this._valuesStartRepeat={},this._duration=1e3,this._isDynamic=!1,this._initialRepeat=0,this._repeat=0,this._yoyo=!1,this._isPlaying=!1,this._reversed=!1,this._delayTime=0,this._startTime=0,this._easingFunction=bt.Linear.None,this._interpolationFunction=Nt.Linear,this._chainedTweens=[],this._onStartCallbackFired=!1,this._onEveryStartCallbackFired=!1,this._id=Pt.nextId(),this._isChainStopped=!1,this._propertiesAreSetUp=!1,this._goToEnd=!1}return t.prototype.getId=function(){return this._id},t.prototype.isPlaying=function(){return this._isPlaying},t.prototype.isPaused=function(){return this._isPaused},t.prototype.getDuration=function(){return this._duration},t.prototype.to=function(t,n){if(void 0===n&&(n=1e3),this._isPlaying)throw new Error("Can not call Tween.to() while Tween is already started or paused. Stop the Tween first.");return this._valuesEnd=t,this._propertiesAreSetUp=!1,this._duration=n<0?0:n,this},t.prototype.duration=function(t){return void 0===t&&(t=1e3),this._duration=t<0?0:t,this},t.prototype.dynamic=function(t){return void 0===t&&(t=!1),this._isDynamic=t,this},t.prototype.start=function(t,n){if(void 0===t&&(t=Ct()),void 0===n&&(n=!1),this._isPlaying)return this;if(this._group&&this._group.add(this),this._repeat=this._initialRepeat,this._reversed)for(var i in this._reversed=!1,this._valuesStartRepeat)this._swapEndStartRepeatValues(i),this._valuesStart[i]=this._valuesStartRepeat[i];if(this._isPlaying=!0,this._isPaused=!1,this._onStartCallbackFired=!1,this._onEveryStartCallbackFired=!1,this._isChainStopped=!1,this._startTime=t,this._startTime+=this._delayTime,!this._propertiesAreSetUp||n){if(this._propertiesAreSetUp=!0,!this._isDynamic){var e={};for(var o in this._valuesEnd)e[o]=this._valuesEnd[o];this._valuesEnd=e}this._setupProperties(this._object,this._valuesStart,this._valuesEnd,this._valuesStartRepeat,n)}return this},t.prototype.startFromCurrentValues=function(t){return this.start(t,!0)},t.prototype._setupProperties=function(t,n,i,e,o){for(var r in i){var s=t[r],a=Array.isArray(s),u=a?"array":typeof s,d=!a&&Array.isArray(i[r]);if("undefined"!==u&&"function"!==u){if(d){if(0===(g=i[r]).length)continue;for(var l=[s],c=0,h=g.length;c<h;c+=1){var f=this._handleRelativeValue(s,g[c]);if(isNaN(f)){d=!1,console.warn("Found invalid interpolation list. Skipping.");break}l.push(f)}d&&(i[r]=l)}if("object"!==u&&!a||!s||d)(void 0===n[r]||o)&&(n[r]=s),a||(n[r]*=1),e[r]=d?i[r].slice().reverse():n[r]||0;else{n[r]=a?[]:{};var v=s;for(var p in v)n[r][p]=v[p];e[r]=a?[]:{};var g=i[r];if(!this._isDynamic){var y={};for(var p in g)y[p]=g[p];i[r]=g=y}this._setupProperties(v,n[r],g,e[r],o)}}}},t.prototype.stop=function(){return this._isChainStopped||(this._isChainStopped=!0,this.stopChainedTweens()),this._isPlaying?(this._group&&this._group.remove(this),this._isPlaying=!1,this._isPaused=!1,this._onStopCallback&&this._onStopCallback(this._object),this):this},t.prototype.end=function(){return this._goToEnd=!0,this.update(1/0),this},t.prototype.pause=function(t){return void 0===t&&(t=Ct()),this._isPaused||!this._isPlaying||(this._isPaused=!0,this._pauseStart=t,this._group&&this._group.remove(this)),this},t.prototype.resume=function(t){return void 0===t&&(t=Ct()),this._isPaused&&this._isPlaying?(this._isPaused=!1,this._startTime+=t-this._pauseStart,this._pauseStart=0,this._group&&this._group.add(this),this):this},t.prototype.stopChainedTweens=function(){for(var t=0,n=this._chainedTweens.length;t<n;t++)this._chainedTweens[t].stop();return this},t.prototype.group=function(t){return void 0===t&&(t=Ft),this._group=t,this},t.prototype.delay=function(t){return void 0===t&&(t=0),this._delayTime=t,this},t.prototype.repeat=function(t){return void 0===t&&(t=0),this._initialRepeat=t,this._repeat=t,this},t.prototype.repeatDelay=function(t){return this._repeatDelayTime=t,this},t.prototype.yoyo=function(t){return void 0===t&&(t=!1),this._yoyo=t,this},t.prototype.easing=function(t){return void 0===t&&(t=bt.Linear.None),this._easingFunction=t,this},t.prototype.interpolation=function(t){return void 0===t&&(t=Nt.Linear),this._interpolationFunction=t,this},t.prototype.chain=function(){for(var t=[],n=0;n<arguments.length;n++)t[n]=arguments[n];return this._chainedTweens=t,this},t.prototype.onStart=function(t){return this._onStartCallback=t,this},t.prototype.onEveryStart=function(t){return this._onEveryStartCallback=t,this},t.prototype.onUpdate=function(t){return this._onUpdateCallback=t,this},t.prototype.onRepeat=function(t){return this._onRepeatCallback=t,this},t.prototype.onComplete=function(t){return this._onCompleteCallback=t,this},t.prototype.onStop=function(t){return this._onStopCallback=t,this},t.prototype.update=function(t,n){var i,e,o=this;if(void 0===t&&(t=Ct()),void 0===n&&(n=!0),this._isPaused)return!0;var r=this._startTime+this._duration;if(!this._goToEnd&&!this._isPlaying){if(t>r)return!1;n&&this.start(t,!0)}if(this._goToEnd=!1,t<this._startTime)return!0;!1===this._onStartCallbackFired&&(this._onStartCallback&&this._onStartCallback(this._object),this._onStartCallbackFired=!0),!1===this._onEveryStartCallbackFired&&(this._onEveryStartCallback&&this._onEveryStartCallback(this._object),this._onEveryStartCallbackFired=!0);var s=t-this._startTime,a=this._duration+(null!==(i=this._repeatDelayTime)&&void 0!==i?i:this._delayTime),u=this._duration+this._repeat*a,d=function(){if(0===o._duration)return 1;if(s>u)return 1;var t=Math.trunc(s/a),n=s-t*a,i=Math.min(n/o._duration,1);return 0===i&&s===o._duration?1:i}(),l=this._easingFunction(d);if(this._updateProperties(this._object,this._valuesStart,this._valuesEnd,l),this._onUpdateCallback&&this._onUpdateCallback(this._object,d),0===this._duration||s>=this._duration){if(this._repeat>0){var c=Math.min(Math.trunc((s-this._duration)/a)+1,this._repeat);for(e in isFinite(this._repeat)&&(this._repeat-=c),this._valuesStartRepeat)this._yoyo||"string"!=typeof this._valuesEnd[e]||(this._valuesStartRepeat[e]=this._valuesStartRepeat[e]+parseFloat(this._valuesEnd[e])),this._yoyo&&this._swapEndStartRepeatValues(e),this._valuesStart[e]=this._valuesStartRepeat[e];return this._yoyo&&(this._reversed=!this._reversed),this._startTime+=a*c,this._onRepeatCallback&&this._onRepeatCallback(this._object),this._onEveryStartCallbackFired=!1,!0}this._onCompleteCallback&&this._onCompleteCallback(this._object);for(var h=0,f=this._chainedTweens.length;h<f;h++)this._chainedTweens[h].start(this._startTime+this._duration,!1);return this._isPlaying=!1,!1}return!0},t.prototype._updateProperties=function(t,n,i,e){for(var o in i)if(void 0!==n[o]){var r=n[o]||0,s=i[o],a=Array.isArray(t[o]),u=Array.isArray(s);!a&&u?t[o]=this._interpolationFunction(s,e):"object"==typeof s&&s?this._updateProperties(t[o],r,s,e):"number"==typeof(s=this._handleRelativeValue(r,s))&&(t[o]=r+(s-r)*e)}},t.prototype._handleRelativeValue=function(t,n){return"string"!=typeof n?n:"+"===n.charAt(0)||"-"===n.charAt(0)?t+parseFloat(n):parseFloat(n)},t.prototype._swapEndStartRepeatValues=function(t){var n=this._valuesStartRepeat[t],i=this._valuesEnd[t];this._valuesStartRepeat[t]="string"==typeof i?this._valuesStartRepeat[t]+parseFloat(i):this._valuesEnd[t],this._valuesEnd[t]=n},t}(),Gt=(Pt.nextId,Ft),jt=(Gt.getAll.bind(Gt),Gt.removeAll.bind(Gt)),Rt=(Gt.add.bind(Gt),Gt.remove.bind(Gt),Gt.update.bind(Gt));console.log("SNOWFALL BRAMBLE",s);var Xt=s.vec2.vec2FromDegrees;function kt(t,n){var i=(t.position.x-t.previousPosition.x)/n;t.rotation+=.0075*i}function zt(t,n,i){t.x+=n,t.y+=i}var Yt,Bt,Kt=s.vec2.vec2FromDegrees,Vt=function(){function t(t,n,i,e,o,r,a,u,d){var l=this;this.snowflakes=[],this.paused=!1,this.scrollOffsetX=0,this.scrollOffsetY=0,this.scrollVelocityX=0,this.scrollVelocityY=0,this.lastScrollY=0,this.lastScrollX=0,this.originalConfig=t,this.config=t,this.width=n,this.height=i,this.windVector=s.vec2.create(0,0),this.gravityVector=s.vec2.create(0,0);var h=window.scrollX,f=window.scrollY;this.lastScrollX=h,this.lastScrollY=f,this.scrollOffsetX=0,this.scrollOffsetY=0,this.scrollVelocityX=0,this.scrollVelocityY=0;var v=this.config.wind.strength;this.config.wind.gusts.active&&(this.fadeWindIn=new Lt(t).to({wind:{strength:e}},o).easing(bt.Quadratic.InOut).delay(r).onUpdate((function(){l.setWind(l.config.wind.angle,l.config.wind.strength)})),this.fadeWindOut=new Lt(t).to({wind:{strength:v}},a).easing(bt.Quadratic.Out).delay(u).onUpdate((function(){l.setWind(l.config.wind.angle,l.config.wind.strength)})).onComplete((function(){if(d<l.config.wind.gusts.changeChance){var t=c(l.windVector.getOpposite(l.windVector));l.setWindAngle(t)}})))}return t.prototype.setAmplitude=function(t){this.config.sway.amplitude=t},t.prototype.setFrequency=function(t){this.config.sway.frequency=t},t.prototype.setGravity=function(t,n){this.config.gravity.angle=t,this.config.gravity.strength=n,this.originalConfig=p(this.config),this.gravityVector=Kt(t),this.gravityVector.multiplyScalar(n)},t.prototype.setGravityAngle=function(t){this.config.gravity.angle=t,this.originalConfig=p(this.config);var n=this.gravityVector.getLength();this.gravityVector=Kt(t),this.gravityVector.multiplyScalar(n)},t.prototype.setGravityStrength=function(t){this.config.gravity.strength=t,this.originalConfig=p(this.config);var n=c(this.gravityVector);this.gravityVector=Kt(n),this.gravityVector.multiplyScalar(t)},t.prototype.setPaused=function(t){this.paused=t},t.prototype.setWind=function(t,n){this.config.wind.angle=t,this.config.wind.strength=n,this.windVector=Kt(t),this.windVector.multiplyScalar(n)},t.prototype.setWindAngle=function(t){this.config.wind.angle=t,this.originalConfig=p(this.config);var n=this.windVector.getLength();this.windVector=Kt(t),this.windVector.multiplyScalar(n)},t.prototype.setWindStrength=function(t){this.config.wind.strength=t,this.originalConfig=p(this.config);var n=c(this.windVector);this.windVector=Kt(n),this.windVector.multiplyScalar(t)},t.prototype.setGusts=function(t){this.config.wind.gusts.active=t,this.originalConfig=p(this.config),this.restart()},t.prototype.togglePaused=function(){this.paused=!this.paused},t.prototype.setWindInAdditionalStrengthMin=function(t){this.config.wind.gusts.in.additionalStrength.min=t,this.originalConfig=p(this.config)},t.prototype.setWindInAdditionalStrengthMax=function(t){this.config.wind.gusts.in.additionalStrength.max=t,this.originalConfig=p(this.config)},t.prototype.setWindInDurationMin=function(t){this.config.wind.gusts.in.duration.min=t,this.originalConfig=p(this.config)},t.prototype.setWindInDurationMax=function(t){this.config.wind.gusts.in.duration.max=t,this.originalConfig=p(this.config)},t.prototype.setWindInDelayMin=function(t){this.config.wind.gusts.in.delay.min=t,this.originalConfig=p(this.config)},t.prototype.setWindInDelayMax=function(t){this.config.wind.gusts.in.delay.max=t,this.originalConfig=p(this.config)},t.prototype.setWindOutDurationMin=function(t){this.config.wind.gusts.out.duration.min=t,this.originalConfig=p(this.config)},t.prototype.setWindOutDurationMax=function(t){this.config.wind.gusts.out.duration.max=t,this.originalConfig=p(this.config)},t.prototype.setWindOutDelayMin=function(t){this.config.wind.gusts.out.delay.min=t,this.originalConfig=p(this.config)},t.prototype.setWindOutDelayMax=function(t){this.config.wind.gusts.out.delay.max=t,this.originalConfig=p(this.config)},t.prototype.setWindOutChangeChance=function(t){this.config.wind.gusts.changeChance=t,this.originalConfig=p(this.config)},t.prototype.update=function(t,n){var i,e,o=this;if(!this.paused){var r=this.config,a=r.sway,u=r.gravity,l=r.wind,c=window.scrollX,f=window.scrollY,v=c-(null!==(i=this.lastScrollX)&&void 0!==i?i:c),p=f-(null!==(e=this.lastScrollY)&&void 0!==e?e:f);this.lastScrollX=c,this.lastScrollY=f,this.scrollVelocityX+=v/25,this.scrollVelocityY+=p/25,this.scrollVelocityX*=.85,this.scrollVelocityY*=.85,this.scrollOffsetX=this.scrollVelocityX,this.scrollOffsetY=this.scrollVelocityY,this.scrollOffsetX*=.85,this.scrollOffsetY*=.85,this.snowflakes.forEach((function(n){n.time+=t,n.previousPosition=s.vec2.clone(n.position),function(t,n,i){var e=s.vec2.create(0,0),o=Xt(n);o.multiplyScalar(i),e.x=o.x,e.y=o.y,e.multiplyScalar(t.mass+t.random),t.position.add(e)}(n,l.angle,l.strength),function(t,n,i){var e=s.vec2.create(0,0),o=Xt(n);o.multiplyScalar(i),e.x=o.x,e.y=o.y,e.multiplyScalar(t.mass+t.random),t.position.add(e)}(n,u.angle,u.strength),function(t,n,i){var e=t.time+t.noise,o=i.amplitude*Math.sin(i.frequency*t.time+e);h(s.vec2.create(1,0),n.angle);var r=s.vec2.create(o,0);h(r,n.angle+90),t.position.add(r)}(n,u,a),o.config.scroll&&(0===o.scrollOffsetX&&0===o.scrollOffsetY||(zt(n.position,-o.scrollOffsetX,-o.scrollOffsetY),zt(n.previousPosition,-o.scrollOffsetX,-o.scrollOffsetY))),function(t,n,i){var e=!1;return function(t,n){return t.position.x+t.renderedSize>=0&&t.position.x-t.renderedSize<=n}(t,n)||(function(t,n,i){t.position.x+t.renderedSize<0?(t.position.x+=n+2*t.renderedSize,t.position.y=d(i)):t.position.x-t.renderedSize>n&&(t.position.x-=n+2*t.renderedSize,t.position.y=d(i))}(t,n,i),e=!0),function(t,n){return t.position.y+t.renderedSize>=0&&t.position.y-t.renderedSize<=n}(t,i)||(function(t,n,i){t.position.y+t.renderedSize<0?(t.position.y+=n+2*t.renderedSize,t.position.x=d(i)):t.position.y-t.renderedSize>n&&(t.position.y-=n+2*t.renderedSize,t.position.x=d(i))}(t,i,n),e=!0),e}(n,o.width,o.height)&&(n.previousPosition=s.vec2.clone(n.position))}))}},t.prototype.render=function(t){},t.prototype.start=function(){this.snowflakes=g(v(this.width,this.height,this.config.density),this.config,this.width,this.height),this.setWind(this.config.wind.angle,this.config.wind.strength),this.setGravity(this.config.gravity.angle,this.config.gravity.strength),this.config.wind.gusts.active&&this.fadeWindIn&&this.fadeWindOut&&(this.fadeWindIn.chain(this.fadeWindOut),this.fadeWindOut.chain(this.fadeWindIn),this.fadeWindIn.start())},t.prototype.pause=function(){this.paused=!0},t.prototype.resume=function(){this.paused=!1},t.prototype.restart=function(){var t,n,i,e,o;null===(t=this.fadeWindIn)||void 0===t||t.stop(),null===(n=this.fadeWindOut)||void 0===n||n.stop(),null===(i=this.fadeWindIn)||void 0===i||i.stopChainedTweens(),null===(e=this.fadeWindOut)||void 0===e||e.stopChainedTweens(),this.setWind(this.originalConfig.wind.angle,this.originalConfig.wind.strength),this.config.wind.gusts.active&&(null===(o=this.fadeWindIn)||void 0===o||o.start()),this.snowflakes=g(v(this.width,this.height,this.config.density),this.config,this.width,this.height)},t.prototype.setDensity=function(t){this.config.density=t,this.restart()},t.prototype.setMassMin=function(t){this.config.mass.min=t,this.restart()},t.prototype.setMassMax=function(t){this.config.mass.max=t,this.restart()},t.prototype.setSizeMin=function(t){this.config.size.min=t,this.restart()},t.prototype.setSizeMax=function(t){this.config.size.max=t,this.restart()},t}(),Jt=(Yt=function(t,n){return Yt=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(t,n){t.__proto__=n}||function(t,n){for(var i in n)Object.prototype.hasOwnProperty.call(n,i)&&(t[i]=n[i])},Yt(t,n)},function(t,n){if("function"!=typeof n&&null!==n)throw new TypeError("Class extends value "+String(n)+" is not a constructor or null");function i(){this.constructor=t}Yt(t,n),t.prototype=null===n?Object.create(n):(i.prototype=n.prototype,new i)}),Ht=function(t){function n(){var n=null!==t&&t.apply(this,arguments)||this;return n.mode="simple",n}return Jt(n,t),n.prototype.setColour=function(t){throw new Error("Method not implemented.")},n.prototype.render=function(t){var n=this;this.snowflakes.forEach((function(i){t.transparency((function(){n.config.trail?i.previousPosition.x>=0&&i.previousPosition.x<=n.width&&i.previousPosition.y>=0&&i.previousPosition.y<=n.height&&i.position.x>=0&&i.position.x<=n.width&&i.position.y>=0&&i.position.y<=n.height&&t.line(i.position,i.previousPosition,{colour:n.config.colour,opacity:i.opacity,width:2*i.renderedSize}):t.circle(i.position,i.renderedSize,{fill:{colour:n.config.colour},line:{width:0}})}),i.opacity)}))},n}(Vt),qt=function(){var t=function(n,i){return t=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(t,n){t.__proto__=n}||function(t,n){for(var i in n)Object.prototype.hasOwnProperty.call(n,i)&&(t[i]=n[i])},t(n,i)};return function(n,i){if("function"!=typeof i&&null!==i)throw new TypeError("Class extends value "+String(i)+" is not a constructor or null");function e(){this.constructor=n}t(n,i),n.prototype=null===i?Object.create(i):(e.prototype=i.prototype,new e)}}(),Zt=function(t){function n(n,i,e,o,r,s,a,u,d){var l=t.call(this,n,i,e,o,r,s,a,u,d)||this;return l.mode="image",l.image=new Image,l.image.src=n.image,l}return qt(n,t),n.prototype.setImage=function(t){throw new Error("Method not implemented.")},n.prototype.update=function(n,i){t.prototype.update.call(this,n,i);for(var e=0,o=this.snowflakes;e<o.length;e++)kt(o[e],n)},n.prototype.render=function(t){var n=this;this.snowflakes.forEach((function(i){var e=i.renderedSize,o=e/2;t.transparency((function(){n.config.rotate?t.rotation((function(){t.image(n.image,{x:i.position.x-o,y:i.position.y-o},{width:e,height:e})}),i.rotation,i.position):t.image(n.image,{x:i.position.x-o,y:i.position.y-o},{width:e,height:e})}),i.opacity)}))},n}(Vt);function Qt(){if(!Bt)throw new Error("Snowfall simulation not started. Call snowfall.start() first.")}function $t(t){void 0===t&&(t={});try{Bt?Bt.restart():(Bt=function(){var t,n=[],i=s.game.create();function e(){n=[],t.layers.forEach((function(i){var e,o=l(i.wind.strength+i.wind.gusts.in.additionalStrength.min,i.wind.strength+i.wind.gusts.in.additionalStrength.max),r=l(i.wind.gusts.in.delay.min,i.wind.gusts.in.delay.max),s=l(i.wind.gusts.in.delay.min,i.wind.gusts.in.delay.max),a=l(i.wind.gusts.out.duration.min,i.wind.gusts.out.duration.max),u=l(i.wind.gusts.out.delay.min,i.wind.gusts.out.delay.max),d=l();"simple"===i.mode?e=new Ht(i,t.attachTo.offsetWidth,t.attachTo.offsetHeight,o,r,s,a,u,d):"image"===i.mode&&(e=new Zt(i,t.attachTo.offsetWidth,t.attachTo.offsetHeight,o,r,s,a,u,d)),e&&(n.push(e),e.start())}))}function o(){n.forEach((function(n){n.width=t.attachTo.offsetWidth,n.height=t.attachTo.offsetHeight,n.restart()})),r()}function r(o){i.setSize(t.attachTo.offsetWidth,t.attachTo.offsetHeight),o?e():n.forEach((function(t){return t.restart()}))}return{start:function(r){void 0===r&&(r={}),function(n){(t=St(n)).attachTo?e():console.error("Unable to start the application, the specified container could not be found.")}(r),t.attachTo?(window.onresize=o,i.attachTo(t.attachTo),i.setSize(t.attachTo.offsetWidth,t.attachTo.offsetHeight),i.setUpdate((function(t){return e=(i=t).dt,o=i.input,Rt(),void n.forEach((function(t){t.update(e,o)}));var i,e,o})),i.setRender((function(t){return(i=t.gfx).clear(),void n.forEach((function(t){t.render(i)}));var i})),i.start()):console.error("Unable to start the application, the specified container could not be found.")},setAmplitude:function(t,i){var e;null===(e=n[i])||void 0===e||e.setAmplitude(t)},setDensity:function(t,i){var e;null===(e=n[i])||void 0===e||e.setDensity(t)},setFrequency:function(t,i){var e;null===(e=n[i])||void 0===e||e.setFrequency(t)},setGravity:function(t,i,e){var o;null===(o=n[e])||void 0===o||o.setGravity(t,i)},setGravityAngle:function(t,i){var e;null===(e=n[i])||void 0===e||e.setGravityAngle(t)},setGravityStrength:function(t,i){var e;null===(e=n[i])||void 0===e||e.setGravityStrength(t)},setPaused:function(t,i){var e;null===(e=n[i])||void 0===e||e.setPaused(t)},setWind:function(t,i,e){var o;null===(o=n[e])||void 0===o||o.setWind(t,i)},setWindAngle:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindAngle(t)},setWindStrength:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindStrength(t)},setGusts:function(t,i){var e;null===(e=n[i])||void 0===e||e.setGusts(t)},togglePaused:function(t){var i;null===(i=n[t])||void 0===i||i.togglePaused()},setWindInAdditionalStrengthMin:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindInAdditionalStrengthMin(t)},setWindInAdditionalStrengthMax:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindInAdditionalStrengthMax(t)},setWindInDurationMin:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindInDurationMin(t)},setWindInDurationMax:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindInDurationMax(t)},setWindInDelayMin:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindInDelayMin(t)},setWindInDelayMax:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindInDelayMax(t)},setWindOutDurationMin:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindOutDurationMin(t)},setWindOutDurationMax:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindOutDurationMax(t)},setWindOutDelayMin:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindOutDelayMin(t)},setWindOutDelayMax:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindOutDelayMax(t)},setWindOutChangeChance:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindOutChangeChance(t)},setColour:function(t,i){"simple"===n[i].mode?n[i].setColour(t):console.error("attempting to set a colour on a layer that does not have a colour property")},setMassMin:function(t,i){var e;null===(e=n[i])||void 0===e||e.setMassMin(t)},setMassMax:function(t,i){var e;null===(e=n[i])||void 0===e||e.setMassMax(t)},setSizeMin:function(t,i){var e;null===(e=n[i])||void 0===e||e.setSizeMin(t)},setSizeMax:function(t,i){var e;null===(e=n[i])||void 0===e||e.setSizeMax(t)},restart:function(t){r(t?St(t):t)},stop:function(){t=St(yt),n=[],i.stop(),i.canvas.remove(),jt()}}}()).start(t)}catch(t){console.error(t)}}function tn(t){void 0===t&&(t={}),nn(),$t(t)}function nn(){null==Bt||Bt.stop(),Bt=void 0}function en(t,n){void 0===n&&(n={}),function(t){var n=[0,31,29,31,30,31,30,31,31,30,31,30,31];if(t.from.month<1||t.from.month>12||t.from.day<1||t.from.day>n[t.from.month]||t.to.month<1||t.to.month>12||t.to.day<1||t.to.day>n[t.to.month])throw new Error("Invalid date in schedule");var i=new Date,e=100*(i.getUTCMonth()+1)+i.getUTCDate(),o=100*t.from.month+t.from.day,r=100*t.to.month+t.to.day;return o<=r?e>=o&&e<=r:e>=o||e<=r}(t)&&(nn(),$t(n))}function on(t,n){Qt(),Bt.setColour(t,n)}function rn(t,n){Qt(),Bt.setDensity(t,n)}function sn(t,n){Qt(),Bt.setAmplitude(t,n)}function an(t,n){Qt(),Bt.setFrequency(t,n)}function un(t,n){Qt(),Bt.setPaused(t,n)}function dn(t){Qt(),Bt.togglePaused(t)}function ln(t,n,i){Qt(),Bt.setWind(t,n,i)}function cn(t,n){Qt(),Bt.setWindAngle(t,n)}function hn(t,n){Qt(),Bt.setWindStrength(t,n)}function fn(t,n){Qt(),Bt.setGusts(t,n)}function vn(t,n,i){Qt(),Bt.setGravity(t,n,i)}function pn(t,n){Qt(),Bt.setGravityAngle(t,n)}function gn(t,n){Qt(),Bt.setGravityStrength(t,n)}function yn(t,n){Qt(),Bt.setWindInAdditionalStrengthMin(t,n)}function An(t,n){Qt(),Bt.setWindInAdditionalStrengthMax(t,n)}function wn(t,n){Qt(),Bt.setWindInDurationMin(t,n)}function mn(t,n){Qt(),Bt.setWindInDurationMax(t,n)}function _n(t,n){Qt(),Bt.setWindInDelayMin(t,n)}function xn(t,n){Qt(),Bt.setWindInDelayMax(t,n)}function Sn(t,n){Qt(),Bt.setWindOutDurationMin(t,n)}function Dn(t,n){Qt(),Bt.setWindOutDurationMax(t,n)}function Tn(t,n){Qt(),Bt.setWindOutDelayMin(t,n)}function Mn(t,n){Qt(),Bt.setWindOutDelayMax(t,n)}function In(t,n){Qt(),Bt.setWindOutChangeChance(t,n)}function On(t,n){Qt(),Bt.setMassMin(t,n)}function En(t,n){Qt(),Bt.setMassMax(t,n)}function Wn(t,n){Qt(),Bt.setSizeMin(t,n)}function bn(t,n){Qt(),Bt.setSizeMax(t,n)}const Cn={start:$t,restart:tn,stop:nn,schedule:en,setColour:on,setDensity:rn,setAmplitude:sn,setFrequency:an,setPaused:un,togglePaused:dn,setWind:ln,setGravity:vn,setMassMin:On,setMassMax:En,setSizeMin:Wn,setSizeMax:bn};var Un=o.RW,Nn=o.k7,Pn=o.ff,Fn=o.sK,Ln=o.F0,Gn=o.$A,jn=o.T_,Rn=o.zA,Xn=o.t6,kn=o.__,zn=o.SX,Yn=o.t2,Bn=o.$m,Kn=o._z,Vn=o.sR,Jn=o.Cm,Hn=o.q0,qn=o.NE,Zn=o.dB,Qn=o.UZ,$n=o.mt,ti=o.f,ni=o._7,ii=o.BZ,ei=o.fL,oi=o._g,ri=o.n4,si=o.Pd,ai=o.tx,ui=o.zH,di=o.dQ,li=o.ex,ci=o.zp,hi=o.SQ,fi=o.IN,vi=o.B0,pi=o.y8,gi=o.C8,yi=o.y7,Ai=o.PT,wi=o.G8,mi=o.mp,_i=o.mP,xi=o.Fp,Si=o.N4,Di=o.QK,Ti=o.bK,Mi=o.jD,Ii=o.Hm,Oi=o.UC,Ei=o.Md,Wi=o.nK,bi=o.Or,Ci=o.o8,Ui=o.Ay,Ni=o.Ui,Pi=o.Y8,Fi=o.W,Li=o.ld,Gi=o.S8,ji=o._,Ri=o.E1,Xi=o.pN,ki=o.bj,zi=o.Rb,Yi=o.JL,Bi=o._3,Ki=o.uX,Vi=o.bT,Ji=o.Du,Hi=o.li,qi=o.XP,Zi=o.Oo,Qi=o.SP,$i=o.v$,te=o.UN,ne=o.wJ,ie=o.a5,ee=o.N8,oe=o.vQ,re=o.KK,se=o.cO,ae=o.Hy,ue=o.i0,de=o.Ct,le=o.Bf,ce=o.jf,he=o.Sw,fe=o.ni,ve=o.ds,pe=o.Nx;
+/* harmony import */ var _erikwatson_bramble__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @erikwatson/bramble */ "./node_modules/.pnpm/@erikwatson+bramble@0.16.0/node_modules/@erikwatson/bramble/dist/bramble.esm.js");
+var n={711:(t,n,i)=>{var e=i(308),o=i(989),r=i(679),s=i(875),a=i(993),u=i(813),d=i(713);d.alea=e,d.xor128=o,d.xorwow=r,d.xorshift7=s,d.xor4096=a,d.tychei=u,t.exports=d},308:function(t,n,i){var e;!function(t,o){function r(t){var n,i=this,e=(n=4022871197,function(t){t=String(t);for(var i=0;i<t.length;i++){var e=.02519603282416938*(n+=t.charCodeAt(i));e-=n=e>>>0,n=(e*=n)>>>0,n+=4294967296*(e-=n)}return 2.3283064365386963e-10*(n>>>0)});i.next=function(){var t=2091639*i.s0+2.3283064365386963e-10*i.c;return i.s0=i.s1,i.s1=i.s2,i.s2=t-(i.c=0|t)},i.c=1,i.s0=e(" "),i.s1=e(" "),i.s2=e(" "),i.s0-=e(t),i.s0<0&&(i.s0+=1),i.s1-=e(t),i.s1<0&&(i.s1+=1),i.s2-=e(t),i.s2<0&&(i.s2+=1),e=null}function s(t,n){return n.c=t.c,n.s0=t.s0,n.s1=t.s1,n.s2=t.s2,n}function a(t,n){var i=new r(t),e=n&&n.state,o=i.next;return o.int32=function(){return 4294967296*i.next()|0},o.double=function(){return o()+11102230246251565e-32*(2097152*o()|0)},o.quick=o,e&&("object"==typeof e&&s(e,i),o.state=function(){return s(i,{})}),o}o&&o.exports?o.exports=a:i.amdD&&i.amdO?void 0===(e=function(){return a}.call(n,i,n,o))||(o.exports=e):this.alea=a}(0,t=i.nmd(t),i.amdD)},813:function(t,n,i){var e;!function(t,o){function r(t){var n=this,i="";n.next=function(){var t=n.b,i=n.c,e=n.d,o=n.a;return t=t<<25^t>>>7^i,i=i-e|0,e=e<<24^e>>>8^o,o=o-t|0,n.b=t=t<<20^t>>>12^i,n.c=i=i-e|0,n.d=e<<16^i>>>16^o,n.a=o-t|0},n.a=0,n.b=0,n.c=-1640531527,n.d=1367130551,t===Math.floor(t)?(n.a=t/4294967296|0,n.b=0|t):i+=t;for(var e=0;e<i.length+20;e++)n.b^=0|i.charCodeAt(e),n.next()}function s(t,n){return n.a=t.a,n.b=t.b,n.c=t.c,n.d=t.d,n}function a(t,n){var i=new r(t),e=n&&n.state,o=function(){return(i.next()>>>0)/4294967296};return o.double=function(){do{var t=((i.next()>>>11)+(i.next()>>>0)/4294967296)/(1<<21)}while(0===t);return t},o.int32=i.next,o.quick=o,e&&("object"==typeof e&&s(e,i),o.state=function(){return s(i,{})}),o}o&&o.exports?o.exports=a:i.amdD&&i.amdO?void 0===(e=function(){return a}.call(n,i,n,o))||(o.exports=e):this.tychei=a}(0,t=i.nmd(t),i.amdD)},989:function(t,n,i){var e;!function(t,o){function r(t){var n=this,i="";n.x=0,n.y=0,n.z=0,n.w=0,n.next=function(){var t=n.x^n.x<<11;return n.x=n.y,n.y=n.z,n.z=n.w,n.w^=n.w>>>19^t^t>>>8},t===(0|t)?n.x=t:i+=t;for(var e=0;e<i.length+64;e++)n.x^=0|i.charCodeAt(e),n.next()}function s(t,n){return n.x=t.x,n.y=t.y,n.z=t.z,n.w=t.w,n}function a(t,n){var i=new r(t),e=n&&n.state,o=function(){return(i.next()>>>0)/4294967296};return o.double=function(){do{var t=((i.next()>>>11)+(i.next()>>>0)/4294967296)/(1<<21)}while(0===t);return t},o.int32=i.next,o.quick=o,e&&("object"==typeof e&&s(e,i),o.state=function(){return s(i,{})}),o}o&&o.exports?o.exports=a:i.amdD&&i.amdO?void 0===(e=function(){return a}.call(n,i,n,o))||(o.exports=e):this.xor128=a}(0,t=i.nmd(t),i.amdD)},993:function(t,n,i){var e;!function(t,o){function r(t){var n=this;n.next=function(){var t,i,e=n.w,o=n.X,r=n.i;return n.w=e=e+1640531527|0,i=o[r+34&127],t=o[r=r+1&127],i^=i<<13,t^=t<<17,i^=i>>>15,t^=t>>>12,i=o[r]=i^t,n.i=r,i+(e^e>>>16)|0},function(t,n){var i,e,o,r,s,a=[],u=128;for(n===(0|n)?(e=n,n=null):(n+="\0",e=0,u=Math.max(u,n.length)),o=0,r=-32;r<u;++r)n&&(e^=n.charCodeAt((r+32)%n.length)),0===r&&(s=e),e^=e<<10,e^=e>>>15,e^=e<<4,e^=e>>>13,r>=0&&(s=s+1640531527|0,o=0==(i=a[127&r]^=e+s)?o+1:0);for(o>=128&&(a[127&(n&&n.length||0)]=-1),o=127,r=512;r>0;--r)e=a[o+34&127],i=a[o=o+1&127],e^=e<<13,i^=i<<17,e^=e>>>15,i^=i>>>12,a[o]=e^i;t.w=s,t.X=a,t.i=o}(n,t)}function s(t,n){return n.i=t.i,n.w=t.w,n.X=t.X.slice(),n}function a(t,n){null==t&&(t=+new Date);var i=new r(t),e=n&&n.state,o=function(){return(i.next()>>>0)/4294967296};return o.double=function(){do{var t=((i.next()>>>11)+(i.next()>>>0)/4294967296)/(1<<21)}while(0===t);return t},o.int32=i.next,o.quick=o,e&&(e.X&&s(e,i),o.state=function(){return s(i,{})}),o}o&&o.exports?o.exports=a:i.amdD&&i.amdO?void 0===(e=function(){return a}.call(n,i,n,o))||(o.exports=e):this.xor4096=a}(0,t=i.nmd(t),i.amdD)},875:function(t,n,i){var e;!function(t,o){function r(t){var n=this;n.next=function(){var t,i,e=n.x,o=n.i;return t=e[o],i=(t^=t>>>7)^t<<24,i^=(t=e[o+1&7])^t>>>10,i^=(t=e[o+3&7])^t>>>3,i^=(t=e[o+4&7])^t<<7,t=e[o+7&7],i^=(t^=t<<13)^t<<9,e[o]=i,n.i=o+1&7,i},function(t,n){var i,e=[];if(n===(0|n))e[0]=n;else for(n=""+n,i=0;i<n.length;++i)e[7&i]=e[7&i]<<15^n.charCodeAt(i)+e[i+1&7]<<13;for(;e.length<8;)e.push(0);for(i=0;i<8&&0===e[i];++i);for(8==i?e[7]=-1:e[i],t.x=e,t.i=0,i=256;i>0;--i)t.next()}(n,t)}function s(t,n){return n.x=t.x.slice(),n.i=t.i,n}function a(t,n){null==t&&(t=+new Date);var i=new r(t),e=n&&n.state,o=function(){return(i.next()>>>0)/4294967296};return o.double=function(){do{var t=((i.next()>>>11)+(i.next()>>>0)/4294967296)/(1<<21)}while(0===t);return t},o.int32=i.next,o.quick=o,e&&(e.x&&s(e,i),o.state=function(){return s(i,{})}),o}o&&o.exports?o.exports=a:i.amdD&&i.amdO?void 0===(e=function(){return a}.call(n,i,n,o))||(o.exports=e):this.xorshift7=a}(0,t=i.nmd(t),i.amdD)},679:function(t,n,i){var e;!function(t,o){function r(t){var n=this,i="";n.next=function(){var t=n.x^n.x>>>2;return n.x=n.y,n.y=n.z,n.z=n.w,n.w=n.v,(n.d=n.d+362437|0)+(n.v=n.v^n.v<<4^t^t<<1)|0},n.x=0,n.y=0,n.z=0,n.w=0,n.v=0,t===(0|t)?n.x=t:i+=t;for(var e=0;e<i.length+64;e++)n.x^=0|i.charCodeAt(e),e==i.length&&(n.d=n.x<<10^n.x>>>4),n.next()}function s(t,n){return n.x=t.x,n.y=t.y,n.z=t.z,n.w=t.w,n.v=t.v,n.d=t.d,n}function a(t,n){var i=new r(t),e=n&&n.state,o=function(){return(i.next()>>>0)/4294967296};return o.double=function(){do{var t=((i.next()>>>11)+(i.next()>>>0)/4294967296)/(1<<21)}while(0===t);return t},o.int32=i.next,o.quick=o,e&&("object"==typeof e&&s(e,i),o.state=function(){return s(i,{})}),o}o&&o.exports?o.exports=a:i.amdD&&i.amdO?void 0===(e=function(){return a}.call(n,i,n,o))||(o.exports=e):this.xorwow=a}(0,t=i.nmd(t),i.amdD)},713:function(t,n,i){var e;!function(o,r,s){var a,u=256,d=s.pow(u,6),l=s.pow(2,52),c=2*l,h=255;function f(t,n,i){var e=[],h=y(g((n=1==n?{entropy:!0}:n||{}).entropy?[t,A(r)]:null==t?function(){try{var t;return a&&(t=a.randomBytes)?t=t(u):(t=new Uint8Array(u),(o.crypto||o.msCrypto).getRandomValues(t)),A(t)}catch(t){var n=o.navigator,i=n&&n.plugins;return[+new Date,o,i,o.screen,A(r)]}}():t,3),e),f=new v(e),w=function(){for(var t=f.g(6),n=d,i=0;t<l;)t=(t+i)*u,n*=u,i=f.g(1);for(;t>=c;)t/=2,n/=2,i>>>=1;return(t+i)/n};return w.int32=function(){return 0|f.g(4)},w.quick=function(){return f.g(4)/4294967296},w.double=w,y(A(f.S),r),(n.pass||i||function(t,n,i,e){return e&&(e.S&&p(e,f),t.state=function(){return p(f,{})}),i?(s.random=t,n):t})(w,h,"global"in n?n.global:this==s,n.state)}function v(t){var n,i=t.length,e=this,o=0,r=e.i=e.j=0,s=e.S=[];for(i||(t=[i++]);o<u;)s[o]=o++;for(o=0;o<u;o++)s[o]=s[r=h&r+t[o%i]+(n=s[o])],s[r]=n;(e.g=function(t){for(var n,i=0,o=e.i,r=e.j,s=e.S;t--;)n=s[o=h&o+1],i=i*u+s[h&(s[o]=s[r=h&r+n])+(s[r]=n)];return e.i=o,e.j=r,i})(u)}function p(t,n){return n.i=t.i,n.j=t.j,n.S=t.S.slice(),n}function g(t,n){var i,e=[],o=typeof t;if(n&&"object"==o)for(i in t)try{e.push(g(t[i],n-1))}catch(t){}return e.length?e:"string"==o?t:t+"\0"}function y(t,n){for(var i,e=t+"",o=0;o<e.length;)n[h&o]=h&(i^=19*n[h&o])+e.charCodeAt(o++);return A(n)}function A(t){return String.fromCharCode.apply(0,t)}if(y(s.random(),r),t.exports){t.exports=f;try{a=i(222)}catch(t){}}else void 0===(e=function(){return f}.call(n,i,n,t))||(t.exports=e)}("undefined"!=typeof self?self:this,[],Math)},222:()=>{}},i={};function e(t){var o=i[t];if(void 0!==o)return o.exports;var r=i[t]={id:t,loaded:!1,exports:{}};return n[t].call(r.exports,r,r.exports,e),r.loaded=!0,r.exports}e.amdD=function(){throw new Error("define cannot be used indirect")},e.amdO={},e.n=t=>{var n=t&&t.__esModule?()=>t.default:()=>t;return e.d(n,{a:n}),n},e.d=(t,n)=>{for(var i in n)e.o(n,i)&&!e.o(t,i)&&Object.defineProperty(t,i,{enumerable:!0,get:n[i]})},e.o=(t,n)=>Object.prototype.hasOwnProperty.call(t,n),e.r=t=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},e.nmd=t=>(t.paths=[],t.children||(t.children=[]),t);var o={};e.d(o,{RW:()=>ct,k7:()=>F,ff:()=>pt,sK:()=>w,F0:()=>_,$A:()=>L,T_:()=>X,zA:()=>j,t6:()=>R,__:()=>O,SX:()=>ft,t2:()=>vt,$m:()=>U,_z:()=>S,sR:()=>x,Cm:()=>I,q0:()=>P,NE:()=>W,dB:()=>E,UZ:()=>M,mt:()=>C,f:()=>ht,_7:()=>N,BZ:()=>T,fL:()=>D,_g:()=>m,n4:()=>G,Pd:()=>b,tx:()=>yt,zH:()=>lt,dQ:()=>k,ex:()=>dt,zp:()=>st,SQ:()=>rt,IN:()=>ut,B0:()=>at,y8:()=>K,C8:()=>B,y7:()=>Y,PT:()=>Q,G8:()=>Z,mp:()=>q,mP:()=>H,Fp:()=>J,N4:()=>V,QK:()=>nt,bK:()=>tt,jD:()=>$,Hm:()=>ot,UC:()=>it,Md:()=>et,nK:()=>z,Or:()=>r,o8:()=>p,Ay:()=>Cn,Ui:()=>Et,Y8:()=>gt,W:()=>y,ld:()=>Dt,S8:()=>tn,_:()=>en,E1:()=>sn,pN:()=>on,bj:()=>rn,Rb:()=>an,JL:()=>vn,_3:()=>pn,uX:()=>gn,bT:()=>fn,Du:()=>En,li:()=>On,XP:()=>un,Oo:()=>bn,SP:()=>Wn,v$:()=>ln,UN:()=>cn,wJ:()=>An,a5:()=>yn,N8:()=>xn,vQ:()=>_n,KK:()=>mn,cO:()=>wn,Hy:()=>In,i0:()=>Mn,Ct:()=>Tn,Bf:()=>Dn,jf:()=>Sn,Sw:()=>hn,ni:()=>$t,ds:()=>nn,Nx:()=>dn});var r={};e.r(r);const s=_erikwatson_bramble__WEBPACK_IMPORTED_MODULE_0__;var a=e(711),u=e.n(a);function d(t,n){return 1===arguments.length&&(n=t,t=0),void 0===t&&void 0===n?Math.random():void 0!==t&&void 0!==n?t+Math.random()*(n-t):0}function l(t,n){var i=u()("layer");return void 0===t&&void 0===n?i():void 0!==t&&void 0!==n?t+i()*(n-t):0}function c(t){return Math.atan2(t.x,t.y)*(180/Math.PI)}function h(t,n){var i=n*(Math.PI/180),e=Math.cos(i),o=Math.sin(i),r=t.x*e-t.y*o,s=t.x*o+t.y*e;return t.x=r,t.y=s,t}function f(t){var n=document.getElementById(t);if(!n)throw new Error("Error: Element #".concat(t," not found."));return n}function v(t,n,i){var e=t*n;return Math.round(i*(e/2073600))}function p(t){return JSON.parse(JSON.stringify(t))}function g(t,n,i,e){return Array.from({length:t},(function(){var t=d(i),o=d(e),r=s.vec2.create(t,o),a=s.vec2.clone(r),u=n.size.min+d()*(n.size.max-n.mass.min);return{position:r,previousPosition:a,mass:n.mass.min+d()*(n.mass.max-n.mass.min),size:u,renderedSize:u,noise:d(10),amplitude:d(n.sway.amplitude),frequency:d(n.sway.frequency),random:d(),rotation:d(360),time:0,opacity:d(n.opacity.min,n.opacity.max)}}))}function y(t){return"simple"===t.mode||void 0===t.mode}var A=function(){return A=Object.assign||function(t){for(var n,i=1,e=arguments.length;i<e;i++)for(var o in n=arguments[i])Object.prototype.hasOwnProperty.call(n,o)&&(t[o]=n[o]);return t},A.apply(this,arguments)},w="snowfall",m="#ffffff",_=200,x=1,S=3,D=1,T=3,M=!1,I="simple",O="data:image/png;base64,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",E=1,W=1,b=!1,C=!1,U={min:x,max:S},N={min:D,max:T},P={min:E,max:W},F=1,L=.02,G={frequency:L,amplitude:F},j=90,R=.7,X={angle:j,strength:R},k=0,z=0,Y=1,B=3,K={min:Y,max:B},V=1e3,J=3e3,H={min:V,max:J},q=1e3,Z=1e4,Q={min:q,max:Z},$=5e3,tt=1e4,nt={min:$,max:tt},it=1e4,et=1e3,ot={min:et,max:it},rt=.25,st=!0,at={duration:ot,delay:nt},ut={additionalStrength:K,duration:H,delay:Q},dt={active:st,changeChance:rt,in:ut,out:at},lt={angle:k,strength:z,gusts:dt},ct={density:_,mass:U,size:N,sway:G,gravity:X,wind:lt,opacity:P,scroll:C},ht=A(A({},ct),{colour:m,trail:b,mode:"simple"}),ft=A(A({},ct),{mode:"image",image:O,rotate:M}),vt=[],pt={layers:vt};function gt(){return A(A({},pt),{attachTo:f(w)})}var yt=A(A({},pt),{attachTo:w}),At=function(){return At=Object.assign||function(t){for(var n,i=1,e=arguments.length;i<e;i++)for(var o in n=arguments[i])Object.prototype.hasOwnProperty.call(n,o)&&(t[o]=n[o]);return t},At.apply(this,arguments)},wt=function(t,n){var i={};for(var e in t)Object.prototype.hasOwnProperty.call(t,e)&&n.indexOf(e)<0&&(i[e]=t[e]);if(null!=t&&"function"==typeof Object.getOwnPropertySymbols){var o=0;for(e=Object.getOwnPropertySymbols(t);o<e.length;o++)n.indexOf(e[o])<0&&Object.prototype.propertyIsEnumerable.call(t,e[o])&&(i[e[o]]=t[e[o]])}return i},mt=function(t,n){var i,e,o,r,s,a,u,d,l,c,h,f,v,p,g,y,A,w,x,S,D,T,M,I,O,E,W,F,L,j,R,k,z,Y,B,V,J,q,Z,$,tt=n<vt.length?vt[n]:ht;return{colour:t.colour||tt.colour||m,opacity:At(At(At({},P),tt.opacity),null==t?void 0:t.opacity),trail:t.trail||tt.trail||b,density:t.density||tt.density||_,scroll:t.scroll||tt.scroll||C,mode:"simple",mass:At(At(At({},U),tt.mass),t.mass),size:At(At(At({},N),tt.size),t.size),sway:At(At(At({},G),tt.sway),t.sway),gravity:At(At(At({},X),tt.gravity),t.gravity),wind:At(At(At(At({},lt),tt.wind),t.wind),{gusts:At(At(At(At({},dt),null===(i=tt.wind)||void 0===i?void 0:i.gusts),null===(e=t.wind)||void 0===e?void 0:e.gusts),{in:At(At(At(At({},ut),null===(r=null===(o=tt.wind)||void 0===o?void 0:o.gusts)||void 0===r?void 0:r.in),null===(a=null===(s=t.wind)||void 0===s?void 0:s.gusts)||void 0===a?void 0:a.in),{additionalStrength:At(At(At({},K),null===(l=null===(d=null===(u=tt.wind)||void 0===u?void 0:u.gusts)||void 0===d?void 0:d.in)||void 0===l?void 0:l.additionalStrength),null===(f=null===(h=null===(c=t.wind)||void 0===c?void 0:c.gusts)||void 0===h?void 0:h.in)||void 0===f?void 0:f.additionalStrength),duration:At(At(At({},H),null===(g=null===(p=null===(v=tt.wind)||void 0===v?void 0:v.gusts)||void 0===p?void 0:p.in)||void 0===g?void 0:g.duration),null===(w=null===(A=null===(y=t.wind)||void 0===y?void 0:y.gusts)||void 0===A?void 0:A.in)||void 0===w?void 0:w.duration),delay:At(At(At({},Q),null===(D=null===(S=null===(x=tt.wind)||void 0===x?void 0:x.gusts)||void 0===S?void 0:S.in)||void 0===D?void 0:D.delay),null===(I=null===(M=null===(T=t.wind)||void 0===T?void 0:T.gusts)||void 0===M?void 0:M.in)||void 0===I?void 0:I.delay)}),out:At(At(At(At({},at),null===(E=null===(O=tt.wind)||void 0===O?void 0:O.gusts)||void 0===E?void 0:E.out),null===(F=null===(W=t.wind)||void 0===W?void 0:W.gusts)||void 0===F?void 0:F.out),{duration:At(At(At({},ot),null===(R=null===(j=null===(L=tt.wind)||void 0===L?void 0:L.gusts)||void 0===j?void 0:j.out)||void 0===R?void 0:R.duration),null===(Y=null===(z=null===(k=t.wind)||void 0===k?void 0:k.gusts)||void 0===z?void 0:z.out)||void 0===Y?void 0:Y.duration),delay:At(At(At({},nt),null===(J=null===(V=null===(B=tt.wind)||void 0===B?void 0:B.gusts)||void 0===V?void 0:V.out)||void 0===J?void 0:J.delay),null===($=null===(Z=null===(q=t.wind)||void 0===q?void 0:q.gusts)||void 0===Z?void 0:Z.out)||void 0===$?void 0:$.delay)})})})}},_t=function(t,n){var i,e,o,r,s,a,u,d,l,c,h,f,v,p,g,y,A,w,m,x,S,D,T,I,E,W,b,F,L,j,R,k,z,Y,B,V,J,q,Z,$,tt=ft;return{density:t.density||tt.density||_,scroll:t.scroll||tt.scroll||C,mode:"image",image:t.image||tt.image||O,opacity:At(At(At({},P),tt.opacity),null==t?void 0:t.opacity),rotate:t.rotate||tt.rotate||M,mass:At(At(At({},U),tt.mass),t.mass),size:At(At(At({},N),tt.size),t.size),sway:At(At(At({},G),tt.sway),t.sway),gravity:At(At(At({},X),tt.gravity),t.gravity),wind:At(At(At(At({},lt),tt.wind),t.wind),{gusts:At(At(At(At({},dt),null===(i=tt.wind)||void 0===i?void 0:i.gusts),null===(e=t.wind)||void 0===e?void 0:e.gusts),{in:At(At(At(At({},ut),null===(r=null===(o=tt.wind)||void 0===o?void 0:o.gusts)||void 0===r?void 0:r.in),null===(a=null===(s=t.wind)||void 0===s?void 0:s.gusts)||void 0===a?void 0:a.in),{additionalStrength:At(At(At({},K),null===(l=null===(d=null===(u=tt.wind)||void 0===u?void 0:u.gusts)||void 0===d?void 0:d.in)||void 0===l?void 0:l.additionalStrength),null===(f=null===(h=null===(c=t.wind)||void 0===c?void 0:c.gusts)||void 0===h?void 0:h.in)||void 0===f?void 0:f.additionalStrength),duration:At(At(At({},H),null===(g=null===(p=null===(v=tt.wind)||void 0===v?void 0:v.gusts)||void 0===p?void 0:p.in)||void 0===g?void 0:g.duration),null===(w=null===(A=null===(y=t.wind)||void 0===y?void 0:y.gusts)||void 0===A?void 0:A.in)||void 0===w?void 0:w.duration),delay:At(At(At({},Q),null===(S=null===(x=null===(m=tt.wind)||void 0===m?void 0:m.gusts)||void 0===x?void 0:x.in)||void 0===S?void 0:S.delay),null===(I=null===(T=null===(D=t.wind)||void 0===D?void 0:D.gusts)||void 0===T?void 0:T.in)||void 0===I?void 0:I.delay)}),out:At(At(At(At({},at),null===(W=null===(E=tt.wind)||void 0===E?void 0:E.gusts)||void 0===W?void 0:W.out),null===(F=null===(b=t.wind)||void 0===b?void 0:b.gusts)||void 0===F?void 0:F.out),{duration:At(At(At({},ot),null===(R=null===(j=null===(L=tt.wind)||void 0===L?void 0:L.gusts)||void 0===j?void 0:j.out)||void 0===R?void 0:R.duration),null===(Y=null===(z=null===(k=t.wind)||void 0===k?void 0:k.gusts)||void 0===z?void 0:z.out)||void 0===Y?void 0:Y.duration),delay:At(At(At({},nt),null===(J=null===(V=null===(B=tt.wind)||void 0===B?void 0:B.gusts)||void 0===V?void 0:V.out)||void 0===J?void 0:J.delay),null===($=null===(Z=null===(q=t.wind)||void 0===q?void 0:q.gusts)||void 0===Z?void 0:Z.out)||void 0===$?void 0:$.delay)})})})}};function xt(t){var n;return At(At(At({},pt),t),{layers:(null!==(n=t.layers)&&void 0!==n?n:[]).map((function(t,n){return y(t)?mt(t,n):_t(t,n)}))})}function St(t){t.attachTo;var n=xt(wt(t,["attachTo"]));return At(At({},n),{attachTo:t.attachTo?f(t.attachTo):f(w)})}function Dt(t){t.attachTo;var n,i=xt(wt(t,["attachTo"]));return At(At({},i),{attachTo:null!==(n=t.attachTo)&&void 0!==n?n:w})}function Tt(t){return null!==t&&"object"==typeof t&&t.constructor===Object}function Mt(t,n){if(!Tt(t))return t;var i={};for(var e in t){var o=t[e],r=n[e];if(o!==r)if(Array.isArray(o)){var s=It(o,n[e]||[]);s.length>0&&(i[e]=s)}else if(Tt(o)){var a=Mt(o,r||{});Object.keys(a).length>0&&(i[e]=a)}else i[e]=o}return i}function It(t,n){for(var i,e,o=[],r=0;r<t.length;r++){var s=t[r],a=Mt(s,n[r]||(Ot(s)?ft:ht));Ot(s)&&void 0===a.mode&&(a.mode="image"),o.push(a)}return e=n,(i=o).filter((function(t,n){return i.length>e.length||Object.keys(t).length>0||!i.slice(n).every((function(t){return 0===Object.keys(t).length}))}))}function Ot(t){return"image"===t.mode||void 0!==t.image||void 0!==t.rotate}function Et(t){return Mt(t,yt)}var Wt,bt=Object.freeze({Linear:Object.freeze({None:function(t){return t},In:function(t){return t},Out:function(t){return t},InOut:function(t){return t}}),Quadratic:Object.freeze({In:function(t){return t*t},Out:function(t){return t*(2-t)},InOut:function(t){return(t*=2)<1?.5*t*t:-.5*(--t*(t-2)-1)}}),Cubic:Object.freeze({In:function(t){return t*t*t},Out:function(t){return--t*t*t+1},InOut:function(t){return(t*=2)<1?.5*t*t*t:.5*((t-=2)*t*t+2)}}),Quartic:Object.freeze({In:function(t){return t*t*t*t},Out:function(t){return 1- --t*t*t*t},InOut:function(t){return(t*=2)<1?.5*t*t*t*t:-.5*((t-=2)*t*t*t-2)}}),Quintic:Object.freeze({In:function(t){return t*t*t*t*t},Out:function(t){return--t*t*t*t*t+1},InOut:function(t){return(t*=2)<1?.5*t*t*t*t*t:.5*((t-=2)*t*t*t*t+2)}}),Sinusoidal:Object.freeze({In:function(t){return 1-Math.sin((1-t)*Math.PI/2)},Out:function(t){return Math.sin(t*Math.PI/2)},InOut:function(t){return.5*(1-Math.sin(Math.PI*(.5-t)))}}),Exponential:Object.freeze({In:function(t){return 0===t?0:Math.pow(1024,t-1)},Out:function(t){return 1===t?1:1-Math.pow(2,-10*t)},InOut:function(t){return 0===t?0:1===t?1:(t*=2)<1?.5*Math.pow(1024,t-1):.5*(2-Math.pow(2,-10*(t-1)))}}),Circular:Object.freeze({In:function(t){return 1-Math.sqrt(1-t*t)},Out:function(t){return Math.sqrt(1- --t*t)},InOut:function(t){return(t*=2)<1?-.5*(Math.sqrt(1-t*t)-1):.5*(Math.sqrt(1-(t-=2)*t)+1)}}),Elastic:Object.freeze({In:function(t){return 0===t?0:1===t?1:-Math.pow(2,10*(t-1))*Math.sin(5*(t-1.1)*Math.PI)},Out:function(t){return 0===t?0:1===t?1:Math.pow(2,-10*t)*Math.sin(5*(t-.1)*Math.PI)+1},InOut:function(t){return 0===t?0:1===t?1:(t*=2)<1?-.5*Math.pow(2,10*(t-1))*Math.sin(5*(t-1.1)*Math.PI):.5*Math.pow(2,-10*(t-1))*Math.sin(5*(t-1.1)*Math.PI)+1}}),Back:Object.freeze({In:function(t){var n=1.70158;return 1===t?1:t*t*((n+1)*t-n)},Out:function(t){var n=1.70158;return 0===t?0:--t*t*((n+1)*t+n)+1},InOut:function(t){var n=2.5949095;return(t*=2)<1?t*t*((n+1)*t-n)*.5:.5*((t-=2)*t*((n+1)*t+n)+2)}}),Bounce:Object.freeze({In:function(t){return 1-bt.Bounce.Out(1-t)},Out:function(t){return t<1/2.75?7.5625*t*t:t<2/2.75?7.5625*(t-=1.5/2.75)*t+.75:t<2.5/2.75?7.5625*(t-=2.25/2.75)*t+.9375:7.5625*(t-=2.625/2.75)*t+.984375},InOut:function(t){return t<.5?.5*bt.Bounce.In(2*t):.5*bt.Bounce.Out(2*t-1)+.5}}),generatePow:function(t){return void 0===t&&(t=4),t=(t=t<Number.EPSILON?Number.EPSILON:t)>1e4?1e4:t,{In:function(n){return Math.pow(n,t)},Out:function(n){return 1-Math.pow(1-n,t)},InOut:function(n){return n<.5?Math.pow(2*n,t)/2:(1-Math.pow(2-2*n,t))/2+.5}}}}),Ct=function(){return performance.now()},Ut=function(){function t(){this._tweens={},this._tweensAddedDuringUpdate={}}return t.prototype.getAll=function(){var t=this;return Object.keys(this._tweens).map((function(n){return t._tweens[n]}))},t.prototype.removeAll=function(){this._tweens={}},t.prototype.add=function(t){this._tweens[t.getId()]=t,this._tweensAddedDuringUpdate[t.getId()]=t},t.prototype.remove=function(t){delete this._tweens[t.getId()],delete this._tweensAddedDuringUpdate[t.getId()]},t.prototype.update=function(t,n){void 0===t&&(t=Ct()),void 0===n&&(n=!1);var i=Object.keys(this._tweens);if(0===i.length)return!1;for(;i.length>0;){this._tweensAddedDuringUpdate={};for(var e=0;e<i.length;e++){var o=this._tweens[i[e]],r=!n;o&&!1===o.update(t,r)&&!n&&delete this._tweens[i[e]]}i=Object.keys(this._tweensAddedDuringUpdate)}return!0},t}(),Nt={Linear:function(t,n){var i=t.length-1,e=i*n,o=Math.floor(e),r=Nt.Utils.Linear;return n<0?r(t[0],t[1],e):n>1?r(t[i],t[i-1],i-e):r(t[o],t[o+1>i?i:o+1],e-o)},Bezier:function(t,n){for(var i=0,e=t.length-1,o=Math.pow,r=Nt.Utils.Bernstein,s=0;s<=e;s++)i+=o(1-n,e-s)*o(n,s)*t[s]*r(e,s);return i},CatmullRom:function(t,n){var i=t.length-1,e=i*n,o=Math.floor(e),r=Nt.Utils.CatmullRom;return t[0]===t[i]?(n<0&&(o=Math.floor(e=i*(1+n))),r(t[(o-1+i)%i],t[o],t[(o+1)%i],t[(o+2)%i],e-o)):n<0?t[0]-(r(t[0],t[0],t[1],t[1],-e)-t[0]):n>1?t[i]-(r(t[i],t[i],t[i-1],t[i-1],e-i)-t[i]):r(t[o?o-1:0],t[o],t[i<o+1?i:o+1],t[i<o+2?i:o+2],e-o)},Utils:{Linear:function(t,n,i){return(n-t)*i+t},Bernstein:function(t,n){var i=Nt.Utils.Factorial;return i(t)/i(n)/i(t-n)},Factorial:(Wt=[1],function(t){var n=1;if(Wt[t])return Wt[t];for(var i=t;i>1;i--)n*=i;return Wt[t]=n,n}),CatmullRom:function(t,n,i,e,o){var r=.5*(i-t),s=.5*(e-n),a=o*o;return(2*n-2*i+r+s)*(o*a)+(-3*n+3*i-2*r-s)*a+r*o+n}}},Pt=function(){function t(){}return t.nextId=function(){return t._nextId++},t._nextId=0,t}(),Ft=new Ut,Lt=function(){function t(t,n){void 0===n&&(n=Ft),this._object=t,this._group=n,this._isPaused=!1,this._pauseStart=0,this._valuesStart={},this._valuesEnd={},this._valuesStartRepeat={},this._duration=1e3,this._isDynamic=!1,this._initialRepeat=0,this._repeat=0,this._yoyo=!1,this._isPlaying=!1,this._reversed=!1,this._delayTime=0,this._startTime=0,this._easingFunction=bt.Linear.None,this._interpolationFunction=Nt.Linear,this._chainedTweens=[],this._onStartCallbackFired=!1,this._onEveryStartCallbackFired=!1,this._id=Pt.nextId(),this._isChainStopped=!1,this._propertiesAreSetUp=!1,this._goToEnd=!1}return t.prototype.getId=function(){return this._id},t.prototype.isPlaying=function(){return this._isPlaying},t.prototype.isPaused=function(){return this._isPaused},t.prototype.getDuration=function(){return this._duration},t.prototype.to=function(t,n){if(void 0===n&&(n=1e3),this._isPlaying)throw new Error("Can not call Tween.to() while Tween is already started or paused. Stop the Tween first.");return this._valuesEnd=t,this._propertiesAreSetUp=!1,this._duration=n<0?0:n,this},t.prototype.duration=function(t){return void 0===t&&(t=1e3),this._duration=t<0?0:t,this},t.prototype.dynamic=function(t){return void 0===t&&(t=!1),this._isDynamic=t,this},t.prototype.start=function(t,n){if(void 0===t&&(t=Ct()),void 0===n&&(n=!1),this._isPlaying)return this;if(this._group&&this._group.add(this),this._repeat=this._initialRepeat,this._reversed)for(var i in this._reversed=!1,this._valuesStartRepeat)this._swapEndStartRepeatValues(i),this._valuesStart[i]=this._valuesStartRepeat[i];if(this._isPlaying=!0,this._isPaused=!1,this._onStartCallbackFired=!1,this._onEveryStartCallbackFired=!1,this._isChainStopped=!1,this._startTime=t,this._startTime+=this._delayTime,!this._propertiesAreSetUp||n){if(this._propertiesAreSetUp=!0,!this._isDynamic){var e={};for(var o in this._valuesEnd)e[o]=this._valuesEnd[o];this._valuesEnd=e}this._setupProperties(this._object,this._valuesStart,this._valuesEnd,this._valuesStartRepeat,n)}return this},t.prototype.startFromCurrentValues=function(t){return this.start(t,!0)},t.prototype._setupProperties=function(t,n,i,e,o){for(var r in i){var s=t[r],a=Array.isArray(s),u=a?"array":typeof s,d=!a&&Array.isArray(i[r]);if("undefined"!==u&&"function"!==u){if(d){if(0===(g=i[r]).length)continue;for(var l=[s],c=0,h=g.length;c<h;c+=1){var f=this._handleRelativeValue(s,g[c]);if(isNaN(f)){d=!1,console.warn("Found invalid interpolation list. Skipping.");break}l.push(f)}d&&(i[r]=l)}if("object"!==u&&!a||!s||d)(void 0===n[r]||o)&&(n[r]=s),a||(n[r]*=1),e[r]=d?i[r].slice().reverse():n[r]||0;else{n[r]=a?[]:{};var v=s;for(var p in v)n[r][p]=v[p];e[r]=a?[]:{};var g=i[r];if(!this._isDynamic){var y={};for(var p in g)y[p]=g[p];i[r]=g=y}this._setupProperties(v,n[r],g,e[r],o)}}}},t.prototype.stop=function(){return this._isChainStopped||(this._isChainStopped=!0,this.stopChainedTweens()),this._isPlaying?(this._group&&this._group.remove(this),this._isPlaying=!1,this._isPaused=!1,this._onStopCallback&&this._onStopCallback(this._object),this):this},t.prototype.end=function(){return this._goToEnd=!0,this.update(1/0),this},t.prototype.pause=function(t){return void 0===t&&(t=Ct()),this._isPaused||!this._isPlaying||(this._isPaused=!0,this._pauseStart=t,this._group&&this._group.remove(this)),this},t.prototype.resume=function(t){return void 0===t&&(t=Ct()),this._isPaused&&this._isPlaying?(this._isPaused=!1,this._startTime+=t-this._pauseStart,this._pauseStart=0,this._group&&this._group.add(this),this):this},t.prototype.stopChainedTweens=function(){for(var t=0,n=this._chainedTweens.length;t<n;t++)this._chainedTweens[t].stop();return this},t.prototype.group=function(t){return void 0===t&&(t=Ft),this._group=t,this},t.prototype.delay=function(t){return void 0===t&&(t=0),this._delayTime=t,this},t.prototype.repeat=function(t){return void 0===t&&(t=0),this._initialRepeat=t,this._repeat=t,this},t.prototype.repeatDelay=function(t){return this._repeatDelayTime=t,this},t.prototype.yoyo=function(t){return void 0===t&&(t=!1),this._yoyo=t,this},t.prototype.easing=function(t){return void 0===t&&(t=bt.Linear.None),this._easingFunction=t,this},t.prototype.interpolation=function(t){return void 0===t&&(t=Nt.Linear),this._interpolationFunction=t,this},t.prototype.chain=function(){for(var t=[],n=0;n<arguments.length;n++)t[n]=arguments[n];return this._chainedTweens=t,this},t.prototype.onStart=function(t){return this._onStartCallback=t,this},t.prototype.onEveryStart=function(t){return this._onEveryStartCallback=t,this},t.prototype.onUpdate=function(t){return this._onUpdateCallback=t,this},t.prototype.onRepeat=function(t){return this._onRepeatCallback=t,this},t.prototype.onComplete=function(t){return this._onCompleteCallback=t,this},t.prototype.onStop=function(t){return this._onStopCallback=t,this},t.prototype.update=function(t,n){var i,e,o=this;if(void 0===t&&(t=Ct()),void 0===n&&(n=!0),this._isPaused)return!0;var r=this._startTime+this._duration;if(!this._goToEnd&&!this._isPlaying){if(t>r)return!1;n&&this.start(t,!0)}if(this._goToEnd=!1,t<this._startTime)return!0;!1===this._onStartCallbackFired&&(this._onStartCallback&&this._onStartCallback(this._object),this._onStartCallbackFired=!0),!1===this._onEveryStartCallbackFired&&(this._onEveryStartCallback&&this._onEveryStartCallback(this._object),this._onEveryStartCallbackFired=!0);var s=t-this._startTime,a=this._duration+(null!==(i=this._repeatDelayTime)&&void 0!==i?i:this._delayTime),u=this._duration+this._repeat*a,d=function(){if(0===o._duration)return 1;if(s>u)return 1;var t=Math.trunc(s/a),n=s-t*a,i=Math.min(n/o._duration,1);return 0===i&&s===o._duration?1:i}(),l=this._easingFunction(d);if(this._updateProperties(this._object,this._valuesStart,this._valuesEnd,l),this._onUpdateCallback&&this._onUpdateCallback(this._object,d),0===this._duration||s>=this._duration){if(this._repeat>0){var c=Math.min(Math.trunc((s-this._duration)/a)+1,this._repeat);for(e in isFinite(this._repeat)&&(this._repeat-=c),this._valuesStartRepeat)this._yoyo||"string"!=typeof this._valuesEnd[e]||(this._valuesStartRepeat[e]=this._valuesStartRepeat[e]+parseFloat(this._valuesEnd[e])),this._yoyo&&this._swapEndStartRepeatValues(e),this._valuesStart[e]=this._valuesStartRepeat[e];return this._yoyo&&(this._reversed=!this._reversed),this._startTime+=a*c,this._onRepeatCallback&&this._onRepeatCallback(this._object),this._onEveryStartCallbackFired=!1,!0}this._onCompleteCallback&&this._onCompleteCallback(this._object);for(var h=0,f=this._chainedTweens.length;h<f;h++)this._chainedTweens[h].start(this._startTime+this._duration,!1);return this._isPlaying=!1,!1}return!0},t.prototype._updateProperties=function(t,n,i,e){for(var o in i)if(void 0!==n[o]){var r=n[o]||0,s=i[o],a=Array.isArray(t[o]),u=Array.isArray(s);!a&&u?t[o]=this._interpolationFunction(s,e):"object"==typeof s&&s?this._updateProperties(t[o],r,s,e):"number"==typeof(s=this._handleRelativeValue(r,s))&&(t[o]=r+(s-r)*e)}},t.prototype._handleRelativeValue=function(t,n){return"string"!=typeof n?n:"+"===n.charAt(0)||"-"===n.charAt(0)?t+parseFloat(n):parseFloat(n)},t.prototype._swapEndStartRepeatValues=function(t){var n=this._valuesStartRepeat[t],i=this._valuesEnd[t];this._valuesStartRepeat[t]="string"==typeof i?this._valuesStartRepeat[t]+parseFloat(i):this._valuesEnd[t],this._valuesEnd[t]=n},t}(),Gt=(Pt.nextId,Ft),jt=(Gt.getAll.bind(Gt),Gt.removeAll.bind(Gt)),Rt=(Gt.add.bind(Gt),Gt.remove.bind(Gt),Gt.update.bind(Gt));console.log("SNOWFALL BRAMBLE",s);var Xt=s.vec2.vec2FromDegrees;function kt(t,n){var i=(t.position.x-t.previousPosition.x)/n;t.rotation+=.0075*i}function zt(t,n,i){t.x+=n,t.y+=i}var Yt,Bt,Kt=s.vec2.vec2FromDegrees,Vt=function(){function t(t,n,i,e,o,r,a,u,d){var l=this;this.snowflakes=[],this.paused=!1,this.scrollOffsetX=0,this.scrollOffsetY=0,this.scrollVelocityX=0,this.scrollVelocityY=0,this.lastScrollY=0,this.lastScrollX=0,this.originalConfig=t,this.config=t,this.width=n,this.height=i,this.windVector=s.vec2.create(0,0),this.gravityVector=s.vec2.create(0,0);var h=window.scrollX,f=window.scrollY;this.lastScrollX=h,this.lastScrollY=f,this.scrollOffsetX=0,this.scrollOffsetY=0,this.scrollVelocityX=0,this.scrollVelocityY=0;var v=this.config.wind.strength;this.config.wind.gusts.active&&(this.fadeWindIn=new Lt(t).to({wind:{strength:e}},o).easing(bt.Quadratic.InOut).delay(r).onUpdate((function(){l.setWind(l.config.wind.angle,l.config.wind.strength)})),this.fadeWindOut=new Lt(t).to({wind:{strength:v}},a).easing(bt.Quadratic.Out).delay(u).onUpdate((function(){l.setWind(l.config.wind.angle,l.config.wind.strength)})).onComplete((function(){if(d<l.config.wind.gusts.changeChance){var t=c(l.windVector.getOpposite(l.windVector));l.setWindAngle(t)}})))}return t.prototype.setAmplitude=function(t){this.config.sway.amplitude=t},t.prototype.setFrequency=function(t){this.config.sway.frequency=t},t.prototype.setGravity=function(t,n){this.config.gravity.angle=t,this.config.gravity.strength=n,this.originalConfig=p(this.config),this.gravityVector=Kt(t),this.gravityVector.multiplyScalar(n)},t.prototype.setGravityAngle=function(t){this.config.gravity.angle=t,this.originalConfig=p(this.config);var n=this.gravityVector.getLength();this.gravityVector=Kt(t),this.gravityVector.multiplyScalar(n)},t.prototype.setGravityStrength=function(t){this.config.gravity.strength=t,this.originalConfig=p(this.config);var n=c(this.gravityVector);this.gravityVector=Kt(n),this.gravityVector.multiplyScalar(t)},t.prototype.setPaused=function(t){this.paused=t},t.prototype.setWind=function(t,n){this.config.wind.angle=t,this.config.wind.strength=n,this.windVector=Kt(t),this.windVector.multiplyScalar(n)},t.prototype.setWindAngle=function(t){this.config.wind.angle=t,this.originalConfig=p(this.config);var n=this.windVector.getLength();this.windVector=Kt(t),this.windVector.multiplyScalar(n)},t.prototype.setWindStrength=function(t){this.config.wind.strength=t,this.originalConfig=p(this.config);var n=c(this.windVector);this.windVector=Kt(n),this.windVector.multiplyScalar(t)},t.prototype.setGusts=function(t){this.config.wind.gusts.active=t,this.originalConfig=p(this.config),this.restart()},t.prototype.togglePaused=function(){this.paused=!this.paused},t.prototype.setWindInAdditionalStrengthMin=function(t){this.config.wind.gusts.in.additionalStrength.min=t,this.originalConfig=p(this.config)},t.prototype.setWindInAdditionalStrengthMax=function(t){this.config.wind.gusts.in.additionalStrength.max=t,this.originalConfig=p(this.config)},t.prototype.setWindInDurationMin=function(t){this.config.wind.gusts.in.duration.min=t,this.originalConfig=p(this.config)},t.prototype.setWindInDurationMax=function(t){this.config.wind.gusts.in.duration.max=t,this.originalConfig=p(this.config)},t.prototype.setWindInDelayMin=function(t){this.config.wind.gusts.in.delay.min=t,this.originalConfig=p(this.config)},t.prototype.setWindInDelayMax=function(t){this.config.wind.gusts.in.delay.max=t,this.originalConfig=p(this.config)},t.prototype.setWindOutDurationMin=function(t){this.config.wind.gusts.out.duration.min=t,this.originalConfig=p(this.config)},t.prototype.setWindOutDurationMax=function(t){this.config.wind.gusts.out.duration.max=t,this.originalConfig=p(this.config)},t.prototype.setWindOutDelayMin=function(t){this.config.wind.gusts.out.delay.min=t,this.originalConfig=p(this.config)},t.prototype.setWindOutDelayMax=function(t){this.config.wind.gusts.out.delay.max=t,this.originalConfig=p(this.config)},t.prototype.setWindOutChangeChance=function(t){this.config.wind.gusts.changeChance=t,this.originalConfig=p(this.config)},t.prototype.update=function(t,n){var i,e,o=this;if(!this.paused){var r=this.config,a=r.sway,u=r.gravity,l=r.wind,c=window.scrollX,f=window.scrollY,v=c-(null!==(i=this.lastScrollX)&&void 0!==i?i:c),p=f-(null!==(e=this.lastScrollY)&&void 0!==e?e:f);this.lastScrollX=c,this.lastScrollY=f,this.scrollVelocityX+=v/25,this.scrollVelocityY+=p/25,this.scrollVelocityX*=.85,this.scrollVelocityY*=.85,this.scrollOffsetX=this.scrollVelocityX,this.scrollOffsetY=this.scrollVelocityY,this.scrollOffsetX*=.85,this.scrollOffsetY*=.85,this.snowflakes.forEach((function(n){n.time+=t,n.previousPosition=s.vec2.clone(n.position),function(t,n,i){var e=s.vec2.create(0,0),o=Xt(n);o.multiplyScalar(i),e.x=o.x,e.y=o.y,e.multiplyScalar(t.mass+t.random),t.position.add(e)}(n,l.angle,l.strength),function(t,n,i){var e=s.vec2.create(0,0),o=Xt(n);o.multiplyScalar(i),e.x=o.x,e.y=o.y,e.multiplyScalar(t.mass+t.random),t.position.add(e)}(n,u.angle,u.strength),function(t,n,i){var e=t.time+t.noise,o=i.amplitude*Math.sin(i.frequency*t.time+e);h(s.vec2.create(1,0),n.angle);var r=s.vec2.create(o,0);h(r,n.angle+90),t.position.add(r)}(n,u,a),o.config.scroll&&(0===o.scrollOffsetX&&0===o.scrollOffsetY||(zt(n.position,-o.scrollOffsetX,-o.scrollOffsetY),zt(n.previousPosition,-o.scrollOffsetX,-o.scrollOffsetY))),function(t,n,i){var e=!1;return function(t,n){return t.position.x+t.renderedSize>=0&&t.position.x-t.renderedSize<=n}(t,n)||(function(t,n,i){t.position.x+t.renderedSize<0?(t.position.x+=n+2*t.renderedSize,t.position.y=d(i)):t.position.x-t.renderedSize>n&&(t.position.x-=n+2*t.renderedSize,t.position.y=d(i))}(t,n,i),e=!0),function(t,n){return t.position.y+t.renderedSize>=0&&t.position.y-t.renderedSize<=n}(t,i)||(function(t,n,i){t.position.y+t.renderedSize<0?(t.position.y+=n+2*t.renderedSize,t.position.x=d(i)):t.position.y-t.renderedSize>n&&(t.position.y-=n+2*t.renderedSize,t.position.x=d(i))}(t,i,n),e=!0),e}(n,o.width,o.height)&&(n.previousPosition=s.vec2.clone(n.position))}))}},t.prototype.render=function(t){},t.prototype.start=function(){this.snowflakes=g(v(this.width,this.height,this.config.density),this.config,this.width,this.height),this.setWind(this.config.wind.angle,this.config.wind.strength),this.setGravity(this.config.gravity.angle,this.config.gravity.strength),this.config.wind.gusts.active&&this.fadeWindIn&&this.fadeWindOut&&(this.fadeWindIn.chain(this.fadeWindOut),this.fadeWindOut.chain(this.fadeWindIn),this.fadeWindIn.start())},t.prototype.pause=function(){this.paused=!0},t.prototype.resume=function(){this.paused=!1},t.prototype.restart=function(){var t,n,i,e,o;null===(t=this.fadeWindIn)||void 0===t||t.stop(),null===(n=this.fadeWindOut)||void 0===n||n.stop(),null===(i=this.fadeWindIn)||void 0===i||i.stopChainedTweens(),null===(e=this.fadeWindOut)||void 0===e||e.stopChainedTweens(),this.setWind(this.originalConfig.wind.angle,this.originalConfig.wind.strength),this.config.wind.gusts.active&&(null===(o=this.fadeWindIn)||void 0===o||o.start()),this.snowflakes=g(v(this.width,this.height,this.config.density),this.config,this.width,this.height)},t.prototype.setDensity=function(t){this.config.density=t,this.restart()},t.prototype.setMassMin=function(t){this.config.mass.min=t,this.restart()},t.prototype.setMassMax=function(t){this.config.mass.max=t,this.restart()},t.prototype.setSizeMin=function(t){this.config.size.min=t,this.restart()},t.prototype.setSizeMax=function(t){this.config.size.max=t,this.restart()},t}(),Jt=(Yt=function(t,n){return Yt=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(t,n){t.__proto__=n}||function(t,n){for(var i in n)Object.prototype.hasOwnProperty.call(n,i)&&(t[i]=n[i])},Yt(t,n)},function(t,n){if("function"!=typeof n&&null!==n)throw new TypeError("Class extends value "+String(n)+" is not a constructor or null");function i(){this.constructor=t}Yt(t,n),t.prototype=null===n?Object.create(n):(i.prototype=n.prototype,new i)}),Ht=function(t){function n(){var n=null!==t&&t.apply(this,arguments)||this;return n.mode="simple",n}return Jt(n,t),n.prototype.setColour=function(t){throw new Error("Method not implemented.")},n.prototype.render=function(t){var n=this;this.snowflakes.forEach((function(i){t.opacity((function(){n.config.trail?i.previousPosition.x>=0&&i.previousPosition.x<=n.width&&i.previousPosition.y>=0&&i.previousPosition.y<=n.height&&i.position.x>=0&&i.position.x<=n.width&&i.position.y>=0&&i.position.y<=n.height&&t.line(i.position,i.previousPosition,{colour:n.config.colour,opacity:i.opacity,width:2*i.renderedSize}):t.circle(i.position,i.renderedSize,{fill:{colour:n.config.colour},line:{width:0}})}),i.opacity)}))},n}(Vt),qt=function(){var t=function(n,i){return t=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(t,n){t.__proto__=n}||function(t,n){for(var i in n)Object.prototype.hasOwnProperty.call(n,i)&&(t[i]=n[i])},t(n,i)};return function(n,i){if("function"!=typeof i&&null!==i)throw new TypeError("Class extends value "+String(i)+" is not a constructor or null");function e(){this.constructor=n}t(n,i),n.prototype=null===i?Object.create(i):(e.prototype=i.prototype,new e)}}(),Zt=function(t){function n(n,i,e,o,r,s,a,u,d){var l=t.call(this,n,i,e,o,r,s,a,u,d)||this;return l.mode="image",l.image=new Image,l.image.src=n.image,l}return qt(n,t),n.prototype.setImage=function(t){throw new Error("Method not implemented.")},n.prototype.update=function(n,i){t.prototype.update.call(this,n,i);for(var e=0,o=this.snowflakes;e<o.length;e++)kt(o[e],n)},n.prototype.render=function(t){var n=this;this.snowflakes.forEach((function(i){var e=i.renderedSize,o=e/2;t.opacity((function(){n.config.rotate?t.rotate((function(){t.image(n.image,{x:i.position.x-o,y:i.position.y-o},{width:e,height:e})}),i.rotation,i.position):t.image(n.image,{x:i.position.x-o,y:i.position.y-o},{width:e,height:e})}),i.opacity)}))},n}(Vt);function Qt(){if(!Bt)throw new Error("Snowfall simulation not started. Call snowfall.start() first.")}function $t(t){void 0===t&&(t={});try{Bt?Bt.restart():(Bt=function(){var t,n=[],i=s.game.create();function e(){n=[],t.layers.forEach((function(i){var e,o=l(i.wind.strength+i.wind.gusts.in.additionalStrength.min,i.wind.strength+i.wind.gusts.in.additionalStrength.max),r=l(i.wind.gusts.in.delay.min,i.wind.gusts.in.delay.max),s=l(i.wind.gusts.in.delay.min,i.wind.gusts.in.delay.max),a=l(i.wind.gusts.out.duration.min,i.wind.gusts.out.duration.max),u=l(i.wind.gusts.out.delay.min,i.wind.gusts.out.delay.max),d=l();"simple"===i.mode?e=new Ht(i,t.attachTo.offsetWidth,t.attachTo.offsetHeight,o,r,s,a,u,d):"image"===i.mode&&(e=new Zt(i,t.attachTo.offsetWidth,t.attachTo.offsetHeight,o,r,s,a,u,d)),e&&(n.push(e),e.start())}))}function o(){n.forEach((function(n){n.width=t.attachTo.offsetWidth,n.height=t.attachTo.offsetHeight,n.restart()})),r()}function r(o){i.setSize(t.attachTo.offsetWidth,t.attachTo.offsetHeight),o?e():n.forEach((function(t){return t.restart()}))}return{start:function(r){void 0===r&&(r={}),function(n){(t=St(n)).attachTo?e():console.error("Unable to start the application, the specified container could not be found.")}(r),t.attachTo?(window.onresize=o,i.attachTo(t.attachTo),i.setSize(t.attachTo.offsetWidth,t.attachTo.offsetHeight),i.setUpdate((function(t){return e=(i=t).dt,o=i.input,Rt(),void n.forEach((function(t){t.update(e,o)}));var i,e,o})),i.setRender((function(t){return(i=t.gfx).clear(),void n.forEach((function(t){t.render(i)}));var i})),i.start()):console.error("Unable to start the application, the specified container could not be found.")},setAmplitude:function(t,i){var e;null===(e=n[i])||void 0===e||e.setAmplitude(t)},setDensity:function(t,i){var e;null===(e=n[i])||void 0===e||e.setDensity(t)},setFrequency:function(t,i){var e;null===(e=n[i])||void 0===e||e.setFrequency(t)},setGravity:function(t,i,e){var o;null===(o=n[e])||void 0===o||o.setGravity(t,i)},setGravityAngle:function(t,i){var e;null===(e=n[i])||void 0===e||e.setGravityAngle(t)},setGravityStrength:function(t,i){var e;null===(e=n[i])||void 0===e||e.setGravityStrength(t)},setPaused:function(t,i){var e;null===(e=n[i])||void 0===e||e.setPaused(t)},setWind:function(t,i,e){var o;null===(o=n[e])||void 0===o||o.setWind(t,i)},setWindAngle:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindAngle(t)},setWindStrength:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindStrength(t)},setGusts:function(t,i){var e;null===(e=n[i])||void 0===e||e.setGusts(t)},togglePaused:function(t){var i;null===(i=n[t])||void 0===i||i.togglePaused()},setWindInAdditionalStrengthMin:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindInAdditionalStrengthMin(t)},setWindInAdditionalStrengthMax:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindInAdditionalStrengthMax(t)},setWindInDurationMin:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindInDurationMin(t)},setWindInDurationMax:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindInDurationMax(t)},setWindInDelayMin:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindInDelayMin(t)},setWindInDelayMax:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindInDelayMax(t)},setWindOutDurationMin:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindOutDurationMin(t)},setWindOutDurationMax:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindOutDurationMax(t)},setWindOutDelayMin:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindOutDelayMin(t)},setWindOutDelayMax:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindOutDelayMax(t)},setWindOutChangeChance:function(t,i){var e;null===(e=n[i])||void 0===e||e.setWindOutChangeChance(t)},setColour:function(t,i){"simple"===n[i].mode?n[i].setColour(t):console.error("attempting to set a colour on a layer that does not have a colour property")},setMassMin:function(t,i){var e;null===(e=n[i])||void 0===e||e.setMassMin(t)},setMassMax:function(t,i){var e;null===(e=n[i])||void 0===e||e.setMassMax(t)},setSizeMin:function(t,i){var e;null===(e=n[i])||void 0===e||e.setSizeMin(t)},setSizeMax:function(t,i){var e;null===(e=n[i])||void 0===e||e.setSizeMax(t)},restart:function(t){r(t?St(t):t)},stop:function(){t=St(yt),n=[],i.stop(),i.canvas.remove(),jt()}}}()).start(t)}catch(t){console.error(t)}}function tn(t){void 0===t&&(t={}),nn(),$t(t)}function nn(){null==Bt||Bt.stop(),Bt=void 0}function en(t,n){void 0===n&&(n={}),function(t){var n=[0,31,29,31,30,31,30,31,31,30,31,30,31];if(t.from.month<1||t.from.month>12||t.from.day<1||t.from.day>n[t.from.month]||t.to.month<1||t.to.month>12||t.to.day<1||t.to.day>n[t.to.month])throw new Error("Invalid date in schedule");var i=new Date,e=100*(i.getUTCMonth()+1)+i.getUTCDate(),o=100*t.from.month+t.from.day,r=100*t.to.month+t.to.day;return o<=r?e>=o&&e<=r:e>=o||e<=r}(t)&&(nn(),$t(n))}function on(t,n){Qt(),Bt.setColour(t,n)}function rn(t,n){Qt(),Bt.setDensity(t,n)}function sn(t,n){Qt(),Bt.setAmplitude(t,n)}function an(t,n){Qt(),Bt.setFrequency(t,n)}function un(t,n){Qt(),Bt.setPaused(t,n)}function dn(t){Qt(),Bt.togglePaused(t)}function ln(t,n,i){Qt(),Bt.setWind(t,n,i)}function cn(t,n){Qt(),Bt.setWindAngle(t,n)}function hn(t,n){Qt(),Bt.setWindStrength(t,n)}function fn(t,n){Qt(),Bt.setGusts(t,n)}function vn(t,n,i){Qt(),Bt.setGravity(t,n,i)}function pn(t,n){Qt(),Bt.setGravityAngle(t,n)}function gn(t,n){Qt(),Bt.setGravityStrength(t,n)}function yn(t,n){Qt(),Bt.setWindInAdditionalStrengthMin(t,n)}function An(t,n){Qt(),Bt.setWindInAdditionalStrengthMax(t,n)}function wn(t,n){Qt(),Bt.setWindInDurationMin(t,n)}function mn(t,n){Qt(),Bt.setWindInDurationMax(t,n)}function _n(t,n){Qt(),Bt.setWindInDelayMin(t,n)}function xn(t,n){Qt(),Bt.setWindInDelayMax(t,n)}function Sn(t,n){Qt(),Bt.setWindOutDurationMin(t,n)}function Dn(t,n){Qt(),Bt.setWindOutDurationMax(t,n)}function Tn(t,n){Qt(),Bt.setWindOutDelayMin(t,n)}function Mn(t,n){Qt(),Bt.setWindOutDelayMax(t,n)}function In(t,n){Qt(),Bt.setWindOutChangeChance(t,n)}function On(t,n){Qt(),Bt.setMassMin(t,n)}function En(t,n){Qt(),Bt.setMassMax(t,n)}function Wn(t,n){Qt(),Bt.setSizeMin(t,n)}function bn(t,n){Qt(),Bt.setSizeMax(t,n)}const Cn={start:$t,restart:tn,stop:nn,schedule:en,setColour:on,setDensity:rn,setAmplitude:sn,setFrequency:an,setPaused:un,togglePaused:dn,setWind:ln,setGravity:vn,setMassMin:On,setMassMax:En,setSizeMin:Wn,setSizeMax:bn};var Un=o.RW,Nn=o.k7,Pn=o.ff,Fn=o.sK,Ln=o.F0,Gn=o.$A,jn=o.T_,Rn=o.zA,Xn=o.t6,kn=o.__,zn=o.SX,Yn=o.t2,Bn=o.$m,Kn=o._z,Vn=o.sR,Jn=o.Cm,Hn=o.q0,qn=o.NE,Zn=o.dB,Qn=o.UZ,$n=o.mt,ti=o.f,ni=o._7,ii=o.BZ,ei=o.fL,oi=o._g,ri=o.n4,si=o.Pd,ai=o.tx,ui=o.zH,di=o.dQ,li=o.ex,ci=o.zp,hi=o.SQ,fi=o.IN,vi=o.B0,pi=o.y8,gi=o.C8,yi=o.y7,Ai=o.PT,wi=o.G8,mi=o.mp,_i=o.mP,xi=o.Fp,Si=o.N4,Di=o.QK,Ti=o.bK,Mi=o.jD,Ii=o.Hm,Oi=o.UC,Ei=o.Md,Wi=o.nK,bi=o.Or,Ci=o.o8,Ui=o.Ay,Ni=o.Ui,Pi=o.Y8,Fi=o.W,Li=o.ld,Gi=o.S8,ji=o._,Ri=o.E1,Xi=o.pN,ki=o.bj,zi=o.Rb,Yi=o.JL,Bi=o._3,Ki=o.uX,Vi=o.bT,Ji=o.Du,Hi=o.li,qi=o.XP,Zi=o.Oo,Qi=o.SP,$i=o.v$,te=o.UN,ne=o.wJ,ie=o.a5,ee=o.N8,oe=o.vQ,re=o.KK,se=o.cO,ae=o.Hy,ue=o.i0,de=o.Ct,le=o.Bf,ce=o.jf,he=o.Sw,fe=o.ni,ve=o.ds,pe=o.Nx;
 
 /***/ }),
 
@@ -84665,6 +85050,1190 @@ function javascript(hljs) {
       GETTER_OR_SETTER,
       {
         match: /\$[(.]/ // relevance booster for a pattern common to JS libs: `$(something)` and `$.something`
+      }
+    ]
+  };
+}
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/es/languages/typescript.js":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/es/languages/typescript.js ***!
+  \******************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ typescript)
+/* harmony export */ });
+const IDENT_RE = '[A-Za-z$_][0-9A-Za-z$_]*';
+const KEYWORDS = [
+  "as", // for exports
+  "in",
+  "of",
+  "if",
+  "for",
+  "while",
+  "finally",
+  "var",
+  "new",
+  "function",
+  "do",
+  "return",
+  "void",
+  "else",
+  "break",
+  "catch",
+  "instanceof",
+  "with",
+  "throw",
+  "case",
+  "default",
+  "try",
+  "switch",
+  "continue",
+  "typeof",
+  "delete",
+  "let",
+  "yield",
+  "const",
+  "class",
+  // JS handles these with a special rule
+  // "get",
+  // "set",
+  "debugger",
+  "async",
+  "await",
+  "static",
+  "import",
+  "from",
+  "export",
+  "extends",
+  // It's reached stage 3, which is "recommended for implementation":
+  "using"
+];
+const LITERALS = [
+  "true",
+  "false",
+  "null",
+  "undefined",
+  "NaN",
+  "Infinity"
+];
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
+const TYPES = [
+  // Fundamental objects
+  "Object",
+  "Function",
+  "Boolean",
+  "Symbol",
+  // numbers and dates
+  "Math",
+  "Date",
+  "Number",
+  "BigInt",
+  // text
+  "String",
+  "RegExp",
+  // Indexed collections
+  "Array",
+  "Float32Array",
+  "Float64Array",
+  "Int8Array",
+  "Uint8Array",
+  "Uint8ClampedArray",
+  "Int16Array",
+  "Int32Array",
+  "Uint16Array",
+  "Uint32Array",
+  "BigInt64Array",
+  "BigUint64Array",
+  // Keyed collections
+  "Set",
+  "Map",
+  "WeakSet",
+  "WeakMap",
+  // Structured data
+  "ArrayBuffer",
+  "SharedArrayBuffer",
+  "Atomics",
+  "DataView",
+  "JSON",
+  // Control abstraction objects
+  "Promise",
+  "Generator",
+  "GeneratorFunction",
+  "AsyncFunction",
+  // Reflection
+  "Reflect",
+  "Proxy",
+  // Internationalization
+  "Intl",
+  // WebAssembly
+  "WebAssembly"
+];
+
+const ERROR_TYPES = [
+  "Error",
+  "EvalError",
+  "InternalError",
+  "RangeError",
+  "ReferenceError",
+  "SyntaxError",
+  "TypeError",
+  "URIError"
+];
+
+const BUILT_IN_GLOBALS = [
+  "setInterval",
+  "setTimeout",
+  "clearInterval",
+  "clearTimeout",
+
+  "require",
+  "exports",
+
+  "eval",
+  "isFinite",
+  "isNaN",
+  "parseFloat",
+  "parseInt",
+  "decodeURI",
+  "decodeURIComponent",
+  "encodeURI",
+  "encodeURIComponent",
+  "escape",
+  "unescape"
+];
+
+const BUILT_IN_VARIABLES = [
+  "arguments",
+  "this",
+  "super",
+  "console",
+  "window",
+  "document",
+  "localStorage",
+  "sessionStorage",
+  "module",
+  "global" // Node.js
+];
+
+const BUILT_INS = [].concat(
+  BUILT_IN_GLOBALS,
+  TYPES,
+  ERROR_TYPES
+);
+
+/*
+Language: JavaScript
+Description: JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.
+Category: common, scripting, web
+Website: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+*/
+
+
+/** @type LanguageFn */
+function javascript(hljs) {
+  const regex = hljs.regex;
+  /**
+   * Takes a string like "<Booger" and checks to see
+   * if we can find a matching "</Booger" later in the
+   * content.
+   * @param {RegExpMatchArray} match
+   * @param {{after:number}} param1
+   */
+  const hasClosingTag = (match, { after }) => {
+    const tag = "</" + match[0].slice(1);
+    const pos = match.input.indexOf(tag, after);
+    return pos !== -1;
+  };
+
+  const IDENT_RE$1 = IDENT_RE;
+  const FRAGMENT = {
+    begin: '<>',
+    end: '</>'
+  };
+  // to avoid some special cases inside isTrulyOpeningTag
+  const XML_SELF_CLOSING = /<[A-Za-z0-9\\._:-]+\s*\/>/;
+  const XML_TAG = {
+    begin: /<[A-Za-z0-9\\._:-]+/,
+    end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
+    /**
+     * @param {RegExpMatchArray} match
+     * @param {CallbackResponse} response
+     */
+    isTrulyOpeningTag: (match, response) => {
+      const afterMatchIndex = match[0].length + match.index;
+      const nextChar = match.input[afterMatchIndex];
+      if (
+        // HTML should not include another raw `<` inside a tag
+        // nested type?
+        // `<Array<Array<number>>`, etc.
+        nextChar === "<" ||
+        // the , gives away that this is not HTML
+        // `<T, A extends keyof T, V>`
+        nextChar === ","
+        ) {
+        response.ignoreMatch();
+        return;
+      }
+
+      // `<something>`
+      // Quite possibly a tag, lets look for a matching closing tag...
+      if (nextChar === ">") {
+        // if we cannot find a matching closing tag, then we
+        // will ignore it
+        if (!hasClosingTag(match, { after: afterMatchIndex })) {
+          response.ignoreMatch();
+        }
+      }
+
+      // `<blah />` (self-closing)
+      // handled by simpleSelfClosing rule
+
+      let m;
+      const afterMatch = match.input.substring(afterMatchIndex);
+
+      // some more template typing stuff
+      //  <T = any>(key?: string) => Modify<
+      if ((m = afterMatch.match(/^\s*=/))) {
+        response.ignoreMatch();
+        return;
+      }
+
+      // `<From extends string>`
+      // technically this could be HTML, but it smells like a type
+      // NOTE: This is ugh, but added specifically for https://github.com/highlightjs/highlight.js/issues/3276
+      if ((m = afterMatch.match(/^\s+extends\s+/))) {
+        if (m.index === 0) {
+          response.ignoreMatch();
+          // eslint-disable-next-line no-useless-return
+          return;
+        }
+      }
+    }
+  };
+  const KEYWORDS$1 = {
+    $pattern: IDENT_RE,
+    keyword: KEYWORDS,
+    literal: LITERALS,
+    built_in: BUILT_INS,
+    "variable.language": BUILT_IN_VARIABLES
+  };
+
+  // https://tc39.es/ecma262/#sec-literals-numeric-literals
+  const decimalDigits = '[0-9](_?[0-9])*';
+  const frac = `\\.(${decimalDigits})`;
+  // DecimalIntegerLiteral, including Annex B NonOctalDecimalIntegerLiteral
+  // https://tc39.es/ecma262/#sec-additional-syntax-numeric-literals
+  const decimalInteger = `0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*`;
+  const NUMBER = {
+    className: 'number',
+    variants: [
+      // DecimalLiteral
+      { begin: `(\\b(${decimalInteger})((${frac})|\\.)?|(${frac}))` +
+        `[eE][+-]?(${decimalDigits})\\b` },
+      { begin: `\\b(${decimalInteger})\\b((${frac})\\b|\\.)?|(${frac})\\b` },
+
+      // DecimalBigIntegerLiteral
+      { begin: `\\b(0|[1-9](_?[0-9])*)n\\b` },
+
+      // NonDecimalIntegerLiteral
+      { begin: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b" },
+      { begin: "\\b0[bB][0-1](_?[0-1])*n?\\b" },
+      { begin: "\\b0[oO][0-7](_?[0-7])*n?\\b" },
+
+      // LegacyOctalIntegerLiteral (does not include underscore separators)
+      // https://tc39.es/ecma262/#sec-additional-syntax-numeric-literals
+      { begin: "\\b0[0-7]+n?\\b" },
+    ],
+    relevance: 0
+  };
+
+  const SUBST = {
+    className: 'subst',
+    begin: '\\$\\{',
+    end: '\\}',
+    keywords: KEYWORDS$1,
+    contains: [] // defined later
+  };
+  const HTML_TEMPLATE = {
+    begin: '\.?html`',
+    end: '',
+    starts: {
+      end: '`',
+      returnEnd: false,
+      contains: [
+        hljs.BACKSLASH_ESCAPE,
+        SUBST
+      ],
+      subLanguage: 'xml'
+    }
+  };
+  const CSS_TEMPLATE = {
+    begin: '\.?css`',
+    end: '',
+    starts: {
+      end: '`',
+      returnEnd: false,
+      contains: [
+        hljs.BACKSLASH_ESCAPE,
+        SUBST
+      ],
+      subLanguage: 'css'
+    }
+  };
+  const GRAPHQL_TEMPLATE = {
+    begin: '\.?gql`',
+    end: '',
+    starts: {
+      end: '`',
+      returnEnd: false,
+      contains: [
+        hljs.BACKSLASH_ESCAPE,
+        SUBST
+      ],
+      subLanguage: 'graphql'
+    }
+  };
+  const TEMPLATE_STRING = {
+    className: 'string',
+    begin: '`',
+    end: '`',
+    contains: [
+      hljs.BACKSLASH_ESCAPE,
+      SUBST
+    ]
+  };
+  const JSDOC_COMMENT = hljs.COMMENT(
+    /\/\*\*(?!\/)/,
+    '\\*/',
+    {
+      relevance: 0,
+      contains: [
+        {
+          begin: '(?=@[A-Za-z]+)',
+          relevance: 0,
+          contains: [
+            {
+              className: 'doctag',
+              begin: '@[A-Za-z]+'
+            },
+            {
+              className: 'type',
+              begin: '\\{',
+              end: '\\}',
+              excludeEnd: true,
+              excludeBegin: true,
+              relevance: 0
+            },
+            {
+              className: 'variable',
+              begin: IDENT_RE$1 + '(?=\\s*(-)|$)',
+              endsParent: true,
+              relevance: 0
+            },
+            // eat spaces (not newlines) so we can find
+            // types or variables
+            {
+              begin: /(?=[^\n])\s/,
+              relevance: 0
+            }
+          ]
+        }
+      ]
+    }
+  );
+  const COMMENT = {
+    className: "comment",
+    variants: [
+      JSDOC_COMMENT,
+      hljs.C_BLOCK_COMMENT_MODE,
+      hljs.C_LINE_COMMENT_MODE
+    ]
+  };
+  const SUBST_INTERNALS = [
+    hljs.APOS_STRING_MODE,
+    hljs.QUOTE_STRING_MODE,
+    HTML_TEMPLATE,
+    CSS_TEMPLATE,
+    GRAPHQL_TEMPLATE,
+    TEMPLATE_STRING,
+    // Skip numbers when they are part of a variable name
+    { match: /\$\d+/ },
+    NUMBER,
+    // This is intentional:
+    // See https://github.com/highlightjs/highlight.js/issues/3288
+    // hljs.REGEXP_MODE
+  ];
+  SUBST.contains = SUBST_INTERNALS
+    .concat({
+      // we need to pair up {} inside our subst to prevent
+      // it from ending too early by matching another }
+      begin: /\{/,
+      end: /\}/,
+      keywords: KEYWORDS$1,
+      contains: [
+        "self"
+      ].concat(SUBST_INTERNALS)
+    });
+  const SUBST_AND_COMMENTS = [].concat(COMMENT, SUBST.contains);
+  const PARAMS_CONTAINS = SUBST_AND_COMMENTS.concat([
+    // eat recursive parens in sub expressions
+    {
+      begin: /(\s*)\(/,
+      end: /\)/,
+      keywords: KEYWORDS$1,
+      contains: ["self"].concat(SUBST_AND_COMMENTS)
+    }
+  ]);
+  const PARAMS = {
+    className: 'params',
+    // convert this to negative lookbehind in v12
+    begin: /(\s*)\(/, // to match the parms with
+    end: /\)/,
+    excludeBegin: true,
+    excludeEnd: true,
+    keywords: KEYWORDS$1,
+    contains: PARAMS_CONTAINS
+  };
+
+  // ES6 classes
+  const CLASS_OR_EXTENDS = {
+    variants: [
+      // class Car extends vehicle
+      {
+        match: [
+          /class/,
+          /\s+/,
+          IDENT_RE$1,
+          /\s+/,
+          /extends/,
+          /\s+/,
+          regex.concat(IDENT_RE$1, "(", regex.concat(/\./, IDENT_RE$1), ")*")
+        ],
+        scope: {
+          1: "keyword",
+          3: "title.class",
+          5: "keyword",
+          7: "title.class.inherited"
+        }
+      },
+      // class Car
+      {
+        match: [
+          /class/,
+          /\s+/,
+          IDENT_RE$1
+        ],
+        scope: {
+          1: "keyword",
+          3: "title.class"
+        }
+      },
+
+    ]
+  };
+
+  const CLASS_REFERENCE = {
+    relevance: 0,
+    match:
+    regex.either(
+      // Hard coded exceptions
+      /\bJSON/,
+      // Float32Array, OutT
+      /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/,
+      // CSSFactory, CSSFactoryT
+      /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/,
+      // FPs, FPsT
+      /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/,
+      // P
+      // single letters are not highlighted
+      // BLAH
+      // this will be flagged as a UPPER_CASE_CONSTANT instead
+    ),
+    className: "title.class",
+    keywords: {
+      _: [
+        // se we still get relevance credit for JS library classes
+        ...TYPES,
+        ...ERROR_TYPES
+      ]
+    }
+  };
+
+  const USE_STRICT = {
+    label: "use_strict",
+    className: 'meta',
+    relevance: 10,
+    begin: /^\s*['"]use (strict|asm)['"]/
+  };
+
+  const FUNCTION_DEFINITION = {
+    variants: [
+      {
+        match: [
+          /function/,
+          /\s+/,
+          IDENT_RE$1,
+          /(?=\s*\()/
+        ]
+      },
+      // anonymous function
+      {
+        match: [
+          /function/,
+          /\s*(?=\()/
+        ]
+      }
+    ],
+    className: {
+      1: "keyword",
+      3: "title.function"
+    },
+    label: "func.def",
+    contains: [ PARAMS ],
+    illegal: /%/
+  };
+
+  const UPPER_CASE_CONSTANT = {
+    relevance: 0,
+    match: /\b[A-Z][A-Z_0-9]+\b/,
+    className: "variable.constant"
+  };
+
+  function noneOf(list) {
+    return regex.concat("(?!", list.join("|"), ")");
+  }
+
+  const FUNCTION_CALL = {
+    match: regex.concat(
+      /\b/,
+      noneOf([
+        ...BUILT_IN_GLOBALS,
+        "super",
+        "import"
+      ].map(x => `${x}\\s*\\(`)),
+      IDENT_RE$1, regex.lookahead(/\s*\(/)),
+    className: "title.function",
+    relevance: 0
+  };
+
+  const PROPERTY_ACCESS = {
+    begin: regex.concat(/\./, regex.lookahead(
+      regex.concat(IDENT_RE$1, /(?![0-9A-Za-z$_(])/)
+    )),
+    end: IDENT_RE$1,
+    excludeBegin: true,
+    keywords: "prototype",
+    className: "property",
+    relevance: 0
+  };
+
+  const GETTER_OR_SETTER = {
+    match: [
+      /get|set/,
+      /\s+/,
+      IDENT_RE$1,
+      /(?=\()/
+    ],
+    className: {
+      1: "keyword",
+      3: "title.function"
+    },
+    contains: [
+      { // eat to avoid empty params
+        begin: /\(\)/
+      },
+      PARAMS
+    ]
+  };
+
+  const FUNC_LEAD_IN_RE = '(\\(' +
+    '[^()]*(\\(' +
+    '[^()]*(\\(' +
+    '[^()]*' +
+    '\\)[^()]*)*' +
+    '\\)[^()]*)*' +
+    '\\)|' + hljs.UNDERSCORE_IDENT_RE + ')\\s*=>';
+
+  const FUNCTION_VARIABLE = {
+    match: [
+      /const|var|let/, /\s+/,
+      IDENT_RE$1, /\s*/,
+      /=\s*/,
+      /(async\s*)?/, // async is optional
+      regex.lookahead(FUNC_LEAD_IN_RE)
+    ],
+    keywords: "async",
+    className: {
+      1: "keyword",
+      3: "title.function"
+    },
+    contains: [
+      PARAMS
+    ]
+  };
+
+  return {
+    name: 'JavaScript',
+    aliases: ['js', 'jsx', 'mjs', 'cjs'],
+    keywords: KEYWORDS$1,
+    // this will be extended by TypeScript
+    exports: { PARAMS_CONTAINS, CLASS_REFERENCE },
+    illegal: /#(?![$_A-z])/,
+    contains: [
+      hljs.SHEBANG({
+        label: "shebang",
+        binary: "node",
+        relevance: 5
+      }),
+      USE_STRICT,
+      hljs.APOS_STRING_MODE,
+      hljs.QUOTE_STRING_MODE,
+      HTML_TEMPLATE,
+      CSS_TEMPLATE,
+      GRAPHQL_TEMPLATE,
+      TEMPLATE_STRING,
+      COMMENT,
+      // Skip numbers when they are part of a variable name
+      { match: /\$\d+/ },
+      NUMBER,
+      CLASS_REFERENCE,
+      {
+        scope: 'attr',
+        match: IDENT_RE$1 + regex.lookahead(':'),
+        relevance: 0
+      },
+      FUNCTION_VARIABLE,
+      { // "value" container
+        begin: '(' + hljs.RE_STARTERS_RE + '|\\b(case|return|throw)\\b)\\s*',
+        keywords: 'return throw case',
+        relevance: 0,
+        contains: [
+          COMMENT,
+          hljs.REGEXP_MODE,
+          {
+            className: 'function',
+            // we have to count the parens to make sure we actually have the
+            // correct bounding ( ) before the =>.  There could be any number of
+            // sub-expressions inside also surrounded by parens.
+            begin: FUNC_LEAD_IN_RE,
+            returnBegin: true,
+            end: '\\s*=>',
+            contains: [
+              {
+                className: 'params',
+                variants: [
+                  {
+                    begin: hljs.UNDERSCORE_IDENT_RE,
+                    relevance: 0
+                  },
+                  {
+                    className: null,
+                    begin: /\(\s*\)/,
+                    skip: true
+                  },
+                  {
+                    begin: /(\s*)\(/,
+                    end: /\)/,
+                    excludeBegin: true,
+                    excludeEnd: true,
+                    keywords: KEYWORDS$1,
+                    contains: PARAMS_CONTAINS
+                  }
+                ]
+              }
+            ]
+          },
+          { // could be a comma delimited list of params to a function call
+            begin: /,/,
+            relevance: 0
+          },
+          {
+            match: /\s+/,
+            relevance: 0
+          },
+          { // JSX
+            variants: [
+              { begin: FRAGMENT.begin, end: FRAGMENT.end },
+              { match: XML_SELF_CLOSING },
+              {
+                begin: XML_TAG.begin,
+                // we carefully check the opening tag to see if it truly
+                // is a tag and not a false positive
+                'on:begin': XML_TAG.isTrulyOpeningTag,
+                end: XML_TAG.end
+              }
+            ],
+            subLanguage: 'xml',
+            contains: [
+              {
+                begin: XML_TAG.begin,
+                end: XML_TAG.end,
+                skip: true,
+                contains: ['self']
+              }
+            ]
+          }
+        ],
+      },
+      FUNCTION_DEFINITION,
+      {
+        // prevent this from getting swallowed up by function
+        // since they appear "function like"
+        beginKeywords: "while if switch catch for"
+      },
+      {
+        // we have to count the parens to make sure we actually have the correct
+        // bounding ( ).  There could be any number of sub-expressions inside
+        // also surrounded by parens.
+        begin: '\\b(?!function)' + hljs.UNDERSCORE_IDENT_RE +
+          '\\(' + // first parens
+          '[^()]*(\\(' +
+            '[^()]*(\\(' +
+              '[^()]*' +
+            '\\)[^()]*)*' +
+          '\\)[^()]*)*' +
+          '\\)\\s*\\{', // end parens
+        returnBegin:true,
+        label: "func.def",
+        contains: [
+          PARAMS,
+          hljs.inherit(hljs.TITLE_MODE, { begin: IDENT_RE$1, className: "title.function" })
+        ]
+      },
+      // catch ... so it won't trigger the property rule below
+      {
+        match: /\.\.\./,
+        relevance: 0
+      },
+      PROPERTY_ACCESS,
+      // hack: prevents detection of keywords in some circumstances
+      // .keyword()
+      // $keyword = x
+      {
+        match: '\\$' + IDENT_RE$1,
+        relevance: 0
+      },
+      {
+        match: [ /\bconstructor(?=\s*\()/ ],
+        className: { 1: "title.function" },
+        contains: [ PARAMS ]
+      },
+      FUNCTION_CALL,
+      UPPER_CASE_CONSTANT,
+      CLASS_OR_EXTENDS,
+      GETTER_OR_SETTER,
+      {
+        match: /\$[(.]/ // relevance booster for a pattern common to JS libs: `$(something)` and `$.something`
+      }
+    ]
+  };
+}
+
+/*
+Language: TypeScript
+Author: Panu Horsmalahti <panu.horsmalahti@iki.fi>
+Contributors: Ike Ku <dempfi@yahoo.com>
+Description: TypeScript is a strict superset of JavaScript
+Website: https://www.typescriptlang.org
+Category: common, scripting
+*/
+
+
+/** @type LanguageFn */
+function typescript(hljs) {
+  const regex = hljs.regex;
+  const tsLanguage = javascript(hljs);
+
+  const IDENT_RE$1 = IDENT_RE;
+  const TYPES = [
+    "any",
+    "void",
+    "number",
+    "boolean",
+    "string",
+    "object",
+    "never",
+    "symbol",
+    "bigint",
+    "unknown"
+  ];
+  const NAMESPACE = {
+    begin: [
+      /namespace/,
+      /\s+/,
+      hljs.IDENT_RE
+    ],
+    beginScope: {
+      1: "keyword",
+      3: "title.class"
+    }
+  };
+  const INTERFACE = {
+    beginKeywords: 'interface',
+    end: /\{/,
+    excludeEnd: true,
+    keywords: {
+      keyword: 'interface extends',
+      built_in: TYPES
+    },
+    contains: [ tsLanguage.exports.CLASS_REFERENCE ]
+  };
+  const USE_STRICT = {
+    className: 'meta',
+    relevance: 10,
+    begin: /^\s*['"]use strict['"]/
+  };
+  const TS_SPECIFIC_KEYWORDS = [
+    "type",
+    // "namespace",
+    "interface",
+    "public",
+    "private",
+    "protected",
+    "implements",
+    "declare",
+    "abstract",
+    "readonly",
+    "enum",
+    "override",
+    "satisfies"
+  ];
+  /*
+    namespace is a TS keyword but it's fine to use it as a variable name too.
+    const message = 'foo';
+    const namespace = 'bar';
+  */
+  const KEYWORDS$1 = {
+    $pattern: IDENT_RE,
+    keyword: KEYWORDS.concat(TS_SPECIFIC_KEYWORDS),
+    literal: LITERALS,
+    built_in: BUILT_INS.concat(TYPES),
+    "variable.language": BUILT_IN_VARIABLES
+  };
+
+  const DECORATOR = {
+    className: 'meta',
+    begin: '@' + IDENT_RE$1,
+  };
+
+  const swapMode = (mode, label, replacement) => {
+    const indx = mode.contains.findIndex(m => m.label === label);
+    if (indx === -1) { throw new Error("can not find mode to replace"); }
+
+    mode.contains.splice(indx, 1, replacement);
+  };
+
+
+  // this should update anywhere keywords is used since
+  // it will be the same actual JS object
+  Object.assign(tsLanguage.keywords, KEYWORDS$1);
+
+  tsLanguage.exports.PARAMS_CONTAINS.push(DECORATOR);
+
+  // highlight the function params
+  const ATTRIBUTE_HIGHLIGHT = tsLanguage.contains.find(c => c.scope === "attr");
+
+  // take default attr rule and extend it to support optionals
+  const OPTIONAL_KEY_OR_ARGUMENT = Object.assign({},
+    ATTRIBUTE_HIGHLIGHT,
+    { match: regex.concat(IDENT_RE$1, regex.lookahead(/\s*\?:/)) }
+  );
+  tsLanguage.exports.PARAMS_CONTAINS.push([
+    tsLanguage.exports.CLASS_REFERENCE, // class reference for highlighting the params types
+    ATTRIBUTE_HIGHLIGHT, // highlight the params key
+    OPTIONAL_KEY_OR_ARGUMENT, // Added for optional property assignment highlighting
+  ]);
+
+  // Add the optional property assignment highlighting for objects or classes
+  tsLanguage.contains = tsLanguage.contains.concat([
+    DECORATOR,
+    NAMESPACE,
+    INTERFACE,
+    OPTIONAL_KEY_OR_ARGUMENT, // Added for optional property assignment highlighting
+  ]);
+
+  // TS gets a simpler shebang rule than JS
+  swapMode(tsLanguage, "shebang", hljs.SHEBANG());
+  // JS use strict rule purposely excludes `asm` which makes no sense
+  swapMode(tsLanguage, "use_strict", USE_STRICT);
+
+  const functionDeclaration = tsLanguage.contains.find(m => m.label === "func.def");
+  functionDeclaration.relevance = 0; // () => {} is more typical in TypeScript
+
+  Object.assign(tsLanguage, {
+    name: 'TypeScript',
+    aliases: [
+      'ts',
+      'tsx',
+      'mts',
+      'cts'
+    ]
+  });
+
+  return tsLanguage;
+}
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/es/languages/xml.js":
+/*!***********************************************************************************************!*\
+  !*** ./node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/es/languages/xml.js ***!
+  \***********************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ xml)
+/* harmony export */ });
+/*
+Language: HTML, XML
+Website: https://www.w3.org/XML/
+Category: common, web
+Audit: 2020
+*/
+
+/** @type LanguageFn */
+function xml(hljs) {
+  const regex = hljs.regex;
+  // XML names can have the following additional letters: https://www.w3.org/TR/xml/#NT-NameChar
+  // OTHER_NAME_CHARS = /[:\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]/;
+  // Element names start with NAME_START_CHAR followed by optional other Unicode letters, ASCII digits, hyphens, underscores, and periods
+  // const TAG_NAME_RE = regex.concat(/[A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD]/, regex.optional(/[A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]*:/), /[A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]*/);;
+  // const XML_IDENT_RE = /[A-Z_a-z:\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]+/;
+  // const TAG_NAME_RE = regex.concat(/[A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD]/, regex.optional(/[A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]*:/), /[A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]*/);
+  // however, to cater for performance and more Unicode support rely simply on the Unicode letter class
+  const TAG_NAME_RE = regex.concat(/[\p{L}_]/u, regex.optional(/[\p{L}0-9_.-]*:/u), /[\p{L}0-9_.-]*/u);
+  const XML_IDENT_RE = /[\p{L}0-9._:-]+/u;
+  const XML_ENTITIES = {
+    className: 'symbol',
+    begin: /&[a-z]+;|&#[0-9]+;|&#x[a-f0-9]+;/
+  };
+  const XML_META_KEYWORDS = {
+    begin: /\s/,
+    contains: [
+      {
+        className: 'keyword',
+        begin: /#?[a-z_][a-z1-9_-]+/,
+        illegal: /\n/
+      }
+    ]
+  };
+  const XML_META_PAR_KEYWORDS = hljs.inherit(XML_META_KEYWORDS, {
+    begin: /\(/,
+    end: /\)/
+  });
+  const APOS_META_STRING_MODE = hljs.inherit(hljs.APOS_STRING_MODE, { className: 'string' });
+  const QUOTE_META_STRING_MODE = hljs.inherit(hljs.QUOTE_STRING_MODE, { className: 'string' });
+  const TAG_INTERNALS = {
+    endsWithParent: true,
+    illegal: /</,
+    relevance: 0,
+    contains: [
+      {
+        className: 'attr',
+        begin: XML_IDENT_RE,
+        relevance: 0
+      },
+      {
+        begin: /=\s*/,
+        relevance: 0,
+        contains: [
+          {
+            className: 'string',
+            endsParent: true,
+            variants: [
+              {
+                begin: /"/,
+                end: /"/,
+                contains: [ XML_ENTITIES ]
+              },
+              {
+                begin: /'/,
+                end: /'/,
+                contains: [ XML_ENTITIES ]
+              },
+              { begin: /[^\s"'=<>`]+/ }
+            ]
+          }
+        ]
+      }
+    ]
+  };
+  return {
+    name: 'HTML, XML',
+    aliases: [
+      'html',
+      'xhtml',
+      'rss',
+      'atom',
+      'xjb',
+      'xsd',
+      'xsl',
+      'plist',
+      'wsf',
+      'svg'
+    ],
+    case_insensitive: true,
+    unicodeRegex: true,
+    contains: [
+      {
+        className: 'meta',
+        begin: /<![a-z]/,
+        end: />/,
+        relevance: 10,
+        contains: [
+          XML_META_KEYWORDS,
+          QUOTE_META_STRING_MODE,
+          APOS_META_STRING_MODE,
+          XML_META_PAR_KEYWORDS,
+          {
+            begin: /\[/,
+            end: /\]/,
+            contains: [
+              {
+                className: 'meta',
+                begin: /<![a-z]/,
+                end: />/,
+                contains: [
+                  XML_META_KEYWORDS,
+                  XML_META_PAR_KEYWORDS,
+                  QUOTE_META_STRING_MODE,
+                  APOS_META_STRING_MODE
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      hljs.COMMENT(
+        /<!--/,
+        /-->/,
+        { relevance: 10 }
+      ),
+      {
+        begin: /<!\[CDATA\[/,
+        end: /\]\]>/,
+        relevance: 10
+      },
+      XML_ENTITIES,
+      // xml processing instructions
+      {
+        className: 'meta',
+        end: /\?>/,
+        variants: [
+          {
+            begin: /<\?xml/,
+            relevance: 10,
+            contains: [
+              QUOTE_META_STRING_MODE
+            ]
+          },
+          {
+            begin: /<\?[a-z][a-z0-9]+/,
+          }
+        ]
+
+      },
+      {
+        className: 'tag',
+        /*
+        The lookahead pattern (?=...) ensures that 'begin' only matches
+        '<style' as a single word, followed by a whitespace or an
+        ending bracket.
+        */
+        begin: /<style(?=\s|>)/,
+        end: />/,
+        keywords: { name: 'style' },
+        contains: [ TAG_INTERNALS ],
+        starts: {
+          end: /<\/style>/,
+          returnEnd: true,
+          subLanguage: [
+            'css',
+            'xml'
+          ]
+        }
+      },
+      {
+        className: 'tag',
+        // See the comment in the <style tag about the lookahead pattern
+        begin: /<script(?=\s|>)/,
+        end: />/,
+        keywords: { name: 'script' },
+        contains: [ TAG_INTERNALS ],
+        starts: {
+          end: /<\/script>/,
+          returnEnd: true,
+          subLanguage: [
+            'javascript',
+            'handlebars',
+            'xml'
+          ]
+        }
+      },
+      // we need this for now for jSX
+      {
+        className: 'tag',
+        begin: /<>|<\/>/
+      },
+      // open tag
+      {
+        className: 'tag',
+        begin: regex.concat(
+          /</,
+          regex.lookahead(regex.concat(
+            TAG_NAME_RE,
+            // <tag/>
+            // <tag>
+            // <tag ...
+            regex.either(/\/>/, />/, /\s/)
+          ))
+        ),
+        end: /\/?>/,
+        contains: [
+          {
+            className: 'name',
+            begin: TAG_NAME_RE,
+            relevance: 0,
+            starts: TAG_INTERNALS
+          }
+        ]
+      },
+      // close tag
+      {
+        className: 'tag',
+        begin: regex.concat(
+          /<\//,
+          regex.lookahead(regex.concat(
+            TAG_NAME_RE, />/
+          ))
+        ),
+        contains: [
+          {
+            className: 'name',
+            begin: TAG_NAME_RE,
+            relevance: 0
+          },
+          {
+            begin: />/,
+            relevance: 0,
+            endsParent: true
+          }
+        ]
       }
     ]
   };
